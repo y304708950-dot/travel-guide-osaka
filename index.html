@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026大阪10天9夜深度攻略 · 9.25-10.4</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#f6f9fc 0%,#eef2f7 100%);color:#2c3e50;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+
+/* Header */
+.header{background:linear-gradient(135deg,#e63946 0%,#d62828 100%);color:white;padding:50px 40px;border-radius:20px;margin-bottom:30px;box-shadow:0 10px 40px rgba(230,57,70,.2);position:relative;overflow:hidden}
+.header::before{content:"";position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:rgba(255,255,255,.08);border-radius:50%}
+.header::after{content:"";position:absolute;bottom:-30%;left:-5%;width:200px;height:200px;background:rgba(255,255,255,.06);border-radius:50%}
+.header h1{font-size:42px;margin-bottom:10px;position:relative;z-index:1}
+.header .subtitle{font-size:18px;opacity:.95;margin-bottom:20px;position:relative;z-index:1}
+.header .meta{display:flex;flex-wrap:wrap;gap:20px;position:relative;z-index:1}
+.header .meta-item{background:rgba(255,255,255,.2);padding:8px 16px;border-radius:20px;font-size:14px;backdrop-filter:blur(10px)}
+
+/* Tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:25px;background:white;padding:12px;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.tab{padding:10px 20px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:500;transition:all .25s;color:#5a6c7d}
+.tab:hover{background:#f8f9fa}
+.tab.active{background:linear-gradient(135deg,#e63946,#d62828);color:white;box-shadow:0 4px 12px rgba(230,57,70,.3)}
+
+/* Content sections */
+.section{display:none;animation:fadeIn .4s ease-out}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* Cards */
+.card{background:white;border-radius:16px;padding:30px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,.06);transition:transform .2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.card h2{color:#1a1a2e;margin-bottom:20px;font-size:24px;border-left:5px solid #e63946;padding-left:15px}
+.card h3{color:#2c3e50;margin:20px 0 12px;font-size:18px}
+
+/* Alert/warning */
+.alert{background:linear-gradient(135deg,#fff3cd 0%,#ffe8a3 100%);border-left:5px solid #f59e0b;padding:20px;border-radius:12px;margin-bottom:20px}
+.alert-red{background:linear-gradient(135deg,#fee 0%,#fdd 100%);border-left-color:#dc2626}
+.alert-blue{background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);border-left-color:#2563eb}
+.alert-green{background:linear-gradient(135deg,#d1fae5 0%,#a7f3d0 100%);border-left-color:#059669}
+.alert h4{margin-bottom:8px;font-size:16px;color:#92400e}
+.alert-red h4{color:#991b1b}
+.alert-blue h4{color:#1e40af}
+.alert-green h4{color:#065f46}
+
+/* Tables */
+.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid #e5e7eb;margin:15px 0}
+table{width:100%;border-collapse:collapse;background:white}
+th{background:#f8f9fa;padding:14px 16px;text-align:left;font-weight:600;font-size:14px;color:#374151;border-bottom:2px solid #e5e7eb;white-space:nowrap}
+td{padding:14px 16px;border-bottom:1px solid #f3f4f6;font-size:14px;color:#4b5563}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#fafbfc}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:500;margin:2px}
+.tag-rec{background:#fee2e2;color:#dc2626}
+.tag-best{background:#d1fae5;color:#059669}
+.tag-warn{background:#fef3c7;color:#d97706}
+.tag-info{background:#dbeafe;color:#2563eb}
+
+/* Day cards */
+.day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:20px}
+.day-card{background:white;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:4px solid #e63946;transition:all .3s}
+.day-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.day-card .day-num{display:inline-block;background:#e63946;color:white;padding:4px 12px;border-radius:8px;font-size:12px;font-weight:600;margin-bottom:10px}
+.day-card .date{color:#6b7280;font-size:13px;margin-bottom:8px}
+.day-card .day-title{font-size:18px;font-weight:600;margin-bottom:14px;color:#1a1a2e}
+.day-card ul{list-style:none;padding:0}
+.day-card li{padding:6px 0;font-size:13px;color:#4b5563;border-bottom:1px dashed #f3f4f6;display:flex;gap:8px}
+.day-card li:last-child{border-bottom:none}
+.day-card .time{color:#e63946;font-weight:600;min-width:50px}
+
+/* Highlight boxes */
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:15px}
+.hl-box{background:linear-gradient(135deg,#fff 0%,#f8f9fa 100%);padding:20px;border-radius:12px;border:1px solid #e5e7eb;position:relative;overflow:hidden}
+.hl-box::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,#e63946,#f59e0b)}
+.hl-box .icon{font-size:28px;margin-bottom:8px;display:block}
+.hl-box h4{font-size:15px;margin-bottom:6px;color:#1a1a2e}
+.hl-box p{font-size:13px;color:#6b7280;margin:0}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin:20px 0}
+.stat{text-align:center;padding:20px;background:linear-gradient(135deg,#fff 0%,#f8f9fa 100%);border-radius:12px;border:1px solid #e5e7eb}
+.stat .num{font-size:28px;font-weight:700;color:#e63946;display:block}
+.stat .label{font-size:12px;color:#6b7280;margin-top:4px}
+
+/* Budget bars */
+.budget-bar{margin:15px 0}
+.budget-bar .label{display:flex;justify-content:space-between;margin-bottom:6px;font-size:14px}
+.budget-bar .bar{height:24px;background:#f3f4f6;border-radius:6px;overflow:hidden;position:relative}
+.budget-bar .fill{height:100%;border-radius:6px;display:flex;align-items:center;padding:0 10px;color:white;font-size:12px;font-weight:600}
+
+/* Checklist */
+.checklist{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:15px}
+.check-item{padding:12px 16px;background:#f8f9fa;border-radius:10px;font-size:14px;display:flex;align-items:center;gap:10px}
+.check-item::before{content:"☐";font-size:18px;color:#9ca3af}
+
+/* Route diagram */
+.route{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:15px 0;padding:20px;background:#f8f9fa;border-radius:12px}
+.route .node{padding:8px 14px;background:white;border:2px solid #e63946;border-radius:8px;font-size:13px;font-weight:500;color:#e63946}
+.route .arrow{color:#9ca3af;font-size:18px}
+
+/* Footer */
+.footer{text-align:center;padding:30px;color:#6b7280;font-size:13px}
+
+@media(max-width:768px){
+.header{padding:30px 20px}
+.header h1{font-size:28px}
+.card{padding:20px}
+.tabs{padding:8px}
+.tab{padding:8px 14px;font-size:13px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+<h1>🗾 2026 大阪 10 天 9 夜深度攻略</h1>
+<div class="subtitle">济南 ✈️ 大阪 · 户外购物 + 温泉人文 + 亲子探索</div>
+<div class="meta">
+<div class="meta-item">📅 2026.09.25 — 10.04</div>
+<div class="meta-item">🛬 关西国际机场 KIX</div>
+<div class="meta-item">⏱️ 10 天 9 夜</div>
+<div class="meta-item">⚠️ 国庆黄金周</div>
+</div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+<div class="tab active" data-tab="overview">📋 总览</div>
+<div class="tab" data-tab="arrival">✈️ 抵达</div>
+<div class="tab" data-tab="hotel">🏨 住宿</div>
+<div class="tab" data-tab="transport">🚄 交通</div>
+<div class="tab" data-tab="shopping">🛍️ 购物</div>
+<div class="tab" data-tab="scenic">🏯 景点</div>
+<div class="tab" data-tab="itinerary">📅 行程</div>
+<div class="tab" data-tab="food">🍣 美食</div>
+<div class="tab" data-tab="kids">👶 亲子</div>
+<div class="tab" data-tab="budget">💰 预算</div>
+<div class="tab" data-tab="checklist">✅ 清单</div>
+</div>
+
+<!-- 总览 -->
+<div class="section active" id="overview">
+<div class="card">
+<h2>🚨 出发前 5 个关键判断</h2>
+<div class="alert alert-red">
+<h4>1. 时间窗口 — 撞上中国国庆黄金周</h4>
+<p>9/25—9/30 价格友好；<strong>10/1 起酒店价格陡涨</strong>；10/1—10/3 关空回程高峰，<strong>值机提前 3 小时</strong>。建议把京都/奈良/和歌山等城际安排在 9/30 前。</p>
+</div>
+<div class="alert alert-blue">
+<h4>2. 直飞航班需提前确认</h4>
+<p>春秋航空 / 山东航空济南—关西约 2.5 小时直飞，2026 年 10/4 班次需提前查实，无直飞可经青岛/上海中转。</p>
+</div>
+<div class="alert">
+<h4>3. 必须提前预约的项目</h4>
+<p>USJ 门票+快速券（提前 1—2 月）、Visit Japan Web 入境登记（出发前 7 天）、蟹道乐本店（提前 1 月）、岚山小火车、温泉酒店。</p>
+</div>
+<div class="alert alert-green">
+<h4>4. 支付 & 现金</h4>
+<p>大阪市内 80% 商户支持支付宝/微信；<strong>人均带 3—5 万日元现金</strong>用于小车站、温泉乡、出租车。7-11 ATM 可银联取款。</p>
+</div>
+<div class="alert">
+<h4>5. 行李策略</h4>
+<p>去程务必留出 20kg 回程额度；可空带一个大箱，或在堂吉诃德买"大型旅行箱"。<strong>保健品/酒类/液体化妆品必须托运。</strong></p>
+</div>
+</div>
+
+<div class="card">
+<h2>📊 行程速览</h2>
+<div class="stats">
+<div class="stat"><span class="num">10</span><div class="label">天数</div></div>
+<div class="stat"><span class="num">9</span><div class="label">夜数</div></div>
+<div class="stat"><span class="num">5</span><div class="label">城市</div></div>
+<div class="stat"><span class="num">2</span><div class="label">温泉夜</div></div>
+<div class="stat"><span class="num">1</span><div class="label">USJ日</div></div>
+<div class="stat"><span class="num">3</span><div class="label">购物点</div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🎯 你的核心需求 → 解决方案</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🥾</span><h4>户外品牌</h4><p>心斋桥旗舰店 + Rinku Outlet（关空旁，回程当天去）+ 神户三田 Premium Outlet</p></div>
+<div class="hl-box"><span class="icon">👕</span><h4>潮牌</h4><p>美国村（BAPE、Supreme、Stüssy、Human Made）+ Onitsuka Tiger 心斋桥本店</p></div>
+<div class="hl-box"><span class="icon">💊</span><h4>保健品</h4><p>大国药妆（比松本清便宜 5—15%）、Welcia、唐吉诃德。回程前 1—2 天再买。</p></div>
+<div class="hl-box"><span class="icon">♨️</span><h4>温泉酒店</h4><p>京都岚山辨庆 / 和歌山白滨 / 有马温泉 任选 1—2 晚</p></div>
+<div class="hl-box"><span class="icon">👨‍👩‍👧</span><h4>亲子友好</h4><p>USJ 官方酒店 / Hilton / 难波光芒（顶楼大浴场）</p></div>
+<div class="hl-box"><span class="icon">🏯</span><h4>自然 + 人文</h4><p>京都伏见稻荷、岚山、清水寺；高野山、白滨海岸；奈良鹿；神户北野异人馆</p></div>
+</div>
+</div>
+</div>
+
+<!-- 抵达 -->
+<div class="section" id="arrival">
+<div class="card">
+<h2>✈️ 关西机场 → 市区 全方式对比</h2>
+<div class="route">
+<div class="node">关西机场 KIX</div>
+<div class="arrow">→</div>
+<div class="node">市区</div>
+<div class="arrow">距离 50km</div>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>适合</th><th>推荐</th></tr></thead>
+<tbody>
+<tr><td><strong>JR 特急 Haruka</strong></td><td>35—75 分</td><td>2,170—2,900 日元</td><td>住京都/天王寺/新大阪</td><td><span class="tag tag-info">舒适</span></td></tr>
+<tr><td><strong>南海 Rapi:t 特急</strong></td><td>38 分</td><td>1,490 日元</td><td>住难波/心斋桥</td><td><span class="tag tag-best">推荐</span></td></tr>
+<tr><td>南海空港急行</td><td>45 分</td><td>970 日元</td><td>预算紧 / 行李少</td><td><span class="tag">便宜</span></td></tr>
+<tr><td><strong>利木津巴士</strong></td><td>50—70 分</td><td>1,600—2,800 日元</td><td>带大件/亲子/酒店在停靠点</td><td><span class="tag tag-rec">亲子推荐</span></td></tr>
+<tr><td>出租车</td><td>50—70 分</td><td>15,000—20,000 日元</td><td>3 人以上 / 深夜</td><td><span class="tag tag-warn">贵</span></td></tr>
+<tr><td><strong>包车（中文司机）</strong></td><td>50—70 分</td><td>500—700 元</td><td>亲子 + 多行李 + 不想换乘</td><td><span class="tag tag-best">强推</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-green">
+<h4>✅ 我的建议</h4>
+<p>抵达日（9/25）选择 <strong>利木津巴士或包车</strong>。落地晚（19:00 后）直接包车，1 小时到酒店，孩子不会折腾。</p>
+</div>
+</div>
+</div>
+
+<!-- 住宿 -->
+<div class="section" id="hotel">
+<div class="card">
+<h2>🏨 高档酒店（5 星 · 1500—4000 元/晚）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>酒店</th><th>位置</th><th>亮点</th><th>价格</th></tr></thead>
+<tbody>
+<tr><td>大阪丽思卡尔顿</td><td>梅田</td><td>老牌奢华、英式管家</td><td>3000—5000</td></tr>
+<tr><td>大阪文华东方</td><td>御堂筋</td><td>2024 新开、超五星</td><td>3500—6000</td></tr>
+<tr><td>大阪 W 酒店</td><td>心斋桥</td><td>安藤忠雄设计、潮酷</td><td>2000—3500</td></tr>
+<tr><td>大阪康莱德</td><td>中之岛</td><td>40 层景观、亲子俱乐部</td><td>2200—3500</td></tr>
+<tr><td>大阪洲际</td><td>梅田</td><td>直连大丸、行政酒廊</td><td>2500—4000</td></tr>
+<tr><td>大阪丝丽</td><td>本町</td><td>管家服务、商务首选</td><td>2500—4000</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h2>🏨 中档酒店（4 星 · 700—1500 元/晚）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>酒店</th><th>位置</th><th>亮点</th></tr></thead>
+<tbody>
+<tr><td><strong>难波光芒酒店</strong></td><td>难波</td><td>顶楼展望温泉、亲子友好 <span class="tag tag-best">强推</span></td></tr>
+<tr><td>大阪难波诺富特</td><td>难波</td><td>2024 新开、家庭房宽敞</td></tr>
+<tr><td>三井花园酒店难波</td><td>难波</td><td>顶楼大浴场+城市景观</td></tr>
+<tr><td>APA & Resort 御堂筋本町塔</td><td>本町</td><td>顶楼大浴场</td></tr>
+<tr><td>大阪喜来登都酒店</td><td>上本町</td><td>直连百货、安静</td></tr>
+<tr><td>大阪难波华盛顿</td><td>难波</td><td>离黑门市场近</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h2>♨️ 温泉酒店（关西特色）</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🐼</span><h4>和歌山 白滨温泉</h4><p>距大阪 2h · 滨千鸟之汤海舟、白良庄 · 海岸+大熊猫，<strong>亲子最爱</strong></p></div>
+<div class="hl-box"><span class="icon">⛩️</span><h4>有马温泉</h4><p>距大阪 1h · 兵卫向阳阁（700 年老铺）· 金汤银汤兼有</p></div>
+<div class="hl-box"><span class="icon">🎋</span><h4>京都 岚山温泉</h4><p>距大阪 1h · 岚山辨庆、星のや京都 · 怀石+竹林+渡月桥</p></div>
+<div class="hl-box"><span class="icon">🏯</span><h4>城崎温泉</h4><p>距大阪 2.5h · 西村屋本馆 · 最美温泉乡</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>👨‍👩‍👧 亲子家庭强推</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>酒店</th><th>亮点</th></tr></thead>
+<tbody>
+<tr><td><strong>USJ 官方酒店（日航 / 近铁 / 京阪 / The Park Front）</strong></td><td>去 USJ 必住，可早入园 1 小时</td></tr>
+<tr><td>大阪希尔顿</td><td>梅田、行政酒廊小朋友友好、家庭房双床</td></tr>
+<tr><td>难波光芒酒店</td><td>顶楼大浴池、家庭房、地铁 0 距离</td></tr>
+<tr><td>大阪万豪都酒店</td><td>阿倍野 Harukas 大楼内，景观顶级</td></tr>
+<tr><td>MIMARU / Citadines 公寓型</td><td>带厨房+家庭房，<strong>亲子首选公寓</strong></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h2>📍 推荐住宿规划（方案 A · 平衡型）</h2>
+<div class="route">
+<div class="node">9/25—27 难波(3晚)</div>
+<div class="arrow">→</div>
+<div class="node">9/28—29 京都温泉(2晚)</div>
+<div class="arrow">→</div>
+<div class="node">9/30—10/3 梅田(4晚)</div>
+<div class="arrow">→</div>
+<div class="node">10/3 关空(切换)</div>
+</div>
+<p style="color:#6b7280;font-size:13px;margin-top:12px">📌 落地适应+市内游 → 京都奈良温泉 → USJ+神户+购物 → 关空附近便于早班机</p>
+</div>
+</div>
+
+<!-- 交通 -->
+<div class="section" id="transport">
+<div class="card">
+<h2>🚇 大阪市内交通</h2>
+<h3>必备工具</h3>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">💳</span><h4>ICOCA 交通卡</h4><p>500 日元工本费+充值。<strong>儿童版半价</strong>。Apple Pay 可加。</p></div>
+<div class="hl-box"><span class="icon">🎫</span><h4>大阪周游券</h4><p>1日 2,800 / 2日 3,600 日元。含 40+ 景点免票+地铁巴士无限。<strong>强推 1 日</strong>。</p></div>
+<div class="hl-box"><span class="icon">🚇</span><h4>御堂筋线 M</h4><p>市内黄金线，串联梅田—心斋桥—难波—天王寺，<strong>99% 景点都在这条线</strong>。</p></div>
+<div class="hl-box"><span class="icon">🚖</span><h4>滴滴日本 / Uber</h4><p>支持中文+支付宝。计程车也支持微信。深夜 22-5 点加价 20%。</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🚄 跨城交通对比</h2>
+<h3>大阪 ↔ 京都</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td><strong>JR 新快速</strong></td><td>28 分</td><td>580 日元</td><td><span class="tag tag-best">最佳</span></td></tr>
+<tr><td>阪急（梅田→河原町）</td><td>45 分</td><td>410 日元</td><td>近河原町祇园</td></tr>
+<tr><td>京阪（淀屋桥→祇园四条）</td><td>50 分</td><td>430 日元</td><td>直达祇园</td></tr>
+<tr><td>新干线</td><td>13 分</td><td>1,450 日元</td><td>太短不划算</td></tr>
+</tbody>
+</table>
+</div>
+<h3>大阪 ↔ 奈良</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td><strong>近铁奈良线（难波→近铁奈良）</strong></td><td>40 分</td><td>680 日元</td><td><span class="tag tag-best">直达奈良公园</span></td></tr>
+<tr><td>JR 大和路线</td><td>30 分</td><td>480 日元</td><td>离公园稍远</td></tr>
+</tbody>
+</table>
+</div>
+<h3>大阪 ↔ 神户</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td><strong>阪急神户线</strong></td><td>28 分</td><td>330 日元</td><td><span class="tag tag-best">首选</span></td></tr>
+<tr><td>JR 神户线</td><td>21 分</td><td>420 日元</td><td>最快</td></tr>
+</tbody>
+</table>
+</div>
+<h3>大阪 ↔ 和歌山白滨</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>JR 特急黑潮号</td><td>2h20m</td><td>5,800 日元</td><td>新大阪→白滨直达</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert">
+<h4>💡 关于 JR Pass</h4>
+<p>普通 JR Pass 涨价后<strong>性价比大跌</strong>，不推荐。<strong>关西 JR Pass</strong>（1日 2,800 / 3日 5,600 日元）覆盖关西核心圈，去白滨/城崎可选关西广域 5日 10,000 日元。10 天内基本用不到东京新干线。</p>
+</div>
+</div>
+</div>
+
+<!-- 购物 -->
+<div class="section" id="shopping">
+<div class="card">
+<h2>🥾 户外品牌（你的核心需求）</h2>
+<h3>心斋桥/南船场 旗舰店</h3>
+<div class="hl-grid">
+<div class="hl-box"><h4>Snow Peak</h4><p>日本顶级户外，比国内便宜 30—50%</p></div>
+<div class="hl-box"><h4>Mont-bell</h4><p>日本国民户外品牌，性价比之王</p></div>
+<div class="hl-box"><h4>The North Face 紫标</h4><p><strong>日本独有，国内没有</strong>。Goldwin 旗舰店</p></div>
+<div class="hl-box"><h4>Arc'teryx 始祖鸟</h4><p>比国内便宜约 20%</p></div>
+<div class="hl-box"><h4>Patagonia</h4><p>日本限定色多</p></div>
+<div class="hl-box"><h4>Salomon</h4><p>跑鞋/越野鞋齐全</p></div>
+</div>
+<h3>折扣户外（必去！）</h3>
+<div class="alert alert-green">
+<h4>🛍️ Rinku Premium Outlet</h4>
+<p><strong>关空旁 1 站，回程当天上午去！</strong>包含 The North Face、Patagonia、Arc'teryx、Columbia、Mont-bell、Snow Peak 等。折扣常态 3—7 折。</p>
+</div>
+<div class="alert alert-blue">
+<h4>🛍️ 神户三田 Premium Outlet</h4>
+<p>规模最大，<strong>400+ 品牌</strong>。奢侈品+户外+潮牌全有。距大阪约 1 小时，巴士直达。</p>
+</div>
+</div>
+
+<div class="card">
+<h2>👕 潮牌</h2>
+<h3>美国村（アメリカ村）— 大阪潮流圣地</h3>
+<div class="hl-grid">
+<div class="hl-box"><h4>BAPE</h4><p>A Bathing Ape 大阪店</p></div>
+<div class="hl-box"><h4>Supreme</h4><p>御堂筋大阪店</p></div>
+<div class="hl-box"><h4>Stüssy</h4><p>大阪 Chapter</p></div>
+<div class="hl-box"><h4>Human Made</h4><p>NIGO 新品牌</p></div>
+<div class="hl-box"><h4>Wtaps / Neighborhood</h4><p>日系硬核机能</p></div>
+<div class="hl-box"><h4>Carhartt WIP</h4><p>大阪店</p></div>
+<div class="hl-box"><h4>Onitsuka Tiger</h4><p>心斋桥本店，<strong>款式比国内全</strong></p></div>
+<div class="hl-box"><h4>BEAMS / UA / SHIPS</h4><p>日本买手店御三家</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🛒 折扣店 / 综合扫货</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>店铺</th><th>位置</th><th>特色</th></tr></thead>
+<tbody>
+<tr><td><strong>唐吉诃德</strong></td><td>道顿堀/心斋桥/梅田</td><td>24h+药妆+零食+电器+杂货 <span class="tag tag-best">必去</span></td></tr>
+<tr><td>松本清</td><td>各处</td><td>药妆连锁</td></tr>
+<tr><td><strong>大国药妆</strong></td><td>各处</td><td>大阪本土，比松本清便宜 5—15%</td></tr>
+<tr><td>Sundrug / Welcia / Cocokara</td><td>各处</td><td>药妆连锁</td></tr>
+<tr><td>2nd Street / Lab1</td><td>心斋桥/难波/梅田</td><td>古着连锁，老 Levi's、80s 夹克</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h2>💊 保健品（按需求清单）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>品类</th><th>推荐品牌/产品</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>综合维生素</td><td>DHC / Fancl / Asahi Dear-Natura</td><td>DHC 最便宜</td></tr>
+<tr><td>益生菌</td><td>强力 Wakamoto（若元錠）/ 新ビオフェルミンS</td><td><strong>最经典最便宜</strong></td></tr>
+<tr><td>眼药水</td><td>参天 FX neo / Rohto 乐敦</td><td>注意限购</td></tr>
+<tr><td>关节软骨素</td><td>ZS（Zeria）/ Suntory Glucosamine</td><td>中老年</td></tr>
+<tr><td>护肝</td><td>强力肝精 / HEPALYSE 黄金</td><td>应酬人士</td></tr>
+<tr><td>胶原蛋白</td><td>Fancl / 明治 / 资生堂 PURE WHITE</td><td></td></tr>
+<tr><td>纳豆激酶</td><td>小林制药</td><td>心血管</td></tr>
+<tr><td>女性更年期</td><td>小林制药 命の母 A</td><td></td></tr>
+<tr><td>儿童 DHA / 钙片</td><td>森永 / 朝日</td><td>亲子必带</td></tr>
+<tr><td>儿童退烧贴</td><td>小林冰宝贴</td><td></td></tr>
+<tr><td>儿童眼药水</td><td>参天 Sante 学童用（蓝色）</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-red">
+<h4>⚠️ 海关规定</h4>
+<p>个人物品+礼品总价不超过 <strong>5000 元</strong>免税。化妆品 6 瓶/品牌、保健品 6 瓶/品种以内。<strong>不能带肉制品、生鲜水果。</strong></p>
+</div>
+</div>
+
+<div class="card">
+<h2>📅 购物时间分配</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>日期</th><th>购物重点</th></tr></thead>
+<tbody>
+<tr><td>9/26</td><td>心斋桥/难波（潮牌+户外+药妆）</td></tr>
+<tr><td>9/27</td><td>梅田阪急/Lucua（百货+特色品牌）</td></tr>
+<tr><td>10/1—2</td><td>神户三田 Outlet（折扣大日）</td></tr>
+<tr><td>10/3</td><td>大阪市内补货+药妆+电器</td></tr>
+<tr><td><strong>10/4 上午</strong></td><td><strong>Rinku Outlet（机场旁）+ 关空免税店</strong></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- 景点 -->
+<div class="section" id="scenic">
+<div class="card">
+<h2>🌿 自然风光</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🎋</span><h4>京都 岚山</h4><p>竹林小径、渡月桥、嵯峨野小火车（<strong>提前预约</strong>）、保津川下り漂流</p></div>
+<div class="hl-box"><span class="icon">⛩️</span><h4>高野山</h4><p>真言宗圣地、世界遗产、奥之院、可住宿坊体验精进料理</p></div>
+<div class="hl-box"><span class="icon">🌊</span><h4>和歌山 白滨</h4><p>白良海岸、千叠敷、三段壁、Adventure World 大熊猫</p></div>
+<div class="hl-box"><span class="icon">🌃</span><h4>神户 摩耶山</h4><p>掬星台 — <strong>日本三大夜景</strong></p></div>
+<div class="hl-box"><span class="icon">🦌</span><h4>奈良公园</h4><p>1200 只野生鹿、东大寺、春日大社、若草山</p></div>
+<div class="hl-box"><span class="icon">🌅</span><h4>比叡山</h4><p>俯瞰琵琶湖，延历寺世界遗产</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🏯 人文景点</h2>
+<h3>京都</h3>
+<div class="hl-grid">
+<div class="hl-box"><h4>伏见稻荷大社</h4><p>千本鸟居（<strong>早 8 点前最美</strong>）</p></div>
+<div class="hl-box"><h4>清水寺 + 三年坂</h4><p>经典老街</p></div>
+<div class="hl-box"><h4>金阁寺 / 银阁寺</h4><p>金箔池水 / 哲学之道</p></div>
+<div class="hl-box"><h4>祇园 + 花见小路</h4><p>可能偶遇艺伎</p></div>
+</div>
+<h3>大阪 / 神户 / 奈良 / 姬路</h3>
+<div class="hl-grid">
+<div class="hl-box"><h4>大阪城天守阁</h4><p>护城河+樱花树</p></div>
+<div class="hl-box"><h4>道顿堀</h4><p>固力果招牌、章鱼烧</p></div>
+<div class="hl-box"><h4>北野异人馆</h4><p>明治时期外国人住宅区</p></div>
+<div class="hl-box"><h4>姬路城</h4><p>世界遗产，距大阪 1h（新快速）</p></div>
+</div>
+</div>
+</div>
+
+<!-- 行程 -->
+<div class="section" id="itinerary">
+<div class="card">
+<h2>📅 10 天 9 夜详细行程</h2>
+<div class="day-grid">
+
+<div class="day-card">
+<span class="day-num">DAY 1</span>
+<div class="date">9/25 周五 · 抵达</div>
+<div class="day-title">济南 → 关西机场 → 难波</div>
+<ul>
+<li><span class="time">下午</span>济南起飞 → 关西机场</li>
+<li><span class="time">20:00</span>包车/利木津到难波</li>
+<li><span class="time">21:00</span>入住难波光芒</li>
+<li><span class="time">21:30</span>道顿堀一蘭拉面 / 7-11</li>
+<li><span class="time">22:00</span>早睡调时差</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 2</span>
+<div class="date">9/26 周六 · 大阪</div>
+<div class="day-title">大阪市内 + 周游券一日</div>
+<ul>
+<li><span class="time">9:00</span>梅田空中庭园</li>
+<li><span class="time">11:00</span>大阪城天守阁</li>
+<li><span class="time">13:00</span>黑门市场午餐</li>
+<li><span class="time">15:00</span>通天阁+新世界</li>
+<li><span class="time">17:00</span>心斋桥御堂筋购物</li>
+<li><span class="time">19:00</span>道顿堀蟹道乐</li>
+<li><span class="time">21:00</span>HEP FIVE 摩天轮</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 3</span>
+<div class="date">9/27 周日 · 京都</div>
+<div class="day-title">京都人文一日</div>
+<ul>
+<li><span class="time">7:30</span>难波→京都 JR 新快速</li>
+<li><span class="time">8:30</span>伏见稻荷大社</li>
+<li><span class="time">10:30</span>清水寺+三年坂</li>
+<li><span class="time">12:30</span>八坂神社旁午餐</li>
+<li><span class="time">14:00</span>祇园+花见小路</li>
+<li><span class="time">15:30</span>金阁寺</li>
+<li><span class="time">17:00</span>锦市场</li>
+<li><span class="time">19:00</span>返回大阪</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 4</span>
+<div class="date">9/28 周一 · 岚山</div>
+<div class="day-title">岚山 + 京都温泉夜</div>
+<ul>
+<li><span class="time">9:00</span>大阪→岚山 阪急嵐山线</li>
+<li><span class="time">10:00</span>岚山小火车（提前预约）</li>
+<li><span class="time">12:00</span>渡月桥+竹林小径</li>
+<li><span class="time">13:00</span>京都豆腐料理午餐</li>
+<li><span class="time">14:30</span>天龙寺</li>
+<li><span class="time">16:00</span>入住岚山辨庆温泉</li>
+<li><span class="time">17:30</span>♨️ 温泉+怀石料理</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 5</span>
+<div class="date">9/29 周二 · 奈良</div>
+<div class="day-title">奈良一日游</div>
+<ul>
+<li><span class="time">9:00</span>京都→奈良 近铁</li>
+<li><span class="time">10:00</span>奈良公园+喂鹿</li>
+<li><span class="time">11:30</span>东大寺大佛殿</li>
+<li><span class="time">13:00</span>奈良町吃柿叶寿司</li>
+<li><span class="time">14:30</span>春日大社</li>
+<li><span class="time">16:00</span>若草山看景</li>
+<li><span class="time">18:00</span>返回大阪入住梅田</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 6</span>
+<div class="date">9/30 周三 · 神户</div>
+<div class="day-title">神户一日 + 三田 Outlet</div>
+<ul>
+<li><span class="time">8:30</span>大阪→神户三宫 阪急</li>
+<li><span class="time">9:30</span>北野异人馆街</li>
+<li><span class="time">11:30</span>南京町小笼包</li>
+<li><span class="time">13:00</span>美利坚公园</li>
+<li><span class="time">14:30</span>神户三田 Premium Outlet</li>
+<li><span class="time">18:30</span>三宫神户牛肉</li>
+<li><span class="time">21:00</span>返回大阪</li>
+</ul>
+</div>
+
+<div class="day-card" style="border-top-color:#f59e0b">
+<span class="day-num" style="background:#f59e0b">DAY 7</span>
+<div class="date">10/1 周四 · USJ ⚠️</div>
+<div class="day-title">环球影城一整天</div>
+<ul>
+<li><span class="time">7:00</span>出发去 USJ</li>
+<li><span class="time">9:00</span>入园（哈利波特+任天堂世界）</li>
+<li><span class="time">12:00</span>园内午餐</li>
+<li><span class="time">15:00</span>咒术回战+马里奥赛车</li>
+<li><span class="time">19:00</span>夜场水上秀</li>
+<li><span class="time">21:00</span>闭园回酒店</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 8</span>
+<div class="date">10/2 周五 · 周边</div>
+<div class="day-title">白滨 OR 高野山</div>
+<ul>
+<li><span class="time">A方案</span>白滨 Adventure World 看大熊猫+海岸</li>
+<li><span class="time">B方案</span>高野山奥之院+宿坊体验</li>
+<li><span class="time">晚</span>当晚回大阪 / 当地住一晚</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 9</span>
+<div class="date">10/3 周六 · 扫货</div>
+<div class="day-title">大阪补货 + 关空过夜</div>
+<ul>
+<li><span class="time">上午</span>阪急百货+Lucua 补货</li>
+<li><span class="time">中午</span>松本清/大国药妆扫保健品</li>
+<li><span class="time">14:00</span>退房</li>
+<li><span class="time">16:00</span>移动到关空附近酒店</li>
+<li><span class="time">17:00</span>Rinku Premium Outlet</li>
+<li><span class="time">19:00</span>晚餐+休整</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">DAY 10</span>
+<div class="date">10/4 周日 · 回程</div>
+<div class="day-title">Rinku 扫货 → 关空</div>
+<ul>
+<li><span class="time">10:00</span>Rinku Outlet 开门冲一波</li>
+<li><span class="time">12:00</span>回酒店取行李</li>
+<li><span class="time">13:00</span>关空 T1 值机</li>
+<li><span class="time">14:00</span>免税店保健品/电器/酒</li>
+<li><span class="time">下午</span>起飞回济南</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- 美食 -->
+<div class="section" id="food">
+<div class="card">
+<h2>🍣 必吃清单（按区域）</h2>
+<h3>大阪</h3>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🦀</span><h4>蟹道乐 道顿堀本店</h4><p>提前 1 月预约</p></div>
+<div class="hl-box"><span class="icon">🍜</span><h4>金龙拉面 / 神座拉面</h4><p>道顿堀经典</p></div>
+<div class="hl-box"><span class="icon">🐙</span><h4>章鱼烧 Wanaka</h4><p>章鱼烧排队王</p></div>
+<div class="hl-box"><span class="icon">🥞</span><h4>大阪烧 美津 / 千房</h4><p>大阪烧鼻祖</p></div>
+<div class="hl-box"><span class="icon">🐟</span><h4>北村金枪鱼 黑门市场</h4><p>极品金枪鱼</p></div>
+<div class="hl-box"><span class="icon">🍛</span><h4>自由轩咖喱 难波</h4><p>大阪明治老店</p></div>
+</div>
+<h3>京都</h3>
+<div class="hl-grid">
+<div class="hl-box"><h4>菊乃井</h4><p>米其林三星怀石（提前 1 月）</p></div>
+<div class="hl-box"><h4>南禅寺顺正</h4><p>豆腐料理</p></div>
+<div class="hl-box"><h4>中村藤吉本店</h4><p>抹茶冰</p></div>
+<div class="hl-box"><h4>茶寮都路里</h4><p>祇园甜品</p></div>
+</div>
+<h3>神户 & 奈良</h3>
+<div class="hl-grid">
+<div class="hl-box"><h4>Steakland 神户</h4><p>平价神户牛</p></div>
+<div class="hl-box"><h4>Mouriya</h4><p>老字号神户牛</p></div>
+<div class="hl-box"><h4>柿の葉寿し 平宗</h4><p>奈良柿叶寿司</p></div>
+<div class="hl-box"><h4>南京町 老祥记</h4><p>神户小笼包</p></div>
+</div>
+</div>
+</div>
+
+<!-- 亲子 -->
+<div class="section" id="kids">
+<div class="card">
+<h2>👶 亲子专属贴士</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">💳</span><h4>儿童 ICOCA</h4><p>半价票，记得到关空 JR 窗口办理</p></div>
+<div class="hl-box"><span class="icon">🛒</span><h4>婴儿车租赁</h4><p>USJ、阪急百货、关空都有</p></div>
+<div class="hl-box"><span class="icon">🍼</span><h4>母婴室</h4><p>找"赤ちゃん休憩室"</p></div>
+<div class="hl-box"><span class="icon">👕</span><h4>童装购买</h4><p>UNIQLO 童装 / 西松屋（更便宜）</p></div>
+<div class="hl-box"><span class="icon">🧸</span><h4>玩具天堂</h4><p>梅田 Kiddy Land、心斋桥乐高店、难波吉卜力</p></div>
+<div class="hl-box"><span class="icon">🐧</span><h4>海游馆</h4><p>世界最大水族馆之一，天保山码头</p></div>
+<div class="hl-box"><span class="icon">🧱</span><h4>乐高乐园</h4><p>LEGOLAND Discovery 天保山</p></div>
+<div class="hl-box"><span class="icon">🍱</span><h4>儿童套餐</h4><p>日本餐厅普遍有"お子様ランチ"</p></div>
+</div>
+<div class="alert">
+<h4>⚠️ 注意事项</h4>
+<p>周末/节假日热门景点带小孩很挤；伏见稻荷大社爬山长，6 岁以下不建议爬到顶。USJ 国庆当天人数巅峰，<strong>务必买 Express Pass 7 快速券</strong>。</p>
+</div>
+</div>
+</div>
+
+<!-- 预算 -->
+<div class="section" id="budget">
+<div class="card">
+<h2>💰 预算参考（人均 · 2 人成行）</h2>
+
+<h3>经济档（约 1.9 万 / 人）</h3>
+<div class="budget-bar"><div class="label"><span>往返机票</span><span>2,500 元</span></div><div class="bar"><div class="fill" style="width:13%;background:#e63946">13%</div></div></div>
+<div class="budget-bar"><div class="label"><span>酒店 9 晚</span><span>4,500 元</span></div><div class="bar"><div class="fill" style="width:24%;background:#dc2626">24%</div></div></div>
+<div class="budget-bar"><div class="label"><span>交通</span><span>1,500 元</span></div><div class="bar"><div class="fill" style="width:8%;background:#f59e0b">8%</div></div></div>
+<div class="budget-bar"><div class="label"><span>餐饮</span><span>3,000 元</span></div><div class="bar"><div class="fill" style="width:16%;background:#10b981">16%</div></div></div>
+<div class="budget-bar"><div class="label"><span>门票（USJ等）</span><span>1,500 元</span></div><div class="bar"><div class="fill" style="width:8%;background:#3b82f6">8%</div></div></div>
+<div class="budget-bar"><div class="label"><span>购物</span><span>5,000 元</span></div><div class="bar"><div class="fill" style="width:26%;background:#8b5cf6">26%</div></div></div>
+<div class="budget-bar"><div class="label"><span>杂项</span><span>1,000 元</span></div><div class="bar"><div class="fill" style="width:5%;background:#6b7280">5%</div></div></div>
+
+<h3>中档（约 3.35 万 / 人）<span class="tag tag-best">推荐</span></h3>
+<div class="budget-bar"><div class="label"><span>往返机票</span><span>3,500 元</span></div><div class="bar"><div class="fill" style="width:10%;background:#e63946">10%</div></div></div>
+<div class="budget-bar"><div class="label"><span>酒店 9 晚</span><span>7,500 元</span></div><div class="bar"><div class="fill" style="width:22%;background:#dc2626">22%</div></div></div>
+<div class="budget-bar"><div class="label"><span>交通</span><span>2,000 元</span></div><div class="bar"><div class="fill" style="width:6%;background:#f59e0b">6%</div></div></div>
+<div class="budget-bar"><div class="label"><span>餐饮</span><span>5,000 元</span></div><div class="bar"><div class="fill" style="width:15%;background:#10b981">15%</div></div></div>
+<div class="budget-bar"><div class="label"><span>门票</span><span>1,500 元</span></div><div class="bar"><div class="fill" style="width:4%;background:#3b82f6">4%</div></div></div>
+<div class="budget-bar"><div class="label"><span>购物</span><span>12,000 元</span></div><div class="bar"><div class="fill" style="width:36%;background:#8b5cf6">36%</div></div></div>
+<div class="budget-bar"><div class="label"><span>杂项</span><span>2,000 元</span></div><div class="bar"><div class="fill" style="width:6%;background:#6b7280">6%</div></div></div>
+
+<h3>高档（约 6.6 万 / 人）</h3>
+<div class="budget-bar"><div class="label"><span>往返机票</span><span>5,000 元</span></div><div class="bar"><div class="fill" style="width:8%;background:#e63946">8%</div></div></div>
+<div class="budget-bar"><div class="label"><span>酒店 9 晚</span><span>15,000 元</span></div><div class="bar"><div class="fill" style="width:23%;background:#dc2626">23%</div></div></div>
+<div class="budget-bar"><div class="label"><span>交通</span><span>2,500 元</span></div><div class="bar"><div class="fill" style="width:4%;background:#f59e0b">4%</div></div></div>
+<div class="budget-bar"><div class="label"><span>餐饮</span><span>8,000 元</span></div><div class="bar"><div class="fill" style="width:12%;background:#10b981">12%</div></div></div>
+<div class="budget-bar"><div class="label"><span>门票</span><span>2,500 元</span></div><div class="bar"><div class="fill" style="width:4%;background:#3b82f6">4%</div></div></div>
+<div class="budget-bar"><div class="label"><span>购物</span><span>30,000 元</span></div><div class="bar"><div class="fill" style="width:45%;background:#8b5cf6">45%</div></div></div>
+<div class="budget-bar"><div class="label"><span>杂项</span><span>3,000 元</span></div><div class="bar"><div class="fill" style="width:5%;background:#6b7280">5%</div></div></div>
+
+<div class="alert alert-blue">
+<h4>💡 中档预算 ≈ 3.3 万 / 人 · 6.6 万 / 双人 + 购物</h4>
+<p>购物预算可根据个人需求大幅调整，户外品牌+保健品+电器一般人均 5000—15000 元已经能买到很多。</p>
+</div>
+</div>
+</div>
+
+<!-- 清单 -->
+<div class="section" id="checklist">
+<div class="card">
+<h2>✅ 出行前 48 小时 Checklist</h2>
+
+<h3>📄 证件</h3>
+<div class="checklist">
+<div class="check-item">护照（有效期至 2027.04 以后）</div>
+<div class="check-item">日本签证</div>
+<div class="check-item">身份证（值机用）</div>
+<div class="check-item">行程单+酒店预订单</div>
+<div class="check-item">应急联系人信息</div>
+</div>
+
+<h3>📱 已订项</h3>
+<div class="checklist">
+<div class="check-item">往返机票</div>
+<div class="check-item">9 晚酒店</div>
+<div class="check-item">USJ 门票+快速券</div>
+<div class="check-item">蟹道乐等热门餐厅</div>
+<div class="check-item">关空接机/包车</div>
+<div class="check-item">旅行保险（医疗+航延）</div>
+<div class="check-item">岚山小火车票</div>
+</div>
+
+<h3>🎒 装备</h3>
+<div class="checklist">
+<div class="check-item">万能转换插头（A 型扁脚 100V）</div>
+<div class="check-item">充电宝 ≤100Wh，必须随身</div>
+<div class="check-item">雨伞（9 月底大阪可能有雨）</div>
+<div class="check-item">长袖+薄外套（18—27℃ 早晚温差大）</div>
+<div class="check-item">舒适步行鞋</div>
+<div class="check-item">个人药品+常用应急药</div>
+<div class="check-item">空行李箱/折叠袋（装购物）</div>
+</div>
+
+<h3>💴 资金</h3>
+<div class="checklist">
+<div class="check-item">3—5 万日元现金</div>
+<div class="check-item">银联+VISA 双币卡</div>
+<div class="check-item">支付宝/微信开通境外功能</div>
+</div>
+
+<h3>📲 App</h3>
+<div class="checklist">
+<div class="check-item">Visit Japan Web 提前填好</div>
+<div class="check-item">Google Maps 离线地图</div>
+<div class="check-item">Yahoo!乗換案内（电车换乘）</div>
+<div class="check-item">DiDi 日本（中文叫车）</div>
+<div class="check-item">eSIM / WiFi 开通</div>
+<div class="check-item">大众点评（中文评价）</div>
+<div class="check-item">Tabelog（日本本地点评）</div>
+</div>
+</div>
+
+<div class="card">
+<h2>🆘 紧急联系</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🚓</span><h4>报警</h4><p>110</p></div>
+<div class="hl-box"><span class="icon">🚑</span><h4>救护/消防</h4><p>119</p></div>
+<div class="hl-box"><span class="icon">🇨🇳</span><h4>中国驻大阪总领馆</h4><p>+81-6-6445-9481</p></div>
+<div class="hl-box"><span class="icon">✈️</span><h4>关空咨询</h4><p>+81-72-455-2500</p></div>
+</div>
+</div>
+</div>
+
+<div class="footer">
+🗾 祝你和家人在大阪十天玩得尽兴！· 攻略生成于 2026.06
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
