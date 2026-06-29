@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 日本 10 天攻略 · 关西深度 vs 东京+大阪特种兵</title>
+<title>2026 日本 9 晚自由行攻略 · 关西温泉 + 东京都市</title>
 <style>
 /* ============== Theme Variables (Light) ============== */
 :root {
@@ -105,7 +105,7 @@
   --tokyo-tint: #1e3a5f;
 }
 
-/* Plan A (red) / Plan B (blue) accent override */
+/* Kansai (red) / Tokyo (blue) accent override */
 .plan-b-mode {
   --accent: #2563eb;
   --accent-2: #1e40af;
@@ -137,7 +137,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .header .meta{display:flex;flex-wrap:wrap;gap:clamp(6px,1.5vw,14px);position:relative;z-index:1}
 .header .meta-item{background:var(--header-meta-bg);padding:8px 16px;border-radius:20px;font-size:clamp(12px,1.8vw,14px);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .3s}
 
-/* ============== Plan Switch ============== */
+/* ============== Plan Switch (关西/东京视角) ============== */
 .plan-switch{display:flex;gap:10px;margin-bottom:25px;background:var(--bg-card);padding:10px;border-radius:16px;box-shadow:var(--shadow-sm);transition:background-color .3s}
 .plan-btn{flex:1;padding:clamp(12px,2vw,18px);border-radius:12px;cursor:pointer;text-align:center;transition:all .3s;border:2px solid transparent;background:var(--bg-elevated);color:var(--text-muted)}
 .plan-btn:not(.active):hover{background:var(--bg-hover)}
@@ -347,7 +347,7 @@ tr:hover td{background:var(--bg-hover)}
 }
 </style>
 </head>
-<body class="plan-b-mode">
+<body class="plan-a-mode">
 <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换暗色模式" title="切换暗色模式">
   <span class="icon-sun" aria-hidden="true">☀️</span>
   <span class="icon-moon" aria-hidden="true">🌙</span>
@@ -356,958 +356,619 @@ tr:hover td{background:var(--bg-hover)}
 <div class="container">
 
 <div class="header">
-<h1>🗾 2026 日本 10 天 9 夜攻略</h1>
-<div class="subtitle">济南 ✈️ 大阪 KIX · 第一次日本 · 两套方案任你选</div>
+<h1>🗾 2026 日本 9 晚自由行攻略</h1>
+<div class="subtitle">济南 ✈️ 大阪 KIX · 关西温泉 + 东京都市 · 9 晚 10 天</div>
 <div class="meta">
 <div class="meta-item">📅 2026.09.25 — 10.04</div>
-<div class="meta-item">🛬 15:00 落地 KIX</div>
-<div class="meta-item">🛫 10/04 KIX 返济</div>
-<div class="meta-item">⚠️ 国庆黄金周</div>
+<div class="meta-item">♨️ Day1 有马温泉</div>
+<div class="meta-item">🗼 东京+富士河口湖</div>
+<div class="meta-item">🛍️ 关西购物收尾</div>
 </div>
 </div>
 
 <div class="plan-switch">
-<div class="plan-btn plan-a" data-plan="a">
-<div class="plan-name">🏯 方案 A · 关西深度</div>
-<div class="plan-desc">岚山温泉 + 京都 + 奈良 + 神户 + 姬路 + 有马温泉 + USJ</div>
+<div class="plan-btn plan-a active" data-plan="a">
+<div class="plan-name">关西段 · 温泉人文</div>
+<div class="plan-desc">大阪·京都·奈良·有马温泉</div>
 </div>
-<div class="plan-btn plan-b active" data-plan="b">
-<div class="plan-name">🚄 方案 B · 东京+大阪 特种兵</div>
-<div class="plan-desc">关西 4 天 + 东京 5 天（含镰仓+箱根+动漫圣地）<span class="tag tag-best">推荐</span></div>
+<div class="plan-btn plan-b" data-plan="b">
+<div class="plan-name">东京段 · 都市潮牌</div>
+<div class="plan-desc">东京·富士河口湖·购物</div>
 </div>
 </div>
 
 <div class="tabs">
 <div class="tab active" data-tab="overview">📋 总览</div>
-<div class="tab" data-tab="arrival">✈️ 抵达+第一晚温泉</div>
-<div class="tab" data-tab="onsen">♨️ 温泉对比</div>
-<div class="tab" data-tab="itinerary">📅 行程</div>
-<div class="tab" data-tab="hotel">🏨 住宿</div>
-<div class="tab" data-tab="transport">🚄 交通</div>
-<div class="tab" data-tab="anime">🎮 动漫圣地</div>
+<div class="tab" data-tab="alerts">⚠️ 关键判断</div>
+<div class="tab" data-tab="itinerary">🗓️ 每日行程</div>
+<div class="tab" data-tab="hotels">🏨 住宿</div>
 <div class="tab" data-tab="shopping">🛍️ 购物</div>
-<div class="tab" data-tab="food">🍣 美食</div>
+<div class="tab" data-tab="transport">🚄 交通</div>
+<div class="tab" data-tab="food">🍜 美食</div>
 <div class="tab" data-tab="budget">💰 预算</div>
-<div class="tab" data-tab="checklist">✅ 清单</div>
+<div class="tab" data-tab="checklist">✅ 出行清单</div>
 </div>
 
+<!-- ============ 总览 ============ -->
 <div class="section active" id="overview">
 <div class="card">
-<h2>🎯 两套方案对比</h2>
+<h2>🎯 行程定位</h2>
+<p>自由行 9 晚 10 天，大阪往返，中间插东京+富士河口湖。第一天轻松温泉开场，最后两天关西购物收尾。</p>
+<div class="stats">
+<div class="stat"><span class="num">9</span><div class="label">晚住宿</div></div>
+<div class="stat"><span class="num">2</span><div class="label">城市圈</div></div>
+<div class="stat"><span class="num">2</span><div class="label">温泉体验</div></div>
+<div class="stat"><span class="num">10/04</span><div class="label">返程</div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🗺️ 全程骨架</h2>
+<div class="route">
+<span class="node">济南</span><span class="arrow">✈️</span>
+<span class="node">大阪KIX</span><span class="arrow">🚗</span>
+<span class="node">有马温泉</span><span class="arrow">🚃</span>
+<span class="node">大阪·京都·奈良</span><span class="arrow">🚄</span>
+<span class="node">东京</span><span class="arrow">🚃</span>
+<span class="node">富士河口湖</span><span class="arrow">🚄</span>
+<span class="node">大阪购物</span><span class="arrow">✈️</span>
+<span class="node">济南</span>
+</div>
+
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">♨️</span><h4>Day1 有马温泉</h4><p>落地直奔温泉旅馆，怀石料理+金汤银汤，不赶路</p></div>
+<div class="hl-box"><span class="icon">🏯</span><h4>Day2-4 关西人文</h4><p>大阪周游券日+京都清水寺伏见稻荷+奈良喂鹿</p></div>
+<div class="hl-box"><span class="icon">🗼</span><h4>Day5-7 东京段</h4><p>新干线去东京+都市深度+富士河口湖温泉</p></div>
+<div class="hl-box"><span class="icon">🛍️</span><h4>Day8-10 关西收尾</h4><p>返大阪+心斋桥扫货+Rinku Outlet+返程</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>📊 9晚分段</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>段</th><th>日期</th><th>城市</th><th>主题</th><th>住宿</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-rec">1</span></td><td>9/25 周五</td><td>关西</td><td>抵达+温泉放松</td><td>有马温泉旅馆</td></tr>
+<tr><td><span class="tag tag-info">2</span></td><td>9/26-28</td><td>大阪/京都/奈良</td><td>关西人文</td><td>难波/京都站</td></tr>
+<tr><td><span class="tag tag-info">3</span></td><td>9/29-10/1</td><td>东京+河口湖</td><td>都市+富士</td><td>新宿/河口湖温泉</td></tr>
+<tr><td><span class="tag tag-best">4</span></td><td>10/2-4</td><td>大阪</td><td>购物收尾</td><td>梅田/关空</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin-top:12px;color:var(--text-muted);font-size:13px">为什么这么排：9/25-30 避开亚运主场名古屋；10/1-4 国庆高峰回关西购物不动长途；富士河口湖放 10/1（红叶前奏+避开周末）。</p>
+</div>
+</div>
+
+<!-- ============ 关键判断 ============ -->
+<div class="section" id="alerts">
+<div class="card">
+<h2>⚠️ 出行前必读的 6 个关键判断</h2>
+
+<div class="alert alert-red">
+<h4>1. 三重旺季叠加（最重要）</h4>
+<p>9/25-10/4 正好踩在 <strong>中国国庆黄金周 + 日本秋季旅游旺季 + 名古屋亚运会（9/19-10/4）</strong> 三峰交汇。酒店涨价20-40%，新干线指定席紧张。9/25-30 安排关西+东京错开名古屋；10/1-4 回关西购物；新干线务必提前14天订指定席。</p>
+</div>
+
+<div class="alert alert-yellow">
+<h4>2. 亚运会对行程的具体影响</h4>
+<p>名古屋在新大阪-东京中间，亚运期间のぞみ号会非常满。<strong>指定席必须早订</strong>。酒店名古屋周边爆满，但东京/大阪/京都影响相对小（除10/1后国庆叠加）。足球小组赛可能在东京/大阪——出发前查赛程，可能顺便看一场（意外彩蛋）。<strong>避让名古屋方向行程</strong>。</p>
+</div>
+
+<div class="alert alert-blue">
+<h4>3. 烟火大会 / 秋季祭典（待核实）</h4>
+<p>9月下旬-10月初<strong>不是花火旺季</strong>（旺季7-8月），大型花火较少。推荐关注：<strong>岸和田地车祭</strong>（往年9月中旬第三个周末，2026年可能撞亚运开幕）——比花火更独特，极度震撼。出发前1个月到 hanabi.tokyo 或各市观光协会官网确认2026最终日期。<strong>不要为看烟火绕路</strong>，凑上就顺便看。</p>
+</div>
+
+<div class="alert alert-green">
+<h4>4. 大阪 ↔ 东京交通</h4>
+<p><strong>新干线のぞみ号</strong> 2小时30分，14,720日元（约720元），首选。新大阪⇌东京/品川，<strong>指定席务必早订</strong>。飞机算上安检不划算；夜行巴士累不推荐。</p>
+</div>
+
+<div class="alert alert-yellow">
+<h4>5. 现金 vs 移动支付</h4>
+<p>支付宝/微信在大阪/东京市内覆盖80%以上。<strong>必须现金</strong>：小车站、温泉乡、神社、个体小店、出租车找零、自动售货机。人均带3-5万日元现金，关空T1 B1层换汇或7-11 ATM银联取款。</p>
+</div>
+
+<div class="alert alert-red">
+<h4>6. 行李策略</h4>
+<p>返程留20kg空间给购物，另带空折叠箱。保健品/酒类/液体化妆品必须托运。<strong>关西⇌东京新干线带大行李用黑猫宅急便快递</strong>（酒店前台可办，次日到，约1500日元/件），轻装坐新干线。</p>
+</div>
+</div>
+</div>
+
+<!-- ============ 每日行程 ============ -->
+<div class="section" id="itinerary">
+<div class="card">
+<h2>🗓️ 10 天 9 晚详细行程</h2>
+<div class="day-grid">
+
+<div class="day-card special">
+<span class="day-num">Day 1</span>
+<div class="date">9月25日 周五 · 抵达</div>
+<div class="day-title">♨️ 有马温泉轻松开场</div>
+<ul>
+<li><span class="time">14:00</span>济南→关西机场（2.5h）</li>
+<li><span class="time">15:30</span>入境取行李（Visit Japan Web提前填）</li>
+<li><span class="time">16:30</span>关空→有马温泉（包车1.5h推荐）</li>
+<li><span class="time">18:30</span>抵旅馆（兵卫向阳阁/有马Grand）</li>
+<li><span class="time">19:00</span>怀石料理晚餐</li>
+<li><span class="time">20:30</span>金汤银汤露天温泉</li>
+<li><span class="time">晚</span>早睡调时差</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">Day 2</span>
+<div class="date">9月26日 周六 · 大阪</div>
+<div class="day-title">🏯 大阪市内周游券日</div>
+<ul>
+<li><span class="time">9:00</span>有马→大阪（70min）</li>
+<li><span class="time">11:00</span>梅田空中庭园展望台</li>
+<li><span class="time">13:00</span>大阪城公园+天守阁</li>
+<li><span class="time">14:30</span>黑门市场午餐</li>
+<li><span class="time">16:00</span>通天阁+新世界</li>
+<li><span class="time">17:30</span>心斋桥购物（Snow Peak/Mont-bell）</li>
+<li><span class="time">19:30</span>道顿堀晚餐（蟹道乐已订）</li>
+<li><span class="time">21:00</span>固力果招牌+HEP FIVE摩天轮</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">Day 3</span>
+<div class="date">9月27日 周日 · 京都</div>
+<div class="day-title">⛩️ 京都人文一日</div>
+<ul>
+<li><span class="time">7:30</span>难波→京都（JR新快速28min）</li>
+<li><span class="time">8:30</span>伏见稻荷大社（早去人少）</li>
+<li><span class="time">10:30</span>清水寺+三年坂二年坂</li>
+<li><span class="time">12:30</span>八坂神社旁午餐（汤豆腐）</li>
+<li><span class="time">14:00</span>祇园+花见小路</li>
+<li><span class="time">15:30</span>金阁寺</li>
+<li><span class="time">17:00</span>锦市场（抹茶八桥漬物）</li>
+<li><span class="time">20:00</span>京都站拉面小路晚餐</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">Day 4</span>
+<div class="date">9月28日 周一 · 奈良</div>
+<div class="day-title">🦌 奈良喂鹿 + 返大阪</div>
+<ul>
+<li><span class="time">9:00</span>京都→奈良（近铁45min）</li>
+<li><span class="time">10:00</span>奈良公园喂鹿（鹿仙贝150円）</li>
+<li><span class="time">11:30</span>东大寺大佛殿</li>
+<li><span class="time">13:00</span>奈良町午餐（柿叶寿司平宗）</li>
+<li><span class="time">14:30</span>春日大社（3000盏灯笼）</li>
+<li><span class="time">16:00</span>若草山看景</li>
+<li><span class="time">18:00</span>返大阪难波</li>
+<li><span class="time">19:30</span>美国村逛潮牌古着</li>
+</ul>
+</div>
+
+<div class="day-card tokyo">
+<span class="day-num">Day 5</span>
+<div class="date">9月29日 周二 · 新干线</div>
+<div class="day-title">🚄 新干线去东京 + 初探</div>
+<ul>
+<li><span class="time">8:00</span>退房，行李黑猫快递到大阪酒店</li>
+<li><span class="time">9:30</span>新干线のぞみ 新大阪→东京（2.5h）</li>
+<li><span class="time">12:00</span>抵东京入住新宿/池袋</li>
+<li><span class="time">14:30</span>明治神宫+原宿竹下通</li>
+<li><span class="time">16:30</span>表参道+涩谷十字路口</li>
+<li><span class="time">18:30</span>涩谷Shibuya Sky（需预约）</li>
+<li><span class="time">20:00</span>涩谷晚餐+夜景</li>
+</ul>
+</div>
+
+<div class="day-card tokyo">
+<span class="day-num">Day 6</span>
+<div class="date">9月30日 周三 · 东京</div>
+<div class="day-title">🎯 东京都市深度（两选一）</div>
+<ul>
+<li><span class="time">A线</span>下北泽古着+独立咖啡馆</li>
+<li><span class="time">A线</span>原宿Cat Street（BAPE/Human Made）</li>
+<li><span class="time">A线</span>秋叶原电器+动漫手办</li>
+<li><span class="time">A线</span>银座百货+奢侈品</li>
+<li><span class="time">B线</span>浅草寺+雷门（早去人少）</li>
+<li><span class="time">B线</span>上野公园+东京国立博物馆</li>
+<li><span class="time">B线</span>皇居外苑+东京塔</li>
+<li><span class="time">B线</span>六本木Hills展望台</li>
+</ul>
+</div>
+
+<div class="day-card tokyo special">
+<span class="day-num">Day 7</span>
+<div class="date">10月1日 周四 · 国庆</div>
+<div class="day-title">🗻 富士河口湖一日（住河口湖）</div>
+<ul>
+<li><span class="time">8:00</span>新宿→河口湖（2h）</li>
+<li><span class="time">11:00</span>河口湖游船（拍逆富士）</li>
+<li><span class="time">12:30</span>ほうとう不动午餐（当地名物）</li>
+<li><span class="time">14:00</span>大石公园（花海+富士全景）</li>
+<li><span class="time">15:30</span>忍野八海（可选）</li>
+<li><span class="time">17:00</span>入住河口湖温泉旅馆</li>
+<li><span class="time">18:00</span>温泉+怀石料理</li>
+<li><span class="time">20:00</span>夜赏富士山轮廓</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">Day 8</span>
+<div class="date">10月2日 周五 · 返关西</div>
+<div class="day-title">🚄 返大阪 + 购物第一波</div>
+<ul>
+<li><span class="time">8:00</span>河口湖退房</li>
+<li><span class="time">9:30</span>河口湖→新宿</li>
+<li><span class="time">12:30</span>东京站/新宿午餐</li>
+<li><span class="time">14:00</span>新干线のぞみ 东京→新大阪（2.5h）</li>
+<li><span class="time">16:30</span>抵新大阪取快递行李</li>
+<li><span class="time">17:30</span>入住大阪梅田/难波</li>
+<li><span class="time">19:00</span>梅田阪急百货晚间购物</li>
+<li><span class="time">21:00</span>梅田晚餐</li>
+</ul>
+</div>
+
+<div class="day-card">
+<span class="day-num">Day 9</span>
+<div class="date">10月3日 周六 · 购物</div>
+<div class="day-title">🛍️ 心斋桥冲刺 + 移师关空</div>
+<ul>
+<li><span class="time">9:00</span>心斋桥/难波全天购物</li>
+<li><span class="time">上午</span>户外：Snow Peak/Mont-bell/Arc'teryx</li>
+<li><span class="time">上午</span>潮牌：美国村BAPE/Supreme</li>
+<li><span class="time">上午</span>药妆：松本清/大国（保健品扫货）</li>
+<li><span class="time">13:00</span>难波午餐（黑门/千房大阪烧）</li>
+<li><span class="time">15:00</span>退房，移师关空酒店</li>
+<li><span class="time">18:00</span>步行去Rinku Outlet（开到20-21点）</li>
+<li><span class="time">20:00</span>Rinku晚餐</li>
+</ul>
+</div>
+
+<div class="day-card special">
+<span class="day-num">Day 10</span>
+<div class="date">10月4日 周日 · 返程</div>
+<div class="day-title">✈️ Rinku Outlet + 返济南</div>
+<ul>
+<li><span class="time">8:00</span>Rinku周边早餐等开门</li>
+<li><span class="time">10:00</span>Rinku全力扫货（TNF/Arc'teryx折扣3-7折）</li>
+<li><span class="time">12:30</span>回酒店取行李</li>
+<li><span class="time">13:00</span>关西机场T1值机（提前3h）</li>
+<li><span class="time">14:00</span>免税店最后扫货</li>
+<li><span class="time">16:00</span>起飞回济南</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>🌧️ 自由行灵活调整</h2>
 <div class="compare">
 <div class="compare-col left">
-<h4>🏯 方案 A · 关西深度</h4>
-<p style="font-size:13px;color:#6b7280;margin:6px 0">不去东京，关西玩透</p>
+<h4>突发情况方案</h4>
 <ul>
-<li>节奏慢、文化深度</li>
-<li>关西全境（大阪/京都/奈良/神户/姬路）</li>
-<li>2 晚温泉（岚山+有马）</li>
-<li>不需要新干线长途奔波</li>
-<li>购物时间充裕</li>
-<li><strong>适合：偏文化、不赶</strong></li>
+<li>雨天：东京改秋叶原室内/博物馆</li>
+<li>雨天：关西改海游馆/京都博物馆</li>
+<li>体力不支：京都拆两天玩</li>
+<li>购物没买够：10/2后加难波高岛屋</li>
 </ul>
 </div>
 <div class="compare-col right">
-<h4>🚄 方案 B · 东京+大阪 特种兵 <span class="tag tag-best">推荐</span></h4>
-<p style="font-size:13px;color:#6b7280;margin:6px 0">第一次日本不留遗憾</p>
+<h4>加码方案</h4>
 <ul>
-<li>东京+大阪两极反差体验</li>
-<li>含镰仓（灌篮高手）+ 箱根（富士山）</li>
-<li>含吉卜力美术馆 + 秋叶原</li>
-<li>新干线 2.5h 单程一次</li>
-<li>USJ 任天堂世界保留</li>
-<li><strong>适合：第一次来日本</strong></li>
+<li>爱上温泉：河口湖那晚升级更高级旅馆</li>
+<li>亚运彩蛋：查足球小组赛东京/大阪场次</li>
+<li>烟火凑上：出发前查到就顺便看</li>
+<li>岸和田地车祭：撞上关西日强烈推荐</li>
 </ul>
 </div>
 </div>
 </div>
+</div>
 
+<!-- ============ 住宿 ============ -->
+<div class="section" id="hotels">
 <div class="card">
-<h2>🚨 出发前 5 个关键判断</h2>
-<div class="alert alert-red">
-<h4>1. 时间窗口 — 撞上中国国庆</h4>
-<p>9/25—9/30 价格友好；10/1 起酒店价格陡涨；10/1—10/3 关空回程高峰，<strong>值机提前 3 小时</strong>。</p>
-</div>
-<div class="alert alert-blue">
-<h4>2. 落地 15:00 = 当晚可入住温泉</h4>
-<p>15:00 落地 + 入境 1 小时 → 16:30 出关。<strong>当晚直接住岚山温泉是最优解</strong>，详见"抵达+第一晚温泉"页。</p>
-</div>
-<div class="alert alert-yellow">
-<h4>3. 必抢的 4 个项目</h4>
-<p>① <strong>USJ 任天堂世界 Express Pass</strong>（提前 2 月）② <strong>吉卜力美术馆</strong>（每月 10 日开抢下下月票，方案 B 必抢）③ teamLab Planets ④ Visit Japan Web 入境登记</p>
-</div>
-<div class="alert alert-green">
-<h4>4. 黑猫宅急便 — 大件行李福音</h4>
-<p>KIX 机场可用黑猫宅急便（Yamato Takkyubin）把行李直送酒店，<strong>1500—2500 日元/件</strong>，次日送达。第一晚去温泉只带过夜小包即可。</p>
-</div>
-<div class="alert">
-<h4>5. 现金 + 行李</h4>
-<p>人均带 3—5 万日元现金；7-11 ATM 银联取款；回程预留 20kg 行李额度，可在堂吉诃德买大旅行箱。</p>
-</div>
-</div>
-
-<div class="card">
-<h2>📊 方案核心数据</h2>
-<div class="plan-a-only">
-<div class="stats">
-<div class="stat"><span class="num">10</span><div class="label">天</div></div>
-<div class="stat"><span class="num">5</span><div class="label">城市</div></div>
-<div class="stat"><span class="num">2</span><div class="label">温泉夜</div></div>
-<div class="stat"><span class="num">1</span><div class="label">USJ日</div></div>
-<div class="stat"><span class="num">0</span><div class="label">新干线长途</div></div>
-</div>
-</div>
-<div class="plan-b-only">
-<div class="stats">
-<div class="stat"><span class="num">10</span><div class="label">天</div></div>
-<div class="stat"><span class="num">7</span><div class="label">城市</div></div>
-<div class="stat"><span class="num">2</span><div class="label">温泉夜</div></div>
-<div class="stat"><span class="num">1</span><div class="label">USJ日</div></div>
-<div class="stat"><span class="num">5</span><div class="label">东京天</div></div>
-<div class="stat"><span class="num">4</span><div class="label">关西天</div></div>
-</div>
-</div>
-</div>
-
-<div class="card">
-<h2>🎯 你的核心诉求 → 解决方案</h2>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🍄</span><h4>马里奥/任天堂世界</h4><p>USJ 超级任天堂世界 — 全球独一份的马里奥赛车 AR 体验</p></div>
-<div class="hl-box"><span class="icon">🏀</span><h4>镰仓·灌篮高手</h4><p>方案 B：江ノ電镰仓高校前道口、长谷大佛、鹤冈八幡宫</p></div>
-<div class="hl-box"><span class="icon">🗻</span><h4>富士山</h4><p>方案 B：箱根登山缆车看富士山+黑鸡蛋+芦之湖海盗船</p></div>
-<div class="hl-box"><span class="icon">🎬</span><h4>吉卜力 / 动漫</h4><p>方案 B：吉卜力美术馆+秋叶原+中野百老汇+池袋 Animate</p></div>
-<div class="hl-box"><span class="icon">♨️</span><h4>温泉</h4><p>第一晚岚山温泉 + 第二段温泉（A 有马 / B 箱根）</p></div>
-<div class="hl-box"><span class="icon">🏯</span><h4>自然+人文</h4><p>京都伏见稻荷+清水寺+祇园；奈良鹿；姬路城/镰仓大佛</p></div>
-<div class="hl-box"><span class="icon">🛍️</span><h4>购物</h4><p>户外（心斋桥+Rinku）+ 潮牌（美国村+涩谷）+ 保健品 + 折扣店</p></div>
-</div>
-</div>
-</div>
-
-<div class="section" id="arrival">
-<div class="card">
-<h2>✈️ 15:00 落地 KIX → 当晚直接住温泉</h2>
-<div class="alert alert-green">
-<h4>✅ 推荐方案：当晚直奔岚山温泉</h4>
-<p>15:00 落地 + 入境取行李 ≈ 16:30 出关 → 17:00 出发 → <strong>19:00 前抵达岚山</strong>，温泉酒店 19:30 还能赶上怀石料理。把白天的飞行疲惫直接泡进温泉里。</p>
-</div>
-
-<h3>抵达 → 岚山 路径（最优解）</h3>
-<div class="route">
-<div class="node">KIX 16:30 出关</div>
-<div class="arrow">→</div>
-<div class="node">JR Haruka 75 分</div>
-<div class="arrow">→</div>
-<div class="node">京都站</div>
-<div class="arrow">→</div>
-<div class="node">JR山阴线/出租车</div>
-<div class="arrow">→</div>
-<div class="node">嵯峨岚山 19:00</div>
-</div>
-
-<div class="alert alert-blue">
-<h4>🚚 行李解决方案：黑猫宅急便（强推）</h4>
-<p>关空 T1 1F 的黑猫柜台，把大箱子直送大阪/东京最后一晚的酒店，<strong>1,500—2,500 日元/件</strong>，次日下午送达。<br>
-第一晚岚山只带过夜小包即可，<strong>泡温泉、穿浴衣、吃怀石</strong>，毫无负担。</p>
-</div>
-
-<h3>关空 → 各目的地全方式对比</h3>
+<h2>🏨 9 晚住宿规划</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>目的地</th><th>方式</th><th>耗时</th><th>价格</th><th>推荐</th></tr></thead>
+<thead><tr><th>晚</th><th>日期</th><th>城市</th><th>推荐酒店</th><th>备注</th></tr></thead>
 <tbody>
-<tr><td><strong>岚山（首选）</strong></td><td>JR Haruka → 京都 → JR山阴线</td><td>~2h</td><td>2,900 日元</td><td><span class="tag tag-best">第一晚强推</span></td></tr>
-<tr><td>京都站</td><td>JR Haruka 直达</td><td>75 分</td><td>2,900 日元</td><td><span class="tag tag-info">舒适</span></td></tr>
-<tr><td>难波/心斋桥</td><td>南海 Rapi:t 特急</td><td>38 分</td><td>1,490 日元</td><td><span class="tag">便利</span></td></tr>
-<tr><td>有马温泉</td><td>巴士 → 神户三宫 → 神户电铁</td><td>~3h</td><td>~3,500 日元</td><td><span class="tag tag-warn">不推荐第一晚</span></td></tr>
-<tr><td>梅田/新大阪</td><td>JR Haruka</td><td>50 分</td><td>2,410 日元</td><td><span class="tag">中转</span></td></tr>
-<tr><td>包车（中文司机）</td><td>直达</td><td>~50 分</td><td>500—700 元</td><td><span class="tag tag-rec">行李多优选</span></td></tr>
+<tr><td>1</td><td>9/25</td><td>有马温泉</td><td>兵卫向阳阁 / 有马Grand Hotel</td><td><span class="tag tag-warn">提前2个月订</span></td></tr>
+<tr><td>2</td><td>9/26</td><td>大阪难波</td><td>难波光芒 / 三井花园难波</td><td>顶楼大浴场</td></tr>
+<tr><td>3</td><td>9/27</td><td>京都站</td><td>京都新阪急 / 京都三井花园</td><td>车站近，方便去奈良</td></tr>
+<tr><td>4</td><td>9/28</td><td>大阪难波/梅田</td><td>同9/26或换梅田</td><td>灵活</td></tr>
+<tr><td>5</td><td>9/29</td><td>东京新宿/池袋</td><td>新宿王子 / 池袋阳光城</td><td>交通枢纽</td></tr>
+<tr><td>6</td><td>9/30</td><td>东京新宿/池袋</td><td>同9/29</td><td>不换酒店</td></tr>
+<tr><td>7</td><td>10/1</td><td>河口湖</td><td>秀峰閣湖月 / 風の町</td><td><span class="tag tag-warn">提前2个月订</span></td></tr>
+<tr><td>8</td><td>10/2</td><td>大阪梅田</td><td>大阪希尔顿 / InterContinental</td><td>购物便利</td></tr>
+<tr><td>9</td><td>10/3</td><td>关空附近</td><td>关西机场日航 / Star Gate</td><td><span class="tag tag-warn">早班机/国庆峰值</span></td></tr>
 </tbody>
 </table>
 </div>
-
-<div class="alert alert-yellow">
-<h4>⚠️ 第一晚温泉 — 为什么选岚山而不是有马</h4>
-<p><strong>岚山</strong>：京都站 → 嵯峨岚山 1 班车直达；周边白天可继续玩（竹林、渡月桥、小火车）。<br>
-<strong>有马</strong>：日本三大古泉之一，<strong>泉质最好</strong>，但从 KIX 要换 3 次车（巴士/电车/缆车），落地累+晚到风险大；适合放在中段而非第一晚。</p>
-</div>
-</div>
-
-<div class="card">
-<h2>♨️ 第一晚温泉酒店推荐（岚山）</h2>
-<div class="table-wrap">
-<table>
-<thead><tr><th>酒店</th><th>价位/晚</th><th>亮点</th></tr></thead>
-<tbody>
-<tr><td><strong>岚山辨庆</strong></td><td>3,000—4,500 元</td><td>温泉+怀石+和室榻榻米 <span class="tag tag-best">首选</span></td></tr>
-<tr><td>翠岚 Luxury Collection</td><td>4,000—6,000 元</td><td>万豪集团高端、英伦+日式</td></tr>
-<tr><td>星のや京都</td><td>5,000—8,000 元</td><td>船入山中、最高端、<strong>提前 2 月</strong></td></tr>
-<tr><td>渡月亭</td><td>1,800—2,800 元</td><td>性价比和式旅馆</td></tr>
-<tr><td>花传抄</td><td>1,500—2,500 元</td><td>温泉+早晚餐含套餐</td></tr>
-</tbody>
-</table>
+<div class="alert alert-blue" style="margin-top:18px">
+<h4>预订贴士</h4>
+<p>Booking/Agoda/Klook 预订，注意取消政策。亚运+国庆不确定因素多，<strong>选可免费取消的</strong>。温泉旅馆怀石料理常需提前预约。</p>
 </div>
 </div>
 </div>
 
-<div class="section" id="onsen">
-<div class="card">
-<h2>♨️ 温泉对比：岚山 vs 有马 vs 箱根</h2>
-<div class="table-wrap">
-<table>
-<thead><tr><th>对比项</th><th>京都岚山</th><th>神户有马</th><th>箱根（方案B）</th></tr></thead>
-<tbody>
-<tr><td>泉质</td><td>美肌泉、单纯温泉</td><td><strong>金泉（含铁）+银泉（碳酸）</strong></td><td>17 种泉质，硫磺、酸性泉</td></tr>
-<tr><td>距离 KIX</td><td>~2h（首选第一晚）</td><td>~3h 换乘多</td><td>需新干线 + 巴士</td></tr>
-<tr><td>距离大阪市</td><td>1h</td><td>1h</td><td>太远（在东京方向）</td></tr>
-<tr><td>看点</td><td>竹林、渡月桥、小火车</td><td>古老温泉小镇、六甲山缆车</td><td><strong>富士山、芦之湖、黑鸡蛋、雕刻之森</strong></td></tr>
-<tr><td>历史氛围</td><td>★★★★（千年古都郊外）</td><td>★★★★★（700 年老铺）</td><td>★★★（江户时期温泉乡）</td></tr>
-<tr><td>自然氛围</td><td>★★★★（保津川峡谷）</td><td>★★★（六甲山）</td><td><strong>★★★★★（富士山+芦之湖）</strong></td></tr>
-<tr><td>泡汤体验</td><td>★★★（露天温泉）</td><td>★★★★★（金泉染发褐色）</td><td>★★★★（多酸值泉）</td></tr>
-<tr><td>方案 A 安排</td><td><strong>第一晚 9/25</strong></td><td>9/30 半日游</td><td>不安排</td></tr>
-<tr><td>方案 B 安排</td><td><strong>第一晚 9/25</strong></td><td>不安排</td><td><strong>10/1（1 晚）</strong></td></tr>
-</tbody>
-</table>
-</div>
-
-<h3>三种泉的详细对比</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🎋</span><h4>岚山 — 文人之汤</h4><p>京都郊外清雅泉，泉质温和。穿浴衣温泉街散步，吃汤豆腐怀石。</p></div>
-<div class="hl-box"><span class="icon">⛩️</span><h4>有马 — 古泉之王</h4><p><strong>金泉</strong>（褐色含铁）+<strong>银泉</strong>（无色碳酸）兼具。日本最古老温泉乡，700 年老铺密集。</p></div>
-<div class="hl-box"><span class="icon">🗻</span><h4>箱根 — 富士之畔</h4><p>17 种泉质散布全镇，搭配富士山+芦之湖+登山缆车，<strong>富士山打卡最佳地</strong>。</p></div>
-</div>
-
-<div class="alert alert-blue">
-<h4>💡 我的建议</h4>
-<p><strong>方案 A 关西深度：</strong>第一晚岚山温泉 + 9/30 神户有马泡金泉 = 两次温泉互补<br>
-<strong>方案 B 东京特种兵：</strong>第一晚岚山温泉 + 东京段 1 晚箱根温泉看富士山 = <strong>关东+关西温泉一次玩到</strong></p>
-</div>
-</div>
-</div>
-
-<div class="section" id="itinerary">
-
-<div class="plan-a-only">
-<div class="card">
-<h2>🏯 方案 A · 关西深度 10 天行程</h2>
-<div class="day-grid">
-
-<div class="day-card">
-<span class="day-num">DAY 1</span>
-<div class="date">9/25 周五 · 抵达+岚山温泉</div>
-<div class="day-title">济南 → KIX → 岚山温泉</div>
-<ul>
-<li><span class="time">15:00</span>KIX 落地</li>
-<li><span class="time">16:30</span>出关，黑猫宅急便寄行李</li>
-<li><span class="time">17:00</span>JR Haruka → 京都站</li>
-<li><span class="time">18:30</span>JR山阴线/打车到岚山</li>
-<li><span class="time">19:00</span>入住岚山辨庆</li>
-<li><span class="time">19:30</span>♨️ 温泉+怀石料理</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 2</span>
-<div class="date">9/26 周六 · 岚山+京都</div>
-<div class="day-title">岚山小火车+京都市区</div>
-<ul>
-<li><span class="time">8:00</span>嵯峨野竹林（人少）</li>
-<li><span class="time">9:30</span>岚山小火车（提前预约）</li>
-<li><span class="time">11:00</span>渡月桥+天龙寺</li>
-<li><span class="time">13:00</span>京都豆腐料理午餐</li>
-<li><span class="time">15:00</span>金阁寺</li>
-<li><span class="time">17:00</span>锦市场</li>
-<li><span class="time">19:00</span>祇园+花见小路晚餐</li>
-<li><span class="time">21:00</span>入住京都酒店</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 3</span>
-<div class="date">9/27 周日 · 京都人文</div>
-<div class="day-title">伏见稻荷+清水寺</div>
-<ul>
-<li><span class="time">7:30</span>伏见稻荷（早去千本鸟居无人）</li>
-<li><span class="time">10:00</span>清水寺+三年坂二年坂</li>
-<li><span class="time">13:00</span>八坂神社旁午餐</li>
-<li><span class="time">14:30</span>银阁寺+哲学之道</li>
-<li><span class="time">17:00</span>二条城</li>
-<li><span class="time">19:00</span>京都站晚餐</li>
-<li><span class="time">21:00</span>JR新快速 → 大阪入住</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 4</span>
-<div class="date">9/28 周一 · 奈良</div>
-<div class="day-title">奈良一日</div>
-<ul>
-<li><span class="time">9:00</span>难波→近铁奈良 40 分</li>
-<li><span class="time">10:00</span>奈良公园喂鹿</li>
-<li><span class="time">11:30</span>东大寺大佛殿</li>
-<li><span class="time">13:00</span>奈良町柿叶寿司</li>
-<li><span class="time">14:30</span>春日大社</li>
-<li><span class="time">16:00</span>若草山</li>
-<li><span class="time">18:00</span>返回大阪</li>
-<li><span class="time">19:30</span>道顿堀晚餐</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 5</span>
-<div class="date">9/29 周二 · 神户+姬路</div>
-<div class="day-title">姬路城+神户</div>
-<ul>
-<li><span class="time">8:30</span>大阪→姬路 JR 新快速 1h</li>
-<li><span class="time">10:00</span>姬路城（世界遗产）</li>
-<li><span class="time">12:30</span>姬路午餐+回神户</li>
-<li><span class="time">14:30</span>神户北野异人馆</li>
-<li><span class="time">16:00</span>南京町</li>
-<li><span class="time">18:30</span>三宫神户牛肉晚餐</li>
-<li><span class="time">21:00</span>返回大阪</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 6</span>
-<div class="date">9/30 周三 · 有马温泉</div>
-<div class="day-title">六甲山+有马温泉</div>
-<ul>
-<li><span class="time">8:30</span>大阪→六甲山缆车</li>
-<li><span class="time">10:30</span>摩耶山掬星台</li>
-<li><span class="time">12:30</span>六甲山牧场午餐</li>
-<li><span class="time">15:00</span>入住有马温泉兵卫向阳阁</li>
-<li><span class="time">16:00</span>♨️ 金汤银汤</li>
-<li><span class="time">18:30</span>怀石料理</li>
-</ul>
-</div>
-
-<div class="day-card special">
-<span class="day-num">DAY 7</span>
-<div class="date">10/1 周四 · USJ ⚠️</div>
-<div class="day-title">环球影城+任天堂世界</div>
-<ul>
-<li><span class="time">7:00</span>退房去 USJ</li>
-<li><span class="time">9:00</span>入园</li>
-<li><span class="time">9:30</span><strong>超级任天堂世界</strong>（马里奥赛车）</li>
-<li><span class="time">12:00</span>哈利波特禁忌之旅</li>
-<li><span class="time">15:00</span>咒术回战 4D</li>
-<li><span class="time">19:00</span>夜场水上秀</li>
-<li><span class="time">21:00</span>闭园回酒店</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 8</span>
-<div class="date">10/2 周五 · 大阪深度</div>
-<div class="day-title">大阪市内+购物</div>
-<ul>
-<li><span class="time">9:00</span>大阪城天守阁</li>
-<li><span class="time">11:30</span>黑门市场吃海鲜</li>
-<li><span class="time">14:00</span>梅田空中庭园+阪急百货</li>
-<li><span class="time">17:00</span>心斋桥御堂筋（户外品牌）</li>
-<li><span class="time">19:00</span>道顿堀蟹道乐</li>
-<li><span class="time">21:00</span>HEP FIVE 摩天轮</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 9</span>
-<div class="date">10/3 周六 · 扫货+关空</div>
-<div class="day-title">购物+移动到关空</div>
-<ul>
-<li><span class="time">9:00</span>美国村潮牌</li>
-<li><span class="time">12:00</span>松本清/大国药妆扫保健品</li>
-<li><span class="time">14:00</span>退房</li>
-<li><span class="time">15:30</span>移动到关空酒店</li>
-<li><span class="time">17:00</span>Rinku Premium Outlet</li>
-<li><span class="time">19:30</span>晚餐+休整</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 10</span>
-<div class="date">10/4 周日 · 回程</div>
-<div class="day-title">Rinku 扫货 → 回济南</div>
-<ul>
-<li><span class="time">10:00</span>Rinku Outlet 开门冲一波</li>
-<li><span class="time">12:30</span>回酒店取行李</li>
-<li><span class="time">13:30</span>关空 T1 值机</li>
-<li><span class="time">14:30</span>免税店保健品/电器/酒</li>
-<li><span class="time">下午</span>起飞回济南</li>
-</ul>
-</div>
-
-</div>
-</div>
-</div>
-
-<div class="plan-b-only">
-<div class="card">
-<h2>🚄 方案 B · 东京+大阪特种兵 10 天行程</h2>
-<div class="alert alert-blue">
-<h4>整体节奏</h4>
-<p>关西 4 天（D1—D4）→ 新干线奔东京 5 天（D5—D9）→ 飞机回济南。<br>
-<strong>注意</strong>：D9 晚回大阪赶班机；如机票可改为东京成田/羽田回济南，更轻松。</p>
-</div>
-<div class="day-grid">
-
-<div class="day-card">
-<span class="day-num">DAY 1</span>
-<div class="date">9/25 周五 · 抵达+岚山温泉</div>
-<div class="day-title">济南 → KIX → 岚山温泉</div>
-<ul>
-<li><span class="time">15:00</span>KIX 落地</li>
-<li><span class="time">16:30</span>黑猫宅急便寄行李</li>
-<li><span class="time">17:00</span>JR Haruka → 京都站</li>
-<li><span class="time">19:00</span>抵达岚山辨庆</li>
-<li><span class="time">19:30</span>♨️ 温泉+怀石</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 2</span>
-<div class="date">9/26 周六 · 京都人文</div>
-<div class="day-title">岚山+京都市内 1 日打透</div>
-<ul>
-<li><span class="time">7:30</span>嵯峨野竹林+岚山小火车</li>
-<li><span class="time">11:00</span>退房存行李</li>
-<li><span class="time">11:30</span>移动到京都市内</li>
-<li><span class="time">12:30</span>锦市场午餐</li>
-<li><span class="time">14:00</span>清水寺+三年坂</li>
-<li><span class="time">16:30</span>祇园+花见小路</li>
-<li><span class="time">18:00</span>京都晚餐</li>
-<li><span class="time">20:00</span>JR 新快速 → 大阪入住难波</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 3</span>
-<div class="date">9/27 周日 · 奈良+大阪夜</div>
-<div class="day-title">奈良半日 + 大阪市内</div>
-<ul>
-<li><span class="time">7:30</span>伏见稻荷（千本鸟居）</li>
-<li><span class="time">10:00</span>近铁→奈良</li>
-<li><span class="time">10:30</span>奈良公园+东大寺</li>
-<li><span class="time">13:00</span>奈良町午餐</li>
-<li><span class="time">15:00</span>返回大阪</li>
-<li><span class="time">16:00</span>大阪城</li>
-<li><span class="time">18:00</span>道顿堀+心斋桥</li>
-<li><span class="time">21:00</span>HEP FIVE 摩天轮</li>
-</ul>
-</div>
-
-<div class="day-card special">
-<span class="day-num">DAY 4</span>
-<div class="date">9/28 周一 · USJ ⚠️</div>
-<div class="day-title">USJ 任天堂世界</div>
-<ul>
-<li><span class="time">7:00</span>出发去 USJ</li>
-<li><span class="time">9:00</span>入园</li>
-<li><span class="time">9:30</span><strong>任天堂世界（马里奥赛车）</strong></li>
-<li><span class="time">12:00</span>哈利波特</li>
-<li><span class="time">15:00</span>咒术回战 4D</li>
-<li><span class="time">17:00</span>小黄人公园</li>
-<li><span class="time">19:00</span>夜场水上秀</li>
-<li><span class="time">21:30</span>回大阪酒店休息</li>
-</ul>
-</div>
-
-<div class="day-card tokyo">
-<span class="day-num">DAY 5</span>
-<div class="date">9/29 周二 · 奔东京</div>
-<div class="day-title">新干线 → 东京浅草+银座</div>
-<ul>
-<li><span class="time">8:30</span>大阪退房，行李黑猫到东京酒店</li>
-<li><span class="time">10:00</span>新大阪→东京 のぞみ号 2.5h</li>
-<li><span class="time">13:00</span>抵达东京站，午餐</li>
-<li><span class="time">15:00</span>浅草寺+雷门</li>
-<li><span class="time">17:00</span>晴空塔（夜景）</li>
-<li><span class="time">19:30</span>银座晚餐+逛街</li>
-<li><span class="time">22:00</span>入住东京酒店</li>
-</ul>
-</div>
-
-<div class="day-card tokyo">
-<span class="day-num">DAY 6</span>
-<div class="date">9/30 周三 · 镰仓一日</div>
-<div class="day-title">灌篮高手镰仓+江ノ電</div>
-<ul>
-<li><span class="time">8:30</span>东京→镰仓 JR 横须贺线 1h</li>
-<li><span class="time">10:00</span>鹤冈八幡宫</li>
-<li><span class="time">11:30</span>江ノ電镰仓站</li>
-<li><span class="time">12:00</span><strong>镰仓高校前道口</strong>（灌篮高手）</li>
-<li><span class="time">13:30</span>江之岛吃海鲜</li>
-<li><span class="time">15:30</span>长谷大佛</li>
-<li><span class="time">17:00</span>稻村崎看日落</li>
-<li><span class="time">19:30</span>返回东京晚餐</li>
-</ul>
-</div>
-
-<div class="day-card tokyo">
-<span class="day-num">DAY 7</span>
-<div class="date">10/1 周四 · 箱根温泉</div>
-<div class="day-title">箱根+富士山+黑鸡蛋</div>
-<ul>
-<li><span class="time">8:00</span>新宿→箱根汤本（小田急 Romance Car 1.5h）</li>
-<li><span class="time">10:30</span>箱根登山缆车</li>
-<li><span class="time">11:30</span>大涌谷+<strong>黑鸡蛋</strong>+富士山打卡</li>
-<li><span class="time">13:30</span>芦之湖海盗船</li>
-<li><span class="time">15:00</span>雕刻之森美术馆</li>
-<li><span class="time">17:00</span>入住箱根温泉旅馆</li>
-<li><span class="time">18:30</span>♨️ 露天看富士+怀石</li>
-</ul>
-</div>
-
-<div class="day-card tokyo">
-<span class="day-num">DAY 8</span>
-<div class="date">10/2 周五 · 涩谷+秋叶原</div>
-<div class="day-title">东京潮流+动漫圣地</div>
-<ul>
-<li><span class="time">9:00</span>退房回东京</li>
-<li><span class="time">11:00</span>明治神宫+表参道</li>
-<li><span class="time">13:00</span>原宿竹下通午餐</li>
-<li><span class="time">14:30</span>涩谷十字路口+109百货</li>
-<li><span class="time">16:30</span><strong>秋叶原（动漫电器街）</strong></li>
-<li><span class="time">19:00</span>新宿/池袋晚餐</li>
-<li><span class="time">21:00</span>歌舞伎町夜景</li>
-</ul>
-</div>
-
-<div class="day-card tokyo">
-<span class="day-num">DAY 9</span>
-<div class="date">10/3 周六 · 吉卜力+回大阪</div>
-<div class="day-title">吉卜力美术馆+台场+新干线</div>
-<ul>
-<li><span class="time">10:00</span><strong>吉卜力美术馆</strong>（必抢票）</li>
-<li><span class="time">13:00</span>吉祥寺午餐</li>
-<li><span class="time">15:00</span>teamLab Planets 沉浸艺术</li>
-<li><span class="time">17:00</span>东京站药妆扫货</li>
-<li><span class="time">19:00</span>新干线→新大阪 2.5h</li>
-<li><span class="time">22:00</span>入住关空附近酒店</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">DAY 10</span>
-<div class="date">10/4 周日 · 回程</div>
-<div class="day-title">Rinku 扫货 → 回济南</div>
-<ul>
-<li><span class="time">10:00</span>Rinku Outlet 户外+折扣冲</li>
-<li><span class="time">12:30</span>取行李</li>
-<li><span class="time">13:30</span>关空 T1 值机</li>
-<li><span class="time">14:30</span>免税店</li>
-<li><span class="time">下午</span>起飞回济南</li>
-</ul>
-</div>
-
-</div>
-
-<div class="alert alert-yellow" style="margin-top:20px">
-<h4>⚠️ 方案 B 关键提醒</h4>
-<p>① 新干线一定要买 <strong>のぞみ Nozomi 号</strong>，最快 2h22m，普通指定席 14,720 日元/单程<br>
-② 吉卜力美术馆每月 10 日 10:00（日本时间）开抢下下月票，<strong>2026.07.10 抢 9 月，2026.08.10 抢 10 月</strong><br>
-③ 箱根行李：东京酒店保留房间，箱根只带过夜小包<br>
-④ D9 晚回大阪很赶，<strong>如果机票能改东京回济南更轻松</strong></p>
-</div>
-
-</div>
-</div>
-</div>
-
-<div class="section" id="hotel">
-<div class="card">
-<h2>🏨 关西段住宿（两方案通用）</h2>
-<div class="table-wrap">
-<table>
-<thead><tr><th>地段</th><th>酒店</th><th>价位/晚</th><th>亮点</th></tr></thead>
-<tbody>
-<tr><td colspan="4" style="background:#fef3c7"><strong>第一晚 · 岚山温泉</strong></td></tr>
-<tr><td>岚山</td><td>岚山辨庆</td><td>3000—4500</td><td>温泉+怀石+和室 <span class="tag tag-best">首选</span></td></tr>
-<tr><td>岚山</td><td>翠岚 Luxury Collection</td><td>4000—6000</td><td>万豪集团高端</td></tr>
-<tr><td>岚山</td><td>渡月亭</td><td>1800—2800</td><td>性价比和式</td></tr>
-<tr><td colspan="4" style="background:#dbeafe"><strong>京都市内（方案 A 1 晚）</strong></td></tr>
-<tr><td>京都站</td><td>京都都酒店</td><td>1500—2500</td><td>自带温泉</td></tr>
-<tr><td>祇园</td><td>祇园四季酒店</td><td>3500—5000</td><td>奢华和风</td></tr>
-<tr><td colspan="4" style="background:#d1fae5"><strong>大阪难波/心斋桥</strong></td></tr>
-<tr><td>难波</td><td>难波光芒酒店</td><td>900—1500</td><td>顶楼大浴场+亲子 <span class="tag tag-best">强推</span></td></tr>
-<tr><td>难波</td><td>大阪难波诺富特</td><td>1200—1800</td><td>2024 新开</td></tr>
-<tr><td>心斋桥</td><td>大阪 W 酒店</td><td>2500—3500</td><td>安藤忠雄设计</td></tr>
-<tr><td colspan="4" style="background:#fee2e2"><strong>梅田/中之岛</strong></td></tr>
-<tr><td>梅田</td><td>大阪丽思卡尔顿</td><td>3500—5000</td><td>老牌奢华</td></tr>
-<tr><td>中之岛</td><td>大阪康莱德</td><td>2500—3500</td><td>40 层景观</td></tr>
-<tr><td>梅田</td><td>大阪希尔顿</td><td>1800—2800</td><td>行政酒廊</td></tr>
-<tr><td colspan="4" style="background:#ede9fe"><strong>有马温泉（方案 A）</strong></td></tr>
-<tr><td>有马</td><td>兵卫向阳阁</td><td>2500—4000</td><td>700 年老铺、金银汤兼有</td></tr>
-<tr><td>有马</td><td>有马 Grand Hotel</td><td>2000—3000</td><td>家庭友好</td></tr>
-<tr><td colspan="4" style="background:#fce7f3"><strong>关空附近（最后一晚）</strong></td></tr>
-<tr><td>关空</td><td>关西机场日航酒店</td><td>1200—1800</td><td>直连航站楼</td></tr>
-<tr><td>临空</td><td>Star Gate Hotel</td><td>800—1200</td><td>距 Outlet 步行</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="card plan-b-only">
-<h2>🏨 东京段住宿（方案 B）</h2>
-<div class="alert alert-blue">
-<h4>📍 东京住宿黄金 3 选一</h4>
-<p><strong>新宿</strong>：交通枢纽、夜生活、近箱根 Romance Car<br>
-<strong>银座</strong>：奢华+购物、近东京站<br>
-<strong>浅草</strong>：传统氛围、价格友好</p>
-</div>
-<div class="table-wrap">
-<table>
-<thead><tr><th>地段</th><th>酒店</th><th>价位/晚</th><th>亮点</th></tr></thead>
-<tbody>
-<tr><td colspan="4" style="background:#fee2e2"><strong>高档</strong></td></tr>
-<tr><td>东京站</td><td>东京文华东方</td><td>4000—7000</td><td>东京顶级</td></tr>
-<tr><td>新宿</td><td>柏悦东京 Park Hyatt</td><td>3500—5500</td><td>《迷失东京》取景</td></tr>
-<tr><td>银座</td><td>东京半岛酒店</td><td>4000—6000</td><td>奢华</td></tr>
-<tr><td colspan="4" style="background:#dbeafe"><strong>中档</strong></td></tr>
-<tr><td>新宿</td><td>京王广场酒店</td><td>1500—2200</td><td>新宿西口、老牌四星</td></tr>
-<tr><td>新宿</td><td>新宿格拉斯丽</td><td>1800—2500</td><td>哥斯拉酒店、亲子有趣</td></tr>
-<tr><td>银座</td><td>三井花园银座</td><td>1500—2200</td><td>顶楼大浴场</td></tr>
-<tr><td colspan="4" style="background:#d1fae5"><strong>经济</strong></td></tr>
-<tr><td>新宿</td><td>新宿东横 INN</td><td>500—800</td><td>含早</td></tr>
-<tr><td>浅草</td><td>浅草 APA Hotel</td><td>600—1000</td><td>有大浴场</td></tr>
-<tr><td colspan="4" style="background:#ede9fe"><strong>箱根温泉（方案 B 必住 1 晚）</strong></td></tr>
-<tr><td>箱根强罗</td><td>箱根强罗花坛</td><td>3500—5500</td><td>看富士山</td></tr>
-<tr><td>箱根仙石原</td><td>箱根 Hyatt Regency</td><td>2500—4000</td><td>家族式温泉</td></tr>
-<tr><td>箱根汤本</td><td>箱根汤本 Hotel</td><td>1500—2500</td><td>性价比</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div class="section" id="transport">
-<div class="card">
-<h2>🚄 跨城交通对比</h2>
-<h3>关西内部</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>路线</th><th>方式</th><th>耗时</th><th>价格</th></tr></thead>
-<tbody>
-<tr><td>大阪 ↔ 京都</td><td><strong>JR 新快速</strong></td><td>28 分</td><td>580 日元</td></tr>
-<tr><td>大阪 ↔ 奈良</td><td>近铁奈良线</td><td>40 分</td><td>680 日元</td></tr>
-<tr><td>大阪 ↔ 神户</td><td>阪急神户线</td><td>28 分</td><td>330 日元</td></tr>
-<tr><td>大阪 ↔ 姬路</td><td>JR 新快速</td><td>60 分</td><td>1,520 日元</td></tr>
-<tr><td>大阪 ↔ 有马</td><td>阪急+神户电铁</td><td>70 分</td><td>~1,000 日元</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="plan-b-only">
-<h3>关东内部（方案 B）</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>路线</th><th>方式</th><th>耗时</th><th>价格</th></tr></thead>
-<tbody>
-<tr><td><strong>新大阪 ↔ 东京</strong></td><td>新干线 のぞみ Nozomi</td><td>2h22m</td><td>14,720 日元</td></tr>
-<tr><td>东京 ↔ 镰仓</td><td>JR 横须贺线</td><td>55 分</td><td>940 日元</td></tr>
-<tr><td>新宿 ↔ 箱根汤本</td><td><strong>小田急 Romance Car</strong></td><td>1h25m</td><td>2,470 日元</td></tr>
-<tr><td>东京 ↔ 富士山五合目</td><td>巴士直达</td><td>2.5h</td><td>2,800 日元</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="alert alert-blue">
-<h4>💡 方案 B JR Pass 选择</h4>
-<p>普通全国 JR Pass 已涨价不划算。建议：<br>
-① <strong>关西广域 5 日券</strong>（10,000 日元）：覆盖关西+冈山<br>
-② <strong>箱根周游券 2 日</strong>（6,100 日元）：含 Romance Car+登山缆车+海盗船<br>
-③ <strong>新干线单买</strong>：东京来回 2 趟约 3 万日元，比全国 JR Pass 还便宜</p>
-</div>
-</div>
-
-<h3>市内交通工具</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">💳</span><h4>ICOCA / Suica</h4><p>关西用 ICOCA、关东用 Suica。两卡通用，可用 Apple Pay 加。</p></div>
-<div class="hl-box"><span class="icon">🎫</span><h4>大阪周游券</h4><p>1日 2,800 / 2日 3,600 日元。含 40+ 景点+地铁巴士无限。</p></div>
-<div class="hl-box"><span class="icon">🚖</span><h4>滴滴日本</h4><p>支持中文+支付宝。计程车深夜加价 20%。</p></div>
-<div class="hl-box"><span class="icon">🚚</span><h4>黑猫宅急便</h4><p>1500-2500 日元/件，行李直送酒店。<strong>关西↔东京移动神器</strong>。</p></div>
-</div>
-</div>
-</div>
-
-<div class="section" id="anime">
-<div class="card">
-<h2>🎮 动漫/打卡圣地</h2>
-
-<div class="plan-b-only">
-<h3>东京方向（方案 B 包含）</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">📺</span><h4>秋叶原</h4><p>动漫+电器街、Animate 旗舰、AKB48 剧场、女仆咖啡、Mandarake、Yodobashi 八层电器</p></div>
-<div class="hl-box"><span class="icon">🎨</span><h4>中野百老汇 Mandarake</h4><p>古早动漫周边圣地、绝版手办、稀有卡牌</p></div>
-<div class="hl-box"><span class="icon">📚</span><h4>池袋 Animate 总店</h4><p>女性向圣地、乙女向最齐全</p></div>
-<div class="hl-box"><span class="icon">🍃</span><h4>吉卜力美术馆（三鹰）</h4><p><strong>必抢票</strong>，每月 10 日 10:00 抢下下月票</p></div>
-<div class="hl-box"><span class="icon">🌌</span><h4>teamLab Planets（丰洲）</h4><p>沉浸式数字艺术，提前 KKday 订票</p></div>
-<div class="hl-box"><span class="icon">🏀</span><h4>镰仓高校前道口</h4><p>《灌篮高手》OP 同款道口</p></div>
-<div class="hl-box"><span class="icon">📕</span><h4>东京塔/晴空塔</h4><p>动漫常出现地标</p></div>
-<div class="hl-box"><span class="icon">🎭</span><h4>歌舞伎町</h4><p>《孤独的美食家》取景</p></div>
-<div class="hl-box"><span class="icon">⭐</span><h4>明治神宫前</h4><p>《灌篮高手》《你的名字》场景</p></div>
-</div>
-</div>
-
-<h3>关西方向（两方案都有）</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🎮</span><h4>大阪日本桥（电电街）</h4><p>大阪秋叶原，动漫+电器街，难波附近</p></div>
-<div class="hl-box"><span class="icon">🍄</span><h4>USJ 任天堂世界</h4><p>马里奥赛车 AR、耀西冒险、马里奥村全景</p></div>
-<div class="hl-box"><span class="icon">🧙</span><h4>USJ 哈利波特禁忌之旅</h4><p>霍格莫德村、奶油啤酒、4D 飞行</p></div>
-<div class="hl-box"><span class="icon">👹</span><h4>USJ 咒术回战 4D</h4><p>限定期间表演，宿傩 vs 五条悟</p></div>
-<div class="hl-box"><span class="icon">🐱</span><h4>难波吉卜力专卖店</h4><p>橡子共和国、龙猫周边</p></div>
-<div class="hl-box"><span class="icon">⛩️</span><h4>伏见稻荷</h4><p>《艺伎回忆录》《名侦探柯南》经典场景</p></div>
-</div>
-
-<div class="alert alert-yellow">
-<h4>⚠️ 吉卜力美术馆抢票流程（方案 B 必看）</h4>
-<p>① 通过 Lawson 票务网站（罗森便利店）抢票<br>
-② 每月 10 日 10:00（日本时间）开放下下月购票<br>
-③ <strong>2026/07/10 抢 9 月票，08/10 抢 10 月票</strong><br>
-④ 票分 4 个时段（10:00/12:00/14:00/16:00），选第一时段最从容<br>
-⑤ 也可通过 Klook/KKday 代抢，加价约 200 元/张但成功率高</p>
-</div>
-</div>
-</div>
-
+<!-- ============ 购物 ============ -->
 <div class="section" id="shopping">
 <div class="card">
-<h2>🥾 户外品牌</h2>
-<h3>大阪心斋桥/南船场（旗舰店）</h3>
+<h2>🛍️ 购物清单</h2>
+
+<h3>🏔️ 户外品牌（核心）</h3>
+<div class="compare">
+<div class="compare-col left">
+<h4>关西</h4>
+<ul>
+<li>心斋桥/南船场：Snow Peak旗舰、Mont-bell本店</li>
+<li>Goldwin（TNF紫标）、Arc'teryx、Patagonia</li>
+<li>Rinku Outlet（回程必去）：折扣3-7折</li>
+<li>神户三田Premium Outlet（如时间够）</li>
+</ul>
+</div>
+<div class="compare-col right">
+<h4>东京</h4>
+<ul>
+<li>原宿表参道：Snow Peak Tokyo、Arc'teryx</li>
+<li>新宿/涩谷：Mont-bell新宿、Beams户外线</li>
+<li>下北泽：古着+独立品牌</li>
+</ul>
+</div>
+</div>
+
+<h3>👕 潮牌</h3>
 <div class="hl-grid">
-<div class="hl-box"><h4>Snow Peak</h4><p>日本顶级、比国内便宜 30—50%</p></div>
-<div class="hl-box"><h4>Mont-bell</h4><p>日本国民户外、性价比之王</p></div>
-<div class="hl-box"><h4>The North Face 紫标</h4><p><strong>日本独有</strong>，Goldwin 旗舰</p></div>
-<div class="hl-box"><h4>Arc'teryx 始祖鸟</h4><p>比国内便宜约 20%</p></div>
-<div class="hl-box"><h4>Patagonia</h4><p>日本限定色多</p></div>
-<div class="hl-box"><h4>Salomon</h4><p>跑鞋/越野鞋齐全</p></div>
+<div class="hl-box"><span class="icon">🧢</span><h4>关西·美国村</h4><p>BAPE / Supreme / Stüssy / Human Made / Neighborhood / Wtaps</p></div>
+<div class="hl-box"><span class="icon">👜</span><h4>东京·原宿</h4><p>Cat Street 古着 + 涩谷潮流 + 下北泽Vintage</p></div>
+<div class="hl-box"><span class="icon">👟</span><h4>特色品牌</h4><p>三宅一生Bao Bao / Issey Miyake / Onitsuka Tiger本店</p></div>
 </div>
 
-<div class="plan-b-only">
-<h3>东京方向户外</h3>
-<div class="hl-grid">
-<div class="hl-box"><h4>The North Face 表参道</h4><p>表参道旗舰店、紫标专区</p></div>
-<div class="hl-box"><h4>Mont-bell 涉谷店</h4><p>东京最大店</p></div>
-<div class="hl-box"><h4>Goldwin 神宫前</h4><p>含 The North Face 紫标</p></div>
-<div class="hl-box"><h4>御殿场 Premium Outlet</h4><p>箱根附近、超大型户外+奢侈品折扣</p></div>
-</div>
-</div>
-
-<h3>折扣店</h3>
-<div class="alert alert-green">
-<h4>🛍️ Rinku Premium Outlet</h4>
-<p><strong>关空旁 1 站，回程当天必去</strong>。北面、Patagonia、始祖鸟、Columbia、Mont-bell 等。3—7 折。</p>
-</div>
-<div class="alert alert-blue">
-<h4>🛍️ 神户三田 Premium Outlet</h4>
-<p>关西最大，<strong>400+ 品牌</strong>，奢侈品+户外+潮牌全有。距大阪 1h。</p>
-</div>
-<div class="plan-b-only">
-<div class="alert alert-blue">
-<h4>🛍️ 御殿场 Premium Outlet（方案 B）</h4>
-<p>日本最大 Outlet，富士山下，奢侈品深度折扣。从箱根/东京新宿都可巴士直达。</p>
-</div>
-</div>
-</div>
-
-<div class="card">
-<h2>👕 潮牌</h2>
-<h3>大阪 — 美国村</h3>
-<div class="hl-grid">
-<div class="hl-box"><h4>BAPE</h4><p>A Bathing Ape 大阪</p></div>
-<div class="hl-box"><h4>Supreme</h4><p>御堂筋大阪店</p></div>
-<div class="hl-box"><h4>Stüssy</h4><p>大阪 Chapter</p></div>
-<div class="hl-box"><h4>Human Made</h4><p>NIGO 新品牌</p></div>
-<div class="hl-box"><h4>Onitsuka Tiger</h4><p>心斋桥本店，<strong>款式比国内全</strong></p></div>
-</div>
-
-<div class="plan-b-only">
-<h3>东京 — 涩谷/原宿/裏原宿</h3>
-<div class="hl-grid">
-<div class="hl-box"><h4>裏原宿（裏原）</h4><p>日本潮牌起源地</p></div>
-<div class="hl-box"><h4>BAPE 原宿本店</h4><p>NIGO 起家店</p></div>
-<div class="hl-box"><h4>Supreme 涩谷</h4><p>原宿最大店</p></div>
-<div class="hl-box"><h4>NEIGHBORHOOD 神宫前</h4><p>日本机能潮牌天花板</p></div>
-<div class="hl-box"><h4>Wtaps</h4><p>军装机能</p></div>
-<div class="hl-box"><h4>Visvim 神宫前</h4><p>设计师品牌</p></div>
-<div class="hl-box"><h4>BEAMS / UA / SHIPS</h4><p>东京买手店总店</p></div>
-<div class="hl-box"><h4>Dover Street Market 银座</h4><p>川久保玲帝国旗舰</p></div>
-</div>
-</div>
-</div>
-
-<div class="card">
-<h2>💊 保健品（必买）</h2>
+<h3>💊 保健品</h3>
 <div class="table-wrap">
 <table>
-<thead><tr><th>品类</th><th>推荐品牌</th></tr></thead>
+<thead><tr><th>品类</th><th>品牌</th><th>备注</th></tr></thead>
 <tbody>
-<tr><td>综合维生素</td><td>DHC / Fancl / Asahi Dear-Natura</td></tr>
-<tr><td>益生菌</td><td>强力 Wakamoto / 新ビオフェルミンS</td></tr>
-<tr><td>眼药水</td><td>参天 FX neo / Rohto 乐敦</td></tr>
-<tr><td>关节软骨素</td><td>ZS / Suntory Glucosamine</td></tr>
-<tr><td>护肝</td><td>HEPALYSE 黄金 / 强力肝精</td></tr>
-<tr><td>胶原蛋白</td><td>Fancl / 资生堂 PURE WHITE</td></tr>
-<tr><td>女性更年期</td><td>小林制药 命の母 A</td></tr>
-<tr><td>儿童 DHA</td><td>森永 / 朝日</td></tr>
-<tr><td>儿童退烧贴</td><td>小林冰宝贴</td></tr>
+<tr><td>综合维生素</td><td>DHC、Fancl、Asahi</td><td>DHC最便宜</td></tr>
+<tr><td>辅酶Q10</td><td>Kaneka认证</td><td>唯一原料商</td></tr>
+<tr><td>眼药水</td><td>参天FX neo、Rohto</td><td><span class="tag tag-warn">限购2瓶/人</span></td></tr>
+<tr><td>益生菌</td><td>强力Wakamoto、新ビオフェルミンS</td><td>经典便宜</td></tr>
+<tr><td>护肝</td><td>HEPALYSE黄金</td><td>应酬人士</td></tr>
+<tr><td>纳豆激酶</td><td>小林制药</td><td>心血管</td></tr>
+<tr><td>命の母A</td><td>小林制药</td><td>女性更年期</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-red">
-<h4>⚠️ 海关</h4>
-<p>个人物品+礼品总价不超过 5000 元免税。化妆品 6 瓶/品牌、保健品 6 瓶/品种以内。</p>
+<div class="alert alert-yellow" style="margin-top:15px">
+<h4>购买建议</h4>
+<p>大国药妆常比松本清便宜5-15%。单店满5000日元退税。<strong>海关规定：单品种≤6瓶/人，总价≤5000元避税</strong>。最佳购买日：回程前1-2天买，避免拎着走。</p>
+</div>
+
+<h3>📅 购物时间分配</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>日期</th><th>购物重点</th></tr></thead>
+<tbody>
+<tr><td>9/26</td><td>大阪心斋桥（户外+潮牌初探）</td></tr>
+<tr><td>9/29-10/1</td><td>东京（潮牌+户外+电器）</td></tr>
+<tr><td>10/3</td><td>大阪心斋桥全量扫货+药妆</td></tr>
+<tr><td>10/4上午</td><td><span class="tag tag-rec">Rinku Outlet + 关空免税</span></td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 
+<!-- ============ 交通 ============ -->
+<div class="section" id="transport">
+<div class="card">
+<h2>🚄 交通卡 & 通行证</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>卡/证</th><th>价格</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td>ICOCA / Suica</td><td>工本500日元</td><td>关西+东京通用，iPhone可加Apple Pay</td></tr>
+<tr><td><span class="tag tag-rec">大阪周游券1日</span></td><td>2,800日元</td><td>9/26用，含40+景点免费+地铁巴士</td></tr>
+<tr><td>关西JR Pass 3日</td><td>5,600日元</td><td>不推荐（单买更灵活）</td></tr>
+<tr><td><span class="tag tag-warn">新干线のぞみ指定席</span></td><td>14,720日元/程</td><td>务必提前14天订（亚运+国庆）</td></tr>
+<tr><td>河口湖往返</td><td>约3,000日元</td><td>新宿出发，巴士或电车</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-blue" style="margin-top:18px">
+<h4>新干线购票</h4>
+<p>JR官网、车站售票机、或 Klook/KKday 代购。亚运+国庆期间<strong>建议出发前14天锁定指定席</strong>，否则只能站自由席。普通JR Pass涨价后性价比大跌，不推荐。</p>
+</div>
+</div>
+
+<div class="card">
+<h2>🚃 关键跨城交通</h2>
+<h3>大阪 ↔ 京都</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>JR新快速</td><td>28分钟</td><td>580日元</td><td><span class="tag tag-best">最佳选择</span></td></tr>
+<tr><td>阪急（梅田→河原町）</td><td>45分钟</td><td>410日元</td><td>近河原町祇园直达</td></tr>
+</tbody>
+</table>
+</div>
+<h3>大阪 ↔ 奈良</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>近铁奈良线</td><td>40分钟</td><td>680日元</td><td><span class="tag tag-best">直达奈良公园首选</span></td></tr>
+</tbody>
+</table>
+</div>
+<h3>大阪 ↔ 东京</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>新干线のぞみ</td><td>2小时30分</td><td>14,720日元</td><td><span class="tag tag-rec">首选，指定席早订</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- ============ 美食 ============ -->
 <div class="section" id="food">
 <div class="card">
-<h2>🍣 必吃清单</h2>
-<h3>大阪</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🦀</span><h4>蟹道乐 道顿堀本店</h4><p>提前 1 月预约</p></div>
-<div class="hl-box"><span class="icon">🍜</span><h4>金龙拉面 / 神座拉面</h4><p>道顿堀经典</p></div>
-<div class="hl-box"><span class="icon">🐙</span><h4>章鱼烧 Wanaka</h4><p>排队王</p></div>
-<div class="hl-box"><span class="icon">🥞</span><h4>大阪烧 美津 / 千房</h4><p>大阪烧鼻祖</p></div>
-<div class="hl-box"><span class="icon">🐟</span><h4>北村金枪鱼 黑门市场</h4><p>极品金枪鱼</p></div>
+<h2>🍜 必吃清单</h2>
+<div class="compare">
+<div class="compare-col left">
+<h4>关西</h4>
+<ul>
+<li>大阪：蟹道乐本店（提前1月订）</li>
+<li>大阪：一蘭拉面、章鱼烧Wanaka、大阪烧美津</li>
+<li>大阪：黑门市场海鲜</li>
+<li>京都：锦市场抹茶八桥、豆腐料理顺正</li>
+<li>京都：怀石菊乃井（提前1月订）</li>
+<li>京都：中村藤吉抹茶</li>
+<li>奈良：柿叶寿司平宗</li>
+<li>神户：神户牛Mouriya/Wakkoqu（提前1周订）</li>
+</ul>
 </div>
-<h3>京都</h3>
-<div class="hl-grid">
-<div class="hl-box"><h4>菊乃井</h4><p>米其林三星怀石</p></div>
-<div class="hl-box"><h4>南禅寺顺正</h4><p>豆腐料理</p></div>
-<div class="hl-box"><h4>中村藤吉本店</h4><p>抹茶冰</p></div>
-<div class="hl-box"><h4>茶寮都路里</h4><p>祇园甜品</p></div>
-</div>
-<h3>神户/奈良</h3>
-<div class="hl-grid">
-<div class="hl-box"><h4>Mouriya</h4><p>老字号神户牛</p></div>
-<div class="hl-box"><h4>柿の葉寿し 平宗</h4><p>奈良柿叶寿司</p></div>
-<div class="hl-box"><h4>南京町 老祥记</h4><p>神户小笼包</p></div>
-</div>
-
-<div class="plan-b-only">
-<h3>东京</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🍣</span><h4>筑地外市场</h4><p>金枪鱼丼、海胆、玉子烧</p></div>
-<div class="hl-box"><span class="icon">🐟</span><h4>寿司大 / 寿司清</h4><p>顶级寿司</p></div>
-<div class="hl-box"><span class="icon">🍜</span><h4>一兰拉面 涩谷</h4><p>原版一兰</p></div>
-<div class="hl-box"><span class="icon">🥩</span><h4>烧肉 牛角</h4><p>东京烧肉</p></div>
-<div class="hl-box"><span class="icon">🍱</span><h4>浅草今半</h4><p>百年寿喜烧</p></div>
-<div class="hl-box"><span class="icon">🍡</span><h4>浅草雷门 抹茶</h4><p>抹茶冰淇淋</p></div>
-<div class="hl-box"><span class="icon">🍰</span><h4>HARBS</h4><p>千层蛋糕</p></div>
-<div class="hl-box"><span class="icon">🍤</span><h4>新宿 鳗鱼伊势喜</h4><p>百年鳗鱼老店</p></div>
-</div>
-<h3>箱根</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🥚</span><h4>大涌谷黑鸡蛋</h4><p>地热温泉煮鸡蛋，吃一颗据说延寿 7 年</p></div>
-<div class="hl-box"><span class="icon">🍮</span><h4>箱根汤本豆腐</h4><p>温泉豆腐料理</p></div>
+<div class="compare-col right">
+<h4>东京</h4>
+<ul>
+<li>一蘭拉面</li>
+<li>矶丸水产</li>
+<li>藏寿司（回转）</li>
+<li>monjayaki（文字烧）</li>
+<li>银座寿司</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 
+<!-- ============ 预算 ============ -->
 <div class="section" id="budget">
 <div class="card">
-<h2>💰 预算对比（人均 · 2 人成行）</h2>
-
-<h3>方案 A · 关西深度</h3>
+<h2>💰 预算参考（人均，2人成行）</h2>
 <div class="table-wrap">
 <table>
 <thead><tr><th>项目</th><th>经济档</th><th>中档</th><th>高档</th></tr></thead>
 <tbody>
-<tr><td>往返机票</td><td>2,500</td><td>3,500</td><td>5,000</td></tr>
-<tr><td>酒店 9 晚</td><td>5,500</td><td>8,500</td><td>16,000</td></tr>
-<tr><td>交通（市内+城际）</td><td>1,500</td><td>2,000</td><td>2,500</td></tr>
-<tr><td>餐饮</td><td>3,500</td><td>6,000</td><td>10,000</td></tr>
-<tr><td>门票（USJ等）</td><td>1,500</td><td>1,500</td><td>2,500</td></tr>
-<tr><td>购物</td><td>5,000</td><td>12,000</td><td>30,000</td></tr>
+<tr><td>往返机票（济南-大阪）</td><td>2,500</td><td>3,500</td><td>5,000</td></tr>
+<tr><td>酒店9晚</td><td>4,500</td><td>7,500</td><td>15,000</td></tr>
+<tr><td>新干线东京往返</td><td>1,500</td><td>1,500</td><td>1,500</td></tr>
+<tr><td>市内+城际交通</td><td>1,000</td><td>1,500</td><td>2,000</td></tr>
+<tr><td>餐饮</td><td>3,000</td><td>5,000</td><td>8,000</td></tr>
+<tr><td>温泉旅馆（2晚含怀石）</td><td>1,500</td><td>3,000</td><td>6,000</td></tr>
+<tr><td>购物（户外+潮牌+保健品）</td><td>5,000</td><td>12,000</td><td>30,000</td></tr>
 <tr><td>杂项</td><td>1,000</td><td>2,000</td><td>3,000</td></tr>
-<tr><td><strong>合计/人</strong></td><td><strong>20,500</strong></td><td><strong>35,500</strong></td><td><strong>69,000</strong></td></tr>
+<tr style="font-weight:700"><td>合计/人（元RMB）</td><td>20,000</td><td>36,000</td><td>70,500</td></tr>
 </tbody>
 </table>
 </div>
-
-<h3>方案 B · 东京+大阪 特种兵</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>项目</th><th>经济档</th><th>中档</th><th>高档</th></tr></thead>
-<tbody>
-<tr><td>往返机票</td><td>2,500</td><td>3,500</td><td>5,000</td></tr>
-<tr><td>酒店 9 晚（东京贵约 30%）</td><td>6,500</td><td>10,000</td><td>20,000</td></tr>
-<tr><td>新干线（往返）</td><td>1,800</td><td>1,800</td><td>1,800</td></tr>
-<tr><td>市内+城际交通</td><td>2,000</td><td>2,500</td><td>3,000</td></tr>
-<tr><td>餐饮</td><td>3,500</td><td>6,500</td><td>11,000</td></tr>
-<tr><td>门票（USJ+吉卜力+teamLab+箱根）</td><td>2,000</td><td>2,500</td><td>3,500</td></tr>
-<tr><td>购物</td><td>5,000</td><td>12,000</td><td>30,000</td></tr>
-<tr><td>杂项</td><td>1,500</td><td>2,500</td><td>3,500</td></tr>
-<tr><td><strong>合计/人</strong></td><td><strong>24,800</strong></td><td><strong>41,300</strong></td><td><strong>77,800</strong></td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="alert alert-blue">
-<h4>💡 总结</h4>
-<p>方案 B 比方案 A 贵约 <strong>5,000—9,000 元/人</strong>，主要是新干线 + 东京酒店贵 + 多 2 个景点门票。但作为<strong>第一次日本旅行</strong>，多花这点钱体验东京+富士山+镰仓，性价比非常高。</p>
+<div class="alert alert-green" style="margin-top:18px">
+<h4>预算说明</h4>
+<p>中档 ≈ <strong>3.6万/人 / 7.2万双人（含购物）</strong>。汇率参考：1日元 ≈ 0.047元人民币（2026年参考，实际以预订时为准）。东京酒店比关西贵约30%，亚运+国庆期间波动大。</p>
 </div>
 </div>
 </div>
 
+<!-- ============ 出行清单 ============ -->
 <div class="section" id="checklist">
 <div class="card">
-<h2>✅ 出行前 Checklist</h2>
+<h2>✅ 出行前 48 小时 Checklist</h2>
 
-<h3>📄 证件</h3>
-<div class="hl-grid">
-<div class="hl-box"><p>☐ 护照（有效期至 2027.04 后）</p></div>
-<div class="hl-box"><p>☐ 日本签证</p></div>
-<div class="hl-box"><p>☐ 行程单+酒店预订单</p></div>
-<div class="hl-box"><p>☐ 身份证</p></div>
-</div>
+<h3>📋 证件</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 护照（有效期至2027年4月后）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 日本签证</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 身份证</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 行程单+酒店预订单（入境备查）</li>
+<li style="padding:6px 0">☐ 应急联系人</li>
+</ul>
 
-<h3>📱 提前预订</h3>
-<div class="hl-grid">
-<div class="hl-box"><p>☐ 往返机票（确认 9/25 下午班次 + 10/4 班次）</p></div>
-<div class="hl-box"><p>☐ 9 晚酒店（含温泉夜）</p></div>
-<div class="hl-box"><p>☐ <strong>USJ 门票 + Express Pass</strong></p></div>
-<div class="hl-box"><p>☐ <strong>吉卜力美术馆</strong>（方案 B，2026/07/10 开抢）</p></div>
-<div class="hl-box"><p>☐ teamLab Planets（方案 B）</p></div>
-<div class="hl-box"><p>☐ 岚山小火车</p></div>
-<div class="hl-box"><p>☐ 蟹道乐本店</p></div>
-<div class="hl-box"><p>☐ 旅行保险（医疗+航延）</p></div>
-</div>
+<h3>📝 已订</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 往返机票（济南-大阪）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9晚酒店（含可免费取消的）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <span class="tag tag-warn">新干线のぞみ指定席</span>（9/29去东京 + 10/2返大阪）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 有马温泉+河口湖温泉旅馆（提前2个月订）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 蟹道乐/菊乃井/神户牛餐厅</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 涩谷Shibuya Sky门票</li>
+<li style="padding:6px 0">☐ 旅行保险（含医疗+航延）</li>
+</ul>
 
-<h3>📲 必备 App</h3>
-<div class="hl-grid">
-<div class="hl-box"><p>☐ Visit Japan Web 入境</p></div>
-<div class="hl-box"><p>☐ Google Maps 离线包</p></div>
-<div class="hl-box"><p>☐ Yahoo!乗換案内</p></div>
-<div class="hl-box"><p>☐ DiDi 日本</p></div>
-<div class="hl-box"><p>☐ eSIM / 随身 WiFi</p></div>
-<div class="hl-box"><p>☐ 大众点评</p></div>
-<div class="hl-box"><p>☐ Tabelog</p></div>
-<div class="hl-box"><p>☐ Klook / KKday</p></div>
-</div>
+<h3>🎒 装备</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 万能转换插头（日本A型扁脚100V，手机充电不需变压器）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 充电宝（≤100Wh随身）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 雨伞（9月底可能有雨/台风尾）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 长袖+薄外套（9月底18-27℃，早晚温差大）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 舒适步行鞋</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 空折叠箱（装购物）</li>
+<li style="padding:6px 0">☐ 个人药品</li>
+</ul>
 
 <h3>💴 资金</h3>
-<div class="hl-grid">
-<div class="hl-box"><p>☐ 3—5 万日元现金/人</p></div>
-<div class="hl-box"><p>☐ 银联+VISA 双币卡</p></div>
-<div class="hl-box"><p>☐ 支付宝/微信境外开通</p></div>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 3-5万日元现金</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 银联+VISA双币卡</li>
+<li style="padding:6px 0">☐ 支付宝/微信境外功能</li>
+</ul>
+
+<h3>📱 App</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Visit Japan Web 填好</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Google Maps 离线地图</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ DiDi 日本注册</li>
+<li style="padding:6px 0">☐ eSIM 开通</li>
+</ul>
 </div>
 
-<h3>🆘 紧急联系</h3>
+<div class="card">
+<h2>🆘 应急信息</h2>
+<div class="stats">
+<div class="stat"><span class="num">110</span><div class="label">报警</div></div>
+<div class="stat"><span class="num">119</span><div class="label">救护/消防</div></div>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>联系</th><th>电话</th></tr></thead>
+<tbody>
+<tr><td>中国驻大阪总领馆</td><td>+81-6-6445-9481</td></tr>
+<tr><td>中国驻东京大使馆</td><td>+81-3-3403-3380</td></tr>
+<tr><td>关西机场咨询</td><td>+81-72-455-2500</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>📱 必备App</h3>
 <div class="hl-grid">
-<div class="hl-box"><span class="icon">🚓</span><h4>报警</h4><p>110</p></div>
-<div class="hl-box"><span class="icon">🚑</span><h4>救护/消防</h4><p>119</p></div>
-<div class="hl-box"><span class="icon">🇨🇳</span><h4>中国驻大阪总领馆</h4><p>+81-6-6445-9481</p></div>
-<div class="hl-box"><span class="icon">🇨🇳</span><h4>中国驻东京大使馆</h4><p>+81-3-3403-3380</p></div>
+<div class="hl-box"><span class="icon">🗺️</span><h4>Google Maps</h4><p>导航+电车换乘</p></div>
+<div class="hl-box"><span class="icon">🚃</span><h4>Yahoo!乗換案内</h4><p>日本电车换乘神器</p></div>
+<div class="hl-box"><span class="icon">🚕</span><h4>DiDi日本</h4><p>中文叫车+支付宝</p></div>
+<div class="hl-box"><span class="icon">🎫</span><h4>Klook/KKday</h4><p>门票+新干线代购</p></div>
+</div>
+
+<h3>💰 退税 & 海关</h3>
+<div class="alert alert-blue">
+<h4>退税</h4>
+<p>满5,000日元（不含税）可退税，出示护照原件。消耗品（食品/化妆品）当场密封不能拆；一般物品（服装/电器）可使用。<strong>2026年4月起可能改为机场退税模式</strong>，出发前查最新政策。</p>
+</div>
+<div class="alert alert-yellow">
+<h4>海关回国</h4>
+<p>个人物品+礼品总价≤5,000元免税。化妆品≤6瓶/品牌，保健品≤6瓶/品种。<strong>不能带</strong>：肉制品、生鲜水果、活体动植物。<strong>可带</strong>：真空零食、糖果、瓶装酒、保健品。</p>
 </div>
 </div>
 </div>
 
 <div class="footer">
-🗾 祝你和家人在日本十天玩得尽兴！· 攻略 v2 · 2026.06
+<p>🗾 2026 日本 9 晚自由行攻略 · 关西温泉 + 东京都市</p>
+<p style="margin-top:6px">v2.0 · 2026-06-29 · 济南 ✈️ 大阪 KIX · 9 晚 10 天</p>
+<p style="margin-top:6px;font-size:12px;opacity:.7">变更：去除USJ、新增东京段+富士河口湖、Day1温泉开场、最后两天关西购物收尾、纳入亚运会与烟火大会考量</p>
 </div>
 
 </div>
@@ -1341,12 +1002,12 @@ if(window.matchMedia){
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{
     let saved=null;
     try{saved=localStorage.getItem(THEME_KEY)}catch(_){}
-    if(saved)return; /* user override, don't follow system */
+    if(saved)return;
     applyTheme(e.matches?'dark':'light');
   });
 }
 
-// ============ Plan A / B switch ============
+// ============ Plan A / B switch (关西/东京视角) ============
 document.querySelectorAll('.plan-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.plan-btn').forEach(b=>b.classList.remove('active'));
