@@ -146,6 +146,14 @@ tr:hover td{background:var(--bg-hover)}
 .route .node.tokyo{border-color:#2563eb;color:#2563eb}
 .route .arrow{color:var(--text-faint);font-size:16px}
 .footer{text-align:center;padding:30px 20px;color:var(--footer-color);font-size:13px;transition:color .3s}
+/* ============== Route Detail (具体线路步骤) ============== */
+.route-detail{margin:15px 0;padding:4px 0}
+.route-step{display:flex;gap:12px;padding:12px 14px;margin-bottom:8px;background:var(--bg-elevated);border-radius:10px;border-left:3px solid var(--accent);transition:background .3s,border-color .3s}
+.plan-b-mode .route-step{border-left-color:#2563eb}
+.route-step .step-no{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;transition:background .3s}
+.plan-b-mode .route-step .step-no{background:#2563eb}
+.route-step div{flex:1;font-size:13px;color:var(--text-secondary);line-height:1.5;transition:color .3s}
+.route-step div strong{color:var(--text-heading);transition:color .3s}
 .theme-toggle{position:fixed;top:16px;right:16px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--toggle-bg);border:1.5px solid var(--toggle-border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s,background .3s,border-color .3s;color:var(--toggle-icon);box-shadow:var(--shadow-sm)}
 .theme-toggle:hover{transform:scale(1.08) rotate(15deg)}
 .theme-toggle:active{transform:scale(.95)}
@@ -603,21 +611,96 @@ tr:hover td{background:var(--bg-hover)}
 <div class="alert alert-blue" style="margin-top:18px"><h4>新干线购票</h4><p>JR官网/车站售票机/Klook代购。亚运+国庆<strong>提前14天锁定指定席</strong>。普通JR Pass涨价后性价比大跌，不推荐。</p></div>
 </div>
 <div class="card">
-<h2>🚃 关键跨城交通</h2>
-<h3>大阪 ↔ 京都（日trip）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>JR新快速</td><td>28分钟</td><td>580日元</td><td><span class="tag tag-best">最佳·从大阪站发</span></td></tr></tbody></table></div>
-<h3>大阪 ↔ 奈良（日trip）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>近铁奈良线</td><td>40分钟</td><td>680日元</td><td><span class="tag tag-best">从难波直达</span></td></tr></tbody></table></div>
-<h3>大阪 ↔ 有马温泉（日trip）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>阪急+神户电铁</td><td>约70分钟</td><td>约1,000日元</td><td>梅田出发</td></tr></tbody></table></div>
-<h3>大阪 ↔ 东京（新干线跨越）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>新干线のぞみ</td><td>2小时30分</td><td>14,720日元</td><td><span class="tag tag-rec">指定席早订</span></td></tr></tbody></table></div>
-<h3>东京 ↔ 镰仓（日trip）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>JR湘南新宿线</td><td>约1小时</td><td>约920日元</td><td>新宿出发</td></tr></tbody></table></div>
-<h3>镰仓 → 河口湖（环线衔接）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>备注</th></tr></thead><tbody><tr><td>镰仓→大月(横须贺线+中央线)→河口湖(富士急)</td><td>约3.5小时</td><td>不回东京市区，少绕路</td></tr></tbody></table></div>
-<h3>河口湖 → 大阪（返程）</h3>
-<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>备注</th></tr></thead><tbody><tr><td>河口湖→三岛(巴士)→新大阪(新干线)</td><td>约2.5小时</td><td><span class="tag tag-best">最快·避开东京</span></td></tr></tbody></table></div>
+<h2>🚃 全程交通·每段具体线路</h2>
+<p style="color:var(--text-muted);font-size:13px;margin-bottom:18px">按行程顺序列出每段具体线路、换乘站、车种、票价。<strong>全程用 ICOCA/Suica 刷卡</strong>（iPhone 可加 Apple Pay），新干线除外。</p>
+
+<h3>① Day1 济南 ✈️ 大阪 KIX → 难波（大本营）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>航班</strong>：济南遥墙 TNA ✈️ 关西 KIX（春秋/山航，约2.5h）</div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>南海特急 Rapi:t</strong>：关西空港站 → 难波站（直达，38分钟，1,490日元）<br><span style="color:var(--text-muted);font-size:12px">推荐网上买 yokoso Osaka Ticket 约1,500日元含一张地铁一日券</span></div></div>
+<div class="route-step"><span class="step-no">3</span><div>步行至难波酒店（大本营）</div></div>
+</div>
+<div class="alert alert-blue" style="margin-top:10px"><p><strong>备选</strong>：南海空港急行（45分钟，970日元，便宜但站站停）；深夜抵达可包车（600-800元）</p></div>
+
+<h3>② Day2 大阪难波 → 有马温泉（日trip）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：难波站 → 梅田站（约8分钟，180日元）</div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>阪急神户本线 特急</strong>：梅田(阪急) → 三宫站（约30分钟，320日元）</div></div>
+<div class="route-step"><span class="step-no">3</span><div><strong>神户电铁有马线</strong>：三宫(阪急) → 有马温泉站（约30分钟，换乘1次谷上，约410日元）</div></div>
+<div class="route-step"><span class="step-no">4</span><div>步行至温泉旅馆（金汤银汤体验）</div></div>
+</div>
+<div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>方式</th><th>总耗时</th><th>总价</th><th>换乘</th></tr></thead><tbody><tr><td>阪急+神户电铁</td><td>约70分钟</td><td>约910日元</td><td>2次（梅田、谷上）</td></tr><tr><td><span class="tag tag-best">直达巴士</span></td><td>约60分钟</td><td>约1,800日元</td><td>0次（梅田/难波直达）</td></tr></tbody></table></div>
+
+<h3>③ Day3 大阪难波 → 京都（日trip）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：难波站 → 梅田站（8分钟，180日元）→ 步行至大阪站(JR)</div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>JR京都线 新快速</strong>：大阪站 → 京都站（<strong>直达28分钟，580日元</strong>）<br><span style="color:var(--text-muted);font-size:12px">新快速比普通车快，每15分钟一班，首选</span></div></div>
+</div>
+<div class="alert alert-green" style="margin-top:10px"><p><strong>备选直达</strong>：阪急京都线 梅田→河原町（45分钟，410日元，近祇园）；京阪本线 淀屋桥→祇园四条（50分钟，430日元）</p></div>
+
+<h3>④ Day4 大阪难波 → 奈良（日trip）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>近铁奈良线 急行</strong>：大阪难波站 → 近铁奈良站（<strong>直达40分钟，680日元</strong>）<br><span style="color:var(--text-muted);font-size:12px">从难波出发不用换乘，近铁奈良站步行10分钟到奈良公园</span></div></div>
+</div>
+<div class="alert alert-yellow" style="margin-top:10px"><p><strong>备选</strong>：JR大和路线 天王寺→JR奈良（30分钟，480日元，但离奈良公园稍远，需步行20分钟或巴士）</p></div>
+
+<h3>⑤ Day5 大阪难波 → 新大阪 → 东京新宿（新干线跨越）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：难波站 → 新大阪站（约13分钟，280日元）</div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>新干线 のぞみ号</strong>：新大阪站 → 东京站（<strong>2小时30分钟，14,720日元</strong>，指定席）<br><span style="color:var(--text-muted);font-size:12px">⚠️ 亚运+国庆，提前14天订指定席；のぞみ最快，ひかり/こだま更慢更便宜</span></div></div>
+<div class="route-step"><span class="step-no">3</span><div><strong>JR中央线</strong>：东京站 → 新宿站（约15分钟，200日元）；或地铁丸之内线（新宿站）</div></div>
+<div class="route-step"><span class="step-no">4</span><div>步行至新宿酒店（关东大本营）</div></div>
+</div>
+<div class="alert alert-red" style="margin-top:10px"><p><strong>🧳 行李</strong>：9/29出发前，大行李用<strong>黑猫宅急便</strong>从大阪难波酒店快递到东京新宿酒店（次日到，约1,500日元/件，酒店前台办），自己带小包坐新干线</p></div>
+
+<h3>⑥ Day6 东京新宿 市内（购物日）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>JR中央线</strong>：新宿 → 下北泽（小田急线，约5分钟，170日元）</div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>JR山手线</strong>：原宿 → 涩谷 → 秋叶原（环线，每段约5-15分钟，170-200日元）</div></div>
+<div class="route-step"><span class="step-no">3</span><div><strong>地铁银座线</strong>：涩谷 → 银座（约15分钟，180日元）</div></div>
+</div>
+<div class="alert alert-blue" style="margin-top:10px"><p><strong>省钱</strong>：东京地铁 24小时券（800日元）坐3次以上回本；或用 Suica 直接刷</p></div>
+
+<h3>⑦ Day7 东京新宿 → 镰仓（日trip）→ 河口湖</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>JR湘南新宿线 快速</strong>：新宿站 → 镰仓站（约55分钟，920日元）<br><span style="color:var(--text-muted);font-size:12px">直达不需换乘；或JR横须贺线从东京站发</span></div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>江之电</strong>：镰仓 → 镰仓高校前（灌篮高手道口）→ 长谷 → 江之岛（单程260日元，<strong>一日券1,500日元推荐</strong>）</div></div>
+<div class="route-step"><span class="step-no">3</span><div><strong>下午转场去河口湖</strong>：镰仓站 → 大船站（JR，6分钟）→ <strong>JR横须贺线/东海道线</strong> → 大月站（约2小时，换乘1次，约2,000日元）</div></div>
+<div class="route-step"><span class="step-no">4</span><div><strong>富士急行线</strong>：大月站 → 河口湖站（约45分钟，1,160日元）</div></div>
+<div class="route-step"><span class="step-no">5</span><div>步行/巴士至河口湖温泉旅馆</div></div>
+</div>
+<div class="alert alert-yellow" style="margin-top:10px"><p><strong>备选简化</strong>：镰仓日trip结束后回新宿取行李，10/2再去河口湖（但要回东京绕路）。<strong>当前方案不回东京市区，从镰仓直接绕到河口湖</strong>，少走回头路。</p></div>
+
+<h3>⑧ Day8 河口湖 → 大阪梅田（返程）</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>富士急巴士</strong>：河口湖站 → 三岛站（约1小时15分，2,200日元）<br><span style="color:var(--text-muted);font-size:12px">巴士需预约；或富士急行线+JR到大月转中央线</span></div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>新干线 のぞみ号</strong>：三岛站 → 新大阪站（约1小时，5,500日元，指定席）<br><span style="color:var(--text-muted);font-size:12px">⚠️ 三岛站 のぞみ停靠较少，确认班次；无则到三岛坐JR到新大阪（慢）</span></div></div>
+<div class="route-step"><span class="step-no">3</span><div><strong>大阪地铁御堂筋线</strong>：新大阪 → 梅田（3分钟，180日元）→ 入住梅田酒店</div></div>
+</div>
+<div class="alert alert-green" style="margin-top:10px"><p><strong>备选</strong>：河口湖 → 新宿（巴士2h）→ 新干线返大阪（2.5h），全程约5h，要回东京绕路但班次多更稳妥。<strong>当前三岛方案最快约2.5h</strong>。</p></div>
+
+<h3>⑨ Day9 大阪梅田 → 难波心斋桥 → 关空</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：梅田 → 心斋桥 → 难波（黄金线，每段约5分钟，180日元）</div></div>
+<div class="route-step"><span class="step-no">2</span><div>心斋桥/难波全天购物</div></div>
+<div class="route-step"><span class="step-no">3</span><div><strong>南海特急 Rapi:t</strong>：难波站 → 关西空港站（38分钟，1,490日元）；或南海空港急行（45分钟，970日元）</div></div>
+<div class="route-step"><span class="step-no">4</span><div>步行至关空酒店（关西机场日航/Star Gate）</div></div>
+</div>
+
+<h3>⑩ Day10 关空酒店 → Rinku Outlet → 关西机场 ✈️ 济南</h3>
+<div class="route-detail">
+<div class="route-step"><span class="step-no">1</span><div>步行或酒店班车至 Rinku Premium Outlet（关空旁1站）</div></div>
+<div class="route-step"><span class="step-no">2</span><div><strong>JR关西机场线</strong>：りんくうタウン站 → 关西空港站（约2分钟，370日元）；或南海线</div></div>
+<div class="route-step"><span class="step-no">3</span><div>关空T1值机（提前3小时）→ 免税店 → ✈️ 济南</div></div>
+</div>
+</div>
+
+<div class="card">
+<h2>🚇 市内交通速查</h2>
+<h3>大阪市内</h3>
+<div class="table-wrap"><table><thead><tr><th>线路</th><th>覆盖</th><th>票价</th></tr></thead><tbody><tr><td><strong>地铁御堂筋线(M)</strong></td><td>梅田-心斋桥-难波-天王寺（黄金线）</td><td>180-370日元</td></tr><tr><td>大阪周游券1日</td><td>地铁+巴士无限+40景点免费</td><td>2,800日元</td></tr><tr><td>JR环状线</td><td>大阪-天王寺-鹤桥环线</td><td>190日元起</td></tr></tbody></table></div>
+<h3>东京市内</h3>
+<div class="table-wrap"><table><thead><tr><th>线路</th><th>覆盖</th><th>票价</th></tr></thead><tbody><tr><td><strong>JR山手线</strong></td><td>环线：新宿-涩谷-原宿-东京-上野</td><td>170-260日元</td></tr><tr><td>JR中央线</td><td>东京-新宿-中野（东西向）</td><td>170日元起</td></tr><tr><td>地铁24h券</td><td>都营+东京地铁无限</td><td>800日元</td></tr></tbody></table></div>
 </div>
 </div>
 
