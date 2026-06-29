@@ -3,132 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 日本 9 晚自由行攻略 · 关西温泉 + 东京都市</title>
+<title>2026 日本 9 晚自由行攻略 · 不回头环线 · 关西大本营+东京镰仓河口湖</title>
 <style>
 /* ============== Theme Variables (Light) ============== */
 :root {
-  --bg-base: #f6f9fc;
-  --bg-base-2: #eef2f7;
-  --bg-card: #ffffff;
-  --bg-elevated: #f8f9fa;
-  --bg-hover: #fafbfc;
-  --text-primary: #2c3e50;
-  --text-secondary: #4b5563;
-  --text-muted: #6b7280;
-  --text-faint: #9ca3af;
-  --text-heading: #1a1a2e;
-  --border: #e5e7eb;
-  --border-soft: #f3f4f6;
-  --shadow-sm: 0 2px 10px rgba(0,0,0,.05);
-  --shadow-md: 0 4px 20px rgba(0,0,0,.06);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,.1);
-  --header-from: #e63946;
-  --header-to: #d62828;
-  --header-shadow: 0 10px 40px rgba(230,57,70,.2);
-  --header-meta-bg: rgba(255,255,255,.2);
-  --accent: #e63946;
-  --accent-2: #d62828;
-  --accent-soft: #f0f7ff;
-  --special: #f59e0b;
-  --route-bg: #f8f9fa;
-  --node-bg: #ffffff;
-  --tag-rec-bg: #fee2e2; --tag-rec-fg: #dc2626;
-  --tag-best-bg: #d1fae5; --tag-best-fg: #059669;
-  --tag-warn-bg: #fef3c7; --tag-warn-fg: #d97706;
-  --tag-info-bg: #dbeafe; --tag-info-fg: #2563eb;
-  --alert-yellow-bg: linear-gradient(135deg,#fff3cd,#ffe8a3);
-  --alert-yellow-fg: #92400e;
-  --alert-red-bg: linear-gradient(135deg,#fee,#fdd);
-  --alert-red-fg: #991b1b;
-  --alert-blue-bg: linear-gradient(135deg,#dbeafe,#bfdbfe);
-  --alert-blue-fg: #1e40af;
-  --alert-green-bg: linear-gradient(135deg,#d1fae5,#a7f3d0);
-  --alert-green-fg: #065f46;
-  --compare-left-bg: linear-gradient(135deg,#fee2e2,#fecaca);
-  --compare-left-fg: #991b1b;
-  --compare-right-bg: linear-gradient(135deg,#dbeafe,#bfdbfe);
-  --compare-right-fg: #1e40af;
-  --footer-color: #6b7280;
-  --toggle-bg: rgba(255,255,255,.25);
-  --toggle-border: rgba(255,255,255,.4);
-  --toggle-icon: #ffffff;
+  --bg-base: #f6f9fc; --bg-base-2: #eef2f7; --bg-card: #ffffff; --bg-elevated: #f8f9fa; --bg-hover: #fafbfc;
+  --text-primary: #2c3e50; --text-secondary: #4b5563; --text-muted: #6b7280; --text-faint: #9ca3af; --text-heading: #1a1a2e;
+  --border: #e5e7eb; --border-soft: #f3f4f6;
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.05); --shadow-md: 0 4px 20px rgba(0,0,0,.06); --shadow-lg: 0 8px 24px rgba(0,0,0,.1);
+  --header-from: #e63946; --header-to: #d62828; --header-shadow: 0 10px 40px rgba(230,57,70,.2); --header-meta-bg: rgba(255,255,255,.2);
+  --accent: #e63946; --accent-2: #d62828; --accent-soft: #f0f7ff; --special: #f59e0b;
+  --route-bg: #f8f9fa; --node-bg: #ffffff;
+  --tag-rec-bg: #fee2e2; --tag-rec-fg: #dc2626; --tag-best-bg: #d1fae5; --tag-best-fg: #059669; --tag-warn-bg: #fef3c7; --tag-warn-fg: #d97706; --tag-info-bg: #dbeafe; --tag-info-fg: #2563eb;
+  --alert-yellow-bg: linear-gradient(135deg,#fff3cd,#ffe8a3); --alert-yellow-fg: #92400e;
+  --alert-red-bg: linear-gradient(135deg,#fee,#fdd); --alert-red-fg: #991b1b;
+  --alert-blue-bg: linear-gradient(135deg,#dbeafe,#bfdbfe); --alert-blue-fg: #1e40af;
+  --alert-green-bg: linear-gradient(135deg,#d1fae5,#a7f3d0); --alert-green-fg: #065f46;
+  --compare-left-bg: linear-gradient(135deg,#fee2e2,#fecaca); --compare-left-fg: #991b1b;
+  --compare-right-bg: linear-gradient(135deg,#dbeafe,#bfdbfe); --compare-right-fg: #1e40af;
+  --footer-color: #6b7280; --toggle-bg: rgba(255,255,255,.25); --toggle-border: rgba(255,255,255,.4); --toggle-icon: #ffffff;
   --tokyo-tint: #f0f7ff;
 }
-
-/* ============== Theme Variables (Dark) ============== */
 [data-theme="dark"] {
-  --bg-base: #0f1419;
-  --bg-base-2: #161c2b;
-  --bg-card: #1c2333;
-  --bg-elevated: #252b3b;
-  --bg-hover: #2a3243;
-  --text-primary: #e2e8f0;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-faint: #64748b;
-  --text-heading: #f1f5f9;
-  --border: #334155;
-  --border-soft: #1f2937;
-  --shadow-sm: 0 2px 10px rgba(0,0,0,.4);
-  --shadow-md: 0 4px 20px rgba(0,0,0,.45);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,.55);
-  --header-from: #991b1b;
-  --header-to: #450a0a;
-  --header-shadow: 0 10px 40px rgba(0,0,0,.5);
-  --header-meta-bg: rgba(255,255,255,.08);
-  --accent: #f87171;
-  --accent-2: #ef4444;
-  --accent-soft: #1e3a5f;
-  --special: #fbbf24;
-  --route-bg: #252b3b;
-  --node-bg: #1c2333;
-  --tag-rec-bg: #4a1a1a; --tag-rec-fg: #fca5a5;
-  --tag-best-bg: #14532d; --tag-best-fg: #86efac;
-  --tag-warn-bg: #422006; --tag-warn-fg: #fcd34d;
-  --tag-info-bg: #1e3a5f; --tag-info-fg: #93c5fd;
-  --alert-yellow-bg: linear-gradient(135deg,#3d2c00,#5c4200);
-  --alert-yellow-fg: #fde68a;
-  --alert-red-bg: linear-gradient(135deg,#4a1a1a,#5c1a1a);
-  --alert-red-fg: #fca5a5;
-  --alert-blue-bg: linear-gradient(135deg,#1e3a5f,#0f2547);
-  --alert-blue-fg: #93c5fd;
-  --alert-green-bg: linear-gradient(135deg,#14532d,#1a4a36);
-  --alert-green-fg: #86efac;
-  --compare-left-bg: linear-gradient(135deg,#3d1414,#2d0e0e);
-  --compare-left-fg: #fca5a5;
-  --compare-right-bg: linear-gradient(135deg,#1e3a5f,#0f2547);
-  --compare-right-fg: #93c5fd;
-  --footer-color: #94a3b8;
-  --toggle-bg: rgba(0,0,0,.35);
-  --toggle-border: rgba(255,255,255,.15);
-  --toggle-icon: #fbbf24;
-  --tokyo-tint: #1e3a5f;
+  --bg-base: #0f1419; --bg-base-2: #161c2b; --bg-card: #1c2333; --bg-elevated: #252b3b; --bg-hover: #2a3243;
+  --text-primary: #e2e8f0; --text-secondary: #cbd5e1; --text-muted: #94a3b8; --text-faint: #64748b; --text-heading: #f1f5f9;
+  --border: #334155; --border-soft: #1f2937;
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.4); --shadow-md: 0 4px 20px rgba(0,0,0,.45); --shadow-lg: 0 8px 24px rgba(0,0,0,.55);
+  --header-from: #991b1b; --header-to: #450a0a; --header-shadow: 0 10px 40px rgba(0,0,0,.5); --header-meta-bg: rgba(255,255,255,.08);
+  --accent: #f87171; --accent-2: #ef4444; --accent-soft: #1e3a5f; --special: #fbbf24;
+  --route-bg: #252b3b; --node-bg: #1c2333;
+  --tag-rec-bg: #4a1a1a; --tag-rec-fg: #fca5a5; --tag-best-bg: #14532d; --tag-best-fg: #86efac; --tag-warn-bg: #422006; --tag-warn-fg: #fcd34d; --tag-info-bg: #1e3a5f; --tag-info-fg: #93c5fd;
+  --alert-yellow-bg: linear-gradient(135deg,#3d2c00,#5c4200); --alert-yellow-fg: #fde68a;
+  --alert-red-bg: linear-gradient(135deg,#4a1a1a,#5c1a1a); --alert-red-fg: #fca5a5;
+  --alert-blue-bg: linear-gradient(135deg,#1e3a5f,#0f2547); --alert-blue-fg: #93c5fd;
+  --alert-green-bg: linear-gradient(135deg,#14532d,#1a4a36); --alert-green-fg: #86efac;
+  --compare-left-bg: linear-gradient(135deg,#3d1414,#2d0e0e); --compare-left-fg: #fca5a5;
+  --compare-right-bg: linear-gradient(135deg,#1e3a5f,#0f2547); --compare-right-fg: #93c5fd;
+  --footer-color: #94a3b8; --toggle-bg: rgba(0,0,0,.35); --toggle-border: rgba(255,255,255,.15); --toggle-icon: #fbbf24; --tokyo-tint: #1e3a5f;
 }
-
-/* Kansai (red) / Tokyo (blue) accent override */
-.plan-b-mode {
-  --accent: #2563eb;
-  --accent-2: #1e40af;
-  --accent-soft: #dbeafe;
-}
-[data-theme="dark"].plan-a-mode {
-  --accent: #f87171;
-  --accent-2: #ef4444;
-  --accent-soft: #3d1414;
-}
-[data-theme="dark"].plan-b-mode {
-  --accent: #60a5fa;
-  --accent-2: #3b82f6;
-  --accent-soft: #1e3a5f;
-}
-
-/* ============== Base ============== */
+.plan-b-mode { --accent: #2563eb; --accent-2: #1e40af; --accent-soft: #dbeafe; }
+[data-theme="dark"].plan-a-mode { --accent: #f87171; --accent-2: #ef4444; --accent-soft: #3d1414; }
+[data-theme="dark"].plan-b-mode { --accent: #60a5fa; --accent-2: #3b82f6; --accent-soft: #1e3a5f; }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:linear-gradient(135deg,var(--bg-base) 0%,var(--bg-base-2) 100%);color:var(--text-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 .container{max-width:1200px;margin:0 auto;padding:20px}
-
-/* ============== Header ============== */
 .header{background:linear-gradient(135deg,var(--header-from) 0%,var(--header-to) 100%);color:white;padding:clamp(28px,5vw,50px) clamp(20px,4vw,40px);border-radius:20px;margin-bottom:25px;box-shadow:var(--header-shadow);position:relative;overflow:hidden;transition:box-shadow .3s ease}
 .header::before{content:"";position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:rgba(255,255,255,.08);border-radius:50%;pointer-events:none}
 .header::after{content:"";position:absolute;bottom:-30%;left:-5%;width:200px;height:200px;background:rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
@@ -136,8 +55,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .header .subtitle{font-size:clamp(14px,2.2vw,18px);opacity:.95;margin-bottom:20px;position:relative;z-index:1}
 .header .meta{display:flex;flex-wrap:wrap;gap:clamp(6px,1.5vw,14px);position:relative;z-index:1}
 .header .meta-item{background:var(--header-meta-bg);padding:8px 16px;border-radius:20px;font-size:clamp(12px,1.8vw,14px);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .3s}
-
-/* ============== Plan Switch (关西/东京视角) ============== */
 .plan-switch{display:flex;gap:10px;margin-bottom:25px;background:var(--bg-card);padding:10px;border-radius:16px;box-shadow:var(--shadow-sm);transition:background-color .3s}
 .plan-btn{flex:1;padding:clamp(12px,2vw,18px);border-radius:12px;cursor:pointer;text-align:center;transition:all .3s;border:2px solid transparent;background:var(--bg-elevated);color:var(--text-muted)}
 .plan-btn:not(.active):hover{background:var(--bg-hover)}
@@ -146,31 +63,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .plan-btn.active.plan-b{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:var(--accent)}
 .plan-btn .plan-name{font-size:clamp(12px,1.8vw,16px);font-weight:700;margin-bottom:4px}
 .plan-btn .plan-desc{font-size:clamp(10px,1.4vw,12px);opacity:.85;line-height:1.4}
-
-/* ============== Tabs ============== */
 .tabs{display:flex;flex-wrap:nowrap;gap:6px;margin-bottom:25px;background:var(--bg-card);padding:10px;border-radius:16px;box-shadow:var(--shadow-sm);position:sticky;top:8px;z-index:50;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;transition:background-color .3s}
 .tabs::-webkit-scrollbar{display:none}
 .tab{padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;transition:all .25s;color:var(--text-primary);white-space:nowrap;flex-shrink:0}
 .tab:hover{background:var(--bg-hover)}
 .tab.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;box-shadow:0 4px 12px rgba(230,57,70,.3)}
 .plan-b-mode .tab.active{box-shadow:0 4px 12px rgba(37,99,235,.3)}
-
-/* ============== Sections ============== */
 .section{display:none;animation:fadeIn .4s ease-out}
 .section.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
 .plan-a-only,.plan-b-only{display:none}
 .plan-a-mode .plan-a-only{display:block}
 .plan-b-mode .plan-b-only{display:block}
-
-/* ============== Cards ============== */
 .card{background:var(--bg-card);border-radius:16px;padding:clamp(18px,3vw,30px);margin-bottom:20px;box-shadow:var(--shadow-md);transition:background-color .3s,box-shadow .3s}
 .card h2{color:var(--text-heading);margin-bottom:20px;font-size:clamp(18px,3vw,24px);border-left:5px solid var(--accent);padding-left:15px;transition:border-color .3s,color .3s}
 .card h3{color:var(--text-heading);margin:20px 0 12px;font-size:clamp(15px,2.2vw,18px);transition:color .3s}
 .card p{color:var(--text-secondary)}
-
-/* ============== Alerts ============== */
 .alert{padding:18px 20px;border-radius:12px;margin-bottom:18px;border-left:5px solid;transition:background .3s,color .3s}
 .alert h4{margin-bottom:6px;font-size:clamp(14px,2vw,16px)}
 .alert p{color:inherit;opacity:.92;margin:0}
@@ -178,8 +86,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .alert-red{background:var(--alert-red-bg);border-color:#dc2626;color:var(--alert-red-fg)}
 .alert-blue{background:var(--alert-blue-bg);border-color:var(--accent);color:var(--alert-blue-fg)}
 .alert-green{background:var(--alert-green-bg);border-color:#059669;color:var(--alert-green-fg)}
-
-/* ============== Tables ============== */
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--border);margin:15px 0;transition:border-color .3s}
 .table-wrap::-webkit-scrollbar{height:6px}
 .table-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
@@ -188,31 +94,30 @@ th{background:var(--bg-elevated);padding:14px 16px;text-align:left;font-weight:6
 td{padding:14px 16px;border-bottom:1px solid var(--border-soft);font-size:14px;color:var(--text-secondary);transition:background .3s,color .3s,border-color .3s}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:var(--bg-hover)}
-
-/* ============== Tags ============== */
 .tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:500;margin:2px;transition:background .3s,color .3s}
 .tag-rec{background:var(--tag-rec-bg);color:var(--tag-rec-fg)}
 .tag-best{background:var(--tag-best-bg);color:var(--tag-best-fg)}
 .tag-warn{background:var(--tag-warn-bg);color:var(--tag-warn-fg)}
 .tag-info{background:var(--tag-info-bg);color:var(--tag-info-fg)}
-
-/* ============== Day Grid ============== */
 .day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;margin-top:18px}
 .day-card{background:var(--bg-card);border-radius:14px;padding:clamp(16px,2.2vw,22px);box-shadow:var(--shadow-sm);border-top:4px solid var(--accent);transition:transform .3s,box-shadow .3s,background-color .3s}
 .day-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .day-card.special{border-top-color:var(--special)}
 .day-card.tokyo{border-top-color:#2563eb;background:linear-gradient(180deg,var(--bg-card),var(--tokyo-tint))}
+.day-card.base{border-top-color:#059669}
 .day-card .day-num{display:inline-block;background:var(--accent);color:white;padding:4px 12px;border-radius:8px;font-size:12px;font-weight:600;margin-bottom:10px;transition:background .3s}
 .day-card.special .day-num{background:var(--special)}
 .day-card.tokyo .day-num{background:#2563eb}
+.day-card.base .day-num{background:#059669}
 .day-card .date{color:var(--text-muted);font-size:13px;margin-bottom:8px;transition:color .3s}
-.day-card .day-title{font-size:clamp(15px,2vw,17px);font-weight:600;margin-bottom:14px;color:var(--text-heading);transition:color .3s}
+.day-card .day-title{font-size:clamp(15px,2vw,17px);font-weight:600;margin-bottom:8px;color:var(--text-heading);transition:color .3s}
+.day-card .lodging{font-size:12px;color:var(--text-faint);margin-bottom:14px;padding:6px 10px;background:var(--bg-elevated);border-radius:6px;transition:background .3s,color .3s}
 .day-card ul{list-style:none;padding:0}
 .day-card li{padding:6px 0;font-size:13px;color:var(--text-secondary);border-bottom:1px dashed var(--border-soft);display:flex;gap:8px;transition:color .3s,border-color .3s}
 .day-card li:last-child{border-bottom:none}
 .day-card .time{color:var(--accent);font-weight:600;min-width:55px;flex-shrink:0;transition:color .3s}
-
-/* ============== Highlight Grid ============== */
+.day-card.tokyo .time{color:#2563eb}
+.day-card.base .time{color:#059669}
 .hl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:15px}
 .hl-box{background:linear-gradient(135deg,var(--bg-card),var(--bg-elevated));padding:clamp(14px,2vw,20px);border-radius:12px;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .25s,border-color .25s,background .3s}
 .hl-box:hover{transform:translateY(-2px);border-color:var(--accent)}
@@ -221,15 +126,11 @@ tr:hover td{background:var(--bg-hover)}
 .hl-box .icon{font-size:28px;margin-bottom:8px;display:block}
 .hl-box h4{font-size:clamp(14px,1.8vw,15px);margin-bottom:6px;color:var(--text-heading);transition:color .3s}
 .hl-box p{font-size:13px;color:var(--text-muted);margin:0;transition:color .3s}
-
-/* ============== Stats ============== */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:18px 0}
 .stat{text-align:center;padding:clamp(12px,2vw,18px);background:linear-gradient(135deg,var(--bg-card),var(--bg-elevated));border-radius:12px;border:1px solid var(--border);transition:transform .3s,border-color .3s,background .3s}
 .stat:hover{transform:translateY(-3px);border-color:var(--accent)}
 .stat .num{font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--accent);display:block;transition:color .3s}
 .stat .label{font-size:12px;color:var(--text-muted);margin-top:4px;transition:color .3s}
-
-/* ============== Compare ============== */
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:15px 0}
 .compare-col{padding:clamp(16px,2.4vw,20px);border-radius:12px;transition:background .3s,color .3s}
 .compare-col.left{background:var(--compare-left-bg);border:2px solid #dc2626;color:var(--compare-left-fg)}
@@ -239,16 +140,12 @@ tr:hover td{background:var(--bg-hover)}
 .compare-col li{font-size:13px;padding:4px 0;color:inherit;opacity:.92}
 .compare-col li::before{content:"▸ ";color:inherit;font-weight:bold}
 .compare-col p{color:inherit;opacity:.8}
-
-/* ============== Route ============== */
 .route{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0;padding:18px;background:var(--route-bg);border-radius:12px;transition:background-color .3s}
 .route .node{padding:7px 12px;background:var(--node-bg);border:2px solid var(--accent);border-radius:8px;font-size:12px;font-weight:500;color:var(--accent);transition:background-color .3s,border-color .3s,color .3s}
+.route .node.base{border-color:#059669;color:#059669}
+.route .node.tokyo{border-color:#2563eb;color:#2563eb}
 .route .arrow{color:var(--text-faint);font-size:16px}
-
-/* ============== Footer ============== */
 .footer{text-align:center;padding:30px 20px;color:var(--footer-color);font-size:13px;transition:color .3s}
-
-/* ============== Theme Toggle ============== */
 .theme-toggle{position:fixed;top:16px;right:16px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--toggle-bg);border:1.5px solid var(--toggle-border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s,background .3s,border-color .3s;color:var(--toggle-icon);box-shadow:var(--shadow-sm)}
 .theme-toggle:hover{transform:scale(1.08) rotate(15deg)}
 .theme-toggle:active{transform:scale(.95)}
@@ -257,186 +154,172 @@ tr:hover td{background:var(--bg-hover)}
 [data-theme="dark"] .theme-toggle .icon-moon{display:inline-block}
 :root:not([data-theme="dark"]) .theme-toggle .icon-moon{display:none}
 :root:not([data-theme="dark"]) .theme-toggle .icon-sun{display:inline-block}
-
-/* ============== Back to Top ============== */
 .back-top{position:fixed;bottom:24px;right:24px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--accent);color:white;border:none;cursor:pointer;font-size:18px;font-weight:bold;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .3s,transform .3s,background .3s}
 .back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .back-top:hover{transform:translateY(-3px) scale(1.05)}
-
-/* ============== Responsive ============== */
-@media(max-width:1024px){
-  .container{padding:16px}
-  .day-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-  .hl-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
-}
-
-@media(max-width:768px){
-  .header{padding:28px 20px}
-  .card{padding:20px}
-  .tab{padding:8px 12px;font-size:12px}
-  .plan-btn{padding:12px 8px}
-  .plan-btn .plan-name{font-size:13px}
-  .day-grid{grid-template-columns:1fr;gap:12px}
-  .day-card .day-title{font-size:16px}
-  .hl-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
-  .hl-box{padding:14px}
-  .hl-box .icon{font-size:22px}
-  .stats{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}
-  .stat{padding:12px 8px}
-  .alert{padding:14px 16px}
-  .table-wrap{margin-left:-20px;margin-right:-20px;border-radius:0;border-left:0;border-right:0}
-  th,td{padding:10px 12px;font-size:13px}
-  .theme-toggle{width:40px;height:40px;font-size:18px;top:12px;right:12px}
-  .back-top{width:40px;height:40px;font-size:18px;bottom:16px;right:16px}
-  .header .meta-item{padding:6px 12px;font-size:12px}
-}
-
-@media(max-width:640px){
-  .compare{grid-template-columns:1fr}
-  .plan-switch{flex-direction:column;gap:8px}
-  .header .meta{gap:6px}
-  .header .meta-item{flex:1 1 calc(50% - 6px);text-align:center;font-size:11px;padding:6px 8px}
-}
-
-@media(max-width:480px){
-  .container{padding:12px}
-  .header{padding:22px 16px;border-radius:14px}
-  .header h1{font-size:21px}
-  .header .subtitle{font-size:13px}
-  .plan-switch,.tabs{padding:6px;border-radius:12px}
-  .plan-btn{padding:10px 6px;border-radius:8px}
-  .plan-btn .plan-name{font-size:12px}
-  .plan-btn .plan-desc{font-size:10px}
-  .tab{padding:7px 10px;font-size:11px}
-  .card{padding:16px;border-radius:12px}
-  .card h2{font-size:17px;padding-left:10px}
-  .card h3{font-size:15px}
-  .hl-grid{grid-template-columns:1fr 1fr}
-  .stats{grid-template-columns:repeat(3,1fr)}
-  .stat .num{font-size:20px}
-  .day-card{padding:14px}
-  .day-card li{font-size:12px}
-  .day-card .time{min-width:48px;font-size:12px}
-  .alert{padding:12px 14px}
-  .th,td{padding:8px 10px;font-size:12px}
-}
-
-@media(max-width:360px){
-  .hl-grid{grid-template-columns:1fr}
-  .header h1{font-size:19px}
-  .plan-btn .plan-name{font-size:11px}
-}
-
-@media(max-height:500px) and (orientation:landscape){
-  .header{padding:18px 20px}
-  .header h1{font-size:20px;margin-bottom:6px}
-  .header .subtitle{margin-bottom:10px}
-  .header .meta{margin-bottom:-10px}
-}
-
-@media print{
-  .theme-toggle,.back-top,.plan-switch,.tabs{display:none !important}
-  .section{display:block !important;page-break-after:always}
-  .card{box-shadow:none;border:1px solid #ccc}
-  body{background:#fff}
-}
-
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
-  html{scroll-behavior:auto}
-}
+@media(max-width:1024px){.container{padding:16px}.day-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}
+@media(max-width:768px){.header{padding:28px 20px}.card{padding:20px}.tab{padding:8px 12px;font-size:12px}.plan-btn{padding:12px 8px}.plan-btn .plan-name{font-size:13px}.day-grid{grid-template-columns:1fr;gap:12px}.day-card .day-title{font-size:16px}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.hl-box{padding:14px}.hl-box .icon{font-size:22px}.stats{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}.stat{padding:12px 8px}.alert{padding:14px 16px}.table-wrap{margin-left:-20px;margin-right:-20px;border-radius:0;border-left:0;border-right:0}th,td{padding:10px 12px;font-size:13px}.theme-toggle{width:40px;height:40px;font-size:18px;top:12px;right:12px}.back-top{width:40px;height:40px;font-size:18px;bottom:16px;right:16px}.header .meta-item{padding:6px 12px;font-size:12px}}
+@media(max-width:640px){.compare{grid-template-columns:1fr}.plan-switch{flex-direction:column;gap:8px}.header .meta{gap:6px}.header .meta-item{flex:1 1 calc(50% - 6px);text-align:center;font-size:11px;padding:6px 8px}}
+@media(max-width:480px){.container{padding:12px}.header{padding:22px 16px;border-radius:14px}.header h1{font-size:21px}.header .subtitle{font-size:13px}.plan-switch,.tabs{padding:6px;border-radius:12px}.plan-btn{padding:10px 6px;border-radius:8px}.plan-btn .plan-name{font-size:12px}.plan-btn .plan-desc{font-size:10px}.tab{padding:7px 10px;font-size:11px}.card{padding:16px;border-radius:12px}.card h2{font-size:17px;padding-left:10px}.card h3{font-size:15px}.hl-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.stat .num{font-size:20px}.day-card{padding:14px}.day-card li{font-size:12px}.day-card .time{min-width:48px;font-size:12px}.alert{padding:12px 14px}.th,td{padding:8px 10px;font-size:12px}}
+@media(max-width:360px){.hl-grid{grid-template-columns:1fr}.header h1{font-size:19px}.plan-btn .plan-name{font-size:11px}}
+@media(max-height:500px) and (orientation:landscape){.header{padding:18px 20px}.header h1{font-size:20px;margin-bottom:6px}.header .subtitle{margin-bottom:10px}.header .meta{margin-bottom:-10px}}
+@media print{.theme-toggle,.back-top,.plan-switch,.tabs{display:none !important}.section{display:block !important;page-break-after:always}.card{box-shadow:none;border:1px solid #ccc}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body class="plan-a-mode">
-<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换暗色模式" title="切换暗色模式">
-  <span class="icon-sun" aria-hidden="true">☀️</span>
-  <span class="icon-moon" aria-hidden="true">🌙</span>
-</button>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换暗色模式" title="切换暗色模式"><span class="icon-sun" aria-hidden="true">☀️</span><span class="icon-moon" aria-hidden="true">🌙</span></button>
 <button class="back-top" id="backTop" type="button" aria-label="回到顶部" title="回到顶部">↑</button>
 <div class="container">
 
 <div class="header">
-<h1>🗾 2026 日本 9 晚自由行攻略</h1>
-<div class="subtitle">济南 ✈️ 大阪 KIX · 关西温泉 + 东京都市 · 9 晚 10 天</div>
+<h1>🗾 2026 日本 9 晚自由行 · 不回头环线</h1>
+<div class="subtitle">济南 ✈️ 大阪 KIX · 关西大本营 + 东京·镰仓·河口湖 · 不走回头路</div>
 <div class="meta">
 <div class="meta-item">📅 2026.09.25 — 10.04</div>
-<div class="meta-item">♨️ Day1 有马温泉</div>
-<div class="meta-item">🗼 东京+富士河口湖</div>
-<div class="meta-item">🛍️ 关西购物收尾</div>
+<div class="meta-item">🏠 大本营：大阪难波</div>
+<div class="meta-item">🚄 去程向东·回程环线</div>
+<div class="meta-item">🧳 大行李寄大本营</div>
 </div>
 </div>
 
 <div class="plan-switch">
-<div class="plan-btn plan-a active" data-plan="a">
-<div class="plan-name">关西段 · 温泉人文</div>
-<div class="plan-desc">大阪·京都·奈良·有马温泉</div>
-</div>
-<div class="plan-btn plan-b" data-plan="b">
-<div class="plan-name">东京段 · 都市潮牌</div>
-<div class="plan-desc">东京·富士河口湖·购物</div>
-</div>
+<div class="plan-btn plan-a active" data-plan="a"><div class="plan-name">关西段 · 大本营辐射</div><div class="plan-desc">大阪难波连住·有马/京都/奈良日trips</div></div>
+<div class="plan-btn plan-b" data-plan="b"><div class="plan-name">关东段 · 环线回程</div><div class="plan-desc">东京·镰仓·河口湖·返大阪</div></div>
 </div>
 
 <div class="tabs">
 <div class="tab active" data-tab="overview">📋 总览</div>
+<div class="tab" data-tab="logic">🗺️ 环线逻辑</div>
 <div class="tab" data-tab="alerts">⚠️ 关键判断</div>
 <div class="tab" data-tab="itinerary">🗓️ 每日行程</div>
 <div class="tab" data-tab="hotels">🏨 住宿</div>
 <div class="tab" data-tab="shopping">🛍️ 购物</div>
 <div class="tab" data-tab="transport">🚄 交通</div>
-<div class="tab" data-tab="food">🍜 美食</div>
 <div class="tab" data-tab="budget">💰 预算</div>
-<div class="tab" data-tab="checklist">✅ 出行清单</div>
+<div class="tab" data-tab="checklist">✅ 清单</div>
 </div>
 
 <!-- ============ 总览 ============ -->
 <div class="section active" id="overview">
 <div class="card">
 <h2>🎯 行程定位</h2>
-<p>自由行 9 晚 10 天，大阪往返，中间插东京+富士河口湖。第一天轻松温泉开场，最后两天关西购物收尾。</p>
+<p>自由行 9 晚 10 天，<strong>大阪往返</strong>，但走法是"不回头环线"：去程关西一路向东（有马→京都→奈良→大阪→新干线东京），回程从东京向南环线（东京→镰仓→河口湖→新干线返大阪）。关西设大本营连住，轻装日trips；大行李寄大本营酒店。</p>
 <div class="stats">
 <div class="stat"><span class="num">9</span><div class="label">晚住宿</div></div>
-<div class="stat"><span class="num">2</span><div class="label">城市圈</div></div>
+<div class="stat"><span class="num">6</span><div class="label">城市/景点</div></div>
+<div class="stat"><span class="num">2</span><div class="label">大本营</div></div>
 <div class="stat"><span class="num">2</span><div class="label">温泉体验</div></div>
-<div class="stat"><span class="num">10/04</span><div class="label">返程</div></div>
 </div>
 </div>
 
 <div class="card">
-<h2>🗺️ 全程骨架</h2>
+<h2>🗺️ 不回头环线路线</h2>
 <div class="route">
-<span class="node">济南</span><span class="arrow">✈️</span>
-<span class="node">大阪KIX</span><span class="arrow">🚗</span>
-<span class="node">有马温泉</span><span class="arrow">🚃</span>
-<span class="node">大阪·京都·奈良</span><span class="arrow">🚄</span>
-<span class="node">东京</span><span class="arrow">🚃</span>
-<span class="node">富士河口湖</span><span class="arrow">🚄</span>
-<span class="node">大阪购物</span><span class="arrow">✈️</span>
+<span class="node base">大阪KIX</span><span class="arrow">✈️</span>
+<span class="node">有马温泉</span><span class="arrow">↘️</span>
+<span class="node">京都</span><span class="arrow">↘️</span>
+<span class="node">奈良</span><span class="arrow">↘️</span>
+<span class="node base">大阪大本营</span><span class="arrow">🚄新干线</span>
+<span class="node tokyo">东京大本营</span><span class="arrow">↘️</span>
+<span class="node tokyo">镰仓</span><span class="arrow">↖️</span>
+<span class="node tokyo">河口湖</span><span class="arrow">🚄新干线</span>
+<span class="node base">大阪购物收尾</span><span class="arrow">✈️</span>
 <span class="node">济南</span>
 </div>
+<p style="margin-top:14px;color:var(--text-muted);font-size:13px">🟢绿=大本营 · 🔴红=关西 · 🔵蓝=关东。去程一路向东不回头；回程东京→镰仓(南)→河口湖(西)→大阪，顺势环线收尾。唯一"回头"是河口湖→大阪这段新干线（返程必经，无法避免）。</p>
+</div>
 
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">♨️</span><h4>Day1 有马温泉</h4><p>落地直奔温泉旅馆，怀石料理+金汤银汤，不赶路</p></div>
-<div class="hl-box"><span class="icon">🏯</span><h4>Day2-4 关西人文</h4><p>大阪周游券日+京都清水寺伏见稻荷+奈良喂鹿</p></div>
-<div class="hl-box"><span class="icon">🗼</span><h4>Day5-7 东京段</h4><p>新干线去东京+都市深度+富士河口湖温泉</p></div>
-<div class="hl-box"><span class="icon">🛍️</span><h4>Day8-10 关西收尾</h4><p>返大阪+心斋桥扫货+Rinku Outlet+返程</p></div>
+<div class="card">
+<h2>🏠 大本营策略（核心）</h2>
+<div class="compare">
+<div class="compare-col left">
+<h4>🟢 关西大本营：大阪难波</h4>
+<ul>
+<li>9/25-9/28 连住4晚（不换酒店）</li>
+<li>大行李寄这里，轻装出行</li>
+<li>有马温泉：当日往返（或住1晚）</li>
+<li>京都：JR新快速28分钟直达</li>
+<li>奈良：近铁40分钟直达</li>
+<li>难波=吃喝购+交通枢纽</li>
+</ul>
+</div>
+<div class="compare-col right">
+<h4>🔵 关东大本营：东京新宿</h4>
+<ul>
+<li>9/29-9/30 连住2晚（不换酒店）</li>
+<li>镰仓：JR湘南新宿线1小时</li>
+<li>河口湖：10/1过去住1晚温泉</li>
+<li>新宿=交通枢纽+购物</li>
+<li>大行李从大阪黑猫快递到这</li>
+</ul>
+</div>
+</div>
+<div class="alert alert-green" style="margin-top:18px">
+<h4>行李流转方案</h4>
+<p><strong>9/25</strong> 落地后大行李直接带到大阪大本营酒店寄存。<strong>9/29</strong> 去东京时，大行李用<strong>黑猫宅急便</strong>从大阪酒店快递到东京酒店（次日到，约1500日元/件），自己轻装坐新干线。<strong>10/2</strong> 河口湖→大阪时，大行李再黑猫快递回大阪关空酒店。全程不拎大行李跑长途。</p>
+</div>
+</div>
+</div>
+
+<!-- ============ 环线逻辑 ============ -->
+<div class="section" id="logic">
+<div class="card">
+<h2>🧭 为什么这样排不回头</h2>
+
+<h3>去程：关西一路向东</h3>
+<div class="route">
+<span class="node">有马(北)</span><span class="arrow">↘️</span>
+<span class="node">京都(东)</span><span class="arrow">↘️</span>
+<span class="node">奈良(东南)</span><span class="arrow">↘️</span>
+<span class="node base">大阪(西南·大本营)</span>
+</div>
+<p style="margin-top:10px;color:var(--text-muted);font-size:13px">有马→京都→奈良→大阪，地理上一路向东南，不绕路。每个城市都从大阪大本营出发或顺路衔接。</p>
+
+<h3>关西→关东：新干线跨越</h3>
+<div class="route">
+<span class="node base">大阪大本营</span><span class="arrow">🚄</span>
+<span class="node tokyo">东京大本营</span>
+</div>
+<p style="margin-top:10px;color:var(--text-muted);font-size:13px">新大阪→东京/品川，のぞみ号2.5小时。这是唯一的长途跨越，方向向东，不回头。</p>
+
+<h3>回程：关东向南环线</h3>
+<div class="route">
+<span class="node tokyo">东京大本营</span><span class="arrow">↘️</span>
+<span class="node tokyo">镰仓(南)</span><span class="arrow">↖️</span>
+<span class="node tokyo">河口湖(西)</span><span class="arrow">🚄</span>
+<span class="node base">大阪(关空收尾)</span>
+</div>
+<p style="margin-top:10px;color:var(--text-muted);font-size:13px">东京→镰仓(向南)→回东京→河口湖(向西)→新干线返大阪。镰仓和河口湖分别在东京南和西，形成小环线。最后河口湖→大阪是返程必经。</p>
+
+<div class="alert alert-blue">
+<h4>唯一无法避免的"回头"</h4>
+<p>镰仓在东京南，河口湖在东京西，去河口湖要先回东京方向。所以<strong>镰仓→河口湖会经过东京</strong>。优化方案：镰仓结束后直接坐JR到<strong>大月</strong>站（不回东京市区），转富士急行线去河口湖，少绕一段。或者把镰仓做成东京日trip不住，10/1直接东京→河口湖。</p>
 </div>
 </div>
 
 <div class="card">
-<h2>📊 9晚分段</h2>
+<h2>📅 9晚分段对照</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>段</th><th>日期</th><th>城市</th><th>主题</th><th>住宿</th></tr></thead>
+<thead><tr><th>晚</th><th>日期</th><th>住宿地</th><th>当日活动</th><th>大本营</th></tr></thead>
 <tbody>
-<tr><td><span class="tag tag-rec">1</span></td><td>9/25 周五</td><td>关西</td><td>抵达+温泉放松</td><td>有马温泉旅馆</td></tr>
-<tr><td><span class="tag tag-info">2</span></td><td>9/26-28</td><td>大阪/京都/奈良</td><td>关西人文</td><td>难波/京都站</td></tr>
-<tr><td><span class="tag tag-info">3</span></td><td>9/29-10/1</td><td>东京+河口湖</td><td>都市+富士</td><td>新宿/河口湖温泉</td></tr>
-<tr><td><span class="tag tag-best">4</span></td><td>10/2-4</td><td>大阪</td><td>购物收尾</td><td>梅田/关空</td></tr>
+<tr><td>1</td><td>9/25 周五</td><td>大阪难波</td><td>抵达+休整（或加有马日trip）</td><td><span class="tag tag-best">关西大本营</span></td></tr>
+<tr><td>2</td><td>9/26 周六</td><td>大阪难波</td><td>有马温泉日trip</td><td><span class="tag tag-best">关西大本营</span></td></tr>
+<tr><td>3</td><td>9/27 周日</td><td>大阪难波</td><td>京都日trip</td><td><span class="tag tag-best">关西大本营</span></td></tr>
+<tr><td>4</td><td>9/28 周一</td><td>大阪难波</td><td>奈良日trip+大阪市内</td><td><span class="tag tag-best">关西大本营</span></td></tr>
+<tr><td>5</td><td>9/29 周二</td><td>东京新宿</td><td>新干线+东京初探</td><td><span class="tag tag-info">关东大本营</span></td></tr>
+<tr><td>6</td><td>9/30 周三</td><td>东京新宿</td><td>东京深度+购物</td><td><span class="tag tag-info">关东大本营</span></td></tr>
+<tr><td>7</td><td>10/1 周四</td><td>河口湖</td><td>镰仓日trip→傍晚去河口湖</td><td>温泉旅馆</td></tr>
+<tr><td>8</td><td>10/2 周五</td><td>大阪梅田/关空</td><td>河口湖→新干线返大阪+购物</td><td>关西收尾</td></tr>
+<tr><td>9</td><td>10/3 周六</td><td>关空附近</td><td>心斋桥扫货+移师关空</td><td>关西收尾</td></tr>
 </tbody>
 </table>
 </div>
-<p style="margin-top:12px;color:var(--text-muted);font-size:13px">为什么这么排：9/25-30 避开亚运主场名古屋；10/1-4 国庆高峰回关西购物不动长途；富士河口湖放 10/1（红叶前奏+避开周末）。</p>
+<div class="alert alert-yellow" style="margin-top:18px">
+<h4>住宿地点变化最少</h4>
+<p>9晚只换<strong>4个住宿地</strong>：大阪难波(4晚) → 东京新宿(2晚) → 河口湖(1晚) → 大阪关空(2晚)。每个城市内部不换酒店，交通枢纽选址。</p>
+</div>
 </div>
 </div>
 
@@ -444,80 +327,58 @@ tr:hover td{background:var(--bg-hover)}
 <div class="section" id="alerts">
 <div class="card">
 <h2>⚠️ 出行前必读的 6 个关键判断</h2>
-
-<div class="alert alert-red">
-<h4>1. 三重旺季叠加（最重要）</h4>
-<p>9/25-10/4 正好踩在 <strong>中国国庆黄金周 + 日本秋季旅游旺季 + 名古屋亚运会（9/19-10/4）</strong> 三峰交汇。酒店涨价20-40%，新干线指定席紧张。9/25-30 安排关西+东京错开名古屋；10/1-4 回关西购物；新干线务必提前14天订指定席。</p>
-</div>
-
-<div class="alert alert-yellow">
-<h4>2. 亚运会对行程的具体影响</h4>
-<p>名古屋在新大阪-东京中间，亚运期间のぞみ号会非常满。<strong>指定席必须早订</strong>。酒店名古屋周边爆满，但东京/大阪/京都影响相对小（除10/1后国庆叠加）。足球小组赛可能在东京/大阪——出发前查赛程，可能顺便看一场（意外彩蛋）。<strong>避让名古屋方向行程</strong>。</p>
-</div>
-
-<div class="alert alert-blue">
-<h4>3. 烟火大会 / 秋季祭典（待核实）</h4>
-<p>9月下旬-10月初<strong>不是花火旺季</strong>（旺季7-8月），大型花火较少。推荐关注：<strong>岸和田地车祭</strong>（往年9月中旬第三个周末，2026年可能撞亚运开幕）——比花火更独特，极度震撼。出发前1个月到 hanabi.tokyo 或各市观光协会官网确认2026最终日期。<strong>不要为看烟火绕路</strong>，凑上就顺便看。</p>
-</div>
-
-<div class="alert alert-green">
-<h4>4. 大阪 ↔ 东京交通</h4>
-<p><strong>新干线のぞみ号</strong> 2小时30分，14,720日元（约720元），首选。新大阪⇌东京/品川，<strong>指定席务必早订</strong>。飞机算上安检不划算；夜行巴士累不推荐。</p>
-</div>
-
-<div class="alert alert-yellow">
-<h4>5. 现金 vs 移动支付</h4>
-<p>支付宝/微信在大阪/东京市内覆盖80%以上。<strong>必须现金</strong>：小车站、温泉乡、神社、个体小店、出租车找零、自动售货机。人均带3-5万日元现金，关空T1 B1层换汇或7-11 ATM银联取款。</p>
-</div>
-
-<div class="alert alert-red">
-<h4>6. 行李策略</h4>
-<p>返程留20kg空间给购物，另带空折叠箱。保健品/酒类/液体化妆品必须托运。<strong>关西⇌东京新干线带大行李用黑猫宅急便快递</strong>（酒店前台可办，次日到，约1500日元/件），轻装坐新干线。</p>
-</div>
+<div class="alert alert-red"><h4>1. 三重旺季叠加</h4><p>9/25-10/4 踩在 <strong>国庆黄金周 + 日本秋季旺季 + 名古屋亚运会(9/19-10/4)</strong> 三峰交汇。酒店涨价20-40%，新干线指定席紧张。<strong>新干线务必提前14天订指定席</strong>。9/25-30 关西+东京错开名古屋；10/1-4 回关西购物。</p></div>
+<div class="alert alert-yellow"><h4>2. 亚运会影响</h4><p>名古屋在新大阪-东京中间，亚运期间のぞみ号会很满，<strong>指定席必须早订</strong>。足球小组赛可能在东京/大阪，出发前查赛程可能顺便看一场。<strong>避让名古屋方向</strong>。</p></div>
+<div class="alert alert-blue"><h4>3. 烟火/祭典（待核实）</h4><p>9月底-10月初非花火旺季。推荐<strong>岸和田地车祭</strong>（往年9月中旬第三个周末，2026可能撞亚运开幕），比花火更独特。出发前1个月确认2026最终日期。<strong>不为烟火绕路</strong>。</p></div>
+<div class="alert alert-green"><h4>4. 大本营+黑猫快递行李策略</h4><p>关西大本营(大阪难波)寄大行李，日trips轻装。跨城(大阪↔东京)用<strong>黑猫宅急便</strong>酒店间快递大行李（约1500日元/件，次日到），自己轻装坐新干线。酒店前台可办。</p></div>
+<div class="alert alert-yellow"><h4>5. 现金 vs 移动支付</h4><p>支付宝/微信在大阪/东京市内覆盖80%+。<strong>必须现金</strong>：小车站、温泉乡、神社、个体小店、出租车找零。人均带3-5万日元，关空T1 B1层换汇或7-11 ATM银联取款。</p></div>
+<div class="alert alert-red"><h4>6. 行李与购物</h6><p>返程留20kg空间给购物，另带空折叠箱。保健品/酒类/液体化妆品必须托运。最后两天关西购物收尾，Rinku Outlet在关空旁，回程当天上午扫货。</p></div>
 </div>
 </div>
 
 <!-- ============ 每日行程 ============ -->
 <div class="section" id="itinerary">
 <div class="card">
-<h2>🗓️ 10 天 9 晚详细行程</h2>
+<h2>🗓️ 10 天 9 晚不回头环线</h2>
 <div class="day-grid">
 
-<div class="day-card special">
+<div class="day-card base">
 <span class="day-num">Day 1</span>
-<div class="date">9月25日 周五 · 抵达</div>
-<div class="day-title">♨️ 有马温泉轻松开场</div>
+<div class="date">9/25 周五 · 抵达</div>
+<div class="day-title">🛬 落地大阪·入住大本营</div>
+<div class="lodging">🏠 住宿：大阪难波（大本营·连住4晚）</div>
 <ul>
 <li><span class="time">14:00</span>济南→关西机场（2.5h）</li>
 <li><span class="time">15:30</span>入境取行李（Visit Japan Web提前填）</li>
-<li><span class="time">16:30</span>关空→有马温泉（包车1.5h推荐）</li>
-<li><span class="time">18:30</span>抵旅馆（兵卫向阳阁/有马Grand）</li>
-<li><span class="time">19:00</span>怀石料理晚餐</li>
-<li><span class="time">20:30</span>金汤银汤露天温泉</li>
-<li><span class="time">晚</span>早睡调时差</li>
+<li><span class="time">16:30</span>南海特急Rapi:t→难波（38min）</li>
+<li><span class="time">17:30</span>入住大阪大本营酒店（难波光芒/三井花园）</li>
+<li><span class="time">18:30</span>道顿堀晚餐（一蘭/简餐）</li>
+<li><span class="time">晚</span>难波周边散步·早睡调时差</li>
 </ul>
 </div>
 
-<div class="day-card">
+<div class="day-card special">
 <span class="day-num">Day 2</span>
-<div class="date">9月26日 周六 · 大阪</div>
-<div class="day-title">🏯 大阪市内周游券日</div>
+<div class="date">9/26 周六 · 关西日trip</div>
+<div class="day-title">♨️ 有马温泉日trip</div>
+<div class="lodging">🏠 住宿：大阪难波（大本营·不换）·轻装出行</div>
 <ul>
-<li><span class="time">9:00</span>有马→大阪（70min）</li>
-<li><span class="time">11:00</span>梅田空中庭园展望台</li>
-<li><span class="time">13:00</span>大阪城公园+天守阁</li>
-<li><span class="time">14:30</span>黑门市场午餐</li>
-<li><span class="time">16:00</span>通天阁+新世界</li>
-<li><span class="time">17:30</span>心斋桥购物（Snow Peak/Mont-bell）</li>
-<li><span class="time">19:30</span>道顿堀晚餐（蟹道乐已订）</li>
-<li><span class="time">21:00</span>固力果招牌+HEP FIVE摩天轮</li>
+<li><span class="time">8:00</span>难波→有马（阪急+神户电铁，约70min）</li>
+<li><span class="time">9:30</span>抵有马温泉</li>
+<li><span class="time">10:00</span>金汤银汤体验（兵卫向阳阁日归温泉）</li>
+<li><span class="time">12:00</span>有马温泉街散步+炭酸煎饼</li>
+<li><span class="time">13:00</span>有马午餐（怀石料理简版）</li>
+<li><span class="time">15:00</span>六甲山缆车（可选）</li>
+<li><span class="time">17:00</span>返大阪难波</li>
+<li><span class="time">19:00</span>难波晚餐+心斋桥初探</li>
 </ul>
 </div>
 
 <div class="day-card">
 <span class="day-num">Day 3</span>
-<div class="date">9月27日 周日 · 京都</div>
+<div class="date">9/27 周日 · 关西日trip</div>
 <div class="day-title">⛩️ 京都人文一日</div>
+<div class="lodging">🏠 住宿：大阪难波（大本营·不换）·轻装出行</div>
 <ul>
 <li><span class="time">7:30</span>难波→京都（JR新快速28min）</li>
 <li><span class="time">8:30</span>伏见稻荷大社（早去人少）</li>
@@ -525,101 +386,107 @@ tr:hover td{background:var(--bg-hover)}
 <li><span class="time">12:30</span>八坂神社旁午餐（汤豆腐）</li>
 <li><span class="time">14:00</span>祇园+花见小路</li>
 <li><span class="time">15:30</span>金阁寺</li>
-<li><span class="time">17:00</span>锦市场（抹茶八桥漬物）</li>
-<li><span class="time">20:00</span>京都站拉面小路晚餐</li>
+<li><span class="time">17:00</span>锦市场（抹茶八桥）</li>
+<li><span class="time">19:30</span>返大阪难波晚餐</li>
 </ul>
 </div>
 
 <div class="day-card">
 <span class="day-num">Day 4</span>
-<div class="date">9月28日 周一 · 奈良</div>
-<div class="day-title">🦌 奈良喂鹿 + 返大阪</div>
+<div class="date">9/28 周一 · 关西日trip</div>
+<div class="day-title">🦌 奈良+大阪市内</div>
+<div class="lodging">🏠 住宿：大阪难波（大本营·不换）·轻装出行</div>
 <ul>
-<li><span class="time">9:00</span>京都→奈良（近铁45min）</li>
-<li><span class="time">10:00</span>奈良公园喂鹿（鹿仙贝150円）</li>
+<li><span class="time">9:00</span>难波→奈良（近铁40min）</li>
+<li><span class="time">10:00</span>奈良公园喂鹿</li>
 <li><span class="time">11:30</span>东大寺大佛殿</li>
 <li><span class="time">13:00</span>奈良町午餐（柿叶寿司平宗）</li>
-<li><span class="time">14:30</span>春日大社（3000盏灯笼）</li>
-<li><span class="time">16:00</span>若草山看景</li>
-<li><span class="time">18:00</span>返大阪难波</li>
-<li><span class="time">19:30</span>美国村逛潮牌古着</li>
+<li><span class="time">14:30</span>春日大社</li>
+<li><span class="time">16:30</span>返大阪·退大本营酒店</li>
+<li><span class="time">17:30</span>梅田空中庭园+大阪城夜景</li>
+<li><span class="time">晚</span>整理行李，大件黑猫快递到东京酒店</li>
 </ul>
 </div>
 
 <div class="day-card tokyo">
 <span class="day-num">Day 5</span>
-<div class="date">9月29日 周二 · 新干线</div>
-<div class="day-title">🚄 新干线去东京 + 初探</div>
+<div class="date">9/29 周二 · 跨越</div>
+<div class="day-title">🚄 新干线去东京·初探</div>
+<div class="lodging">🏠 住宿：东京新宿（关东大本营·连住2晚）·轻装</div>
 <ul>
-<li><span class="time">8:00</span>退房，行李黑猫快递到大阪酒店</li>
+<li><span class="time">8:00</span>难波→新大阪（地铁御堂筋线）</li>
 <li><span class="time">9:30</span>新干线のぞみ 新大阪→东京（2.5h）</li>
-<li><span class="time">12:00</span>抵东京入住新宿/池袋</li>
+<li><span class="time">12:00</span>抵东京·入住新宿酒店</li>
+<li><span class="time">13:00</span>新宿午餐（矶丸水产）</li>
 <li><span class="time">14:30</span>明治神宫+原宿竹下通</li>
 <li><span class="time">16:30</span>表参道+涩谷十字路口</li>
 <li><span class="time">18:30</span>涩谷Shibuya Sky（需预约）</li>
-<li><span class="time">20:00</span>涩谷晚餐+夜景</li>
+<li><span class="time">20:00</span>新宿晚餐+歌舞伎町夜景</li>
 </ul>
 </div>
 
 <div class="day-card tokyo">
 <span class="day-num">Day 6</span>
-<div class="date">9月30日 周三 · 东京</div>
-<div class="day-title">🎯 东京都市深度（两选一）</div>
+<div class="date">9/30 周三 · 东京</div>
+<div class="day-title">🎯 东京都市深度+购物</div>
+<div class="lodging">🏠 住宿：东京新宿（关东大本营·不换）</div>
 <ul>
-<li><span class="time">A线</span>下北泽古着+独立咖啡馆</li>
-<li><span class="time">A线</span>原宿Cat Street（BAPE/Human Made）</li>
-<li><span class="time">A线</span>秋叶原电器+动漫手办</li>
-<li><span class="time">A线</span>银座百货+奢侈品</li>
-<li><span class="time">B线</span>浅草寺+雷门（早去人少）</li>
-<li><span class="time">B线</span>上野公园+东京国立博物馆</li>
-<li><span class="time">B线</span>皇居外苑+东京塔</li>
-<li><span class="time">B线</span>六本木Hills展望台</li>
+<li><span class="time">9:00</span>下北泽古着+独立咖啡馆</li>
+<li><span class="time">11:30</span>原宿Cat Street（BAPE/Human Made）</li>
+<li><span class="time">13:00</span>午餐</li>
+<li><span class="time">14:30</span>秋叶原电器+动漫</li>
+<li><span class="time">17:00</span>银座百货+奢侈品</li>
+<li><span class="time">19:30</span>银座晚餐+东京站角色街</li>
+<li><span class="time">晚</span>大行李黑猫快递到关空酒店</li>
 </ul>
 </div>
 
 <div class="day-card tokyo special">
 <span class="day-num">Day 7</span>
-<div class="date">10月1日 周四 · 国庆</div>
-<div class="day-title">🗻 富士河口湖一日（住河口湖）</div>
+<div class="date">10/1 周四 · 国庆</div>
+<div class="day-title">🌊 镰仓日trip→富士河口湖</div>
+<div class="lodging">🏠 住宿：河口湖温泉旅馆·轻装</div>
 <ul>
-<li><span class="time">8:00</span>新宿→河口湖（2h）</li>
-<li><span class="time">11:00</span>河口湖游船（拍逆富士）</li>
-<li><span class="time">12:30</span>ほうとう不动午餐（当地名物）</li>
-<li><span class="time">14:00</span>大石公园（花海+富士全景）</li>
-<li><span class="time">15:30</span>忍野八海（可选）</li>
-<li><span class="time">17:00</span>入住河口湖温泉旅馆</li>
-<li><span class="time">18:00</span>温泉+怀石料理</li>
-<li><span class="time">20:00</span>夜赏富士山轮廓</li>
+<li><span class="time">8:00</span>新宿→镰仓（JR湘南新宿线1h）</li>
+<li><span class="time">9:30</span>镰仓高校前（灌篮高手道口）</li>
+<li><span class="time">10:30</span>江之电沿线+长谷寺</li>
+<li><span class="time">12:00</span>镰仓午餐（しらす丼）</li>
+<li><span class="time">13:30</span>镰仓大佛+小町通</li>
+<li><span class="time">15:00</span>镰仓→大月（JR+换乘）</li>
+<li><span class="time">17:00</span>大月→河口湖（富士急行线）</li>
+<li><span class="time">18:00</span>入住河口湖温泉旅馆+怀石</li>
 </ul>
 </div>
 
 <div class="day-card">
 <span class="day-num">Day 8</span>
-<div class="date">10月2日 周五 · 返关西</div>
-<div class="day-title">🚄 返大阪 + 购物第一波</div>
+<div class="date">10/2 周五 · 返关西</div>
+<div class="day-title">🗻 河口湖晨景→新干线返大阪</div>
+<div class="lodging">🏠 住宿：大阪梅田（关西收尾·连住1晚）</div>
 <ul>
-<li><span class="time">8:00</span>河口湖退房</li>
-<li><span class="time">9:30</span>河口湖→新宿</li>
-<li><span class="time">12:30</span>东京站/新宿午餐</li>
-<li><span class="time">14:00</span>新干线のぞみ 东京→新大阪（2.5h）</li>
-<li><span class="time">16:30</span>抵新大阪取快递行李</li>
-<li><span class="time">17:30</span>入住大阪梅田/难波</li>
-<li><span class="time">19:00</span>梅田阪急百货晚间购物</li>
-<li><span class="time">21:00</span>梅田晚餐</li>
+<li><span class="time">6:30</span>河口湖拍逆富士（清晨风平浪静）</li>
+<li><span class="time">8:00</span>旅馆早餐+退房</li>
+<li><span class="time">9:30</span>大石公园（花海+富士全景）</li>
+<li><span class="time">11:00</span>河口湖→三岛（富士急巴士）</li>
+<li><span class="time">12:30</span>三岛→新大阪（新干线，约1h）</li>
+<li><span class="time">14:00</span>抵大阪·入住梅田酒店</li>
+<li><span class="time">15:30</span>梅田阪急百货购物</li>
+<li><span class="time">19:00</span>梅田晚餐</li>
 </ul>
 </div>
 
-<div class="day-card">
+<div class="day-card special">
 <span class="day-num">Day 9</span>
-<div class="date">10月3日 周六 · 购物</div>
-<div class="day-title">🛍️ 心斋桥冲刺 + 移师关空</div>
+<div class="date">10/3 周六 · 购物</div>
+<div class="day-title">🛍️ 心斋桥冲刺+移师关空</div>
+<div class="lodging">🏠 住宿：关空附近酒店</div>
 <ul>
 <li><span class="time">9:00</span>心斋桥/难波全天购物</li>
 <li><span class="time">上午</span>户外：Snow Peak/Mont-bell/Arc'teryx</li>
 <li><span class="time">上午</span>潮牌：美国村BAPE/Supreme</li>
 <li><span class="time">上午</span>药妆：松本清/大国（保健品扫货）</li>
-<li><span class="time">13:00</span>难波午餐（黑门/千房大阪烧）</li>
-<li><span class="time">15:00</span>退房，移师关空酒店</li>
+<li><span class="time">13:00</span>难波午餐</li>
+<li><span class="time">15:00</span>退房·移动到关空酒店</li>
 <li><span class="time">18:00</span>步行去Rinku Outlet（开到20-21点）</li>
 <li><span class="time">20:00</span>Rinku晚餐</li>
 </ul>
@@ -627,11 +494,12 @@ tr:hover td{background:var(--bg-hover)}
 
 <div class="day-card special">
 <span class="day-num">Day 10</span>
-<div class="date">10月4日 周日 · 返程</div>
-<div class="day-title">✈️ Rinku Outlet + 返济南</div>
+<div class="date">10/4 周日 · 返程</div>
+<div class="day-title">✈️ Rinku Outlet+返济南</div>
+<div class="lodging">—</div>
 <ul>
 <li><span class="time">8:00</span>Rinku周边早餐等开门</li>
-<li><span class="time">10:00</span>Rinku全力扫货（TNF/Arc'teryx折扣3-7折）</li>
+<li><span class="time">10:00</span>Rinku全力扫货（TNF/Arc'teryx 3-7折）</li>
 <li><span class="time">12:30</span>回酒店取行李</li>
 <li><span class="time">13:00</span>关西机场T1值机（提前3h）</li>
 <li><span class="time">14:00</span>免税店最后扫货</li>
@@ -643,26 +511,10 @@ tr:hover td{background:var(--bg-hover)}
 </div>
 
 <div class="card">
-<h2>🌧️ 自由行灵活调整</h2>
+<h2>🔄 灵活调整</h2>
 <div class="compare">
-<div class="compare-col left">
-<h4>突发情况方案</h4>
-<ul>
-<li>雨天：东京改秋叶原室内/博物馆</li>
-<li>雨天：关西改海游馆/京都博物馆</li>
-<li>体力不支：京都拆两天玩</li>
-<li>购物没买够：10/2后加难波高岛屋</li>
-</ul>
-</div>
-<div class="compare-col right">
-<h4>加码方案</h4>
-<ul>
-<li>爱上温泉：河口湖那晚升级更高级旅馆</li>
-<li>亚运彩蛋：查足球小组赛东京/大阪场次</li>
-<li>烟火凑上：出发前查到就顺便看</li>
-<li>岸和田地车祭：撞上关西日强烈推荐</li>
-</ul>
-</div>
+<div class="compare-col left"><h4>突发方案</h4><ul><li>雨天：东京改秋叶原室内/博物馆</li><li>雨天：关西改海游馆/京都博物馆</li><li>体力不支：京都拆两天</li><li>有马太累：改大阪市内+温泉浴场</li></ul></div>
+<div class="compare-col right"><h4>加码方案</h4><ul><li>亚运彩蛋：查足球小组赛</li><li>烟火凑上：出发前查到就顺便</li><li>岸和田地车祭：撞上关西日强烈推荐</li><li>河口湖升级：温泉旅馆升级</li></ul></div>
 </div>
 </div>
 </div>
@@ -670,27 +522,20 @@ tr:hover td{background:var(--bg-hover)}
 <!-- ============ 住宿 ============ -->
 <div class="section" id="hotels">
 <div class="card">
-<h2>🏨 9 晚住宿规划</h2>
+<h2>🏨 住宿规划（只换4个地）</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>晚</th><th>日期</th><th>城市</th><th>推荐酒店</th><th>备注</th></tr></thead>
+<thead><tr><th>晚</th><th>日期</th><th>住宿地</th><th>推荐酒店</th><th>大本营</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>9/25</td><td>有马温泉</td><td>兵卫向阳阁 / 有马Grand Hotel</td><td><span class="tag tag-warn">提前2个月订</span></td></tr>
-<tr><td>2</td><td>9/26</td><td>大阪难波</td><td>难波光芒 / 三井花园难波</td><td>顶楼大浴场</td></tr>
-<tr><td>3</td><td>9/27</td><td>京都站</td><td>京都新阪急 / 京都三井花园</td><td>车站近，方便去奈良</td></tr>
-<tr><td>4</td><td>9/28</td><td>大阪难波/梅田</td><td>同9/26或换梅田</td><td>灵活</td></tr>
-<tr><td>5</td><td>9/29</td><td>东京新宿/池袋</td><td>新宿王子 / 池袋阳光城</td><td>交通枢纽</td></tr>
-<tr><td>6</td><td>9/30</td><td>东京新宿/池袋</td><td>同9/29</td><td>不换酒店</td></tr>
-<tr><td>7</td><td>10/1</td><td>河口湖</td><td>秀峰閣湖月 / 風の町</td><td><span class="tag tag-warn">提前2个月订</span></td></tr>
-<tr><td>8</td><td>10/2</td><td>大阪梅田</td><td>大阪希尔顿 / InterContinental</td><td>购物便利</td></tr>
-<tr><td>9</td><td>10/3</td><td>关空附近</td><td>关西机场日航 / Star Gate</td><td><span class="tag tag-warn">早班机/国庆峰值</span></td></tr>
+<tr><td>1-4</td><td>9/25-28</td><td>大阪难波</td><td>难波光芒/三井花园难波</td><td><span class="tag tag-best">关西大本营·连住4晚</span></td></tr>
+<tr><td>5-6</td><td>9/29-30</td><td>东京新宿</td><td>新宿王子/京王广场</td><td><span class="tag tag-info">关东大本营·连住2晚</span></td></tr>
+<tr><td>7</td><td>10/1</td><td>河口湖</td><td>秀峰閣湖月/風の町</td><td><span class="tag tag-warn">温泉旅馆·提前2个月订</span></td></tr>
+<tr><td>8</td><td>10/2</td><td>大阪梅田</td><td>大阪希尔顿/InterContinental</td><td>关西收尾·购物便利</td></tr>
+<tr><td>9</td><td>10/3</td><td>关空附近</td><td>关西机场日航/Star Gate</td><td><span class="tag tag-warn">早班机/国庆峰值</span></td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-blue" style="margin-top:18px">
-<h4>预订贴士</h4>
-<p>Booking/Agoda/Klook 预订，注意取消政策。亚运+国庆不确定因素多，<strong>选可免费取消的</strong>。温泉旅馆怀石料理常需提前预约。</p>
-</div>
+<div class="alert alert-blue" style="margin-top:18px"><h4>选址逻辑</h4><p><strong>大阪难波</strong>：吃喝购+交通枢纽，去京都/奈良/有马都方便。<strong>东京新宿</strong>：JR枢纽，去镰仓/河口湖都从这出发。<strong>每城不换酒店</strong>，减少搬行李。Booking/Agoda选可免费取消的。</p></div>
 </div>
 </div>
 
@@ -698,62 +543,39 @@ tr:hover td{background:var(--bg-hover)}
 <div class="section" id="shopping">
 <div class="card">
 <h2>🛍️ 购物清单</h2>
-
-<h3>🏔️ 户外品牌（核心）</h3>
+<h3>🏔️ 户外品牌</h3>
 <div class="compare">
-<div class="compare-col left">
-<h4>关西</h4>
-<ul>
-<li>心斋桥/南船场：Snow Peak旗舰、Mont-bell本店</li>
-<li>Goldwin（TNF紫标）、Arc'teryx、Patagonia</li>
-<li>Rinku Outlet（回程必去）：折扣3-7折</li>
-<li>神户三田Premium Outlet（如时间够）</li>
-</ul>
+<div class="compare-col left"><h4>关西（大阪）</h4><ul><li>心斋桥/南船场：Snow Peak旗舰、Mont-bell本店</li><li>Goldwin（TNF紫标）、Arc'teryx、Patagonia</li><li>Rinku Outlet（回程必去）：折扣3-7折</li></ul></div>
+<div class="compare-col right"><h4>东京</h4><ul><li>原宿表参道：Snow Peak Tokyo、Arc'teryx</li><li>新宿/涩谷：Mont-bell新宿、Beams</li><li>下北泽：古着+独立品牌</li></ul></div>
 </div>
-<div class="compare-col right">
-<h4>东京</h4>
-<ul>
-<li>原宿表参道：Snow Peak Tokyo、Arc'teryx</li>
-<li>新宿/涩谷：Mont-bell新宿、Beams户外线</li>
-<li>下北泽：古着+独立品牌</li>
-</ul>
-</div>
-</div>
-
 <h3>👕 潮牌</h3>
 <div class="hl-grid">
-<div class="hl-box"><span class="icon">🧢</span><h4>关西·美国村</h4><p>BAPE / Supreme / Stüssy / Human Made / Neighborhood / Wtaps</p></div>
-<div class="hl-box"><span class="icon">👜</span><h4>东京·原宿</h4><p>Cat Street 古着 + 涩谷潮流 + 下北泽Vintage</p></div>
-<div class="hl-box"><span class="icon">👟</span><h4>特色品牌</h4><p>三宅一生Bao Bao / Issey Miyake / Onitsuka Tiger本店</p></div>
+<div class="hl-box"><span class="icon">🧢</span><h4>关西·美国村</h4><p>BAPE/Supreme/Stüssy/Human Made</p></div>
+<div class="hl-box"><span class="icon">👜</span><h4>东京·原宿</h4><p>Cat Street+涩谷+下北泽</p></div>
+<div class="hl-box"><span class="icon">👟</span><h4>特色品牌</h4><p>三宅一生/Onitsuka Tiger本店</p></div>
 </div>
-
 <h3>💊 保健品</h3>
 <div class="table-wrap">
 <table>
 <thead><tr><th>品类</th><th>品牌</th><th>备注</th></tr></thead>
 <tbody>
-<tr><td>综合维生素</td><td>DHC、Fancl、Asahi</td><td>DHC最便宜</td></tr>
+<tr><td>综合维生素</td><td>DHC、Fancl</td><td>DHC最便宜</td></tr>
 <tr><td>辅酶Q10</td><td>Kaneka认证</td><td>唯一原料商</td></tr>
-<tr><td>眼药水</td><td>参天FX neo、Rohto</td><td><span class="tag tag-warn">限购2瓶/人</span></td></tr>
-<tr><td>益生菌</td><td>强力Wakamoto、新ビオフェルミンS</td><td>经典便宜</td></tr>
+<tr><td>眼药水</td><td>参天FX neo</td><td><span class="tag tag-warn">限购2瓶/人</span></td></tr>
+<tr><td>益生菌</td><td>强力Wakamoto</td><td>经典便宜</td></tr>
 <tr><td>护肝</td><td>HEPALYSE黄金</td><td>应酬人士</td></tr>
 <tr><td>纳豆激酶</td><td>小林制药</td><td>心血管</td></tr>
-<tr><td>命の母A</td><td>小林制药</td><td>女性更年期</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-yellow" style="margin-top:15px">
-<h4>购买建议</h4>
-<p>大国药妆常比松本清便宜5-15%。单店满5000日元退税。<strong>海关规定：单品种≤6瓶/人，总价≤5000元避税</strong>。最佳购买日：回程前1-2天买，避免拎着走。</p>
-</div>
-
+<div class="alert alert-yellow" style="margin-top:15px"><h4>购买建议</h4><p>大国药妆常比松本清便宜5-15%。<strong>海关规定：单品种≤6瓶/人，总价≤5000元避税</strong>。回程前1-2天买。</p></div>
 <h3>📅 购物时间分配</h3>
 <div class="table-wrap">
 <table>
 <thead><tr><th>日期</th><th>购物重点</th></tr></thead>
 <tbody>
-<tr><td>9/26</td><td>大阪心斋桥（户外+潮牌初探）</td></tr>
-<tr><td>9/29-10/1</td><td>东京（潮牌+户外+电器）</td></tr>
+<tr><td>9/28</td><td>大阪心斋桥初探</td></tr>
+<tr><td>9/29-10/1</td><td>东京潮牌+户外+电器</td></tr>
 <tr><td>10/3</td><td>大阪心斋桥全量扫货+药妆</td></tr>
 <tr><td>10/4上午</td><td><span class="tag tag-rec">Rinku Outlet + 关空免税</span></td></tr>
 </tbody>
@@ -771,88 +593,38 @@ tr:hover td{background:var(--bg-hover)}
 <thead><tr><th>卡/证</th><th>价格</th><th>用途</th></tr></thead>
 <tbody>
 <tr><td>ICOCA / Suica</td><td>工本500日元</td><td>关西+东京通用，iPhone可加Apple Pay</td></tr>
-<tr><td><span class="tag tag-rec">大阪周游券1日</span></td><td>2,800日元</td><td>9/26用，含40+景点免费+地铁巴士</td></tr>
-<tr><td>关西JR Pass 3日</td><td>5,600日元</td><td>不推荐（单买更灵活）</td></tr>
+<tr><td><span class="tag tag-rec">大阪周游券1日</span></td><td>2,800日元</td><td>9/28用，含40+景点免费+地铁巴士</td></tr>
 <tr><td><span class="tag tag-warn">新干线のぞみ指定席</span></td><td>14,720日元/程</td><td>务必提前14天订（亚运+国庆）</td></tr>
-<tr><td>河口湖往返</td><td>约3,000日元</td><td>新宿出发，巴士或电车</td></tr>
+<tr><td>镰仓·江之电一日券</td><td>约1,500日元</td><td>江之电无限次+JR</td></tr>
+<tr><td>河口湖往返</td><td>约3,000日元</td><td>新宿出发巴士或电车</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-blue" style="margin-top:18px">
-<h4>新干线购票</h4>
-<p>JR官网、车站售票机、或 Klook/KKday 代购。亚运+国庆期间<strong>建议出发前14天锁定指定席</strong>，否则只能站自由席。普通JR Pass涨价后性价比大跌，不推荐。</p>
+<div class="alert alert-blue" style="margin-top:18px"><h4>新干线购票</h4><p>JR官网/车站售票机/Klook代购。亚运+国庆<strong>提前14天锁定指定席</strong>。普通JR Pass涨价后性价比大跌，不推荐。</p></div>
 </div>
-</div>
-
 <div class="card">
 <h2>🚃 关键跨城交通</h2>
-<h3>大阪 ↔ 京都</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
-<tbody>
-<tr><td>JR新快速</td><td>28分钟</td><td>580日元</td><td><span class="tag tag-best">最佳选择</span></td></tr>
-<tr><td>阪急（梅田→河原町）</td><td>45分钟</td><td>410日元</td><td>近河原町祇园直达</td></tr>
-</tbody>
-</table>
-</div>
-<h3>大阪 ↔ 奈良</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
-<tbody>
-<tr><td>近铁奈良线</td><td>40分钟</td><td>680日元</td><td><span class="tag tag-best">直达奈良公园首选</span></td></tr>
-</tbody>
-</table>
-</div>
-<h3>大阪 ↔ 东京</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead>
-<tbody>
-<tr><td>新干线のぞみ</td><td>2小时30分</td><td>14,720日元</td><td><span class="tag tag-rec">首选，指定席早订</span></td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<!-- ============ 美食 ============ -->
-<div class="section" id="food">
-<div class="card">
-<h2>🍜 必吃清单</h2>
-<div class="compare">
-<div class="compare-col left">
-<h4>关西</h4>
-<ul>
-<li>大阪：蟹道乐本店（提前1月订）</li>
-<li>大阪：一蘭拉面、章鱼烧Wanaka、大阪烧美津</li>
-<li>大阪：黑门市场海鲜</li>
-<li>京都：锦市场抹茶八桥、豆腐料理顺正</li>
-<li>京都：怀石菊乃井（提前1月订）</li>
-<li>京都：中村藤吉抹茶</li>
-<li>奈良：柿叶寿司平宗</li>
-<li>神户：神户牛Mouriya/Wakkoqu（提前1周订）</li>
-</ul>
-</div>
-<div class="compare-col right">
-<h4>东京</h4>
-<ul>
-<li>一蘭拉面</li>
-<li>矶丸水产</li>
-<li>藏寿司（回转）</li>
-<li>monjayaki（文字烧）</li>
-<li>银座寿司</li>
-</ul>
-</div>
-</div>
+<h3>大阪 ↔ 京都（日trip）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>JR新快速</td><td>28分钟</td><td>580日元</td><td><span class="tag tag-best">最佳·从大阪站发</span></td></tr></tbody></table></div>
+<h3>大阪 ↔ 奈良（日trip）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>近铁奈良线</td><td>40分钟</td><td>680日元</td><td><span class="tag tag-best">从难波直达</span></td></tr></tbody></table></div>
+<h3>大阪 ↔ 有马温泉（日trip）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>阪急+神户电铁</td><td>约70分钟</td><td>约1,000日元</td><td>梅田出发</td></tr></tbody></table></div>
+<h3>大阪 ↔ 东京（新干线跨越）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>新干线のぞみ</td><td>2小时30分</td><td>14,720日元</td><td><span class="tag tag-rec">指定席早订</span></td></tr></tbody></table></div>
+<h3>东京 ↔ 镰仓（日trip）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>价格</th><th>备注</th></tr></thead><tbody><tr><td>JR湘南新宿线</td><td>约1小时</td><td>约920日元</td><td>新宿出发</td></tr></tbody></table></div>
+<h3>镰仓 → 河口湖（环线衔接）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>备注</th></tr></thead><tbody><tr><td>镰仓→大月(横须贺线+中央线)→河口湖(富士急)</td><td>约3.5小时</td><td>不回东京市区，少绕路</td></tr></tbody></table></div>
+<h3>河口湖 → 大阪（返程）</h3>
+<div class="table-wrap"><table><thead><tr><th>方式</th><th>耗时</th><th>备注</th></tr></thead><tbody><tr><td>河口湖→三岛(巴士)→新大阪(新干线)</td><td>约2.5小时</td><td><span class="tag tag-best">最快·避开东京</span></td></tr></tbody></table></div>
 </div>
 </div>
 
 <!-- ============ 预算 ============ -->
 <div class="section" id="budget">
 <div class="card">
-<h2>💰 预算参考（人均，2人成行）</h2>
+<h2>💰 预算参考（人均，2人成行·元RMB）</h2>
 <div class="table-wrap">
 <table>
 <thead><tr><th>项目</th><th>经济档</th><th>中档</th><th>高档</th></tr></thead>
@@ -860,27 +632,24 @@ tr:hover td{background:var(--bg-hover)}
 <tr><td>往返机票（济南-大阪）</td><td>2,500</td><td>3,500</td><td>5,000</td></tr>
 <tr><td>酒店9晚</td><td>4,500</td><td>7,500</td><td>15,000</td></tr>
 <tr><td>新干线东京往返</td><td>1,500</td><td>1,500</td><td>1,500</td></tr>
-<tr><td>市内+城际交通</td><td>1,000</td><td>1,500</td><td>2,000</td></tr>
+<tr><td>市内+城际+日trip</td><td>1,500</td><td>2,000</td><td>2,500</td></tr>
+<tr><td>黑猫快递行李(2次)</td><td>200</td><td>200</td><td>200</td></tr>
 <tr><td>餐饮</td><td>3,000</td><td>5,000</td><td>8,000</td></tr>
-<tr><td>温泉旅馆（2晚含怀石）</td><td>1,500</td><td>3,000</td><td>6,000</td></tr>
+<tr><td>温泉(有马日归+河口湖1晚)</td><td>1,500</td><td>3,000</td><td>6,000</td></tr>
 <tr><td>购物（户外+潮牌+保健品）</td><td>5,000</td><td>12,000</td><td>30,000</td></tr>
 <tr><td>杂项</td><td>1,000</td><td>2,000</td><td>3,000</td></tr>
-<tr style="font-weight:700"><td>合计/人（元RMB）</td><td>20,000</td><td>36,000</td><td>70,500</td></tr>
+<tr style="font-weight:700"><td>合计/人</td><td>20,700</td><td>36,700</td><td>71,200</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-green" style="margin-top:18px">
-<h4>预算说明</h4>
-<p>中档 ≈ <strong>3.6万/人 / 7.2万双人（含购物）</strong>。汇率参考：1日元 ≈ 0.047元人民币（2026年参考，实际以预订时为准）。东京酒店比关西贵约30%，亚运+国庆期间波动大。</p>
-</div>
+<div class="alert alert-green" style="margin-top:18px"><h4>预算说明</h4><p>中档 ≈ <strong>3.7万/人 / 7.4万双人（含购物）</strong>。汇率参考：1日元 ≈ 0.047元人民币（2026参考，实际以预订时为准）。大本营连住比每天换酒店便宜，且省行李搬运。</p></div>
 </div>
 </div>
 
-<!-- ============ 出行清单 ============ -->
+<!-- ============ 清单 ============ -->
 <div class="section" id="checklist">
 <div class="card">
 <h2>✅ 出行前 48 小时 Checklist</h2>
-
 <h3>📋 证件</h3>
 <ul style="list-style:none;padding:0">
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 护照（有效期至2027年4月后）</li>
@@ -889,86 +658,56 @@ tr:hover td{background:var(--bg-hover)}
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 行程单+酒店预订单（入境备查）</li>
 <li style="padding:6px 0">☐ 应急联系人</li>
 </ul>
-
 <h3>📝 已订</h3>
 <ul style="list-style:none;padding:0">
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 往返机票（济南-大阪）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9晚酒店（含可免费取消的）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <span class="tag tag-warn">新干线のぞみ指定席</span>（9/29去东京 + 10/2返大阪）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 有马温泉+河口湖温泉旅馆（提前2个月订）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <strong>大阪难波大本营4晚+东京新宿2晚+河口湖1晚+大阪关空2晚</strong></li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <span class="tag tag-warn">新干线のぞみ指定席</span>（9/29大阪→东京 + 10/2三岛→新大阪）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 河口湖温泉旅馆（提前2个月订）</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 蟹道乐/菊乃井/神户牛餐厅</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 涩谷Shibuya Sky门票</li>
 <li style="padding:6px 0">☐ 旅行保险（含医疗+航延）</li>
 </ul>
-
 <h3>🎒 装备</h3>
 <ul style="list-style:none;padding:0">
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 万能转换插头（日本A型扁脚100V，手机充电不需变压器）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 万能转换插头（日本A型扁脚100V）</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 充电宝（≤100Wh随身）</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 雨伞（9月底可能有雨/台风尾）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 长袖+薄外套（9月底18-27℃，早晚温差大）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 长袖+薄外套（9月底18-27℃）</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 舒适步行鞋</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 空折叠箱（装购物）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <strong>小背包（日trip轻装用）</strong></li>
 <li style="padding:6px 0">☐ 个人药品</li>
 </ul>
-
 <h3>💴 资金</h3>
 <ul style="list-style:none;padding:0">
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 3-5万日元现金</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 银联+VISA双币卡</li>
 <li style="padding:6px 0">☐ 支付宝/微信境外功能</li>
 </ul>
-
 <h3>📱 App</h3>
 <ul style="list-style:none;padding:0">
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Visit Japan Web 填好</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Google Maps 离线地图</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Yahoo!乗換案内（电车换乘）</li>
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ DiDi 日本注册</li>
 <li style="padding:6px 0">☐ eSIM 开通</li>
 </ul>
 </div>
-
 <div class="card">
 <h2>🆘 应急信息</h2>
-<div class="stats">
-<div class="stat"><span class="num">110</span><div class="label">报警</div></div>
-<div class="stat"><span class="num">119</span><div class="label">救护/消防</div></div>
-</div>
-<div class="table-wrap">
-<table>
-<thead><tr><th>联系</th><th>电话</th></tr></thead>
-<tbody>
-<tr><td>中国驻大阪总领馆</td><td>+81-6-6445-9481</td></tr>
-<tr><td>中国驻东京大使馆</td><td>+81-3-3403-3380</td></tr>
-<tr><td>关西机场咨询</td><td>+81-72-455-2500</td></tr>
-</tbody>
-</table>
-</div>
-
-<h3>📱 必备App</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🗺️</span><h4>Google Maps</h4><p>导航+电车换乘</p></div>
-<div class="hl-box"><span class="icon">🚃</span><h4>Yahoo!乗換案内</h4><p>日本电车换乘神器</p></div>
-<div class="hl-box"><span class="icon">🚕</span><h4>DiDi日本</h4><p>中文叫车+支付宝</p></div>
-<div class="hl-box"><span class="icon">🎫</span><h4>Klook/KKday</h4><p>门票+新干线代购</p></div>
-</div>
-
+<div class="stats"><div class="stat"><span class="num">110</span><div class="label">报警</div></div><div class="stat"><span class="num">119</span><div class="label">救护/消防</div></div></div>
+<div class="table-wrap"><table><thead><tr><th>联系</th><th>电话</th></tr></thead><tbody><tr><td>中国驻大阪总领馆</td><td>+81-6-6445-9481</td></tr><tr><td>中国驻东京大使馆</td><td>+81-3-3403-3380</td></tr><tr><td>关西机场咨询</td><td>+81-72-455-2500</td></tr></tbody></table></div>
 <h3>💰 退税 & 海关</h3>
-<div class="alert alert-blue">
-<h4>退税</h4>
-<p>满5,000日元（不含税）可退税，出示护照原件。消耗品（食品/化妆品）当场密封不能拆；一般物品（服装/电器）可使用。<strong>2026年4月起可能改为机场退税模式</strong>，出发前查最新政策。</p>
-</div>
-<div class="alert alert-yellow">
-<h4>海关回国</h4>
-<p>个人物品+礼品总价≤5,000元免税。化妆品≤6瓶/品牌，保健品≤6瓶/品种。<strong>不能带</strong>：肉制品、生鲜水果、活体动植物。<strong>可带</strong>：真空零食、糖果、瓶装酒、保健品。</p>
-</div>
+<div class="alert alert-blue"><h4>退税</h4><p>满5,000日元（不含税）可退税，出示护照原件。消耗品当场密封不能拆。<strong>2026年4月起可能改为机场退税</strong>，出发前查最新政策。</p></div>
+<div class="alert alert-yellow"><h4>海关回国</h4><p>个人物品+礼品总价≤5,000元免税。化妆品≤6瓶/品牌，保健品≤6瓶/品种。<strong>不能带</strong>：肉制品、生鲜水果、活体动植物。<strong>可带</strong>：真空零食、糖果、瓶装酒、保健品。</p></div>
 </div>
 </div>
 
 <div class="footer">
-<p>🗾 2026 日本 9 晚自由行攻略 · 关西温泉 + 东京都市</p>
-<p style="margin-top:6px">v2.0 · 2026-06-29 · 济南 ✈️ 大阪 KIX · 9 晚 10 天</p>
-<p style="margin-top:6px;font-size:12px;opacity:.7">变更：去除USJ、新增东京段+富士河口湖、Day1温泉开场、最后两天关西购物收尾、纳入亚运会与烟火大会考量</p>
+<p>🗾 2026 日本 9 晚自由行 · 不回头环线 · 关西大本营+东京镰仓河口湖</p>
+<p style="margin-top:6px">v3.0 · 2026-06-29 · 济南 ✈️ 大阪 KIX · 9 晚 10 天</p>
+<p style="margin-top:6px;font-size:12px;opacity:.7">v3变更：改不回头环线·关西大本营连住4晚·有马/京都/奈良日trips·回程东京→镰仓→河口湖→大阪环线·大行李黑猫快递</p>
 </div>
 
 </div>
@@ -976,67 +715,15 @@ tr:hover td{background:var(--bg-hover)}
 <script>
 const body=document.body;
 const THEME_KEY='osaka-guide-theme';
-
-// ============ Theme (light/dark) ============
-function applyTheme(theme){
-  if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark')}
-  else{document.documentElement.removeAttribute('data-theme')}
-}
-(function initTheme(){
-  let saved=null;
-  try{saved=localStorage.getItem(THEME_KEY)}catch(e){}
-  if(saved==='light'||saved==='dark'){applyTheme(saved);return}
-  const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(prefersDark?'dark':'light');
-})();
+function applyTheme(theme){if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark')}else{document.documentElement.removeAttribute('data-theme')}}
+(function initTheme(){let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(e){}if(saved==='light'||saved==='dark'){applyTheme(saved);return}const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;applyTheme(prefersDark?'dark':'light')})();
 const themeBtn=document.getElementById('themeToggle');
-if(themeBtn){
-  themeBtn.addEventListener('click',()=>{
-    const isDark=document.documentElement.getAttribute('data-theme')==='dark';
-    const next=isDark?'light':'dark';
-    applyTheme(next);
-    try{localStorage.setItem(THEME_KEY,next)}catch(e){}
-  });
-}
-if(window.matchMedia){
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{
-    let saved=null;
-    try{saved=localStorage.getItem(THEME_KEY)}catch(_){}
-    if(saved)return;
-    applyTheme(e.matches?'dark':'light');
-  });
-}
-
-// ============ Plan A / B switch (关西/东京视角) ============
-document.querySelectorAll('.plan-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.plan-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    if(btn.dataset.plan==='a'){body.classList.remove('plan-b-mode');body.classList.add('plan-a-mode')}
-    else{body.classList.remove('plan-a-mode');body.classList.add('plan-b-mode')}
-  });
-});
-
-// ============ Tabs ============
-document.querySelectorAll('.tab').forEach(tab=>{
-  tab.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(tab.dataset.tab).classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-  });
-});
-
-// ============ Back to top ============
+if(themeBtn){themeBtn.addEventListener('click',()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';const next=isDark?'light':'dark';applyTheme(next);try{localStorage.setItem(THEME_KEY,next)}catch(e){}})}
+if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(_){}if(saved)return;applyTheme(e.matches?'dark':'light')})}
+document.querySelectorAll('.plan-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.plan-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(btn.dataset.plan==='a'){body.classList.remove('plan-b-mode');body.classList.add('plan-a-mode')}else{body.classList.remove('plan-a-mode');body.classList.add('plan-b-mode')}})});
+document.querySelectorAll('.tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.tab).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})})});
 const backTop=document.getElementById('backTop');
-if(backTop){
-  window.addEventListener('scroll',()=>{
-    if(window.scrollY>400){backTop.classList.add('show')}
-    else{backTop.classList.remove('show')}
-  },{passive:true});
-  backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
-}
+if(backTop){window.addEventListener('scroll',()=>{if(window.scrollY>400){backTop.classList.add('show')}else{backTop.classList.remove('show')}},{passive:true});backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})}
 </script>
 </body>
 </html>
