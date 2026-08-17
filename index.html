@@ -122,6 +122,34 @@ tr:hover td{background:var(--bg-hover)}
 .route .node.base{border-color:#059669;color:#059669}
 .route .node.tokyo{border-color:#2563eb;color:#2563eb}
 .route .arrow{color:var(--text-faint);font-size:16px}
+/* ============== 逐日展开（时间线 + 本日最推荐） ============== */
+.day-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.day-badge{display:inline-block;background:var(--accent);color:white;padding:4px 12px;border-radius:8px;font-size:12px;font-weight:600}
+.day-badge.tokyo{background:#2563eb}
+.day-badge.base{background:#059669}
+.day-badge.special{background:var(--special)}
+.day-head h3{margin:0}
+.lodging-inline{font-size:12px;color:var(--text-faint);padding:5px 10px;background:var(--bg-elevated);border-radius:6px;display:inline-block;margin-top:8px}
+.day-cols{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;margin-top:14px}
+@media(max-width:960px){.day-cols{grid-template-columns:1fr}}
+.tl-head{font-size:14px;color:var(--text-heading);margin:0 0 8px}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{padding:5px 0;font-size:13px;color:var(--text-secondary);border-bottom:1px dashed var(--border-soft);display:flex;gap:8px;transition:color .3s,border-color .3s}
+.tl li:last-child{border-bottom:none}
+.tl .time{color:var(--accent);font-weight:600;min-width:52px;flex-shrink:0}
+.rec-group{margin-bottom:16px}
+.rec-group h5{font-size:13px;color:var(--text-heading);margin:0 0 8px;letter-spacing:.5px}
+.rec-top{display:flex;gap:12px;align-items:flex-start;background:var(--bg-elevated);border-radius:10px;padding:10px;margin-bottom:8px}
+.rec-top img{width:86px;height:66px;object-fit:cover;border-radius:8px;flex-shrink:0;background:var(--border-soft)}
+.rec-name{font-size:13px;font-weight:600;color:var(--text-heading)}
+.rec-why{font-size:12px;color:var(--text-muted);margin-top:3px;line-height:1.55}
+.rec-links{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+.rec-links a{font-size:11px;padding:3px 9px;border-radius:10px;background:var(--accent-soft);color:var(--accent-2);text-decoration:none;font-weight:500}
+.rec-links a:hover{text-decoration:underline}
+.rec-alt{font-size:12px;color:var(--text-muted);line-height:1.8}
+.rec-alt a{color:var(--accent-2);text-decoration:none}
+.rec-alt a:hover{text-decoration:underline}
+.quota{margin-top:14px;padding:8px 10px;border-radius:8px;background:var(--bg-elevated);font-size:12px;color:var(--text-muted);line-height:1.5}
 .footer{text-align:center;padding:30px 20px;color:var(--footer-color);font-size:13px;transition:color .3s}
 .theme-toggle{position:fixed;top:16px;right:16px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--toggle-bg);border:1.5px solid var(--toggle-border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s,background .3s,border-color .3s;color:var(--toggle-icon);box-shadow:var(--shadow-sm)}
 .theme-toggle:hover{transform:scale(1.08) rotate(15deg)}
@@ -259,192 +287,567 @@ tr:hover td{background:var(--bg-hover)}
 <!-- ============ 每日行程 ============ -->
 <div class="section" id="itinerary">
 <div class="card">
-<h2>🗓️ 10 天 9 晚逐日行程</h2>
-<p style="color:var(--text-muted);font-size:13px">每张卡片末尾标注当日配额（景点/购物/美食）和午休位置。"可选"项都可整体删除而不影响当天。</p>
-<div class="day-grid">
+<h2>🗓️ 10 天 9 晚逐日行程 · 完整展开版</h2>
+<p style="color:var(--text-muted);font-size:13px">每天左侧是时间线，右侧「本日最推荐」给出景点/美食/购物的首选具体店与点位（配图 + 官网 + Google 地图链接），备选并列其后；每天末尾是配额与午休。「可选」项都可整体删除而不影响当天。图片 © Wikimedia Commons，点击图片可查原图。</p>
+</div>
 
-<div class="day-card">
-<span class="day-num">Day 1</span>
-<div class="date">9/25 周五 · 抵达</div>
-<div class="day-title">🛬 落地关西·新大阪恢复夜</div>
-<div class="lodging">🏠 Courtyard Shin-Osaka Station（或新大阪站步行酒店）</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge">Day 1</span><h3>9/25 周五 · 抵达｜落地关西·新大阪恢复夜</h3></div>
+<span class="lodging-inline">🏠 Courtyard Shin-Osaka Station（或新大阪站步行酒店）</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">14:55</span>落地→入境、取行李、买 ICOCA、取现金</li>
 <li><span class="time">17:00</span>Haruka 至新大阪，入住</li>
 <li><span class="time">18:15</span>新世界街区+通天阁外围夜景（不登塔）</li>
-<li><span class="time">19:00</span>串炸/大阪烧晚餐</li>
+<li><span class="time">19:00</span>串炸晚餐</li>
 <li><span class="time">20:00</span>便利店买次日新干线早餐、儿童零食</li>
 <li><span class="time">21:30</span>前熄灯</li>
 </ul>
-<div class="quota">🎯 景点 2 / 购物 1 / 美食 1<br>😴 抵达日不凑数，休息优先</div>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg/960px-Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg" alt="新世界与通天阁夜景" loading="lazy">
+<div>
+<div class="rec-name">新世界 · 通天阁外围夜景</div>
+<div class="rec-why">昭和老街的霓虹氛围是大阪最好的"第一眼"，只拍外围不登塔，30 分钟搞定不耗体力。</div>
+<div class="rec-links"><a href="https://www.tsutenkaku.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=通天閣" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ジャンジャン横丁" target="_blank" rel="noopener">JANJAN 横丁</a>（新世界腹地的小巷，更有烟火气）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">串かつだるま 新世界総本店</div>
+<div class="rec-why">通天阁脚下的串炸本店，白饭、乌冬、玉子烧孩子都能吃；酱汁禁止二次蘸，顺便给孩子讲个有趣的餐桌规则。</div>
+<div class="rec-links"><a href="https://www.kushikatsu-daruma.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=串かつだるま+新世界総本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=新世界+大阪烧" target="_blank" rel="noopener">新世界大阪烧/定食</a>（排队超 20 分钟就换，第一晚不硬排）</div>
+</div>
+</div>
+</div>
+<div class="quota">🎯 景点 2 / 购物 1（便利店补给）/ 美食 1<br>😴 抵达日不凑数，休息优先</div>
 </div>
 
-<div class="day-card tokyo">
-<span class="day-num">Day 2</span>
-<div class="date">9/26 周六 · 跨越</div>
-<div class="day-title">🚄 早班新干线→原宿·涩谷</div>
-<div class="lodging">🏠 Hilton Tokyo（西新宿）· 大行李随身寄酒店</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge tokyo">Day 2</span><h3>9/26 周六 · 跨越｜早班新干线→原宿·涩谷</h3></div>
+<span class="lodging-inline">🏠 Hilton Tokyo（西新宿）· 大行李随身寄酒店</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">07:09</span>Nozomi 新大阪→东京（约 2.5h，车上早餐+补觉）</li>
 <li><span class="time">10:00</span>新宿酒店寄存行李（已过早高峰）</li>
-<li><span class="time">11:00</span><strong>景点①明治神宫</strong>：大鸟居、森林参道</li>
-<li><span class="time">12:00</span><strong>美食①</strong>表参道午餐（定食/乌冬/寿司）</li>
-<li><span class="time">13:00</span><strong>景点②竹下通</strong>（只走核心段）+可丽饼</li>
-<li><span class="time">13:40</span><strong>景点③表参道</strong>：建筑橱窗慢走</li>
-<li><span class="time">14:30</span><strong>回酒店入住+孩子午休</strong>（至 16:30）</li>
-<li><span class="time">16:30</span><strong>景点④涩谷</strong>：十字路口、Hachiko、中心街</li>
-<li><span class="time">17:00</span><strong>购物①涩谷 PARCO</strong>：Nintendo TOKYO（排队超 20 分钟就走）</li>
-<li><span class="time">18:00</span><strong>美食②涩谷晚餐</strong>：回转寿司/亲子盖饭</li>
-<li><span class="time">19:30</span><strong>购物②</strong>PARCO/109 短逛后回新宿（避高峰）；<strong>美食③</strong>新宿甜品夜宵</li>
+<li><span class="time">11:00</span>明治神宫</li>
+<li><span class="time">12:00</span>表参道午餐</li>
+<li><span class="time">13:00</span>竹下通（只走核心段）+可丽饼</li>
+<li><span class="time">13:40</span>表参道慢走</li>
+<li><span class="time">14:30</span>回酒店入住+孩子午休（至 16:30）</li>
+<li><span class="time">16:30</span>涩谷十字路口、Hachiko、中心街</li>
+<li><span class="time">17:00</span>涩谷 PARCO：Nintendo TOKYO</li>
+<li><span class="time">18:00</span>涩谷晚餐</li>
+<li><span class="time">19:30</span>PARCO/109 短逛后回新宿（避高峰）</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Meiji_Jingu_2023-3.jpg/960px-Meiji_Jingu_2023-3.jpg" alt="明治神宫" loading="lazy">
+<div>
+<div class="rec-name">明治神宫</div>
+<div class="rec-why">东京都心最大的森林参道，大鸟居必拍；路面平缓好走，是落地第二天最舒服的"开场"。</div>
+<div class="rec-links"><a href="https://www.meijijingu.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=明治神宮" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=竹下通り" target="_blank" rel="noopener">竹下通</a> · <a href="https://www.google.com/maps/search/?api=1&query=KIDDY LAND 原宿店" target="_blank" rel="noopener">KIDDY LAND 原宿店</a>（孩子的玩具天堂） · <a href="https://www.google.com/maps/search/?api=1&query=渋谷スクランブル交差点" target="_blank" rel="noopener">涩谷十字路口＋ハチ公</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">まい泉 青山本店（炸猪排）</div>
+<div class="rec-why">表参道旁的老牌猪排店，有儿童餐具和软嫩的ひれかつ，午休前坐下来吃顿正经午餐的最佳选择。</div>
+<div class="rec-links"><a href="https://mai-sen.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=まい泉+青山本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=マリオンクレープ+竹下通り" target="_blank" rel="noopener">Marion Crepes 竹下通</a>（可丽饼创始老店，甜点不当代正餐） · <a href="https://www.google.com/maps/search/?api=1&query=活美登利寿司+渋谷" target="_blank" rel="noopener">活 美登利寿司 涩谷店</a>（晚餐回转寿司，孩子接受度高）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Nintendo_TOKYO_2024.JPG/960px-Nintendo_TOKYO_2024.JPG" alt="Nintendo TOKYO" loading="lazy">
+<div>
+<div class="rec-name">Nintendo TOKYO（涩谷 PARCO 6F）</div>
+<div class="rec-why">免费入场，马里奥/动森/塞尔达官方限定；只顺路停 30–45 分钟，排队超 20 分钟就放弃，不当主线。</div>
+<div class="rec-links"><a href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=Nintendo TOKYO" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：同层 <a href="https://www.google.com/maps/search/?api=1&query=Pokémon Center Shibuya" target="_blank" rel="noopener">Pokémon Center Shibuya</a> · PARCO 动漫/游戏楼层短逛</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 14:30–16:30 酒店<br>✂️ 删减顺序：Shibuya Sky → 表参道 → 任天堂店</div>
 </div>
 
-<div class="day-card tokyo">
-<span class="day-num">Day 3</span>
-<div class="date">9/27 周日 · 东京</div>
-<div class="day-title">⛩️ 浅草·上野·秋叶原·池袋</div>
-<div class="lodging">🏠 Hilton Tokyo · <strong>晚 19:30 大箱宅急便寄京都</strong></div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge tokyo">Day 3</span><h3>9/27 周日 · 东京｜浅草·上野·秋叶原·池袋</h3></div>
+<span class="lodging-inline">🏠 Hilton Tokyo · <strong>晚 19:30 大箱宅急便寄京都</strong></span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">08:30</span>早餐、出发（周日无高峰，不用早起）</li>
-<li><span class="time">09:30</span><strong>景点①浅草寺</strong>：雷门—仲见世—本堂；人形烧小吃</li>
-<li><span class="time">11:30</span><strong>美食①上野/阿美横丁午餐</strong>：鳗鱼饭/寿司/定食</li>
-<li><span class="time">12:30</span><strong>景点②上野公园</strong>：开阔地跑一跑</li>
-<li><span class="time">13:30</span><strong>景点③秋叶原 + 购物①</strong>：扭蛋、模型、游戏机厅（先定预算）</li>
-<li><span class="time">15:30</span>电车回新宿方向，<strong>车上补觉</strong></li>
-<li><span class="time">16:00</span><strong>景点④池袋 + 购物② animate 旗舰店</strong>（营业至 21:00）</li>
-<li><span class="time">18:00</span><strong>美食②池袋晚餐</strong>：商场餐厅</li>
-<li><span class="time">19:30</span><strong>美食③（轻）</strong>买次日路早；<strong>打包寄大箱到 Hilton Kyoto</strong>，只留 1 晚小包</li>
+<li><span class="time">09:30</span>浅草寺：雷门—仲见世—本堂</li>
+<li><span class="time">11:30</span>上野/阿美横丁午餐</li>
+<li><span class="time">12:30</span>上野公园跑一跑</li>
+<li><span class="time">13:30</span>秋叶原：扭蛋、模型、游戏机厅（先定预算）</li>
+<li><span class="time">15:30</span>电车回新宿方向，车上补觉</li>
+<li><span class="time">16:00</span>池袋 animate 旗舰店（营业至 21:00）</li>
+<li><span class="time">18:00</span>池袋晚餐</li>
+<li><span class="time">19:30</span>买次日路早；打包寄大箱到 Hilton Kyoto，只留 1 晚小包</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sensoji_2023.jpg/960px-Sensoji_2023.jpg" alt="浅草寺" loading="lazy">
+<div>
+<div class="rec-name">浅草寺 · 雷门</div>
+<div class="rec-why">东京最经典的江户街景：大红灯笼—仲见世—本堂一条线走完；教孩子参拜前洗手、安静看香炉和绘马。</div>
+<div class="rec-links"><a href="https://www.senso-ji.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=浅草寺" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=仲見世通り" target="_blank" rel="noopener">仲见世通</a> · <a href="https://www.google.com/maps/search/?api=1&query=上野公園" target="_blank" rel="noopener">上野公园</a> · <a href="https://www.google.com/maps/search/?api=1&query=アメヤ横丁" target="_blank" rel="noopener">阿美横丁</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ueno_20241210_133139.jpg/960px-Ueno_20241210_133139.jpg" alt="阿美横丁" loading="lazy">
+<div>
+<div class="rec-name">伊豆荣 本店（上野 · 鳗鱼饭）</div>
+<div class="rec-why">创业 260 多年的鳗鱼饭老铺，就在上野公园不忍池旁；鳗鱼软、酱汁甜，孩子也能吃，午市套餐性价比高。</div>
+<div class="rec-links"><a href="https://www.izuei.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=伊豆栄+上野本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=木村家本店+浅草+人形焼" target="_blank" rel="noopener">木村家本店 人形烧</a>（浅草伴手小吃） · <a href="https://www.google.com/maps/search/?api=1&query=無敵家+池袋" target="_blank" rel="noopener">无敌家 池袋</a>（晚餐拉面，排队短于一兰）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png/960px-Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png" alt="秋叶原电器街" loading="lazy">
+<div>
+<div class="rec-name">秋叶原无线电会馆（ラジオ会館）</div>
+<div class="rec-why">一栋楼集中模型、手办、卡牌、扭蛋，亲子逛这一栋就够；先定每人预算，"想买"拍照后再决定。</div>
+<div class="rec-links"><a href="https://akihabara-radiokaikan.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=秋葉原ラジオ会館" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.animate.co.jp/shop/ikebukuro/" target="_blank" rel="noopener">animate 池袋本店</a>（<a href="https://www.google.com/maps/search/?api=1&query=アニメイト池袋本店" target="_blank" rel="noopener">地图</a>，角色周边/漫画/文具） · <a href="https://www.google.com/maps/search/?api=1&query=ガシャポンのデパート+池袋総本店" target="_blank" rel="noopener">ガシャポンのデパート 池袋総本店</a>（扭蛋专门店）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 15:30–16:00 车上（也可 15:00 回酒店躺 1 小时）<br>✂️ 删减：池袋 → 上野公园</div>
 </div>
 
-<div class="day-card tokyo">
-<span class="day-num">Day 4</span>
-<div class="date">9/28 周一 · 转场</div>
-<div class="day-title">🌊 镰仓半日→河口湖温泉夜</div>
-<div class="lodging">🏠 Hotel Asafuji 或同级含晚餐温泉旅馆 · 只背小包</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge tokyo">Day 4</span><h3>9/28 周一 · 转场｜镰仓半日→河口湖温泉夜</h3></div>
+<span class="lodging-inline">🏠 <a href="https://en.asafuji.jp/" target="_blank" rel="noopener" style="color:inherit">Hotel Asafuji</a> 或同级含晚餐温泉旅馆 · 只背小包</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">07:00</span>JR 湘南新宿线→镰仓（高峰前通过），换江之电</li>
-<li><span class="time">08:30</span><strong>景点①镰仓高校前</strong>：官方安全区域拍照</li>
-<li><span class="time">09:00</span><strong>景点②江之电沿海短乘</strong>：以乘车体验为主</li>
-<li><span class="time">09:45</span><strong>景点③镰仓大佛</strong>：只保留这一处寺院</li>
-<li><span class="time">10:45</span><strong>景点④小町通 + 美食①早午餐</strong>：鳗鱼/乌冬/海鲜丼</li>
-<li><span class="time">12:30</span><strong>藤泽→河口湖直达巴士（已订座，全车补觉）</strong></li>
+<li><span class="time">08:30</span>镰仓高校前：官方安全区域拍照</li>
+<li><span class="time">09:00</span>江之电沿海短乘</li>
+<li><span class="time">09:45</span>镰仓大佛</li>
+<li><span class="time">10:45</span>小町通早午餐</li>
+<li><span class="time">12:30</span>藤泽→河口湖直达巴士（已订座，全车补觉）</li>
 <li><span class="time">15:00</span>河口湖站 10 号站牌旅馆接送、入住、房间休息</li>
 <li><span class="time">16:30</span>浴衣、榻榻米、第一次温泉（孩子浅尝即可）</li>
-<li><span class="time">18:00</span><strong>美食②旅馆日式晚餐</strong>（今日核心，须 18:00 前到站）</li>
-<li><span class="time">19:30</span>房内桌游/绘本/日式小点（<strong>美食③轻</strong>）；第二次温泉成人轮流</li>
+<li><span class="time">18:00</span>旅馆日式晚餐（须 18:00 前到站）</li>
+<li><span class="time">19:30</span>房内桌游/绘本/日式小点；第二次温泉成人轮流</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Enoden_300_series_Kamakura_Koko_mae_Station.jpg/960px-Enoden_300_series_Kamakura_Koko_mae_Station.jpg" alt="江之电与镰仓高校前" loading="lazy">
+<div>
+<div class="rec-name">镰仓高校前 · 灌篮高手道口</div>
+<div class="rec-why">《灌篮高手》OP 名场面。只在海侧官方安全区域拍，不站轨道、不堵道口；8:30 到人少好拍。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=鎌倉高校前駅" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.enoden.co.jp/" target="_blank" rel="noopener">江之电</a>（沿海慢车体验，<a href="https://www.google.com/maps/search/?api=1&query=江ノ電" target="_blank" rel="noopener">地图</a>） · <a href="https://www.kotoku-in.jp/" target="_blank" rel="noopener">高德院 镰仓大佛</a>（<a href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏+高徳院" target="_blank" rel="noopener">地图</a>，只保留这一处寺院）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Komachi_Street%2C_Kanagawa_02.jpg/960px-Komachi_Street%2C_Kanagawa_02.jpg" alt="小町通" loading="lazy">
+<div>
+<div class="rec-name">小町通 しらす丼（银鱼盖饭）</div>
+<div class="rec-why">镰仓名物，小町通沿线的和食店都有；早午餐坐下吃 40 分钟，是赶巴士前最重要的体力补给。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=小町通り+しらす丼" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">今日核心：<strong>旅馆日式晚餐</strong>（含餐旅馆不另找餐厅，18:00 前必须到河口湖站）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">豊島屋 本店 · 鳩サブレー</div>
+<div class="rec-why">镰仓百年老铺的鸽子黄油饼干，小町通入口即达；孩子喜欢造型，大人认老字号，最佳小伴手礼。</div>
+<div class="rec-links"><a href="https://www.hato-sable.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=豊島屋+本店+鎌倉" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：小町通杂货小店（不为特定网红店排队）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 1 / 美食 3<br>😴 午休 12:30–15:00 巴士 + 15:00–16:30 房间<br>✂️ 删减：湖畔夜走 → 江之电延长段 → 大佛</div>
 </div>
 
-<div class="day-card special">
-<span class="day-num">Day 5</span>
-<div class="date">9/29 周二 · 跨越</div>
-<div class="day-title">🗻 河口湖清晨→京都河原町夜</div>
-<div class="lodging">🏠 Hilton Kyoto（河原町）· 东京大箱今日送达</div>
-<ul>
-<li><span class="time">06:30</span><strong>景点①清晨湖景/温泉</strong>：安静看富士的最佳窗口</li>
-<li><span class="time">07:15</span><strong>美食①旅馆早餐</strong>、退房</li>
-<li><span class="time">08:30</span><strong>景点②大石公园/湖畔短走</strong>（红线巴士或出租车）</li>
-<li><span class="time">09:45</span><strong>购物①站前伴手礼</strong>：山梨点心、富士山小物</li>
-<li><span class="time">10:30</span><strong>美食②ほうとう午餐</strong>：山梨特色宽面</li>
+<div class="card">
+<div class="day-head"><span class="day-badge special">Day 5</span><h3>9/29 周二 · 跨越｜河口湖清晨→京都河原町夜</h3></div>
+<span class="lodging-inline">🏠 Hilton Kyoto（河原町）· 东京大箱今日送达</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">06:30</span>清晨湖景/温泉：安静看富士的最佳窗口</li>
+<li><span class="time">07:15</span>旅馆早餐、退房</li>
+<li><span class="time">08:30</span>大石公园/湖畔短走（红线巴士或出租车）</li>
+<li><span class="time">09:45</span>站前伴手礼</li>
+<li><span class="time">10:30</span>ほうとう午餐</li>
 <li><span class="time">11:30</span>河口湖→三岛巴士（订座，补觉）→三岛→京都 Hikari</li>
 <li><span class="time">15:00</span>Hilton Kyoto 入住、洗澡、休息；确认大箱已到</li>
-<li><span class="time">17:00</span><strong>景点③先斗町</strong>：石板小巷、鸭川纳凉床外景</li>
-<li><span class="time">18:00</span><strong>美食③京都晚餐</strong>：豆腐/湯叶、荞麦、亲子盖饭</li>
-<li><span class="time">19:00</span><strong>景点④鸭川/河原町短走</strong>；<strong>购物②药妆预逛</strong>（只看价不扫货）</li>
+<li><span class="time">17:00</span>先斗町短走</li>
+<li><span class="time">18:00</span>京都晚餐</li>
+<li><span class="time">19:00</span>鸭川/河原町短走；药妆预逛（只看价不扫货）</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/KawaguchiKo.jpg/960px-KawaguchiKo.jpg" alt="河口湖与富士山" loading="lazy">
+<div>
+<div class="rec-name">大石公园 · 富士山全景</div>
+<div class="rec-why">湖面+富士山的明信片机位，红线巴士直达、步道平缓，带孩子最省力的富士观景方式；上午人少。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=大石公園+河口湖" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=河口湖+天上山公園" target="_blank" rel="noopener">天上山缆车</a>（与骑行/大石公园三选一，不全做） · <a href="https://www.google.com/maps/search/?api=1&query=先斗町" target="_blank" rel="noopener">先斗町</a> · <a href="https://www.google.com/maps/search/?api=1&query=鴨川デルタ" target="_blank" rel="noopener">鸭川三角洲</a>（京都傍晚短走）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Houtou.jpg/960px-Houtou.jpg" alt="ほうとう" loading="lazy">
+<div>
+<div class="rec-name">ほうとう不動 河口湖駅前店</div>
+<div class="rec-why">山梨第一名物：味噌汤底的手打宽面+南瓜蔬菜，热乎软烂孩子爱吃；店就在车站对面，赶巴士前吃最顺。</div>
+<div class="rec-links"><a href="http://www.houtou-fudou.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=先斗町+湯豆腐" target="_blank" rel="noopener">先斗町 汤豆腐/荞麦</a>（京都第一晚只做城市生活体验，不安排寺院）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">河口湖站前伴手礼</div>
+<div class="rec-why">山梨葡萄点心、富士山饼干、ほうとう味手信一站买齐；控制在 20 分钟内，不耽误巴士。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=河口湖駅+お土産" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=河原町+药妆店" target="_blank" rel="noopener">河原町药妆预逛</a>（只比价不扫货，留给 Day 9）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 全天车程补觉 + 15:00–16:30 房间</div>
 </div>
 
-<div class="day-card base">
-<span class="day-num">Day 6</span>
-<div class="date">9/30 周三 · 京都</div>
-<div class="day-title">⛩️ 京都东山深度</div>
-<div class="lodging">🏠 Hilton Kyoto · 13:30–15:00 回酒店午休</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge base">Day 6</span><h3>9/30 周三 · 京都｜东山深度</h3></div>
+<span class="lodging-inline">🏠 Hilton Kyoto · 13:30–15:00 回酒店午休</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">07:00</span>京阪线→伏见稻荷（高峰前上车）</li>
-<li><span class="time">08:00</span><strong>景点①伏见稻荷大社</strong>：千本鸟居，奥社奉拜所折返，不登顶</li>
-<li><span class="time">10:15</span><strong>景点②清水寺</strong>：舞台、音羽瀑布（排队超 20 分钟跳过）</li>
-<li><span class="time">11:30</span><strong>美食①二年坂午餐</strong>：汤豆腐/荞麦/亲子定食，坐下 45 分钟</li>
-<li><span class="time">12:30</span><strong>景点③三年坂→宁宁之道</strong>；<strong>购物①清水坂小店</strong></li>
-<li><span class="time">13:30</span><strong>回酒店午休</strong>（至 15:00，大人轮流咖啡）</li>
-<li><span class="time">15:00</span><strong>景点④祇园·花见小路→八坂神社</strong></li>
-<li><span class="time">16:00</span><strong>美食②抹茶/和果子茶歇</strong></li>
-<li><span class="time">16:30</span><strong>购物②锦市场</strong>：茶、干货、漬物</li>
-<li><span class="time">18:00</span><strong>美食③先斗町/鸭川边晚餐</strong>，步行回酒店</li>
+<li><span class="time">08:00</span>伏见稻荷大社：千本鸟居，奥社奉拜所折返，不登顶</li>
+<li><span class="time">10:15</span>清水寺：舞台、音羽瀑布（排队超 20 分钟跳过）</li>
+<li><span class="time">11:30</span>二年坂午餐，坐下 45 分钟</li>
+<li><span class="time">12:30</span>三年坂→宁宁之道；清水坂小店</li>
+<li><span class="time">13:30</span>回酒店午休（至 15:00，大人轮流咖啡）</li>
+<li><span class="time">15:00</span>祇园·花见小路→八坂神社</li>
+<li><span class="time">16:00</span>抹茶/和果子茶歇</li>
+<li><span class="time">16:30</span>锦市场</li>
+<li><span class="time">18:00</span>先斗町/鸭川边晚餐，步行回酒店</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/960px-Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg" alt="伏见稻荷千本鸟居" loading="lazy">
+<div>
+<div class="rec-name">伏见稻荷大社 · 千本鸟居</div>
+<div class="rec-why">8 点前到几乎包场，鸟居隧道光影最好；只走前段不登顶，孩子还能写一块绘马、选一枚御守。</div>
+<div class="rec-links"><a href="https://inari.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=伏見稲荷大社" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.kiyomizudera.or.jp/" target="_blank" rel="noopener">清水寺</a>（<a href="https://www.google.com/maps/search/?api=1&query=清水寺" target="_blank" rel="noopener">地图</a>） · <a href="https://www.google.com/maps/search/?api=1&query=祇園+花見小路" target="_blank" rel="noopener">祇园·花见小路</a>（不追拍艺伎、不进私道） · <a href="https://www.google.com/maps/search/?api=1&query=八坂神社" target="_blank" rel="noopener">八坂神社</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Sannenzaka_street%2C_Kyoto_%283811257874%29.jpg/960px-Sannenzaka_street%2C_Kyoto_%283811257874%29.jpg" alt="三年坂" loading="lazy">
+<div>
+<div class="rec-name">清水顺正 おかべ家（汤豆腐）</div>
+<div class="rec-why">清水寺步行 5 分钟的汤豆腐老铺，豆腐清淡软嫩、有米饭套餐，孩子接受度高；午市定食价格合理。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=清水順正+おかべ家" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=茶寮都路里+祇園本店" target="_blank" rel="noopener">茶寮都路里 祇园本店</a>（抹茶芭菲下午茶） · <a href="https://www.google.com/maps/search/?api=1&query=先斗町+京料理" target="_blank" rel="noopener">先斗町京料理</a>（晚餐）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Nishiki_Ichiba_by_matsuyuki.jpg/960px-Nishiki_Ichiba_by_matsuyuki.jpg" alt="锦市场" loading="lazy">
+<div>
+<div class="rec-name">锦市场</div>
+<div class="rec-why">"京都的厨房"：茶叶、漬物、厨房小物、豆乳甜甜圈；下午的室内段，拥挤时就是雨天替换方案。</div>
+<div class="rec-links"><a href="https://www.kyoto-nishiki.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=錦市場" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=七味家本舗+清水" target="_blank" rel="noopener">七味家本铺</a>（清水坂 370 年七味粉老铺） · 清水坂小店（扇子、香袋、手帕）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 13:30–15:00 酒店<br>🌧️ 雨天：压缩街区步行，锦市场提前</div>
 </div>
 
-<div class="day-card base">
-<span class="day-num">Day 7</span>
-<div class="date">10/1 周四 · 关键日</div>
-<div class="day-title">🎋 岚山 + 16:00 任天堂博物馆</div>
-<div class="lodging">🏠 Hilton Kyoto · 博物馆结束 30 分钟回酒店</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge base">Day 7</span><h3>10/1 周四 · 关键日｜岚山 + 16:00 任天堂博物馆</h3></div>
+<span class="lodging-inline">🏠 Hilton Kyoto · 博物馆结束 30 分钟回酒店</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">07:00</span>河原町→岚山（高峰前上车），车上早餐</li>
-<li><span class="time">08:45</span><strong>景点①岚山小火车</strong>（订座；<strong>无票直接跳过</strong>）</li>
-<li><span class="time">10:00</span><strong>景点②竹林小径+野宫神社</strong></li>
-<li><span class="time">11:00</span><strong>景点③天龙寺</strong>：庭园借景</li>
-<li><span class="time">12:00</span><strong>景点④渡月桥</strong>：河岸开阔处休息</li>
-<li><span class="time">12:30</span><strong>美食①岚山午餐</strong>：汤豆腐/湯叶/荞麦</li>
-<li><span class="time">13:20</span><strong>购物①岚山小店</strong>：只选一家</li>
-<li><span class="time">14:00</span>岚山→宇治小仓（<strong>车上补觉</strong>）</li>
-<li><span class="time">16:00</span><strong>任天堂博物馆</strong>：历史展→互动→花札→<strong>购物②限定商店</strong>；馆内咖啡 <strong>美食②（轻）</strong></li>
-<li><span class="time">19:30</span>回河原町；<strong>美食③京都晚餐</strong>（酒店附近坐下吃）</li>
+<li><span class="time">08:45</span>岚山小火车（订座；无票直接跳过）</li>
+<li><span class="time">10:00</span>竹林小径+野宫神社</li>
+<li><span class="time">11:00</span>天龙寺庭园</li>
+<li><span class="time">12:00</span>渡月桥河岸休息</li>
+<li><span class="time">12:30</span>岚山午餐</li>
+<li><span class="time">13:20</span>岚山小店（只选一家）</li>
+<li><span class="time">14:00</span>岚山→宇治小仓（车上补觉）</li>
+<li><span class="time">16:00</span>任天堂博物馆：历史展→互动→花札→限定商店；馆内咖啡</li>
+<li><span class="time">19:30</span>回河原町；京都晚餐（酒店附近坐下吃）</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sagano_scenic_railway_hotsukyo.jpg/960px-Sagano_scenic_railway_hotsukyo.jpg" alt="岚山小火车" loading="lazy">
+<div>
+<div class="rec-name">嵯峨野小火车（トロッコ列車）</div>
+<div class="rec-why">沿保津峡 25 分钟的开放式观光车厢，孩子全程不无聊；必须提前订指定席，无票就直接跳过不等待。</div>
+<div class="rec-links"><a href="https://www.sagano-kanko.co.jp/" target="_blank" rel="noopener">官网订票</a><a href="https://www.google.com/maps/search/?api=1&query=トロッコ嵯峨駅" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Nintendo_Museum_logo.svg/960px-Nintendo_Museum_logo.svg.png" alt="任天堂博物馆" loading="lazy">
+<div>
+<div class="rec-name">任天堂博物馆（16:00 票）</div>
+<div class="rec-why">全行程最独特的体验：花札到 Switch 的产品史+互动项目+花札制作。顺序：历史展→孩子最想玩的互动→花札→商店，数字币有限不求全打卡。</div>
+<div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=ニンテンドーミュージアム" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">上午备选：<a href="https://www.google.com/maps/search/?api=1&query=嵐山+竹林の小径" target="_blank" rel="noopener">竹林小径</a> · <a href="https://www.tenryuji.com/" target="_blank" rel="noopener">天龙寺</a>（<a href="https://www.google.com/maps/search/?api=1&query=天龍寺" target="_blank" rel="noopener">地图</a>，庭园借景） · <a href="https://www.google.com/maps/search/?api=1&query=渡月橋" target="_blank" rel="noopener">渡月桥</a><br>无票分支：<a href="https://www.byodoin.or.jp/" target="_blank" rel="noopener">平等院</a>（<a href="https://www.google.com/maps/search/?api=1&query=平等院" target="_blank" rel="noopener">地图</a>，宇治慢体验）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">嵯峨とうふ 稲 本店（岚山汤豆腐定食）</div>
+<div class="rec-why">竹林旁的平价汤豆腐名店，定食有饭有汤孩子能吃好；11:30 开门就去，避开正午排队。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=嵯峨とうふ稲+本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：博物馆馆内咖啡（有票才能用，轻食/饮品） · 河原町酒店附近晚餐</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">任天堂博物馆限定商店</div>
+<div class="rec-why">只有持票者能进，博物馆限定商品在外面买不到；放离馆前最后 30 分钟，先玩再买。</div>
+<div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ちりめん細工館+嵐山" target="_blank" rel="noopener">ちりめん细工馆 岚山</a>（布艺手作小物，岚山只选这一家）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4+博物馆 / 购物 2 / 美食 3<br>😴 午休 14:00–15:00 车上补觉<br>🔀 票面 17:00 后：午后先回酒店午休再去；无票：下午改宇治慢体验</div>
 </div>
 
-<div class="day-card">
-<span class="day-num">Day 8</span>
-<div class="date">10/2 周五 · 跨越</div>
-<div class="day-title">🦌 奈良精华→大阪梅田</div>
-<div class="lodging">🏠 Hilton Osaka（JR 大阪站 2 分钟）</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge">Day 8</span><h3>10/2 周五 · 跨越｜奈良精华→大阪梅田</h3></div>
+<span class="lodging-inline">🏠 Hilton Osaka（JR 大阪站 2 分钟）</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">09:30</span>近铁京都→近铁奈良（避开早高峰）</li>
-<li><span class="time">10:30</span><strong>景点①奈良公园喂鹿 + 景点②东大寺大佛殿</strong></li>
-<li><span class="time">12:00</span><strong>美食①奈良町午餐</strong>：茶粥、柿叶寿司或定食</li>
-<li><span class="time">13:00</span><strong>景点③奈良町</strong>慢走；<strong>购物①奈良小物</strong>（鹿杂货、奈良渍）</li>
-<li><span class="time">14:00</span><strong>景点④猿泽池/浮见堂</strong>；<strong>美食②吉野葛/和果子茶歇</strong></li>
-<li><span class="time">15:00</span>近铁→大阪（<strong>车上补觉</strong>，晚高峰前抵达）</li>
+<li><span class="time">10:30</span>奈良公园喂鹿 + 东大寺大佛殿</li>
+<li><span class="time">12:00</span>奈良町午餐</li>
+<li><span class="time">13:00</span>奈良町慢走；奈良小物</li>
+<li><span class="time">14:00</span>猿泽池/浮见堂；吉野葛/和果子茶歇</li>
+<li><span class="time">15:00</span>近铁→大阪（车上补觉，晚高峰前抵达）</li>
 <li><span class="time">16:00</span>Hilton Osaka 入住、休息</li>
-<li><span class="time">17:00</span><strong>购物②梅田</strong>：Grand Front、阪急/大丸食品层、童装</li>
-<li><span class="time">18:30</span><strong>美食③梅田晚餐</strong>：新梅田食道街或 Grand Front</li>
+<li><span class="time">17:00</span>梅田购物</li>
+<li><span class="time">18:30</span>梅田晚餐</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nara_Park_-_panoramio_%282%29.jpg/960px-Nara_Park_-_panoramio_%282%29.jpg" alt="奈良公园的鹿" loading="lazy">
+<div>
+<div class="rec-name">奈良公园喂鹿 + 东大寺大佛殿</div>
+<div class="rec-why">孩子全程的高光时刻：上千头野生鹿+世界最大木造建筑。只喂鹿仙贝，孩子的零食/纸张提前收好，喂完摊开双手表示"没有了"。</div>
+<div class="rec-links"><a href="https://www.todaiji.or.jp/" target="_blank" rel="noopener">东大寺官网</a><a href="https://www.google.com/maps/search/?api=1&query=奈良公園" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ならまち" target="_blank" rel="noopener">奈良町</a>（格子老屋街区） · <a href="https://www.google.com/maps/search/?api=1&query=猿沢池" target="_blank" rel="noopener">猿泽池/浮见堂</a>（水边平缓收尾）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">平宗 奈良店 · 柿叶寿司</div>
+<div class="rec-why">奈良第一名物，创业 150 多年的老铺；柿子叶包裹的寿司清淡好拿，孩子也能吃，还可以外带当车上点心。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=平宗+奈良店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=天極堂+奈良本店" target="_blank" rel="noopener">天极堂 奈良本店</a>（吉野葛点心/葛切下午茶） · 东大寺门前茶粥定食</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">中川政七商店 奈良本店</div>
+<div class="rec-why">300 年奈良老铺的现代杂货：鹿麻织小物、手帕、文具，好看不贵，是最值得买的奈良手信。</div>
+<div class="rec-links"><a href="https://www.nakagawa-masashichi.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=中川政七商店+奈良本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=阪急うめだ本店" target="_blank" rel="noopener">阪急梅田本店</a>（食品层/童装/户外品牌，百货 20:00 关门前先去）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 15:00–16:00 车上 + 16:00–17:00 房间<br>✂️ 删减：猿泽池 → 奈良町</div>
 </div>
 
-<div class="day-card special">
-<span class="day-num">Day 9</span>
-<div class="date">10/3 周六 · 购物主日</div>
-<div class="day-title">🛍️ 心斋桥主购物→临空奥莱</div>
-<div class="lodging">🏠 Star Gate Hotel / 临空城站周边 · 17:00 取大箱转移</div>
-<ul>
-<li><span class="time">09:00</span><strong>美食①黑门市场早午餐</strong>：烤扇贝、玉子烧、水果</li>
-<li><span class="time">10:00</span><strong>景点①道顿堀/戎桥</strong>：白天版固力果招牌</li>
-<li><span class="time">10:40</span><strong>景点②法善寺横丁</strong>：石板小巷</li>
-<li><span class="time">11:30</span><strong>购物①大丸心斋桥+PARCO</strong>：先办退税流程的店</li>
-<li><span class="time">13:00</span><strong>美食②心斋桥午餐</strong>（Kirby Café 仅预约成功时）</li>
-<li><span class="time">14:00</span><strong>景点③心斋桥筋 + 购物②</strong>：按清单入店，每家最多 20 分钟</li>
-<li><span class="time">15:30</span><strong>景点④美国村</strong>；孩子咖啡厅休整 30 分钟（大人轮逛）</li>
-<li><span class="time">16:15</span>橘通/堀江补货；<strong>美食③（轻）</strong>咖啡甜品茶歇</li>
+<div class="card">
+<div class="day-head"><span class="day-badge special">Day 9</span><h3>10/3 周六 · 购物主日｜心斋桥主购物→临空奥莱</h3></div>
+<span class="lodging-inline">🏠 Star Gate Hotel / 临空城站周边 · 17:00 取大箱转移</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">09:00</span>黑门市场早午餐</li>
+<li><span class="time">10:00</span>道顿堀/戎桥：白天版固力果招牌</li>
+<li><span class="time">10:40</span>法善寺横丁</li>
+<li><span class="time">11:30</span>大丸心斋桥+PARCO：先办退税流程的店</li>
+<li><span class="time">13:00</span>心斋桥午餐（Kirby Café 仅预约成功时）</li>
+<li><span class="time">14:00</span>心斋桥筋：按清单入店，每家最多 20 分钟</li>
+<li><span class="time">15:30</span>美国村；孩子咖啡厅休整 30 分钟（大人轮逛）</li>
+<li><span class="time">16:15</span>橘通/堀江补货；咖啡甜品茶歇</li>
 <li><span class="time">17:30</span>南海电铁→临空城，入住</li>
-<li><span class="time">18:30</span><strong>临空奥莱第一轮</strong>：只买试尺码大件（运动鞋/户外服/童装/行李箱）</li>
-<li><span class="time">20:00</span>RINKU FOOD PARK 晚餐（注意 19:45 最后点餐）</li>
+<li><span class="time">18:30</span>临空奥莱第一轮：只买试尺码大件</li>
+<li><span class="time">20:00</span>RINKU FOOD PARK 晚餐（19:45 最后点餐）</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Osaka_Dotonbori_Ebisu_Bridge.jpg/960px-Osaka_Dotonbori_Ebisu_Bridge.jpg" alt="道顿堀戎桥" loading="lazy">
+<div>
+<div class="rec-name">道顿堀 · 戎桥固力果招牌</div>
+<div class="rec-why">大阪的第一标志，上午 10 点前人少好拍；白天版和夜景是两种感觉，拍完全家福就走。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=道頓堀+戎橋" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=法善寺横丁" target="_blank" rel="noopener">法善寺横丁</a>（水挂不动明王，霓虹背后的安静石板巷） · <a href="https://www.google.com/maps/search/?api=1&query=アメリカ村+三角公園" target="_blank" rel="noopener">美国村 Triangle Park</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg/960px-%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg" alt="黑门市场" loading="lazy">
+<div>
+<div class="rec-name">黑门市场 · 黑门三平</div>
+<div class="rec-why">"大阪的厨房"：烤扇贝、烤蟹腿、玉子烧、水果切片，早午餐一站解决；黑门三平是人气最旺的海鲜档。</div>
+<div class="rec-links"><a href="https://www.kuromon.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=黒門三平" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=千房+道頓堀" target="_blank" rel="noopener">千房 道顿堀店</a>（大阪烧） · <a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">RINKU FOOD PARK</a>（临空晚餐，513 个座位分口味点餐）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shinsaibashi_Osaka_Japan01-r.jpg/960px-Shinsaibashi_Osaka_Japan01-r.jpg" alt="心斋桥筋" loading="lazy">
+<div>
+<div class="rec-name">大丸心斋桥 + 心斋桥筋</div>
+<div class="rec-why">购物主战场：先在大丸/PARCO 完成退税类（护肤、药妆、品牌、角色商品），再沿心斋桥筋按清单入店，每家最多 20 分钟。</div>
+<div class="rec-links"><a href="https://www.daimaru.co.jp/shinsaibashi/" target="_blank" rel="noopener">大丸官网</a><a href="https://www.google.com/maps/search/?api=1&query=心斎橋筋商店街" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/960px-Rinku_premium_outlets02s3200.jpg" alt="临空奥莱" loading="lazy">
+<div>
+<div class="rec-name">临空 Premium Outlets</div>
+<div class="rec-why">TNF/Patagonia/Arc'teryx/Columbia 常态 3–7 折。第一轮（今晚）只买必须试尺码的大件：运动鞋、户外服、童装、行李箱；比价留到明早。</div>
+<div class="rec-links"><a href="https://www.premiumoutlets.co.jp/rinku/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアム・アウトレット" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">可选：<a href="https://kirbycafe.jp/cafe/osaka/" target="_blank" rel="noopener">Kirby Café OSAKA</a>（大丸 9F，<a href="https://www.google.com/maps/search/?api=1&query=カービィカフェ+OSAKA" target="_blank" rel="noopener">地图</a>；仅预约成功时替换午餐） · <a href="https://www.google.com/maps/search/?api=1&query=大国药妆+心斎橋" target="_blank" rel="noopener">大国药妆 心斋桥</a>（保健品一次买齐，常比松本清便宜 5–15%）</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 景点 4 / 购物 2+奥莱 / 美食 3<br>😴 午休 15:30–16:15 咖啡厅/商场休息区<br>♨️ 有马温泉：仅前 8 天全顺且孩子状态好时上午插入，默认不加</div>
 </div>
 
-<div class="day-card">
-<span class="day-num">Day 10</span>
-<div class="date">10/4 周日 · 返程</div>
-<div class="day-title">✈️ 奥莱精准补货→关西机场→济南</div>
-<div class="lodging">— · 16:00 SC8086 硬约束</div>
-<ul>
+<div class="card">
+<div class="day-head"><span class="day-badge">Day 10</span><h3>10/4 周日 · 返程｜奥莱精准补货→关西机场→济南</h3></div>
+<span class="lodging-inline">✈️ 16:00 SC8086 硬约束 · 13:00 前到机场</span>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
 <li><span class="time">08:00</span>早餐、退房、寄存行李；托运/随身分装</li>
 <li><span class="time">10:00</span>临空奥莱第二轮：只补 Day 9 缺尺码/缺型号</li>
 <li><span class="time">11:30</span>Food Park 快速早午餐或外带</li>
@@ -452,11 +855,29 @@ tr:hover td{background:var(--bg-hover)}
 <li><span class="time">13:00</span>值机、托运、安检、退税（免税店不是主购物场）</li>
 <li><span class="time">16:00</span>SC8086 起飞回济南</li>
 </ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/960px-Rinku_premium_outlets02s3200.jpg" alt="临空奥莱" loading="lazy">
+<div>
+<div class="rec-name">临空奥莱 · 精准补货</div>
+<div class="rec-why">10:00 开门直入目标店，只买 Day 9 记录的缺尺码/缺型号，不新开主题；11:30 必须停手。</div>
+<div class="rec-links"><a href="https://www.premiumoutlets.co.jp/rinku/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアム・アウトレット" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-alt">收尾餐：<a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">RINKU FOOD PARK</a> 快速早午餐（饭/面/蛋包饭等稳定主食，不让孩子空腹进机场） · 安检后机场餐厅为备选</div>
+</div>
+</div>
+</div>
 <div class="quota">🎯 购物有边界，航班优先<br>⚠️ 国庆回程峰值，13:00 前到机场</div>
 </div>
 
-</div>
-</div>
 </div>
 
 <!-- ============ 住宿 ============ -->
@@ -693,8 +1114,8 @@ tr:hover td{background:var(--bg-hover)}
 
 <div class="footer">
 <p>🗾 2026 日本亲子自由行 · 轻松完整版 · 东京·河口湖·京都·奈良·大阪购物收尾</p>
-<p style="margin-top:6px">v4.0 · 2026-08-17 · 济南 ✈️ 大阪 KIX · 9 晚 10 天 · 2大1小</p>
-<p style="margin-top:6px;font-size:12px;opacity:.7">v4 变更：改用京都 3 晚主方案（任天堂博物馆 10/1 晚场约束）；每天 4 景点/2 购物/3 美食配额；4 个早起日内置午休；全部市内移动避开通勤高峰；末晚住临空城</p>
+<p style="margin-top:6px">v4.1 · 2026-08-17 · 济南 ✈️ 大阪 KIX · 9 晚 10 天 · 2大1小</p>
+<p style="margin-top:6px;font-size:12px;opacity:.7">v4.1 变更：每日行程完整展开——每天新增「本日最推荐」，景点/美食/购物给出首选具体店与点位，配图（Wikimedia Commons）+ 官网 + Google 地图链接，备选并列</p>
 </div>
 
 </div>
