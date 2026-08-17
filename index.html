@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 日本 9 晚自由行攻略 · 不回头环线 · 关西大本营+东京镰仓河口湖</title>
+<title>2026 日本亲子自由行 · 轻松完整版 · 东京·河口湖·京都·奈良·大阪购物收尾</title>
 <style>
 /* ============== Theme Variables (Light) ============== */
 :root {
@@ -41,9 +41,6 @@
   --compare-right-bg: linear-gradient(135deg,#1e3a5f,#0f2547); --compare-right-fg: #93c5fd;
   --footer-color: #94a3b8; --toggle-bg: rgba(0,0,0,.35); --toggle-border: rgba(255,255,255,.15); --toggle-icon: #fbbf24; --tokyo-tint: #1e3a5f;
 }
-.plan-b-mode { --accent: #2563eb; --accent-2: #1e40af; --accent-soft: #dbeafe; }
-[data-theme="dark"].plan-a-mode { --accent: #f87171; --accent-2: #ef4444; --accent-soft: #3d1414; }
-[data-theme="dark"].plan-b-mode { --accent: #60a5fa; --accent-2: #3b82f6; --accent-soft: #1e3a5f; }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:linear-gradient(135deg,var(--bg-base) 0%,var(--bg-base-2) 100%);color:var(--text-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
@@ -55,26 +52,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .header .subtitle{font-size:clamp(14px,2.2vw,18px);opacity:.95;margin-bottom:20px;position:relative;z-index:1}
 .header .meta{display:flex;flex-wrap:wrap;gap:clamp(6px,1.5vw,14px);position:relative;z-index:1}
 .header .meta-item{background:var(--header-meta-bg);padding:8px 16px;border-radius:20px;font-size:clamp(12px,1.8vw,14px);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .3s}
-.plan-switch{display:flex;gap:10px;margin-bottom:25px;background:var(--bg-card);padding:10px;border-radius:16px;box-shadow:var(--shadow-sm);transition:background-color .3s}
-.plan-btn{flex:1;padding:clamp(12px,2vw,18px);border-radius:12px;cursor:pointer;text-align:center;transition:all .3s;border:2px solid transparent;background:var(--bg-elevated);color:var(--text-muted)}
-.plan-btn:not(.active):hover{background:var(--bg-hover)}
-.plan-btn.active{color:white}
-.plan-btn.active.plan-a{background:linear-gradient(135deg,#dc2626,#991b1b);border-color:#dc2626}
-.plan-btn.active.plan-b{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:var(--accent)}
-.plan-btn .plan-name{font-size:clamp(12px,1.8vw,16px);font-weight:700;margin-bottom:4px}
-.plan-btn .plan-desc{font-size:clamp(10px,1.4vw,12px);opacity:.85;line-height:1.4}
 .tabs{display:flex;flex-wrap:nowrap;gap:6px;margin-bottom:25px;background:var(--bg-card);padding:10px;border-radius:16px;box-shadow:var(--shadow-sm);position:sticky;top:8px;z-index:50;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;transition:background-color .3s}
 .tabs::-webkit-scrollbar{display:none}
 .tab{padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;transition:all .25s;color:var(--text-primary);white-space:nowrap;flex-shrink:0}
 .tab:hover{background:var(--bg-hover)}
 .tab.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;box-shadow:0 4px 12px rgba(230,57,70,.3)}
-.plan-b-mode .tab.active{box-shadow:0 4px 12px rgba(37,99,235,.3)}
 .section{display:none;animation:fadeIn .4s ease-out}
 .section.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.plan-a-only,.plan-b-only{display:none}
-.plan-a-mode .plan-a-only{display:block}
-.plan-b-mode .plan-b-only{display:block}
 .card{background:var(--bg-card);border-radius:16px;padding:clamp(18px,3vw,30px);margin-bottom:20px;box-shadow:var(--shadow-md);transition:background-color .3s,box-shadow .3s}
 .card h2{color:var(--text-heading);margin-bottom:20px;font-size:clamp(18px,3vw,24px);border-left:5px solid var(--accent);padding-left:15px;transition:border-color .3s,color .3s}
 .card h3{color:var(--text-heading);margin:20px 0 12px;font-size:clamp(15px,2.2vw,18px);transition:color .3s}
@@ -118,11 +103,12 @@ tr:hover td{background:var(--bg-hover)}
 .day-card .time{color:var(--accent);font-weight:600;min-width:55px;flex-shrink:0;transition:color .3s}
 .day-card.tokyo .time{color:#2563eb}
 .day-card.base .time{color:#059669}
+.day-card .quota{margin-top:12px;padding:8px 10px;border-radius:8px;background:var(--bg-elevated);font-size:12px;color:var(--text-muted);line-height:1.5}
+.day-card .quota strong{color:var(--text-heading)}
 .hl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:15px}
 .hl-box{background:linear-gradient(135deg,var(--bg-card),var(--bg-elevated));padding:clamp(14px,2vw,20px);border-radius:12px;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .25s,border-color .25s,background .3s}
 .hl-box:hover{transform:translateY(-2px);border-color:var(--accent)}
 .hl-box::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--accent),var(--special))}
-.plan-b-mode .hl-box::before{background:linear-gradient(180deg,#2563eb,#06b6d4)}
 .hl-box .icon{font-size:28px;margin-bottom:8px;display:block}
 .hl-box h4{font-size:clamp(14px,1.8vw,15px);margin-bottom:6px;color:var(--text-heading);transition:color .3s}
 .hl-box p{font-size:13px;color:var(--text-muted);margin:0;transition:color .3s}
@@ -131,29 +117,12 @@ tr:hover td{background:var(--bg-hover)}
 .stat:hover{transform:translateY(-3px);border-color:var(--accent)}
 .stat .num{font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--accent);display:block;transition:color .3s}
 .stat .label{font-size:12px;color:var(--text-muted);margin-top:4px;transition:color .3s}
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:15px 0}
-.compare-col{padding:clamp(16px,2.4vw,20px);border-radius:12px;transition:background .3s,color .3s}
-.compare-col.left{background:var(--compare-left-bg);border:2px solid #dc2626;color:var(--compare-left-fg)}
-.compare-col.right{background:var(--compare-right-bg);border:2px solid #2563eb;color:var(--compare-right-fg)}
-.compare-col h4{font-size:clamp(15px,2vw,16px);margin-bottom:10px;color:inherit}
-.compare-col ul{list-style:none;padding:0;margin-top:8px}
-.compare-col li{font-size:13px;padding:4px 0;color:inherit;opacity:.92}
-.compare-col li::before{content:"▸ ";color:inherit;font-weight:bold}
-.compare-col p{color:inherit;opacity:.8}
 .route{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0;padding:18px;background:var(--route-bg);border-radius:12px;transition:background-color .3s}
 .route .node{padding:7px 12px;background:var(--node-bg);border:2px solid var(--accent);border-radius:8px;font-size:12px;font-weight:500;color:var(--accent);transition:background-color .3s,border-color .3s,color .3s}
 .route .node.base{border-color:#059669;color:#059669}
 .route .node.tokyo{border-color:#2563eb;color:#2563eb}
 .route .arrow{color:var(--text-faint);font-size:16px}
 .footer{text-align:center;padding:30px 20px;color:var(--footer-color);font-size:13px;transition:color .3s}
-/* ============== Route Detail (具体线路步骤) ============== */
-.route-detail{margin:15px 0;padding:4px 0}
-.route-step{display:flex;gap:12px;padding:12px 14px;margin-bottom:8px;background:var(--bg-elevated);border-radius:10px;border-left:3px solid var(--accent);transition:background .3s,border-color .3s}
-.plan-b-mode .route-step{border-left-color:#2563eb}
-.route-step .step-no{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;transition:background .3s}
-.plan-b-mode .route-step .step-no{background:#2563eb}
-.route-step div{flex:1;font-size:13px;color:var(--text-secondary);line-height:1.5;transition:color .3s}
-.route-step div strong{color:var(--text-heading);transition:color .3s}
 .theme-toggle{position:fixed;top:16px;right:16px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--toggle-bg);border:1.5px solid var(--toggle-border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s,background .3s,border-color .3s;color:var(--toggle-icon);box-shadow:var(--shadow-sm)}
 .theme-toggle:hover{transform:scale(1.08) rotate(15deg)}
 .theme-toggle:active{transform:scale(.95)}
@@ -166,44 +135,41 @@ tr:hover td{background:var(--bg-hover)}
 .back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .back-top:hover{transform:translateY(-3px) scale(1.05)}
 @media(max-width:1024px){.container{padding:16px}.day-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}
-@media(max-width:768px){.header{padding:28px 20px}.card{padding:20px}.tab{padding:8px 12px;font-size:12px}.plan-btn{padding:12px 8px}.plan-btn .plan-name{font-size:13px}.day-grid{grid-template-columns:1fr;gap:12px}.day-card .day-title{font-size:16px}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.hl-box{padding:14px}.hl-box .icon{font-size:22px}.stats{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}.stat{padding:12px 8px}.alert{padding:14px 16px}.table-wrap{margin-left:-20px;margin-right:-20px;border-radius:0;border-left:0;border-right:0}th,td{padding:10px 12px;font-size:13px}.theme-toggle{width:40px;height:40px;font-size:18px;top:12px;right:12px}.back-top{width:40px;height:40px;font-size:18px;bottom:16px;right:16px}.header .meta-item{padding:6px 12px;font-size:12px}}
-@media(max-width:640px){.compare{grid-template-columns:1fr}.plan-switch{flex-direction:column;gap:8px}.header .meta{gap:6px}.header .meta-item{flex:1 1 calc(50% - 6px);text-align:center;font-size:11px;padding:6px 8px}}
-@media(max-width:480px){.container{padding:12px}.header{padding:22px 16px;border-radius:14px}.header h1{font-size:21px}.header .subtitle{font-size:13px}.plan-switch,.tabs{padding:6px;border-radius:12px}.plan-btn{padding:10px 6px;border-radius:8px}.plan-btn .plan-name{font-size:12px}.plan-btn .plan-desc{font-size:10px}.tab{padding:7px 10px;font-size:11px}.card{padding:16px;border-radius:12px}.card h2{font-size:17px;padding-left:10px}.card h3{font-size:15px}.hl-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.stat .num{font-size:20px}.day-card{padding:14px}.day-card li{font-size:12px}.day-card .time{min-width:48px;font-size:12px}.alert{padding:12px 14px}.th,td{padding:8px 10px;font-size:12px}}
-@media(max-width:360px){.hl-grid{grid-template-columns:1fr}.header h1{font-size:19px}.plan-btn .plan-name{font-size:11px}}
+@media(max-width:768px){.header{padding:28px 20px}.card{padding:20px}.tab{padding:8px 12px;font-size:12px}.day-grid{grid-template-columns:1fr;gap:12px}.day-card .day-title{font-size:16px}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.hl-box{padding:14px}.hl-box .icon{font-size:22px}.stats{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}.stat{padding:12px 8px}.alert{padding:14px 16px}.table-wrap{margin-left:-20px;margin-right:-20px;border-radius:0;border-left:0;border-right:0}th,td{padding:10px 12px;font-size:13px}.theme-toggle{width:40px;height:40px;font-size:18px;top:12px;right:12px}.back-top{width:40px;height:40px;font-size:18px;bottom:16px;right:16px}.header .meta-item{padding:6px 12px;font-size:12px}}
+@media(max-width:640px){.header .meta{gap:6px}.header .meta-item{flex:1 1 calc(50% - 6px);text-align:center;font-size:11px;padding:6px 8px}}
+@media(max-width:480px){.container{padding:12px}.header{padding:22px 16px;border-radius:14px}.header h1{font-size:21px}.header .subtitle{font-size:13px}.tabs{padding:6px;border-radius:12px}.tab{padding:7px 10px;font-size:11px}.card{padding:16px;border-radius:12px}.card h2{font-size:17px;padding-left:10px}.card h3{font-size:15px}.hl-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.stat .num{font-size:20px}.day-card{padding:14px}.day-card li{font-size:12px}.day-card .time{min-width:48px;font-size:12px}.alert{padding:12px 14px}th,td{padding:8px 10px;font-size:12px}}
+@media(max-width:360px){.hl-grid{grid-template-columns:1fr}.header h1{font-size:19px}}
 @media(max-height:500px) and (orientation:landscape){.header{padding:18px 20px}.header h1{font-size:20px;margin-bottom:6px}.header .subtitle{margin-bottom:10px}.header .meta{margin-bottom:-10px}}
-@media print{.theme-toggle,.back-top,.plan-switch,.tabs{display:none !important}.section{display:block !important;page-break-after:always}.card{box-shadow:none;border:1px solid #ccc}body{background:#fff}}
+@media print{.theme-toggle,.back-top,.tabs{display:none !important}.section{display:block !important;page-break-after:always}.card{box-shadow:none;border:1px solid #ccc}body{background:#fff}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}html{scroll-behavior:auto}}
 </style>
 </head>
-<body class="plan-a-mode">
+<body>
 <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换暗色模式" title="切换暗色模式"><span class="icon-sun" aria-hidden="true">☀️</span><span class="icon-moon" aria-hidden="true">🌙</span></button>
 <button class="back-top" id="backTop" type="button" aria-label="回到顶部" title="回到顶部">↑</button>
 <div class="container">
 
 <div class="header">
-<h1>🗾 2026 日本 9 晚自由行 · 不回头环线</h1>
-<div class="subtitle">济南 ✈️ 大阪 KIX · 关西大本营 + 东京·镰仓·河口湖 · 不走回头路</div>
+<h1>🗾 2026 日本亲子自由行 · 轻松完整版</h1>
+<div class="subtitle">济南 ✈️ 大阪进 · 东京 → 镰仓 → 河口湖 → 京都 → 奈良 → 大阪购物收尾</div>
 <div class="meta">
 <div class="meta-item">📅 2026.09.25 — 10.04</div>
-<div class="meta-item">🏠 大本营：大阪难波</div>
-<div class="meta-item">🚄 去程向东·回程环线</div>
-<div class="meta-item">🧳 大行李寄大本营</div>
+<div class="meta-item">👨‍👩‍👦 2大1小（5.5岁）</div>
+<div class="meta-item">🎯 每天 4 景点 / 2 购物 / 3 美食</div>
+<div class="meta-item">😴 早起日必留午休</div>
+<div class="meta-item">🚇 避开通勤高峰</div>
 </div>
-</div>
-
-<div class="plan-switch">
-<div class="plan-btn plan-a active" data-plan="a"><div class="plan-name">关西段 · 大本营辐射</div><div class="plan-desc">大阪难波连住·有马/京都/奈良日trips</div></div>
-<div class="plan-btn plan-b" data-plan="b"><div class="plan-name">关东段 · 环线回程</div><div class="plan-desc">东京·镰仓·河口湖·返大阪</div></div>
 </div>
 
 <div class="tabs">
 <div class="tab active" data-tab="overview">📋 总览</div>
-<div class="tab" data-tab="logic">🗺️ 环线逻辑</div>
 <div class="tab" data-tab="alerts">⚠️ 关键判断</div>
 <div class="tab" data-tab="itinerary">🗓️ 每日行程</div>
 <div class="tab" data-tab="hotels">🏨 住宿</div>
-<div class="tab" data-tab="shopping">🛍️ 购物</div>
 <div class="tab" data-tab="transport">🚄 交通</div>
+<div class="tab" data-tab="shopping">🛍️ 购物美食</div>
+<div class="tab" data-tab="branches">🎫 预约分支</div>
+<div class="tab" data-tab="kids">👶 亲子贴士</div>
 <div class="tab" data-tab="budget">💰 预算</div>
 <div class="tab" data-tab="checklist">✅ 清单</div>
 </div>
@@ -212,121 +178,67 @@ tr:hover td{background:var(--bg-hover)}
 <div class="section active" id="overview">
 <div class="card">
 <h2>🎯 行程定位</h2>
-<p>自由行 9 晚 10 天，<strong>大阪往返</strong>，但走法是"不回头环线"：去程关西一路向东（有马→京都→奈良→大阪→新干线东京），回程从东京向南环线（东京→镰仓→河口湖→新干线返大阪）。关西设大本营连住，轻装日trips；大行李寄大本营酒店。</p>
+<p>固定航班 <strong>SC8085 济南 11:20→关西 14:55 / SC8086 关西 16:00→济南 17:55</strong>。大阪作为入境和购物基地，东京负责都市与动漫，河口湖一晚温泉看富士，<strong>京都住 3 晚</strong>承接东山、岚山与任天堂博物馆晚场，最后心斋桥+临空奥莱完整购物收尾。全程轻松优先：每天约 4 个景点、2 个购物点、3 个美食体验，不硬塞。</p>
 <div class="stats">
 <div class="stat"><span class="num">9</span><div class="label">晚住宿</div></div>
-<div class="stat"><span class="num">6</span><div class="label">城市/景点</div></div>
-<div class="stat"><span class="num">2</span><div class="label">大本营</div></div>
-<div class="stat"><span class="num">2</span><div class="label">温泉体验</div></div>
+<div class="stat"><span class="num">4</span><div class="label">景点 / 天</div></div>
+<div class="stat"><span class="num">2</span><div class="label">购物点 / 天</div></div>
+<div class="stat"><span class="num">3</span><div class="label">美食体验 / 天</div></div>
+<div class="stat"><span class="num">4</span><div class="label">早起日（含午休）</div></div>
 </div>
 </div>
 
 <div class="card">
-<h2>🗺️ 不回头环线路线</h2>
+<h2>🗺️ 全程路线</h2>
 <div class="route">
-<span class="node base">大阪KIX</span><span class="arrow">✈️</span>
-<span class="node">有马温泉</span><span class="arrow">↘️</span>
-<span class="node">京都</span><span class="arrow">↘️</span>
-<span class="node">奈良</span><span class="arrow">↘️</span>
-<span class="node base">大阪大本营</span><span class="arrow">🚄新干线</span>
-<span class="node tokyo">东京大本营</span><span class="arrow">↘️</span>
-<span class="node tokyo">镰仓</span><span class="arrow">↖️</span>
-<span class="node tokyo">河口湖</span><span class="arrow">🚄新干线</span>
-<span class="node base">大阪购物收尾</span><span class="arrow">✈️</span>
+<span class="node">大阪KIX</span><span class="arrow">✈️</span>
+<span class="node">新大阪(1晚)</span><span class="arrow">🚄</span>
+<span class="node tokyo">东京新宿(2晚)</span><span class="arrow">↘️</span>
+<span class="node tokyo">镰仓</span><span class="arrow">🚌</span>
+<span class="node tokyo">河口湖温泉(1晚)</span><span class="arrow">🚄</span>
+<span class="node base">京都河原町(3晚)</span><span class="arrow">↘️</span>
+<span class="node base">宇治·奈良</span><span class="arrow">↘️</span>
+<span class="node">大阪梅田(1晚)</span><span class="arrow">↘️</span>
+<span class="node">临空城(1晚)</span><span class="arrow">✈️</span>
 <span class="node">济南</span>
 </div>
-<p style="margin-top:14px;color:var(--text-muted);font-size:13px">🟢绿=大本营 · 🔴红=关西 · 🔵蓝=关东。去程一路向东不回头；回程东京→镰仓(南)→河口湖(西)→大阪，顺势环线收尾。唯一"回头"是河口湖→大阪这段新干线（返程必经，无法避免）。</p>
+<p style="margin-top:14px;color:var(--text-muted);font-size:13px">🔵蓝=关东 · 🟢绿=京都基地 · 🔴红=大阪/其他。<strong>为什么京都住 3 晚：</strong>任天堂博物馆只能约到 10/1 或 10/2 晚场，住京都时博物馆结束 30 分钟回酒店；住大阪则孩子要深夜跨城。多换一次酒店，换来京都两个完整夜晚 + 更稳的博物馆日 + 更从容的奈良日。</p>
 </div>
 
 <div class="card">
-<h2>🏠 大本营策略（核心）</h2>
-<div class="compare">
-<div class="compare-col left">
-<h4>🟢 关西大本营：大阪难波</h4>
-<ul>
-<li>9/25-9/28 连住4晚（不换酒店）</li>
-<li>大行李寄这里，轻装出行</li>
-<li>有马温泉：当日往返（或住1晚）</li>
-<li>京都：JR新快速28分钟直达</li>
-<li>奈良：近铁40分钟直达</li>
-<li>难波=吃喝购+交通枢纽</li>
-</ul>
-</div>
-<div class="compare-col right">
-<h4>🔵 关东大本营：东京新宿</h4>
-<ul>
-<li>9/29-9/30 连住2晚（不换酒店）</li>
-<li>镰仓：JR湘南新宿线1小时</li>
-<li>河口湖：10/1过去住1晚温泉</li>
-<li>新宿=交通枢纽+购物</li>
-<li>大行李从大阪黑猫快递到这</li>
-</ul>
-</div>
-</div>
-<div class="alert alert-green" style="margin-top:18px">
-<h4>行李流转方案</h4>
-<p><strong>9/25</strong> 落地后大行李直接带到大阪大本营酒店寄存。<strong>9/29</strong> 去东京时，大行李用<strong>黑猫宅急便</strong>从大阪酒店快递到东京酒店（次日到，约1500日元/件），自己轻装坐新干线。<strong>10/2</strong> 河口湖→大阪时，大行李再黑猫快递回大阪关空酒店。全程不拎大行李跑长途。</p>
-</div>
-</div>
-</div>
-
-<!-- ============ 环线逻辑 ============ -->
-<div class="section" id="logic">
-<div class="card">
-<h2>🧭 为什么这样排不回头</h2>
-
-<h3>去程：关西一路向东</h3>
-<div class="route">
-<span class="node">有马(北)</span><span class="arrow">↘️</span>
-<span class="node">京都(东)</span><span class="arrow">↘️</span>
-<span class="node">奈良(东南)</span><span class="arrow">↘️</span>
-<span class="node base">大阪(西南·大本营)</span>
-</div>
-<p style="margin-top:10px;color:var(--text-muted);font-size:13px">有马→京都→奈良→大阪，地理上一路向东南，不绕路。每个城市都从大阪大本营出发或顺路衔接。</p>
-
-<h3>关西→关东：新干线跨越</h3>
-<div class="route">
-<span class="node base">大阪大本营</span><span class="arrow">🚄</span>
-<span class="node tokyo">东京大本营</span>
-</div>
-<p style="margin-top:10px;color:var(--text-muted);font-size:13px">新大阪→东京/品川，のぞみ号2.5小时。这是唯一的长途跨越，方向向东，不回头。</p>
-
-<h3>回程：关东向南环线</h3>
-<div class="route">
-<span class="node tokyo">东京大本营</span><span class="arrow">↘️</span>
-<span class="node tokyo">镰仓(南)</span><span class="arrow">↖️</span>
-<span class="node tokyo">河口湖(西)</span><span class="arrow">🚄</span>
-<span class="node base">大阪(关空收尾)</span>
-</div>
-<p style="margin-top:10px;color:var(--text-muted);font-size:13px">东京→镰仓(向南)→回东京→河口湖(向西)→新干线返大阪。镰仓和河口湖分别在东京南和西，形成小环线。最后河口湖→大阪是返程必经。</p>
-
-<div class="alert alert-blue">
-<h4>唯一无法避免的"回头"</h4>
-<p>镰仓在东京南，河口湖在东京西，去河口湖要先回东京方向。所以<strong>镰仓→河口湖会经过东京</strong>。优化方案：镰仓结束后直接坐JR到<strong>大月</strong>站（不回东京市区），转富士急行线去河口湖，少绕一段。或者把镰仓做成东京日trip不住，10/1直接东京→河口湖。</p>
-</div>
-</div>
-
-<div class="card">
-<h2>📅 9晚分段对照</h2>
+<h2>📅 9 晚分段与节奏</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>晚</th><th>日期</th><th>住宿地</th><th>当日活动</th><th>大本营</th></tr></thead>
+<thead><tr><th>日期</th><th>住宿</th><th>主题</th><th>节奏</th><th>早起</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>9/25 周五</td><td>大阪难波</td><td>抵达+休整（或加有马日trip）</td><td><span class="tag tag-best">关西大本营</span></td></tr>
-<tr><td>2</td><td>9/26 周六</td><td>大阪难波</td><td>有马温泉日trip</td><td><span class="tag tag-best">关西大本营</span></td></tr>
-<tr><td>3</td><td>9/27 周日</td><td>大阪难波</td><td>京都日trip</td><td><span class="tag tag-best">关西大本营</span></td></tr>
-<tr><td>4</td><td>9/28 周一</td><td>大阪难波</td><td>奈良日trip+大阪市内</td><td><span class="tag tag-best">关西大本营</span></td></tr>
-<tr><td>5</td><td>9/29 周二</td><td>东京新宿</td><td>新干线+东京初探</td><td><span class="tag tag-info">关东大本营</span></td></tr>
-<tr><td>6</td><td>9/30 周三</td><td>东京新宿</td><td>东京深度+购物</td><td><span class="tag tag-info">关东大本营</span></td></tr>
-<tr><td>7</td><td>10/1 周四</td><td>河口湖</td><td>镰仓日trip→傍晚去河口湖</td><td>温泉旅馆</td></tr>
-<tr><td>8</td><td>10/2 周五</td><td>大阪梅田/关空</td><td>河口湖→新干线返大阪+购物</td><td>关西收尾</td></tr>
-<tr><td>9</td><td>10/3 周六</td><td>关空附近</td><td>心斋桥扫货+移师关空</td><td>关西收尾</td></tr>
+<tr><td>9/25 周五</td><td>新大阪</td><td>抵达恢复</td><td>晚起型</td><td>否</td></tr>
+<tr><td>9/26 周六</td><td>东京新宿</td><td>原宿·涩谷</td><td>新干线早班，下午酒店午休</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>9/27 周日</td><td>东京新宿</td><td>浅草·秋叶原·池袋</td><td>周日无高峰，正常节奏</td><td>否</td></tr>
+<tr><td>9/28 周一</td><td>河口湖温泉</td><td>镰仓+温泉</td><td>7:00 出发避高峰，午后巴士补觉</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>9/29 周二</td><td>京都河原町</td><td>河口湖→京都</td><td>白天跨城补觉，晚上慢逛</td><td>否</td></tr>
+<tr><td>9/30 周三</td><td>京都河原町</td><td>东山深度</td><td>7:00 出发，13:30–15:00 酒店午休</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>10/1 周四</td><td>京都河原町</td><td>岚山+任天堂博物馆</td><td>7:00 出发，午后车程补觉</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>10/2 周五</td><td>大阪梅田</td><td>奈良+梅田</td><td>9:30 后出发避高峰</td><td>否</td></tr>
+<tr><td>10/3 周六</td><td>临空城</td><td>心斋桥购物</td><td>周六无高峰，购物主日</td><td>否</td></tr>
+<tr><td>10/4 周日</td><td>—</td><td>奥莱补货+离境</td><td>航班硬约束</td><td>否</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-yellow" style="margin-top:18px">
-<h4>住宿地点变化最少</h4>
-<p>9晚只换<strong>4个住宿地</strong>：大阪难波(4晚) → 东京新宿(2晚) → 河口湖(1晚) → 大阪关空(2晚)。每个城市内部不换酒店，交通枢纽选址。</p>
+</div>
+
+<div class="card">
+<h2>🚇 通勤高峰规避规则（已内置到每天）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>场景</th><th>规则</th></tr></thead>
+<tbody>
+<tr><td>平日市内地铁/JR</td><td>不在 <strong>7:30–9:30</strong> 和 <strong>17:30–19:30</strong> 挤通勤线</td></tr>
+<tr><td>早起看景点（伏见稻荷、岚山、镰仓）</td><td><strong>7:00–7:15 上车</strong>，赶高峰前通过；当天下午必留午休</td></tr>
+<tr><td>晚间回酒店</td><td>要么 17:00 前回，要么吃完晚饭 19:30 后回，不夹在高峰里</td></tr>
+<tr><td>周六日（9/27、10/3）</td><td>无通勤高峰，可自然醒后出发</td></tr>
+<tr><td>跨城新干线/高速巴士</td><td>全部排在工作日 10:00–16:00 之间，订座车厢=孩子补觉时间</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -335,194 +247,214 @@ tr:hover td{background:var(--bg-hover)}
 <div class="section" id="alerts">
 <div class="card">
 <h2>⚠️ 出行前必读的 6 个关键判断</h2>
-<div class="alert alert-red"><h4>1. 三重旺季叠加</h4><p>9/25-10/4 踩在 <strong>国庆黄金周 + 日本秋季旺季 + 名古屋亚运会(9/19-10/4)</strong> 三峰交汇。酒店涨价20-40%，新干线指定席紧张。<strong>新干线务必提前14天订指定席</strong>。9/25-30 关西+东京错开名古屋；10/1-4 回关西购物。</p></div>
-<div class="alert alert-yellow"><h4>2. 亚运会影响</h4><p>名古屋在新大阪-东京中间，亚运期间のぞみ号会很满，<strong>指定席必须早订</strong>。足球小组赛可能在东京/大阪，出发前查赛程可能顺便看一场。<strong>避让名古屋方向</strong>。</p></div>
-<div class="alert alert-blue"><h4>3. 烟火/祭典（待核实）</h4><p>9月底-10月初非花火旺季。推荐<strong>岸和田地车祭</strong>（往年9月中旬第三个周末，2026可能撞亚运开幕），比花火更独特。出发前1个月确认2026最终日期。<strong>不为烟火绕路</strong>。</p></div>
-<div class="alert alert-green"><h4>4. 大本营+黑猫快递行李策略</h4><p>关西大本营(大阪难波)寄大行李，日trips轻装。跨城(大阪↔东京)用<strong>黑猫宅急便</strong>酒店间快递大行李（约1500日元/件，次日到），自己轻装坐新干线。酒店前台可办。</p></div>
-<div class="alert alert-yellow"><h4>5. 现金 vs 移动支付</h4><p>支付宝/微信在大阪/东京市内覆盖80%+。<strong>必须现金</strong>：小车站、温泉乡、神社、个体小店、出租车找零。人均带3-5万日元，关空T1 B1层换汇或7-11 ATM银联取款。</p></div>
-<div class="alert alert-red"><h4>6. 行李与购物</h6><p>返程留20kg空间给购物，另带空折叠箱。保健品/酒类/液体化妆品必须托运。最后两天关西购物收尾，Rinku Outlet在关空旁，回程当天上午扫货。</p></div>
+<div class="alert alert-red"><h4>1. 国庆 + 日本秋季旺季叠加</h4><p>9/25–10/4 覆盖中国国庆黄金周，<strong>10/1 起酒店涨价、关西机场回程值机排队剧增</strong>。长途移动（大阪→东京、河口湖→京都）全部安排在 9/30 前；10/1 后只做京都—奈良—大阪短半径移动。<strong>10/4 目标 13:00 前到关西机场</strong>。</p></div>
+<div class="alert alert-red"><h4>2. 任天堂博物馆是唯一的"硬预约"</h4><p>目标 <strong>10/1（周四）16:00 以后</strong>的票，备选 10/2 16:00 以后。门票实名、需持与票面一致证件入场，<strong>不能买转售票</strong>。现在起每天查官方余票/候补——拿到票的那一刻 Day 7 / Day 8 才最终定型（见"预约分支"页）。无票也不崩：Day 7 下午改宇治慢体验。</p></div>
+<div class="alert alert-blue"><h4>3. 通勤高峰规则</h4><p>平日地铁/JR 避开 7:30–9:30、17:30–19:30。早起日 7:00–7:15 上车抢在高峰前；晚间 17:00 前或 19:30 后回酒店；跨城段全排在白天订座车厢。本行程每天的时间都是按这条规则排的。</p></div>
+<div class="alert alert-green"><h4>4. 行李策略：9/27 晚东京大箱直寄京都</h4><p>宅急便约 1,500–2,000 日元/件，9/27 寄、9/29 入住京都前必达；寄出时让东京前台电话确认京都酒店可代收。9/28–29 只背 1 晚小包去镰仓和河口湖。护照、贵重物、药品、充电宝永远随身。返程留 20kg 购物空间，保健品/酒类/液体必须托运。</p></div>
+<div class="alert alert-yellow"><h4>5. 现金 vs 移动支付</h4><p>支付宝/微信在东京、大阪市内覆盖 80%+。<strong>仍需现金</strong>：镰仓/河口湖/宇治小站、神社、寺庙门票、小店、自动售货机。建议带 8–10 万日元现金（3 人），7-11 ATM 银联可取。</p></div>
+<div class="alert alert-yellow"><h4>6. 必备预约/手续清单</h4><p>Visit Japan Web（前 7 天）；任天堂博物馆（每天查）；9/26 Nozomi 指定席（约 8/26 10:00 JST 开售，SmartEX）；9/28 藤泽→河口湖巴士、9/29 河口湖→三岛巴士+三岛→京都新干线（开售后即订）；岚山小火车；河口湖旅馆（含晚餐+站接送）。Shibuya Sky、Kirby Café OSAKA 全部是可删加分项。</p></div>
 </div>
 </div>
 
 <!-- ============ 每日行程 ============ -->
 <div class="section" id="itinerary">
 <div class="card">
-<h2>🗓️ 10 天 9 晚不回头环线</h2>
+<h2>🗓️ 10 天 9 晚逐日行程</h2>
+<p style="color:var(--text-muted);font-size:13px">每张卡片末尾标注当日配额（景点/购物/美食）和午休位置。"可选"项都可整体删除而不影响当天。</p>
 <div class="day-grid">
 
-<div class="day-card base">
+<div class="day-card">
 <span class="day-num">Day 1</span>
 <div class="date">9/25 周五 · 抵达</div>
-<div class="day-title">🛬 落地大阪·入住大本营</div>
-<div class="lodging">🏠 住宿：大阪难波（大本营·连住4晚）</div>
+<div class="day-title">🛬 落地关西·新大阪恢复夜</div>
+<div class="lodging">🏠 Courtyard Shin-Osaka Station（或新大阪站步行酒店）</div>
 <ul>
-<li><span class="time">14:00</span>济南→关西机场（2.5h）</li>
-<li><span class="time">15:30</span>入境取行李（Visit Japan Web提前填）</li>
-<li><span class="time">16:30</span>南海特急Rapi:t→难波（38min）</li>
-<li><span class="time">17:30</span>入住大阪大本营酒店（难波光芒/三井花园）</li>
-<li><span class="time">18:30</span>道顿堀晚餐（一蘭/简餐）</li>
-<li><span class="time">晚</span>难波周边散步·早睡调时差</li>
+<li><span class="time">14:55</span>落地→入境、取行李、买 ICOCA、取现金</li>
+<li><span class="time">17:00</span>Haruka 至新大阪，入住</li>
+<li><span class="time">18:15</span>新世界街区+通天阁外围夜景（不登塔）</li>
+<li><span class="time">19:00</span>串炸/大阪烧晚餐</li>
+<li><span class="time">20:00</span>便利店买次日新干线早餐、儿童零食</li>
+<li><span class="time">21:30</span>前熄灯</li>
 </ul>
+<div class="quota">🎯 景点 2 / 购物 1 / 美食 1<br>😴 抵达日不凑数，休息优先</div>
+</div>
+
+<div class="day-card tokyo">
+<span class="day-num">Day 2</span>
+<div class="date">9/26 周六 · 跨越</div>
+<div class="day-title">🚄 早班新干线→原宿·涩谷</div>
+<div class="lodging">🏠 Hilton Tokyo（西新宿）· 大行李随身寄酒店</div>
+<ul>
+<li><span class="time">07:09</span>Nozomi 新大阪→东京（约 2.5h，车上早餐+补觉）</li>
+<li><span class="time">10:00</span>新宿酒店寄存行李（已过早高峰）</li>
+<li><span class="time">11:00</span><strong>景点①明治神宫</strong>：大鸟居、森林参道</li>
+<li><span class="time">12:00</span><strong>美食①</strong>表参道午餐（定食/乌冬/寿司）</li>
+<li><span class="time">13:00</span><strong>景点②竹下通</strong>（只走核心段）+可丽饼</li>
+<li><span class="time">13:40</span><strong>景点③表参道</strong>：建筑橱窗慢走</li>
+<li><span class="time">14:30</span><strong>回酒店入住+孩子午休</strong>（至 16:30）</li>
+<li><span class="time">16:30</span><strong>景点④涩谷</strong>：十字路口、Hachiko、中心街</li>
+<li><span class="time">17:00</span><strong>购物①涩谷 PARCO</strong>：Nintendo TOKYO（排队超 20 分钟就走）</li>
+<li><span class="time">18:00</span><strong>美食②涩谷晚餐</strong>：回转寿司/亲子盖饭</li>
+<li><span class="time">19:30</span><strong>购物②</strong>PARCO/109 短逛后回新宿（避高峰）；<strong>美食③</strong>新宿甜品夜宵</li>
+</ul>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 14:30–16:30 酒店<br>✂️ 删减顺序：Shibuya Sky → 表参道 → 任天堂店</div>
+</div>
+
+<div class="day-card tokyo">
+<span class="day-num">Day 3</span>
+<div class="date">9/27 周日 · 东京</div>
+<div class="day-title">⛩️ 浅草·上野·秋叶原·池袋</div>
+<div class="lodging">🏠 Hilton Tokyo · <strong>晚 19:30 大箱宅急便寄京都</strong></div>
+<ul>
+<li><span class="time">08:30</span>早餐、出发（周日无高峰，不用早起）</li>
+<li><span class="time">09:30</span><strong>景点①浅草寺</strong>：雷门—仲见世—本堂；人形烧小吃</li>
+<li><span class="time">11:30</span><strong>美食①上野/阿美横丁午餐</strong>：鳗鱼饭/寿司/定食</li>
+<li><span class="time">12:30</span><strong>景点②上野公园</strong>：开阔地跑一跑</li>
+<li><span class="time">13:30</span><strong>景点③秋叶原 + 购物①</strong>：扭蛋、模型、游戏机厅（先定预算）</li>
+<li><span class="time">15:30</span>电车回新宿方向，<strong>车上补觉</strong></li>
+<li><span class="time">16:00</span><strong>景点④池袋 + 购物② animate 旗舰店</strong>（营业至 21:00）</li>
+<li><span class="time">18:00</span><strong>美食②池袋晚餐</strong>：商场餐厅</li>
+<li><span class="time">19:30</span><strong>美食③（轻）</strong>买次日路早；<strong>打包寄大箱到 Hilton Kyoto</strong>，只留 1 晚小包</li>
+</ul>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 15:30–16:00 车上（也可 15:00 回酒店躺 1 小时）<br>✂️ 删减：池袋 → 上野公园</div>
+</div>
+
+<div class="day-card tokyo">
+<span class="day-num">Day 4</span>
+<div class="date">9/28 周一 · 转场</div>
+<div class="day-title">🌊 镰仓半日→河口湖温泉夜</div>
+<div class="lodging">🏠 Hotel Asafuji 或同级含晚餐温泉旅馆 · 只背小包</div>
+<ul>
+<li><span class="time">07:00</span>JR 湘南新宿线→镰仓（高峰前通过），换江之电</li>
+<li><span class="time">08:30</span><strong>景点①镰仓高校前</strong>：官方安全区域拍照</li>
+<li><span class="time">09:00</span><strong>景点②江之电沿海短乘</strong>：以乘车体验为主</li>
+<li><span class="time">09:45</span><strong>景点③镰仓大佛</strong>：只保留这一处寺院</li>
+<li><span class="time">10:45</span><strong>景点④小町通 + 美食①早午餐</strong>：鳗鱼/乌冬/海鲜丼</li>
+<li><span class="time">12:30</span><strong>藤泽→河口湖直达巴士（已订座，全车补觉）</strong></li>
+<li><span class="time">15:00</span>河口湖站 10 号站牌旅馆接送、入住、房间休息</li>
+<li><span class="time">16:30</span>浴衣、榻榻米、第一次温泉（孩子浅尝即可）</li>
+<li><span class="time">18:00</span><strong>美食②旅馆日式晚餐</strong>（今日核心，须 18:00 前到站）</li>
+<li><span class="time">19:30</span>房内桌游/绘本/日式小点（<strong>美食③轻</strong>）；第二次温泉成人轮流</li>
+</ul>
+<div class="quota">🎯 景点 4 / 购物 1 / 美食 3<br>😴 午休 12:30–15:00 巴士 + 15:00–16:30 房间<br>✂️ 删减：湖畔夜走 → 江之电延长段 → 大佛</div>
 </div>
 
 <div class="day-card special">
-<span class="day-num">Day 2</span>
-<div class="date">9/26 周六 · 关西日trip</div>
-<div class="day-title">♨️ 有马温泉日trip</div>
-<div class="lodging">🏠 住宿：大阪难波（大本营·不换）·轻装出行</div>
-<ul>
-<li><span class="time">8:00</span>难波→有马（阪急+神户电铁，约70min）</li>
-<li><span class="time">9:30</span>抵有马温泉</li>
-<li><span class="time">10:00</span>金汤银汤体验（兵卫向阳阁日归温泉）</li>
-<li><span class="time">12:00</span>有马温泉街散步+炭酸煎饼</li>
-<li><span class="time">13:00</span>有马午餐（怀石料理简版）</li>
-<li><span class="time">15:00</span>六甲山缆车（可选）</li>
-<li><span class="time">17:00</span>返大阪难波</li>
-<li><span class="time">19:00</span>难波晚餐+心斋桥初探</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">Day 3</span>
-<div class="date">9/27 周日 · 关西日trip</div>
-<div class="day-title">⛩️ 京都人文一日</div>
-<div class="lodging">🏠 住宿：大阪难波（大本营·不换）·轻装出行</div>
-<ul>
-<li><span class="time">7:30</span>难波→京都（JR新快速28min）</li>
-<li><span class="time">8:30</span>伏见稻荷大社（早去人少）</li>
-<li><span class="time">10:30</span>清水寺+三年坂二年坂</li>
-<li><span class="time">12:30</span>八坂神社旁午餐（汤豆腐）</li>
-<li><span class="time">14:00</span>祇园+花见小路</li>
-<li><span class="time">15:30</span>金阁寺</li>
-<li><span class="time">17:00</span>锦市场（抹茶八桥）</li>
-<li><span class="time">19:30</span>返大阪难波晚餐</li>
-</ul>
-</div>
-
-<div class="day-card">
-<span class="day-num">Day 4</span>
-<div class="date">9/28 周一 · 关西日trip</div>
-<div class="day-title">🦌 奈良+大阪市内</div>
-<div class="lodging">🏠 住宿：大阪难波（大本营·不换）·轻装出行</div>
-<ul>
-<li><span class="time">9:00</span>难波→奈良（近铁40min）</li>
-<li><span class="time">10:00</span>奈良公园喂鹿</li>
-<li><span class="time">11:30</span>东大寺大佛殿</li>
-<li><span class="time">13:00</span>奈良町午餐（柿叶寿司平宗）</li>
-<li><span class="time">14:30</span>春日大社</li>
-<li><span class="time">16:30</span>返大阪·退大本营酒店</li>
-<li><span class="time">17:30</span>梅田空中庭园+大阪城夜景</li>
-<li><span class="time">晚</span>整理行李，大件黑猫快递到东京酒店</li>
-</ul>
-</div>
-
-<div class="day-card tokyo">
 <span class="day-num">Day 5</span>
 <div class="date">9/29 周二 · 跨越</div>
-<div class="day-title">🚄 新干线去东京·初探</div>
-<div class="lodging">🏠 住宿：东京新宿（关东大本营·连住2晚）·轻装</div>
+<div class="day-title">🗻 河口湖清晨→京都河原町夜</div>
+<div class="lodging">🏠 Hilton Kyoto（河原町）· 东京大箱今日送达</div>
 <ul>
-<li><span class="time">8:00</span>难波→新大阪（地铁御堂筋线）</li>
-<li><span class="time">9:30</span>新干线のぞみ 新大阪→东京（2.5h）</li>
-<li><span class="time">12:00</span>抵东京·入住新宿酒店</li>
-<li><span class="time">13:00</span>新宿午餐（矶丸水产）</li>
-<li><span class="time">14:30</span>明治神宫+原宿竹下通</li>
-<li><span class="time">16:30</span>表参道+涩谷十字路口</li>
-<li><span class="time">18:30</span>涩谷Shibuya Sky（需预约）</li>
-<li><span class="time">20:00</span>新宿晚餐+歌舞伎町夜景</li>
+<li><span class="time">06:30</span><strong>景点①清晨湖景/温泉</strong>：安静看富士的最佳窗口</li>
+<li><span class="time">07:15</span><strong>美食①旅馆早餐</strong>、退房</li>
+<li><span class="time">08:30</span><strong>景点②大石公园/湖畔短走</strong>（红线巴士或出租车）</li>
+<li><span class="time">09:45</span><strong>购物①站前伴手礼</strong>：山梨点心、富士山小物</li>
+<li><span class="time">10:30</span><strong>美食②ほうとう午餐</strong>：山梨特色宽面</li>
+<li><span class="time">11:30</span>河口湖→三岛巴士（订座，补觉）→三岛→京都 Hikari</li>
+<li><span class="time">15:00</span>Hilton Kyoto 入住、洗澡、休息；确认大箱已到</li>
+<li><span class="time">17:00</span><strong>景点③先斗町</strong>：石板小巷、鸭川纳凉床外景</li>
+<li><span class="time">18:00</span><strong>美食③京都晚餐</strong>：豆腐/湯叶、荞麦、亲子盖饭</li>
+<li><span class="time">19:00</span><strong>景点④鸭川/河原町短走</strong>；<strong>购物②药妆预逛</strong>（只看价不扫货）</li>
 </ul>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 全天车程补觉 + 15:00–16:30 房间</div>
 </div>
 
-<div class="day-card tokyo">
+<div class="day-card base">
 <span class="day-num">Day 6</span>
-<div class="date">9/30 周三 · 东京</div>
-<div class="day-title">🎯 东京都市深度+购物</div>
-<div class="lodging">🏠 住宿：东京新宿（关东大本营·不换）</div>
+<div class="date">9/30 周三 · 京都</div>
+<div class="day-title">⛩️ 京都东山深度</div>
+<div class="lodging">🏠 Hilton Kyoto · 13:30–15:00 回酒店午休</div>
 <ul>
-<li><span class="time">9:00</span>下北泽古着+独立咖啡馆</li>
-<li><span class="time">11:30</span>原宿Cat Street（BAPE/Human Made）</li>
-<li><span class="time">13:00</span>午餐</li>
-<li><span class="time">14:30</span>秋叶原电器+动漫</li>
-<li><span class="time">17:00</span>银座百货+奢侈品</li>
-<li><span class="time">19:30</span>银座晚餐+东京站角色街</li>
-<li><span class="time">晚</span>大行李黑猫快递到关空酒店</li>
+<li><span class="time">07:00</span>京阪线→伏见稻荷（高峰前上车）</li>
+<li><span class="time">08:00</span><strong>景点①伏见稻荷大社</strong>：千本鸟居，奥社奉拜所折返，不登顶</li>
+<li><span class="time">10:15</span><strong>景点②清水寺</strong>：舞台、音羽瀑布（排队超 20 分钟跳过）</li>
+<li><span class="time">11:30</span><strong>美食①二年坂午餐</strong>：汤豆腐/荞麦/亲子定食，坐下 45 分钟</li>
+<li><span class="time">12:30</span><strong>景点③三年坂→宁宁之道</strong>；<strong>购物①清水坂小店</strong></li>
+<li><span class="time">13:30</span><strong>回酒店午休</strong>（至 15:00，大人轮流咖啡）</li>
+<li><span class="time">15:00</span><strong>景点④祇园·花见小路→八坂神社</strong></li>
+<li><span class="time">16:00</span><strong>美食②抹茶/和果子茶歇</strong></li>
+<li><span class="time">16:30</span><strong>购物②锦市场</strong>：茶、干货、漬物</li>
+<li><span class="time">18:00</span><strong>美食③先斗町/鸭川边晚餐</strong>，步行回酒店</li>
 </ul>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 13:30–15:00 酒店<br>🌧️ 雨天：压缩街区步行，锦市场提前</div>
 </div>
 
-<div class="day-card tokyo special">
+<div class="day-card base">
 <span class="day-num">Day 7</span>
-<div class="date">10/1 周四 · 国庆</div>
-<div class="day-title">🌊 镰仓日trip→富士河口湖</div>
-<div class="lodging">🏠 住宿：河口湖温泉旅馆·轻装</div>
+<div class="date">10/1 周四 · 关键日</div>
+<div class="day-title">🎋 岚山 + 16:00 任天堂博物馆</div>
+<div class="lodging">🏠 Hilton Kyoto · 博物馆结束 30 分钟回酒店</div>
 <ul>
-<li><span class="time">8:00</span>新宿→镰仓（JR湘南新宿线1h）</li>
-<li><span class="time">9:30</span>镰仓高校前（灌篮高手道口）</li>
-<li><span class="time">10:30</span>江之电沿线+长谷寺</li>
-<li><span class="time">12:00</span>镰仓午餐（しらす丼）</li>
-<li><span class="time">13:30</span>镰仓大佛+小町通</li>
-<li><span class="time">15:00</span>镰仓→大月（JR+换乘）</li>
-<li><span class="time">17:00</span>大月→河口湖（富士急行线）</li>
-<li><span class="time">18:00</span>入住河口湖温泉旅馆+怀石</li>
+<li><span class="time">07:00</span>河原町→岚山（高峰前上车），车上早餐</li>
+<li><span class="time">08:45</span><strong>景点①岚山小火车</strong>（订座；<strong>无票直接跳过</strong>）</li>
+<li><span class="time">10:00</span><strong>景点②竹林小径+野宫神社</strong></li>
+<li><span class="time">11:00</span><strong>景点③天龙寺</strong>：庭园借景</li>
+<li><span class="time">12:00</span><strong>景点④渡月桥</strong>：河岸开阔处休息</li>
+<li><span class="time">12:30</span><strong>美食①岚山午餐</strong>：汤豆腐/湯叶/荞麦</li>
+<li><span class="time">13:20</span><strong>购物①岚山小店</strong>：只选一家</li>
+<li><span class="time">14:00</span>岚山→宇治小仓（<strong>车上补觉</strong>）</li>
+<li><span class="time">16:00</span><strong>任天堂博物馆</strong>：历史展→互动→花札→<strong>购物②限定商店</strong>；馆内咖啡 <strong>美食②（轻）</strong></li>
+<li><span class="time">19:30</span>回河原町；<strong>美食③京都晚餐</strong>（酒店附近坐下吃）</li>
 </ul>
+<div class="quota">🎯 景点 4+博物馆 / 购物 2 / 美食 3<br>😴 午休 14:00–15:00 车上补觉<br>🔀 票面 17:00 后：午后先回酒店午休再去；无票：下午改宇治慢体验</div>
 </div>
 
 <div class="day-card">
 <span class="day-num">Day 8</span>
-<div class="date">10/2 周五 · 返关西</div>
-<div class="day-title">🗻 河口湖晨景→新干线返大阪</div>
-<div class="lodging">🏠 住宿：大阪梅田（关西收尾·连住1晚）</div>
+<div class="date">10/2 周五 · 跨越</div>
+<div class="day-title">🦌 奈良精华→大阪梅田</div>
+<div class="lodging">🏠 Hilton Osaka（JR 大阪站 2 分钟）</div>
 <ul>
-<li><span class="time">6:30</span>河口湖拍逆富士（清晨风平浪静）</li>
-<li><span class="time">8:00</span>旅馆早餐+退房</li>
-<li><span class="time">9:30</span>大石公园（花海+富士全景）</li>
-<li><span class="time">11:00</span>河口湖→三岛（富士急巴士）</li>
-<li><span class="time">12:30</span>三岛→新大阪（新干线，约1h）</li>
-<li><span class="time">14:00</span>抵大阪·入住梅田酒店</li>
-<li><span class="time">15:30</span>梅田阪急百货购物</li>
-<li><span class="time">19:00</span>梅田晚餐</li>
+<li><span class="time">09:30</span>近铁京都→近铁奈良（避开早高峰）</li>
+<li><span class="time">10:30</span><strong>景点①奈良公园喂鹿 + 景点②东大寺大佛殿</strong></li>
+<li><span class="time">12:00</span><strong>美食①奈良町午餐</strong>：茶粥、柿叶寿司或定食</li>
+<li><span class="time">13:00</span><strong>景点③奈良町</strong>慢走；<strong>购物①奈良小物</strong>（鹿杂货、奈良渍）</li>
+<li><span class="time">14:00</span><strong>景点④猿泽池/浮见堂</strong>；<strong>美食②吉野葛/和果子茶歇</strong></li>
+<li><span class="time">15:00</span>近铁→大阪（<strong>车上补觉</strong>，晚高峰前抵达）</li>
+<li><span class="time">16:00</span>Hilton Osaka 入住、休息</li>
+<li><span class="time">17:00</span><strong>购物②梅田</strong>：Grand Front、阪急/大丸食品层、童装</li>
+<li><span class="time">18:30</span><strong>美食③梅田晚餐</strong>：新梅田食道街或 Grand Front</li>
 </ul>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 15:00–16:00 车上 + 16:00–17:00 房间<br>✂️ 删减：猿泽池 → 奈良町</div>
 </div>
 
 <div class="day-card special">
 <span class="day-num">Day 9</span>
-<div class="date">10/3 周六 · 购物</div>
-<div class="day-title">🛍️ 心斋桥冲刺+移师关空</div>
-<div class="lodging">🏠 住宿：关空附近酒店</div>
+<div class="date">10/3 周六 · 购物主日</div>
+<div class="day-title">🛍️ 心斋桥主购物→临空奥莱</div>
+<div class="lodging">🏠 Star Gate Hotel / 临空城站周边 · 17:00 取大箱转移</div>
 <ul>
-<li><span class="time">9:00</span>心斋桥/难波全天购物</li>
-<li><span class="time">上午</span>户外：Snow Peak/Mont-bell/Arc'teryx</li>
-<li><span class="time">上午</span>潮牌：美国村BAPE/Supreme</li>
-<li><span class="time">上午</span>药妆：松本清/大国（保健品扫货）</li>
-<li><span class="time">13:00</span>难波午餐</li>
-<li><span class="time">15:00</span>退房·移动到关空酒店</li>
-<li><span class="time">18:00</span>步行去Rinku Outlet（开到20-21点）</li>
-<li><span class="time">20:00</span>Rinku晚餐</li>
+<li><span class="time">09:00</span><strong>美食①黑门市场早午餐</strong>：烤扇贝、玉子烧、水果</li>
+<li><span class="time">10:00</span><strong>景点①道顿堀/戎桥</strong>：白天版固力果招牌</li>
+<li><span class="time">10:40</span><strong>景点②法善寺横丁</strong>：石板小巷</li>
+<li><span class="time">11:30</span><strong>购物①大丸心斋桥+PARCO</strong>：先办退税流程的店</li>
+<li><span class="time">13:00</span><strong>美食②心斋桥午餐</strong>（Kirby Café 仅预约成功时）</li>
+<li><span class="time">14:00</span><strong>景点③心斋桥筋 + 购物②</strong>：按清单入店，每家最多 20 分钟</li>
+<li><span class="time">15:30</span><strong>景点④美国村</strong>；孩子咖啡厅休整 30 分钟（大人轮逛）</li>
+<li><span class="time">16:15</span>橘通/堀江补货；<strong>美食③（轻）</strong>咖啡甜品茶歇</li>
+<li><span class="time">17:30</span>南海电铁→临空城，入住</li>
+<li><span class="time">18:30</span><strong>临空奥莱第一轮</strong>：只买试尺码大件（运动鞋/户外服/童装/行李箱）</li>
+<li><span class="time">20:00</span>RINKU FOOD PARK 晚餐（注意 19:45 最后点餐）</li>
 </ul>
+<div class="quota">🎯 景点 4 / 购物 2+奥莱 / 美食 3<br>😴 午休 15:30–16:15 咖啡厅/商场休息区<br>♨️ 有马温泉：仅前 8 天全顺且孩子状态好时上午插入，默认不加</div>
 </div>
 
-<div class="day-card special">
+<div class="day-card">
 <span class="day-num">Day 10</span>
 <div class="date">10/4 周日 · 返程</div>
-<div class="day-title">✈️ Rinku Outlet+返济南</div>
-<div class="lodging">—</div>
+<div class="day-title">✈️ 奥莱精准补货→关西机场→济南</div>
+<div class="lodging">— · 16:00 SC8086 硬约束</div>
 <ul>
-<li><span class="time">8:00</span>Rinku周边早餐等开门</li>
-<li><span class="time">10:00</span>Rinku全力扫货（TNF/Arc'teryx 3-7折）</li>
-<li><span class="time">12:30</span>回酒店取行李</li>
-<li><span class="time">13:00</span>关西机场T1值机（提前3h）</li>
-<li><span class="time">14:00</span>免税店最后扫货</li>
-<li><span class="time">16:00</span>起飞回济南</li>
+<li><span class="time">08:00</span>早餐、退房、寄存行李；托运/随身分装</li>
+<li><span class="time">10:00</span>临空奥莱第二轮：只补 Day 9 缺尺码/缺型号</li>
+<li><span class="time">11:30</span>Food Park 快速早午餐或外带</li>
+<li><span class="time">12:00</span>取行李、前往 KIX（1 站/酒店接驳）</li>
+<li><span class="time">13:00</span>值机、托运、安检、退税（免税店不是主购物场）</li>
+<li><span class="time">16:00</span>SC8086 起飞回济南</li>
 </ul>
+<div class="quota">🎯 购物有边界，航班优先<br>⚠️ 国庆回程峰值，13:00 前到机场</div>
 </div>
 
-</div>
-</div>
-
-<div class="card">
-<h2>🔄 灵活调整</h2>
-<div class="compare">
-<div class="compare-col left"><h4>突发方案</h4><ul><li>雨天：东京改秋叶原室内/博物馆</li><li>雨天：关西改海游馆/京都博物馆</li><li>体力不支：京都拆两天</li><li>有马太累：改大阪市内+温泉浴场</li></ul></div>
-<div class="compare-col right"><h4>加码方案</h4><ul><li>亚运彩蛋：查足球小组赛</li><li>烟火凑上：出发前查到就顺便</li><li>岸和田地车祭：撞上关西日强烈推荐</li><li>河口湖升级：温泉旅馆升级</li></ul></div>
 </div>
 </div>
 </div>
@@ -530,280 +462,250 @@ tr:hover td{background:var(--bg-hover)}
 <!-- ============ 住宿 ============ -->
 <div class="section" id="hotels">
 <div class="card">
-<h2>🏨 住宿规划（只换4个地）</h2>
+<h2>🏨 住宿规划（9 晚）</h2>
+<p style="color:var(--text-muted);font-size:13px;margin-bottom:10px">积分房需在 Hilton Honors / Marriott Bonvoy 账户内以「2 成人 + 1 名 5 岁儿童」查询复核。<strong>先订可取消现金房，积分房出现后再替换。</strong></p>
 <div class="table-wrap">
 <table>
-<thead><tr><th>晚</th><th>日期</th><th>住宿地</th><th>推荐酒店</th><th>大本营</th></tr></thead>
+<thead><tr><th>晚</th><th>日期</th><th>区域</th><th>推荐酒店</th><th>选择原因</th></tr></thead>
 <tbody>
-<tr><td>1-4</td><td>9/25-28</td><td>大阪难波</td><td>难波光芒/三井花园难波</td><td><span class="tag tag-best">关西大本营·连住4晚</span></td></tr>
-<tr><td>5-6</td><td>9/29-30</td><td>东京新宿</td><td>新宿王子/京王广场</td><td><span class="tag tag-info">关东大本营·连住2晚</span></td></tr>
-<tr><td>7</td><td>10/1</td><td>河口湖</td><td>秀峰閣湖月/風の町</td><td><span class="tag tag-warn">温泉旅馆·提前2个月订</span></td></tr>
-<tr><td>8</td><td>10/2</td><td>大阪梅田</td><td>大阪希尔顿/InterContinental</td><td>关西收尾·购物便利</td></tr>
-<tr><td>9</td><td>10/3</td><td>关空附近</td><td>关西机场日航/Star Gate</td><td><span class="tag tag-warn">早班机/国庆峰值</span></td></tr>
+<tr><td>1</td><td>9/25</td><td>新大阪</td><td><strong>Courtyard by Marriott Shin-Osaka Station</strong></td><td>次日早班新干线，住站上最稳</td></tr>
+<tr><td>2–3</td><td>9/26–27</td><td>东京新宿</td><td><strong>Hilton Tokyo（西新宿）</strong></td><td>两天分别走东京西/东北，回程方便</td></tr>
+<tr><td>4</td><td>9/28</td><td>河口湖</td><td><strong>Hotel Asafuji</strong> 或同级含晚餐温泉旅馆</td><td>价值在日式晚餐+湖景+温泉+榻榻米；约 10 号站牌接送，晚餐 18:00/18:30/19:00 可选，温泉开放至 23:30</td></tr>
+<tr><td>5–7</td><td>9/29–10/1</td><td>京都河原町</td><td><strong>Hilton Kyoto</strong>；备选 DoubleTree 京都站</td><td>步行可达祇园、锦市场、先斗町；博物馆结束 30 分钟回房</td></tr>
+<tr><td>8</td><td>10/2</td><td>大阪梅田</td><td><strong>Hilton Osaka</strong></td><td>JR 大阪站 2 分钟，地下通道连商场，适合梅田购物和次日取行李</td></tr>
+<tr><td>9</td><td>10/3</td><td>临空城</td><td><strong>Star Gate Hotel Kansai Airport</strong> 或临空城站周边</td><td>当晚奥莱第一轮 + 次日补货，去机场 1 站，Day 10 完全不赶</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-blue" style="margin-top:18px"><h4>选址逻辑</h4><p><strong>大阪难波</strong>：吃喝购+交通枢纽，去京都/奈良/有马都方便。<strong>东京新宿</strong>：JR枢纽，去镰仓/河口湖都从这出发。<strong>每城不换酒店</strong>，减少搬行李。Booking/Agoda选可免费取消的。</p></div>
-</div>
-</div>
-
-<!-- ============ 购物 ============ -->
-<div class="section" id="shopping">
-<div class="card">
-<h2>🛍️ 购物清单</h2>
-<h3>🏔️ 户外品牌</h3>
-<div class="compare">
-<div class="compare-col left"><h4>关西（大阪）</h4><ul><li>心斋桥/南船场：Snow Peak旗舰、Mont-bell本店</li><li>Goldwin（TNF紫标）、Arc'teryx、Patagonia</li><li>Rinku Outlet（回程必去）：折扣3-7折</li></ul></div>
-<div class="compare-col right"><h4>东京</h4><ul><li>原宿表参道：Snow Peak Tokyo、Arc'teryx</li><li>新宿/涩谷：Mont-bell新宿、Beams</li><li>下北泽：古着+独立品牌</li></ul></div>
-</div>
-<h3>👕 潮牌</h3>
-<div class="hl-grid">
-<div class="hl-box"><span class="icon">🧢</span><h4>关西·美国村</h4><p>BAPE/Supreme/Stüssy/Human Made</p></div>
-<div class="hl-box"><span class="icon">👜</span><h4>东京·原宿</h4><p>Cat Street+涩谷+下北泽</p></div>
-<div class="hl-box"><span class="icon">👟</span><h4>特色品牌</h4><p>三宅一生/Onitsuka Tiger本店</p></div>
-</div>
-<h3>💊 保健品</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>品类</th><th>品牌</th><th>备注</th></tr></thead>
-<tbody>
-<tr><td>综合维生素</td><td>DHC、Fancl</td><td>DHC最便宜</td></tr>
-<tr><td>辅酶Q10</td><td>Kaneka认证</td><td>唯一原料商</td></tr>
-<tr><td>眼药水</td><td>参天FX neo</td><td><span class="tag tag-warn">限购2瓶/人</span></td></tr>
-<tr><td>益生菌</td><td>强力Wakamoto</td><td>经典便宜</td></tr>
-<tr><td>护肝</td><td>HEPALYSE黄金</td><td>应酬人士</td></tr>
-<tr><td>纳豆激酶</td><td>小林制药</td><td>心血管</td></tr>
-</tbody>
-</table>
-</div>
-<div class="alert alert-yellow" style="margin-top:15px"><h4>购买建议</h4><p>大国药妆常比松本清便宜5-15%。<strong>海关规定：单品种≤6瓶/人，总价≤5000元避税</strong>。回程前1-2天买。</p></div>
-<h3>📅 购物时间分配</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>日期</th><th>购物重点</th></tr></thead>
-<tbody>
-<tr><td>9/28</td><td>大阪心斋桥初探</td></tr>
-<tr><td>9/29-10/1</td><td>东京潮牌+户外+电器</td></tr>
-<tr><td>10/3</td><td>大阪心斋桥全量扫货+药妆</td></tr>
-<tr><td>10/4上午</td><td><span class="tag tag-rec">Rinku Outlet + 关空免税</span></td></tr>
-</tbody>
-</table>
-</div>
+<div class="alert alert-blue" style="margin-top:18px"><h4>少换酒店替代</h4><p>10/3 可续住 Hilton Osaka，Day 10 早班南海电铁 40 分钟到机场；但 10/4 需 11:00 前出发，奥莱补货时间减半。默认仍推荐末晚住临空城。</p></div>
+<div class="alert alert-green"><h4>行李流转</h4><p><strong>9/27 晚</strong>东京大箱宅急便寄 Hilton Kyoto（9/29 入住前必达，前台电话确认代收）。9/28–29 只背 1 晚小包（换洗、雨具、儿童睡衣、常用药、安抚物）。护照、贵重物、药品、充电宝永远随身。</p></div>
 </div>
 </div>
 
 <!-- ============ 交通 ============ -->
 <div class="section" id="transport">
 <div class="card">
-<h2>🚄 交通卡 & 通行证</h2>
+<h2>🚄 跨城交通（全部订座制，白天=补觉时间）</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>卡/证</th><th>价格</th><th>用途</th></tr></thead>
+<thead><tr><th>段</th><th>日期</th><th>方式</th><th>耗时</th><th>关键动作</th></tr></thead>
 <tbody>
-<tr><td>ICOCA / Suica</td><td>工本500日元</td><td>关西+东京通用，iPhone可加Apple Pay</td></tr>
-<tr><td><span class="tag tag-rec">大阪周游券1日</span></td><td>2,800日元</td><td>9/28用，含40+景点免费+地铁巴士</td></tr>
-<tr><td><span class="tag tag-warn">新干线のぞみ指定席</span></td><td>14,720日元/程</td><td>务必提前14天订（亚运+国庆）</td></tr>
-<tr><td>镰仓·江之电一日券</td><td>约1,500日元</td><td>江之电无限次+JR</td></tr>
-<tr><td>河口湖往返</td><td>约3,000日元</td><td>新宿出发巴士或电车</td></tr>
+<tr><td>关西机场→新大阪</td><td>9/25</td><td>JR Haruka 直达</td><td>约 50 分钟</td><td>落地后只办必要事项</td></tr>
+<tr><td>新大阪→东京</td><td>9/26</td><td><strong>Nozomi 07:09 左右</strong>，指定席 3 人相邻</td><td>约 2.5 小时</td><td>SmartEX 开售后即订；不选名古屋换乘组合</td></tr>
+<tr><td>新宿→镰仓</td><td>9/28</td><td>JR 湘南新宿线，<strong>7:00 前后上车</strong></td><td>约 55 分钟</td><td>赶通勤高峰前通过</td></tr>
+<tr><td>藤泽→河口湖</td><td>9/28</td><td>神奈中高速巴士（预约制）</td><td>约 2.5 小时</td><td>无座则改 JR 新宿→大月→富士急行</td></tr>
+<tr><td>河口湖→三岛</td><td>9/29</td><td>高速巴士（预约制）</td><td>约 1 小时 20 分</td><td>班次少必订；为新干线留 45–60 分钟缓冲</td></tr>
+<tr><td>三岛→京都</td><td>9/29</td><td><strong>Hikari 优先</strong>，无则 Kodama 直达</td><td>约 1 小时 50 分</td><td>不在新大阪换乘</td></tr>
+<tr><td>京都→奈良→大阪</td><td>10/2</td><td>近铁（奈良站离公园最近）</td><td>各约 40–50 分钟</td><td>9:30 后出发、15:00 前后离开奈良</td></tr>
+<tr><td>大阪→临空城</td><td>10/3</td><td>南海电铁 / JR</td><td>约 40 分钟</td><td>先回酒店取大箱再去</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-blue" style="margin-top:18px"><h4>新干线购票</h4><p>JR官网/车站售票机/Klook代购。亚运+国庆<strong>提前14天锁定指定席</strong>。普通JR Pass涨价后性价比大跌，不推荐。</p></div>
-</div>
-<div class="card">
-<h2>🚃 全程交通·每段具体线路</h2>
-<p style="color:var(--text-muted);font-size:13px;margin-bottom:18px">按行程顺序列出每段具体线路、换乘站、车种、票价。<strong>全程用 ICOCA/Suica 刷卡</strong>（iPhone 可加 Apple Pay），新干线除外。</p>
-
-<h3>① Day1 济南 ✈️ 大阪 KIX → 难波（大本营）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>航班</strong>：济南遥墙 TNA ✈️ 关西 KIX（春秋/山航，约2.5h）</div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>南海特急 Rapi:t</strong>：关西空港站 → 难波站（直达，38分钟，1,490日元）<br><span style="color:var(--text-muted);font-size:12px">推荐网上买 yokoso Osaka Ticket 约1,500日元含一张地铁一日券</span></div></div>
-<div class="route-step"><span class="step-no">3</span><div>步行至难波酒店（大本营）</div></div>
-</div>
-<div class="alert alert-blue" style="margin-top:10px"><p><strong>备选</strong>：南海空港急行（45分钟，970日元，便宜但站站停）；深夜抵达可包车（600-800元）</p></div>
-
-<h3>② Day2 大阪难波 → 有马温泉（日trip）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：难波站 → 梅田站（约8分钟，180日元）</div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>阪急神户本线 特急</strong>：梅田(阪急) → 三宫站（约30分钟，320日元）</div></div>
-<div class="route-step"><span class="step-no">3</span><div><strong>神户电铁有马线</strong>：三宫(阪急) → 有马温泉站（约30分钟，换乘1次谷上，约410日元）</div></div>
-<div class="route-step"><span class="step-no">4</span><div>步行至温泉旅馆（金汤银汤体验）</div></div>
-</div>
-<div class="table-wrap" style="margin-top:10px"><table><thead><tr><th>方式</th><th>总耗时</th><th>总价</th><th>换乘</th></tr></thead><tbody><tr><td>阪急+神户电铁</td><td>约70分钟</td><td>约910日元</td><td>2次（梅田、谷上）</td></tr><tr><td><span class="tag tag-best">直达巴士</span></td><td>约60分钟</td><td>约1,800日元</td><td>0次（梅田/难波直达）</td></tr></tbody></table></div>
-
-<h3>③ Day3 大阪难波 → 京都（日trip）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：难波站 → 梅田站（8分钟，180日元）→ 步行至大阪站(JR)</div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>JR京都线 新快速</strong>：大阪站 → 京都站（<strong>直达28分钟，580日元</strong>）<br><span style="color:var(--text-muted);font-size:12px">新快速比普通车快，每15分钟一班，首选</span></div></div>
-</div>
-<div class="alert alert-green" style="margin-top:10px"><p><strong>备选直达</strong>：阪急京都线 梅田→河原町（45分钟，410日元，近祇园）；京阪本线 淀屋桥→祇园四条（50分钟，430日元）</p></div>
-
-<h3>④ Day4 大阪难波 → 奈良（日trip）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>近铁奈良线 急行</strong>：大阪难波站 → 近铁奈良站（<strong>直达40分钟，680日元</strong>）<br><span style="color:var(--text-muted);font-size:12px">从难波出发不用换乘，近铁奈良站步行10分钟到奈良公园</span></div></div>
-</div>
-<div class="alert alert-yellow" style="margin-top:10px"><p><strong>备选</strong>：JR大和路线 天王寺→JR奈良（30分钟，480日元，但离奈良公园稍远，需步行20分钟或巴士）</p></div>
-
-<h3>⑤ Day5 大阪难波 → 新大阪 → 东京新宿（新干线跨越）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：难波站 → 新大阪站（约13分钟，280日元）</div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>新干线 のぞみ号</strong>：新大阪站 → 东京站（<strong>2小时30分钟，14,720日元</strong>，指定席）<br><span style="color:var(--text-muted);font-size:12px">⚠️ 亚运+国庆，提前14天订指定席；のぞみ最快，ひかり/こだま更慢更便宜</span></div></div>
-<div class="route-step"><span class="step-no">3</span><div><strong>JR中央线</strong>：东京站 → 新宿站（约15分钟，200日元）；或地铁丸之内线（新宿站）</div></div>
-<div class="route-step"><span class="step-no">4</span><div>步行至新宿酒店（关东大本营）</div></div>
-</div>
-<div class="alert alert-red" style="margin-top:10px"><p><strong>🧳 行李</strong>：9/29出发前，大行李用<strong>黑猫宅急便</strong>从大阪难波酒店快递到东京新宿酒店（次日到，约1,500日元/件，酒店前台办），自己带小包坐新干线</p></div>
-
-<h3>⑥ Day6 东京新宿 市内（购物日）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>JR中央线</strong>：新宿 → 下北泽（小田急线，约5分钟，170日元）</div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>JR山手线</strong>：原宿 → 涩谷 → 秋叶原（环线，每段约5-15分钟，170-200日元）</div></div>
-<div class="route-step"><span class="step-no">3</span><div><strong>地铁银座线</strong>：涩谷 → 银座（约15分钟，180日元）</div></div>
-</div>
-<div class="alert alert-blue" style="margin-top:10px"><p><strong>省钱</strong>：东京地铁 24小时券（800日元）坐3次以上回本；或用 Suica 直接刷</p></div>
-
-<h3>⑦ Day7 东京新宿 → 镰仓（日trip）→ 河口湖</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>JR湘南新宿线 快速</strong>：新宿站 → 镰仓站（约55分钟，920日元）<br><span style="color:var(--text-muted);font-size:12px">直达不需换乘；或JR横须贺线从东京站发</span></div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>江之电</strong>：镰仓 → 镰仓高校前（灌篮高手道口）→ 长谷 → 江之岛（单程260日元，<strong>一日券1,500日元推荐</strong>）</div></div>
-<div class="route-step"><span class="step-no">3</span><div><strong>下午转场去河口湖</strong>：镰仓站 → 大船站（JR，6分钟）→ <strong>JR横须贺线/东海道线</strong> → 大月站（约2小时，换乘1次，约2,000日元）</div></div>
-<div class="route-step"><span class="step-no">4</span><div><strong>富士急行线</strong>：大月站 → 河口湖站（约45分钟，1,160日元）</div></div>
-<div class="route-step"><span class="step-no">5</span><div>步行/巴士至河口湖温泉旅馆</div></div>
-</div>
-<div class="alert alert-yellow" style="margin-top:10px"><p><strong>备选简化</strong>：镰仓日trip结束后回新宿取行李，10/2再去河口湖（但要回东京绕路）。<strong>当前方案不回东京市区，从镰仓直接绕到河口湖</strong>，少走回头路。</p></div>
-
-<h3>⑧ Day8 河口湖 → 大阪梅田（返程）</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>富士急巴士</strong>：河口湖站 → 三岛站（约1小时15分，2,200日元）<br><span style="color:var(--text-muted);font-size:12px">巴士需预约；或富士急行线+JR到大月转中央线</span></div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>新干线 のぞみ号</strong>：三岛站 → 新大阪站（约1小时，5,500日元，指定席）<br><span style="color:var(--text-muted);font-size:12px">⚠️ 三岛站 のぞみ停靠较少，确认班次；无则到三岛坐JR到新大阪（慢）</span></div></div>
-<div class="route-step"><span class="step-no">3</span><div><strong>大阪地铁御堂筋线</strong>：新大阪 → 梅田（3分钟，180日元）→ 入住梅田酒店</div></div>
-</div>
-<div class="alert alert-green" style="margin-top:10px"><p><strong>备选</strong>：河口湖 → 新宿（巴士2h）→ 新干线返大阪（2.5h），全程约5h，要回东京绕路但班次多更稳妥。<strong>当前三岛方案最快约2.5h</strong>。</p></div>
-
-<h3>⑨ Day9 大阪梅田 → 难波心斋桥 → 关空</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div><strong>大阪地铁御堂筋线</strong>：梅田 → 心斋桥 → 难波（黄金线，每段约5分钟，180日元）</div></div>
-<div class="route-step"><span class="step-no">2</span><div>心斋桥/难波全天购物</div></div>
-<div class="route-step"><span class="step-no">3</span><div><strong>南海特急 Rapi:t</strong>：难波站 → 关西空港站（38分钟，1,490日元）；或南海空港急行（45分钟，970日元）</div></div>
-<div class="route-step"><span class="step-no">4</span><div>步行至关空酒店（关西机场日航/Star Gate）</div></div>
-</div>
-
-<h3>⑩ Day10 关空酒店 → Rinku Outlet → 关西机场 ✈️ 济南</h3>
-<div class="route-detail">
-<div class="route-step"><span class="step-no">1</span><div>步行或酒店班车至 Rinku Premium Outlet（关空旁1站）</div></div>
-<div class="route-step"><span class="step-no">2</span><div><strong>JR关西机场线</strong>：りんくうタウン站 → 关西空港站（约2分钟，370日元）；或南海线</div></div>
-<div class="route-step"><span class="step-no">3</span><div>关空T1值机（提前3小时）→ 免税店 → ✈️ 济南</div></div>
-</div>
 </div>
 
 <div class="card">
-<h2>🚇 市内交通速查</h2>
-<h3>大阪市内</h3>
-<div class="table-wrap"><table><thead><tr><th>线路</th><th>覆盖</th><th>票价</th></tr></thead><tbody><tr><td><strong>地铁御堂筋线(M)</strong></td><td>梅田-心斋桥-难波-天王寺（黄金线）</td><td>180-370日元</td></tr><tr><td>大阪周游券1日</td><td>地铁+巴士无限+40景点免费</td><td>2,800日元</td></tr><tr><td>JR环状线</td><td>大阪-天王寺-鹤桥环线</td><td>190日元起</td></tr></tbody></table></div>
-<h3>东京市内</h3>
-<div class="table-wrap"><table><thead><tr><th>线路</th><th>覆盖</th><th>票价</th></tr></thead><tbody><tr><td><strong>JR山手线</strong></td><td>环线：新宿-涩谷-原宿-东京-上野</td><td>170-260日元</td></tr><tr><td>JR中央线</td><td>东京-新宿-中野（东西向）</td><td>170日元起</td></tr><tr><td>地铁24h券</td><td>都营+东京地铁无限</td><td>800日元</td></tr></tbody></table></div>
+<h2>🚇 市内交通 & 高峰对照</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🗼</span><h4>东京</h4><p>JR 山手线+地铁；新宿→原宿/涩谷选 JR 或副都心线；避开 7:30–9:30 / 17:30–19:30</p></div>
+<div class="hl-box"><span class="icon">⛩️</span><h4>京都</h4><p>京阪电铁+地铁+短程出租车，不依赖堵车的市巴士；河原町住宿区大量步行</p></div>
+<div class="hl-box"><span class="icon">🎋</span><h4>岚山</h4><p>去程 JR 嵯峨野线或阪急（河原町出发更顺）；岚电用于体验和转场</p></div>
+<div class="hl-box"><span class="icon">💳</span><h4>ICOCA</h4><p>落地关空即买，儿童版半价；东京通用，iPhone 可绑 Apple Pay</p></div>
+</div>
+<h3>每天的高峰避法</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>日期</th><th>高峰风险</th><th>处理</th></tr></thead>
+<tbody>
+<tr><td>9/26 周六</td><td>无</td><td>—</td></tr>
+<tr><td>9/28 周一</td><td>早高峰</td><td>7:00 前后上新宿→镰仓 JR，高峰前通过</td></tr>
+<tr><td>9/29 周二</td><td>双高峰</td><td>全天在高速巴士/新干线订座车厢里</td></tr>
+<tr><td>9/30 周三</td><td>早高峰</td><td>7:00 京阪河原町上车，8 点前到伏见稻荷</td></tr>
+<tr><td>10/1 周四</td><td>早高峰</td><td>7:00 前后出发去岚山；16:00 进博物馆正好错过晚高峰</td></tr>
+<tr><td>10/2 周五</td><td>双高峰</td><td>9:30 后离开京都；15:00 前后离开奈良，晚高峰前到大阪</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- ============ 购物美食 ============ -->
+<div class="section" id="shopping">
+<div class="card">
+<h2>🛍️ 购物清单（按区域落位）</h2>
+<h3>🗼 东京（Day 2–3，只买"东京限定"小件）</h3>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🎮</span><h4>涩谷 PARCO</h4><p>Nintendo TOKYO、动漫/游戏楼层</p></div>
+<div class="hl-box"><span class="icon">🕹️</span><h4>秋叶原</h4><p>扭蛋、模型、游戏机厅（先设预算）</p></div>
+<div class="hl-box"><span class="icon">📚</span><h4>池袋 animate 旗舰店</h4><p>角色周边、漫画、文具（营业至 21:00）</p></div>
+</div>
+<div class="alert alert-yellow" style="margin-top:14px"><p>⚠️ 东京只买小件和限定品，<strong>大宗购物全部留在大阪</strong>，免得拎去河口湖。</p></div>
+<h3>⛩️ 京都（Day 5–7 轻量）</h3>
+<p>清水坂/二三年坂：扇子、香袋、手帕 · 锦市场：茶、干货、漬物 · 岚山：和果子、竹工艺 · 任天堂博物馆商店：限定商品（有票才有）</p>
+<h3>🐙 大阪（Day 8–9 主战场）</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>区域</th><th>时间</th><th>目标</th></tr></thead>
+<tbody>
+<tr><td>梅田（Day 8）</td><td>17:00–18:30</td><td>阪急/大丸食品层、童装、户外品牌（Mont-bell、Snow Peak、TNF 紫标）</td></tr>
+<tr><td>大丸/PARCO（Day 9）</td><td>11:30–13:00</td><td>护肤药妆、日系品牌、角色商品（先办退税）</td></tr>
+<tr><td>心斋桥筋（Day 9）</td><td>14:00–15:30</td><td>运动鞋、服饰、药妆、零食伴手礼</td></tr>
+<tr><td>美国村（Day 9）</td><td>15:30–16:15</td><td>潮牌、古着（BAPE、Supreme、Stüssy）</td></tr>
+<tr><td>临空奥莱（Day 9 晚）</td><td>18:30–20:00</td><td>试尺码大件：运动鞋、户外服、童装、行李箱</td></tr>
+<tr><td>临空奥莱（Day 10）</td><td>10:00–11:30</td><td>只补缺尺码/缺型号</td></tr>
+</tbody>
+</table>
+</div>
+<h3>💊 药妆/保健品（Day 9 下午一次买齐）</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>品类</th><th>推荐</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>综合维生素</td><td>DHC、Fancl</td><td>DHC 最便宜</td></tr>
+<tr><td>眼药水</td><td>参天 FX、乐敦</td><td><span class="tag tag-warn">注意限购</span></td></tr>
+<tr><td>益生菌</td><td>强力 Wakamoto、新ビオフェルミンS</td><td>经典便宜</td></tr>
+<tr><td>儿童用品</td><td>小林冰宝贴、儿童钙/DHA</td><td>亲子必带</td></tr>
+<tr><td>胶原蛋白</td><td>Fancl、明治</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-blue" style="margin-top:14px"><p>退税：单店满 5,000 日元（不含税），<strong>护照原件</strong>；消耗品密封离境前不拆。海关：保健品单品种 ≤6 瓶/人，礼品总价 ≤5,000 元免税。大国药妆常比松本清便宜 5–15%。</p></div>
+</div>
+
+<div class="card">
+<h2>🍜 必吃清单（按区域）</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🐙</span><h4>大阪</h4><p>新世界串炸、黑门市场烤扇贝/玉子烧、章鱼烧、千房大阪烧、一蘭拉面、梅田新梅田食道街、RINKU FOOD PARK</p></div>
+<div class="hl-box"><span class="icon">🗼</span><h4>东京</h4><p>原宿可丽饼、涩谷回转寿司/亲子盖饭、上野鳗鱼饭、浅草人形烧/炸馒头</p></div>
+<div class="hl-box"><span class="icon">🌊</span><h4>镰仓·河口湖</h4><p>小町通鳗鱼饭/海鲜丼、河口湖ほうとう、旅馆日式晚餐（核心体验）</p></div>
+<div class="hl-box"><span class="icon">🍵</span><h4>京都·宇治·奈良</h4><p>汤豆腐/湯叶、荞麦、抹茶和果子、先斗町京料理、宇治抹茶（无票分支）、奈良柿叶寿司/茶粥/吉野葛</p></div>
+</div>
+</div>
+</div>
+
+<!-- ============ 预约分支 ============ -->
+<div class="section" id="branches">
+<div class="card">
+<h2>🎫 关键预约与分支总表</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>优先级</th><th>项目</th><th>成功</th><th>失败/无票</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-rec">1</span></td><td><strong>任天堂博物馆</strong></td><td>10/1 16:00 后 → Day 7 主线；17:00–18:00 场 → 午后先回酒店午休再去；10/2 场 → Day 7 改岚山完整日、Day 8 下午博物馆（奈良移到 Day 9 上午）</td><td>Day 7 下午改宇治慢体验；Nintendo KYOTO 仅顺路；<strong>不买转售票</strong></td></tr>
+<tr><td><span class="tag tag-warn">2</span></td><td>9/26 Nozomi 指定席</td><td>07:09 优先</td><td>改 06:15 或更晚班次；不用名古屋换乘组合</td></tr>
+<tr><td><span class="tag tag-warn">3</span></td><td>藤泽→河口湖巴士</td><td>Day 4 午后直达</td><td>改 JR 新宿→大月→富士急行（约多 1 小时，删小町通短走）</td></tr>
+<tr><td><span class="tag tag-warn">4</span></td><td>河口湖→三岛巴士</td><td>Day 5 主线</td><td>无座走铁路绕行，三岛新干线改晚一班</td></tr>
+<tr><td><span class="tag tag-info">5</span></td><td>岚山小火车</td><td>Day 7 首项</td><td>直接竹林+野宫+天龙寺+渡月桥，只问一次当日余票</td></tr>
+<tr><td><span class="tag tag-info">6</span></td><td>Kirby Café OSAKA</td><td>Day 9 13:00 午餐</td><td>普通午餐 + 更完整购物时间</td></tr>
+<tr><td><span class="tag tag-info">7</span></td><td>Shibuya Sky</td><td>Day 2 晚间</td><td>涩谷夜景替代</td></tr>
+<tr><td><span class="tag tag-info">8</span></td><td>东京→京都行李寄送</td><td>Day 3 晚寄出</td><td>改随身 + 新干线带大件行李区座位</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-red" style="margin-top:18px"><h4>博物馆票务决策</h4><p><strong>10/1 16:00–17:00</strong>：主线执行，上午岚山下午小仓，不加金阁寺。<strong>10/1 18:00 后</strong>：岚山午餐后回酒店午休，15:30 再去小仓。<strong>10/2 场</strong>：Day 7 岚山完整日，Day 8 下午博物馆，奈良移到 Day 9 上午。<strong>无票</strong>：Day 7 下午宇治慢体验。拿到票后保存二维码、护照和同行人信息离线截图。</p></div>
+</div>
+</div>
+
+<!-- ============ 亲子贴士 ============ -->
+<div class="section" id="kids">
+<div class="card">
+<h2>👶 亲子专属贴士</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">💳</span><h4>儿童 ICOCA 半价</h4><p>落地即办，东京关西通用</p></div>
+<div class="hl-box"><span class="icon">😴</span><h4>午休纪律</h4><p>4 个早起日（9/26、9/28、9/30、10/1）都内置午休或车程补觉，不要因为"状态还行"就砍掉——疲劳是累积的</p></div>
+<div class="hl-box"><span class="icon">🚄</span><h4>补觉场景已设计</h4><p>Nozomi 2.5h、藤泽—河口湖巴士 2.5h、河口湖—三岛—京都 3h、奈良往返 2h，全是订座车厢，孩子放心睡</p></div>
+<div class="hl-box"><span class="icon">🍼</span><h4>母婴设施</h4><p>找"赤ちゃん休憩室"，百货和车站标配；餐厅找"お子様ランチ"</p></div>
+<div class="hl-box"><span class="icon">♨️</span><h4>温泉礼仪</h4><p>5.5 岁儿童视旅馆规定入汤，每次不超 10 分钟，先淋浴后入池，不强迫</p></div>
+<div class="hl-box"><span class="icon">🦌</span><h4>喂鹿安全</h4><p>只喂鹿仙贝；孩子零食、纸张、塑料袋提前收进包；喂完摊开双手表示"没有了"</p></div>
+<div class="hl-box"><span class="icon">⏱️</span><h4>喝水节奏</h4><p>每 45–60 分钟安排一次坐下喝水，尤其秋叶原、心斋桥这种逛起来没完的地方</p></div>
+<div class="hl-box"><span class="icon">💊</span><h4>儿童药品</h4><p>退烧贴、感冒药在药妆店（小林制药儿童线）随手补</p></div>
+<div class="hl-box"><span class="icon">✂️</span><h4>删减不内疚</h4><p>每天都写了删减顺序，删到孩子开心为止，就是这份行程设计的目的</p></div>
+</div>
+</div>
+<div class="card">
+<h2>🆘 应急信息</h2>
+<div class="stats"><div class="stat"><span class="num">110</span><div class="label">报警</div></div><div class="stat"><span class="num">119</span><div class="label">救护/消防</div></div></div>
+<div class="table-wrap"><table><thead><tr><th>联系</th><th>电话</th></tr></thead><tbody><tr><td>中国驻大阪总领馆</td><td>+81-6-6445-9481</td></tr><tr><td>中国驻东京大使馆</td><td>+81-3-3403-3380</td></tr><tr><td>关西机场咨询</td><td>+81-72-455-2500</td></tr></tbody></table></div>
+<h3>📱 必备 App</h3>
+<div class="table-wrap"><table><thead><tr><th>App</th><th>用途</th></tr></thead><tbody><tr><td>Google Maps</td><td>导航+换乘</td></tr><tr><td>Yahoo!乗換案内</td><td>电车时刻</td></tr><tr><td>SmartEX</td><td>新干线订座/改签</td></tr><tr><td>DiDi 日本</td><td>中文叫车+支付宝</td></tr><tr><td>Visit Japan Web</td><td>入境申报</td></tr></tbody></table></div>
 </div>
 </div>
 
 <!-- ============ 预算 ============ -->
 <div class="section" id="budget">
 <div class="card">
-<h2>💰 预算参考（人均，2人成行·元RMB）</h2>
+<h2>💰 预算参考（3 人家庭合计，中档）</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>项目</th><th>经济档</th><th>中档</th><th>高档</th></tr></thead>
+<thead><tr><th>项目</th><th>人民币</th></tr></thead>
 <tbody>
-<tr><td>往返机票（济南-大阪）</td><td>2,500</td><td>3,500</td><td>5,000</td></tr>
-<tr><td>酒店9晚</td><td>4,500</td><td>7,500</td><td>15,000</td></tr>
-<tr><td>新干线东京往返</td><td>1,500</td><td>1,500</td><td>1,500</td></tr>
-<tr><td>市内+城际+日trip</td><td>1,500</td><td>2,000</td><td>2,500</td></tr>
-<tr><td>黑猫快递行李(2次)</td><td>200</td><td>200</td><td>200</td></tr>
-<tr><td>餐饮</td><td>3,000</td><td>5,000</td><td>8,000</td></tr>
-<tr><td>温泉(有马日归+河口湖1晚)</td><td>1,500</td><td>3,000</td><td>6,000</td></tr>
-<tr><td>购物（户外+潮牌+保健品）</td><td>5,000</td><td>12,000</td><td>30,000</td></tr>
-<tr><td>杂项</td><td>1,000</td><td>2,000</td><td>3,000</td></tr>
-<tr style="font-weight:700"><td>合计/人</td><td>20,700</td><td>36,700</td><td>71,200</td></tr>
+<tr><td>往返机票（3 人，已出票）</td><td>约 9,000–12,000</td></tr>
+<tr><td>酒店 9 晚（含温泉旅馆 1 晚含早晚餐）</td><td>约 15,000–20,000</td></tr>
+<tr><td>跨城交通（新干线×2 段 + 高速巴士×2 段，儿童半价/免费）</td><td>约 3,500–4,500</td></tr>
+<tr><td>市内交通</td><td>约 1,000</td></tr>
+<tr><td>餐饮</td><td>约 8,000–10,000</td></tr>
+<tr><td>门票（博物馆、小火车、寺院等）</td><td>约 1,500</td></tr>
+<tr><td>购物（户外+药妆+动漫周边）</td><td>按清单自控，典型 10,000–25,000</td></tr>
+<tr><td>杂项（保险、通信、行李寄送）</td><td>约 2,000</td></tr>
+<tr style="font-weight:700"><td>合计（不含购物）</td><td>约 4.0–5.0 万</td></tr>
 </tbody>
 </table>
 </div>
-<div class="alert alert-green" style="margin-top:18px"><h4>预算说明</h4><p>中档 ≈ <strong>3.7万/人 / 7.4万双人（含购物）</strong>。汇率参考：1日元 ≈ 0.047元人民币（2026参考，实际以预订时为准）。大本营连住比每天换酒店便宜，且省行李搬运。</p></div>
+<div class="alert alert-green" style="margin-top:18px"><h4>预算说明</h4><p>京都 3 晚用积分房可显著降低成本；温泉旅馆选含早晚餐的可省两餐外出费用。汇率以预订时为准。</p></div>
 </div>
 </div>
 
 <!-- ============ 清单 ============ -->
 <div class="section" id="checklist">
 <div class="card">
-<h2>✅ 出行前 48 小时 Checklist</h2>
-<h3>📋 证件</h3>
+<h2>✅ 出行前 Checklist</h2>
+<h3>📅 出发前 30 天</h3>
 <ul style="list-style:none;padding:0">
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 护照（有效期至2027年4月后）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 日本签证</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 身份证</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 行程单+酒店预订单（入境备查）</li>
-<li style="padding:6px 0">☐ 应急联系人</li>
-</ul>
-<h3>📝 已订</h3>
-<ul style="list-style:none;padding:0">
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 往返机票（济南-大阪）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <strong>大阪难波大本营4晚+东京新宿2晚+河口湖1晚+大阪关空2晚</strong></li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <span class="tag tag-warn">新干线のぞみ指定席</span>（9/29大阪→东京 + 10/2三岛→新大阪）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 河口湖温泉旅馆（提前2个月订）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 蟹道乐/菊乃井/神户牛餐厅</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 涩谷Shibuya Sky门票</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <span class="tag tag-rec">任天堂博物馆</span> 官方余票/候补（每天查）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9/26 新大阪→东京 Nozomi 指定席（SmartEX，约 8/26 10:00 JST 开售）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9/28 藤泽→河口湖高速巴士</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9/29 河口湖→三岛巴士 + 三岛→京都 Hikari</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 岚山小火车指定席</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9 晚酒店（先可取消现金房，再查积分替换）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 河口湖旅馆：确认含晚餐 + 河口湖站接送 + 到店时间</li>
 <li style="padding:6px 0">☐ 旅行保险（含医疗+航延）</li>
 </ul>
-<h3>🎒 装备</h3>
+<h3>📅 出发前 14 天</h3>
 <ul style="list-style:none;padding:0">
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 万能转换插头（日本A型扁脚100V）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 充电宝（≤100Wh随身）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 雨伞（9月底可能有雨/台风尾）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 长袖+薄外套（9月底18-27℃）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 舒适步行鞋</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 空折叠箱（装购物）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <strong>小背包（日trip轻装用）</strong></li>
-<li style="padding:6px 0">☐ 个人药品</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 确认东京、京都酒店均接受宅急便代收</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Kirby Café OSAKA / Shibuya Sky（有则加分）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 复核各景点休馆/临时调整</li>
+<li style="padding:6px 0">☐ 拖车（仅在书面确认 120cm 儿童座舱后保留）</li>
 </ul>
-<h3>💴 资金</h3>
-<ul style="list-style:none;padding:0">
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 3-5万日元现金</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 银联+VISA双币卡</li>
-<li style="padding:6px 0">☐ 支付宝/微信境外功能</li>
-</ul>
-<h3>📱 App</h3>
+<h3>📅 出发前 72 小时</h3>
 <ul style="list-style:none;padding:0">
 <li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Visit Japan Web 填好</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Google Maps 离线地图</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Yahoo!乗換案内（电车换乘）</li>
-<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ DiDi 日本注册</li>
-<li style="padding:6px 0">☐ eSIM 开通</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 下载所有车票/门票二维码离线截图</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 查东京/富士/京都天气，确定 Day 5 上午方案</li>
+<li style="padding:6px 0">☐ 存好博物馆票面和身份证件对应关系</li>
 </ul>
-</div>
-<div class="card">
-<h2>🆘 应急信息</h2>
-<div class="stats"><div class="stat"><span class="num">110</span><div class="label">报警</div></div><div class="stat"><span class="num">119</span><div class="label">救护/消防</div></div></div>
-<div class="table-wrap"><table><thead><tr><th>联系</th><th>电话</th></tr></thead><tbody><tr><td>中国驻大阪总领馆</td><td>+81-6-6445-9481</td></tr><tr><td>中国驻东京大使馆</td><td>+81-3-3403-3380</td></tr><tr><td>关西机场咨询</td><td>+81-72-455-2500</td></tr></tbody></table></div>
-<h3>💰 退税 & 海关</h3>
-<div class="alert alert-blue"><h4>退税</h4><p>满5,000日元（不含税）可退税，出示护照原件。消耗品当场密封不能拆。<strong>2026年4月起可能改为机场退税</strong>，出发前查最新政策。</p></div>
-<div class="alert alert-yellow"><h4>海关回国</h4><p>个人物品+礼品总价≤5,000元免税。化妆品≤6瓶/品牌，保健品≤6瓶/品种。<strong>不能带</strong>：肉制品、生鲜水果、活体动植物。<strong>可带</strong>：真空零食、糖果、瓶装酒、保健品。</p></div>
+<h3>📅 每天晚上</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 确认次日首班交通、预约时间、午休位置、删减顺序</li>
+<li style="padding:6px 0">☐ 不临时增加跨区项目</li>
+</ul>
 </div>
 </div>
 
 <div class="footer">
-<p>🗾 2026 日本 9 晚自由行 · 不回头环线 · 关西大本营+东京镰仓河口湖</p>
-<p style="margin-top:6px">v3.0 · 2026-06-29 · 济南 ✈️ 大阪 KIX · 9 晚 10 天</p>
-<p style="margin-top:6px;font-size:12px;opacity:.7">v3变更：改不回头环线·关西大本营连住4晚·有马/京都/奈良日trips·回程东京→镰仓→河口湖→大阪环线·大行李黑猫快递</p>
+<p>🗾 2026 日本亲子自由行 · 轻松完整版 · 东京·河口湖·京都·奈良·大阪购物收尾</p>
+<p style="margin-top:6px">v4.0 · 2026-08-17 · 济南 ✈️ 大阪 KIX · 9 晚 10 天 · 2大1小</p>
+<p style="margin-top:6px;font-size:12px;opacity:.7">v4 变更：改用京都 3 晚主方案（任天堂博物馆 10/1 晚场约束）；每天 4 景点/2 购物/3 美食配额；4 个早起日内置午休；全部市内移动避开通勤高峰；末晚住临空城</p>
 </div>
 
 </div>
 
 <script>
-const body=document.body;
 const THEME_KEY='osaka-guide-theme';
 function applyTheme(theme){if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark')}else{document.documentElement.removeAttribute('data-theme')}}
 (function initTheme(){let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(e){}if(saved==='light'||saved==='dark'){applyTheme(saved);return}const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;applyTheme(prefersDark?'dark':'light')})();
 const themeBtn=document.getElementById('themeToggle');
 if(themeBtn){themeBtn.addEventListener('click',()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';const next=isDark?'light':'dark';applyTheme(next);try{localStorage.setItem(THEME_KEY,next)}catch(e){}})}
-if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(_){}if(saved)return;applyTheme(e.matches?'dark':'light')})}
-document.querySelectorAll('.plan-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.plan-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(btn.dataset.plan==='a'){body.classList.remove('plan-b-mode');body.classList.add('plan-a-mode')}else{body.classList.remove('plan-a-mode');body.classList.add('plan-b-mode')}})});
+if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(_){ }if(saved)return;applyTheme(e.matches?'dark':'light')})}
 document.querySelectorAll('.tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.tab).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})})});
 const backTop=document.getElementById('backTop');
 if(backTop){window.addEventListener('scroll',()=>{if(window.scrollY>400){backTop.classList.add('show')}else{backTop.classList.remove('show')}},{passive:true});backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})}
