@@ -3,955 +3,1305 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 日本亲子自由行 · 每日详细行程+配图版</title>
+<title>2026 日本亲子自由行 · 轻松完整版 · 东京·河口湖·京都·奈良·大阪购物收尾</title>
 <style>
 /* ============== Theme Variables (Light) ============== */
 :root {
-  --bg-base: #f6f9fc; --bg-card: #ffffff; --bg-elevated: #f8f9fa;
-  --text-primary: #2c3e50; --text-secondary: #4b5563; --text-muted: #6b7280; --text-heading: #1a1a2e;
+  --bg-base: #f6f9fc; --bg-base-2: #eef2f7; --bg-card: #ffffff; --bg-elevated: #f8f9fa; --bg-hover: #fafbfc;
+  --text-primary: #2c3e50; --text-secondary: #4b5563; --text-muted: #6b7280; --text-faint: #9ca3af; --text-heading: #1a1a2e;
   --border: #e5e7eb; --border-soft: #f3f4f6;
   --shadow-sm: 0 2px 10px rgba(0,0,0,.05); --shadow-md: 0 4px 20px rgba(0,0,0,.06); --shadow-lg: 0 8px 24px rgba(0,0,0,.1);
-  --header-from: #e63946; --header-to: #d62828;
-  --accent: #e63946; --accent-2: #d62828; --special: #f59e0b;
-  --blue: #2563eb; --green: #059669;
+  --header-from: #e63946; --header-to: #d62828; --header-shadow: 0 10px 40px rgba(230,57,70,.2); --header-meta-bg: rgba(255,255,255,.2);
+  --accent: #e63946; --accent-2: #d62828; --accent-soft: #f0f7ff; --special: #f59e0b;
   --route-bg: #f8f9fa; --node-bg: #ffffff;
-  --tag-rec-bg: #fee2e2; --tag-rec-fg: #dc2626; --tag-best-bg: #d1fae5; --tag-best-fg: #059669;
-  --tag-warn-bg: #fef3c7; --tag-warn-fg: #d97706; --tag-info-bg: #dbeafe; --tag-info-fg: #2563eb;
+  --tag-rec-bg: #fee2e2; --tag-rec-fg: #dc2626; --tag-best-bg: #d1fae5; --tag-best-fg: #059669; --tag-warn-bg: #fef3c7; --tag-warn-fg: #d97706; --tag-info-bg: #dbeafe; --tag-info-fg: #2563eb;
   --alert-yellow-bg: linear-gradient(135deg,#fff3cd,#ffe8a3); --alert-yellow-fg: #92400e;
   --alert-red-bg: linear-gradient(135deg,#fee,#fdd); --alert-red-fg: #991b1b;
   --alert-blue-bg: linear-gradient(135deg,#dbeafe,#bfdbfe); --alert-blue-fg: #1e40af;
   --alert-green-bg: linear-gradient(135deg,#d1fae5,#a7f3d0); --alert-green-fg: #065f46;
-  --footer-color: #6b7280;
+  --compare-left-bg: linear-gradient(135deg,#fee2e2,#fecaca); --compare-left-fg: #991b1b;
+  --compare-right-bg: linear-gradient(135deg,#dbeafe,#bfdbfe); --compare-right-fg: #1e40af;
+  --footer-color: #6b7280; --toggle-bg: rgba(255,255,255,.25); --toggle-border: rgba(255,255,255,.4); --toggle-icon: #ffffff;
+  --tokyo-tint: #f0f7ff;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  background: var(--bg-base); color: var(--text-primary); line-height: 1.7;
+[data-theme="dark"] {
+  --bg-base: #0f1419; --bg-base-2: #161c2b; --bg-card: #1c2333; --bg-elevated: #252b3b; --bg-hover: #2a3243;
+  --text-primary: #e2e8f0; --text-secondary: #cbd5e1; --text-muted: #94a3b8; --text-faint: #64748b; --text-heading: #f1f5f9;
+  --border: #334155; --border-soft: #1f2937;
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.4); --shadow-md: 0 4px 20px rgba(0,0,0,.45); --shadow-lg: 0 8px 24px rgba(0,0,0,.55);
+  --header-from: #991b1b; --header-to: #450a0a; --header-shadow: 0 10px 40px rgba(0,0,0,.5); --header-meta-bg: rgba(255,255,255,.08);
+  --accent: #f87171; --accent-2: #ef4444; --accent-soft: #1e3a5f; --special: #fbbf24;
+  --route-bg: #252b3b; --node-bg: #1c2333;
+  --tag-rec-bg: #4a1a1a; --tag-rec-fg: #fca5a5; --tag-best-bg: #14532d; --tag-best-fg: #86efac; --tag-warn-bg: #422006; --tag-warn-fg: #fcd34d; --tag-info-bg: #1e3a5f; --tag-info-fg: #93c5fd;
+  --alert-yellow-bg: linear-gradient(135deg,#3d2c00,#5c4200); --alert-yellow-fg: #fde68a;
+  --alert-red-bg: linear-gradient(135deg,#4a1a1a,#5c1a1a); --alert-red-fg: #fca5a5;
+  --alert-blue-bg: linear-gradient(135deg,#1e3a5f,#0f2547); --alert-blue-fg: #93c5fd;
+  --alert-green-bg: linear-gradient(135deg,#14532d,#1a4a36); --alert-green-fg: #86efac;
+  --compare-left-bg: linear-gradient(135deg,#3d1414,#2d0e0e); --compare-left-fg: #fca5a5;
+  --compare-right-bg: linear-gradient(135deg,#1e3a5f,#0f2547); --compare-right-fg: #93c5fd;
+  --footer-color: #94a3b8; --toggle-bg: rgba(0,0,0,.35); --toggle-border: rgba(255,255,255,.15); --toggle-icon: #fbbf24; --tokyo-tint: #1e3a5f;
 }
-.container { max-width: 1080px; margin: 0 auto; padding: 20px 16px 40px; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:linear-gradient(135deg,var(--bg-base) 0%,var(--bg-base-2) 100%);color:var(--text-primary);line-height:1.6;transition:background-color .3s ease,color .3s ease;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.header{background:linear-gradient(135deg,var(--header-from) 0%,var(--header-to) 100%);color:white;padding:clamp(28px,5vw,50px) clamp(20px,4vw,40px);border-radius:20px;margin-bottom:25px;box-shadow:var(--header-shadow);position:relative;overflow:hidden;transition:box-shadow .3s ease}
+.header::before{content:"";position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:rgba(255,255,255,.08);border-radius:50%;pointer-events:none}
+.header::after{content:"";position:absolute;bottom:-30%;left:-5%;width:200px;height:200px;background:rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
+.header h1{font-size:clamp(22px,4.5vw,38px);margin-bottom:10px;position:relative;z-index:1;line-height:1.25}
+.header .subtitle{font-size:clamp(14px,2.2vw,18px);opacity:.95;margin-bottom:20px;position:relative;z-index:1}
+.header .meta{display:flex;flex-wrap:wrap;gap:clamp(6px,1.5vw,14px);position:relative;z-index:1}
+.header .meta-item{background:var(--header-meta-bg);padding:8px 16px;border-radius:20px;font-size:clamp(12px,1.8vw,14px);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:background .3s}
+.tabs{display:flex;flex-wrap:nowrap;gap:6px;margin-bottom:25px;background:var(--bg-card);padding:10px;border-radius:16px;box-shadow:var(--shadow-sm);position:sticky;top:8px;z-index:50;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;transition:background-color .3s}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;transition:all .25s;color:var(--text-primary);white-space:nowrap;flex-shrink:0}
+.tab:hover{background:var(--bg-hover)}
+.tab.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;box-shadow:0 4px 12px rgba(230,57,70,.3)}
+.section{display:none;animation:fadeIn .4s ease-out}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--bg-card);border-radius:16px;padding:clamp(18px,3vw,30px);margin-bottom:20px;box-shadow:var(--shadow-md);transition:background-color .3s,box-shadow .3s}
+.card h2{color:var(--text-heading);margin-bottom:20px;font-size:clamp(18px,3vw,24px);border-left:5px solid var(--accent);padding-left:15px;transition:border-color .3s,color .3s}
+.card h3{color:var(--text-heading);margin:20px 0 12px;font-size:clamp(15px,2.2vw,18px);transition:color .3s}
+.card p{color:var(--text-secondary)}
+.alert{padding:18px 20px;border-radius:12px;margin-bottom:18px;border-left:5px solid;transition:background .3s,color .3s}
+.alert h4{margin-bottom:6px;font-size:clamp(14px,2vw,16px)}
+.alert p{color:inherit;opacity:.92;margin:0}
+.alert-yellow{background:var(--alert-yellow-bg);border-color:var(--special);color:var(--alert-yellow-fg)}
+.alert-red{background:var(--alert-red-bg);border-color:#dc2626;color:var(--alert-red-fg)}
+.alert-blue{background:var(--alert-blue-bg);border-color:var(--accent);color:var(--alert-blue-fg)}
+.alert-green{background:var(--alert-green-bg);border-color:#059669;color:var(--alert-green-fg)}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--border);margin:15px 0;transition:border-color .3s}
+.table-wrap::-webkit-scrollbar{height:6px}
+.table-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+table{width:100%;border-collapse:collapse;background:var(--bg-card);transition:background-color .3s}
+th{background:var(--bg-elevated);padding:14px 16px;text-align:left;font-weight:600;font-size:14px;color:var(--text-heading);border-bottom:2px solid var(--border);white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
+td{padding:14px 16px;border-bottom:1px solid var(--border-soft);font-size:14px;color:var(--text-secondary);transition:background .3s,color .3s,border-color .3s}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg-hover)}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:500;margin:2px;transition:background .3s,color .3s}
+.tag-rec{background:var(--tag-rec-bg);color:var(--tag-rec-fg)}
+.tag-best{background:var(--tag-best-bg);color:var(--tag-best-fg)}
+.tag-warn{background:var(--tag-warn-bg);color:var(--tag-warn-fg)}
+.tag-info{background:var(--tag-info-bg);color:var(--tag-info-fg)}
+.day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;margin-top:18px}
+.day-card{background:var(--bg-card);border-radius:14px;padding:clamp(16px,2.2vw,22px);box-shadow:var(--shadow-sm);border-top:4px solid var(--accent);transition:transform .3s,box-shadow .3s,background-color .3s}
+.day-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.day-card.special{border-top-color:var(--special)}
+.day-card.tokyo{border-top-color:#2563eb;background:linear-gradient(180deg,var(--bg-card),var(--tokyo-tint))}
+.day-card.base{border-top-color:#059669}
+.day-card .day-num{display:inline-block;background:var(--accent);color:white;padding:4px 12px;border-radius:8px;font-size:12px;font-weight:600;margin-bottom:10px;transition:background .3s}
+.day-card.special .day-num{background:var(--special)}
+.day-card.tokyo .day-num{background:#2563eb}
+.day-card.base .day-num{background:#059669}
+.day-card .date{color:var(--text-muted);font-size:13px;margin-bottom:8px;transition:color .3s}
+.day-card .day-title{font-size:clamp(15px,2vw,17px);font-weight:600;margin-bottom:8px;color:var(--text-heading);transition:color .3s}
+.day-card .lodging{font-size:12px;color:var(--text-faint);margin-bottom:14px;padding:6px 10px;background:var(--bg-elevated);border-radius:6px;transition:background .3s,color .3s}
+.day-card ul{list-style:none;padding:0}
+.day-card li{padding:6px 0;font-size:13px;color:var(--text-secondary);border-bottom:1px dashed var(--border-soft);display:flex;gap:8px;transition:color .3s,border-color .3s}
+.day-card li:last-child{border-bottom:none}
+.day-card .time{color:var(--accent);font-weight:600;min-width:55px;flex-shrink:0;transition:color .3s}
+.day-card.tokyo .time{color:#2563eb}
+.day-card.base .time{color:#059669}
+.day-card .quota{margin-top:12px;padding:8px 10px;border-radius:8px;background:var(--bg-elevated);font-size:12px;color:var(--text-muted);line-height:1.5}
+.day-card .quota strong{color:var(--text-heading)}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:15px}
+.hl-box{background:linear-gradient(135deg,var(--bg-card),var(--bg-elevated));padding:clamp(14px,2vw,20px);border-radius:12px;border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .25s,border-color .25s,background .3s}
+.hl-box:hover{transform:translateY(-2px);border-color:var(--accent)}
+.hl-box::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--accent),var(--special))}
+.hl-box .icon{font-size:28px;margin-bottom:8px;display:block}
+.hl-box h4{font-size:clamp(14px,1.8vw,15px);margin-bottom:6px;color:var(--text-heading);transition:color .3s}
+.hl-box p{font-size:13px;color:var(--text-muted);margin:0;transition:color .3s}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin:18px 0}
+.stat{text-align:center;padding:clamp(12px,2vw,18px);background:linear-gradient(135deg,var(--bg-card),var(--bg-elevated));border-radius:12px;border:1px solid var(--border);transition:transform .3s,border-color .3s,background .3s}
+.stat:hover{transform:translateY(-3px);border-color:var(--accent)}
+.stat .num{font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--accent);display:block;transition:color .3s}
+.stat .label{font-size:12px;color:var(--text-muted);margin-top:4px;transition:color .3s}
+.route{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0;padding:18px;background:var(--route-bg);border-radius:12px;transition:background-color .3s}
+.route .node{padding:7px 12px;background:var(--node-bg);border:2px solid var(--accent);border-radius:8px;font-size:12px;font-weight:500;color:var(--accent);transition:background-color .3s,border-color .3s,color .3s}
+.route .node.base{border-color:#059669;color:#059669}
+.route .node.tokyo{border-color:#2563eb;color:#2563eb}
+.route .arrow{color:var(--text-faint);font-size:16px}
+/* ============== 逐日展开（时间线 + 本日最推荐） ============== */
+.day-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.day-badge{display:inline-block;background:var(--accent);color:white;padding:4px 12px;border-radius:8px;font-size:12px;font-weight:600}
+.day-badge.tokyo{background:#2563eb}
+.day-badge.base{background:#059669}
+.day-badge.special{background:var(--special)}
+.day-head h3{margin:0}
+.lodging-inline{font-size:12px;color:var(--text-faint);padding:5px 10px;background:var(--bg-elevated);border-radius:6px;display:inline-block;margin-top:8px}
+.day-cols{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;margin-top:14px}
+@media(max-width:960px){.day-cols{grid-template-columns:1fr}}
+.tl-head{font-size:14px;color:var(--text-heading);margin:0 0 8px}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{padding:5px 0;font-size:13px;color:var(--text-secondary);border-bottom:1px dashed var(--border-soft);display:flex;gap:8px;transition:color .3s,border-color .3s}
+.tl li:last-child{border-bottom:none}
+.tl .time{color:var(--accent);font-weight:600;min-width:52px;flex-shrink:0}
+.rec-group{margin-bottom:16px}
+.rec-group h5{font-size:13px;color:var(--text-heading);margin:0 0 8px;letter-spacing:.5px}
+.rec-top{display:flex;gap:12px;align-items:flex-start;background:var(--bg-elevated);border-radius:10px;padding:10px;margin-bottom:8px}
+.rec-top img{width:86px;height:66px;object-fit:cover;border-radius:8px;flex-shrink:0;background:var(--border-soft)}
+.rec-name{font-size:13px;font-weight:600;color:var(--text-heading)}
+.rec-why{font-size:12px;color:var(--text-muted);margin-top:3px;line-height:1.55}
+.rec-links{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+.rec-links a{font-size:11px;padding:3px 9px;border-radius:10px;background:var(--accent-soft);color:var(--accent-2);text-decoration:none;font-weight:500}
+.rec-links a:hover{text-decoration:underline}
+.rec-alt{font-size:12px;color:var(--text-muted);line-height:1.8}
+.rec-alt a{color:var(--accent-2);text-decoration:none}
+.rec-alt a:hover{text-decoration:underline}
+.quota{margin-top:14px;padding:8px 10px;border-radius:8px;background:var(--bg-elevated);font-size:12px;color:var(--text-muted);line-height:1.5}
+.footer{text-align:center;padding:30px 20px;color:var(--footer-color);font-size:13px;transition:color .3s}
+.theme-toggle{position:fixed;top:16px;right:16px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--toggle-bg);border:1.5px solid var(--toggle-border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s,background .3s,border-color .3s;color:var(--toggle-icon);box-shadow:var(--shadow-sm)}
+.theme-toggle:hover{transform:scale(1.08) rotate(15deg)}
+.theme-toggle:active{transform:scale(.95)}
+.theme-toggle .icon-sun,.theme-toggle .icon-moon{display:inline-block;transition:transform .4s,opacity .3s}
+[data-theme="dark"] .theme-toggle .icon-sun{display:none}
+[data-theme="dark"] .theme-toggle .icon-moon{display:inline-block}
+:root:not([data-theme="dark"]) .theme-toggle .icon-moon{display:none}
+:root:not([data-theme="dark"]) .theme-toggle .icon-sun{display:inline-block}
+.back-top{position:fixed;bottom:24px;right:24px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--accent);color:white;border:none;cursor:pointer;font-size:18px;font-weight:bold;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .3s,transform .3s,background .3s}
+.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-top:hover{transform:translateY(-3px) scale(1.05)}
+@media(max-width:1024px){.container{padding:16px}.day-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}
+@media(max-width:768px){.header{padding:28px 20px}.card{padding:20px}.tab{padding:8px 12px;font-size:12px}.day-grid{grid-template-columns:1fr;gap:12px}.day-card .day-title{font-size:16px}.hl-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}.hl-box{padding:14px}.hl-box .icon{font-size:22px}.stats{grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}.stat{padding:12px 8px}.alert{padding:14px 16px}.table-wrap{margin-left:-20px;margin-right:-20px;border-radius:0;border-left:0;border-right:0}th,td{padding:10px 12px;font-size:13px}.theme-toggle{width:40px;height:40px;font-size:18px;top:12px;right:12px}.back-top{width:40px;height:40px;font-size:18px;bottom:16px;right:16px}.header .meta-item{padding:6px 12px;font-size:12px}}
+@media(max-width:640px){.header .meta{gap:6px}.header .meta-item{flex:1 1 calc(50% - 6px);text-align:center;font-size:11px;padding:6px 8px}}
+@media(max-width:480px){.container{padding:12px}.header{padding:22px 16px;border-radius:14px}.header h1{font-size:21px}.header .subtitle{font-size:13px}.tabs{padding:6px;border-radius:12px}.tab{padding:7px 10px;font-size:11px}.card{padding:16px;border-radius:12px}.card h2{font-size:17px;padding-left:10px}.card h3{font-size:15px}.hl-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.stat .num{font-size:20px}.day-card{padding:14px}.day-card li{font-size:12px}.day-card .time{min-width:48px;font-size:12px}.alert{padding:12px 14px}th,td{padding:8px 10px;font-size:12px}}
+@media(max-width:360px){.hl-grid{grid-template-columns:1fr}.header h1{font-size:19px}}
+@media(max-height:500px) and (orientation:landscape){.header{padding:18px 20px}.header h1{font-size:20px;margin-bottom:6px}.header .subtitle{margin-bottom:10px}.header .meta{margin-bottom:-10px}}
+@media print{.theme-toggle,.back-top,.tabs{display:none !important}.section{display:block !important;page-break-after:always}.card{box-shadow:none;border:1px solid #ccc}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}html{scroll-behavior:auto}}
 
-/* ============== Header ============== */
-.header {
-  text-align: center; padding: 44px 20px;
-  background: linear-gradient(135deg, var(--header-from), var(--header-to));
-  color: #fff; border-radius: 16px; margin-bottom: 22px;
-  box-shadow: var(--header-shadow, 0 10px 40px rgba(230,57,70,.25));
-}
-.header h1 { font-size: clamp(22px, 4vw, 32px); margin-bottom: 10px; letter-spacing: 1px; }
-.header .subtitle { font-size: 15px; opacity: .95; margin-bottom: 8px; }
-.header .meta { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
-.header .meta-item {
-  background: rgba(255,255,255,.18); padding: 6px 14px; border-radius: 20px;
-  font-size: 12.5px; backdrop-filter: blur(4px);
-}
-
-/* ============== Stats ============== */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0 22px; }
-.stat { text-align: center; padding: 16px 10px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
-.stat .num { font-size: 24px; font-weight: 700; color: var(--accent); display: block; }
-.stat .label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
-
-/* ============== Route ============== */
-.route { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 16px 0; padding: 18px; background: var(--route-bg); border-radius: 12px; }
-.route .node { padding: 7px 13px; background: var(--node-bg); border: 2px solid var(--accent); border-radius: 8px; font-size: 12.5px; font-weight: 600; color: var(--accent); }
-.route .node.tokyo { border-color: var(--blue); color: var(--blue); }
-.route .node.special { border-color: var(--special); color: var(--special); }
-.route .node.base { border-color: var(--green); color: var(--green); }
-.route .arrow { color: var(--text-muted); font-size: 16px; }
-
-/* ============== Overview Table ============== */
-.table-wrap { overflow-x: auto; margin: 18px 0 26px; background: var(--bg-card); border-radius: 12px; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 640px; }
-th, td { padding: 11px 12px; text-align: left; border-bottom: 1px solid var(--border-soft); }
-th { background: var(--bg-elevated); font-weight: 600; color: var(--text-heading); white-space: nowrap; }
-tr:last-child td { border-bottom: none; }
-td .tag { display: inline-block; padding: 2px 9px; border-radius: 6px; font-size: 11.5px; font-weight: 600; }
-.tag.rec { background: var(--tag-rec-bg); color: var(--tag-rec-fg); }
-.tag.best { background: var(--tag-best-bg); color: var(--tag-best-fg); }
-.tag.warn { background: var(--tag-warn-bg); color: var(--tag-warn-fg); }
-.tag.info { background: var(--tag-info-bg); color: var(--tag-info-fg); }
-
-/* ============== Day Section ============== */
-.day-section {
-  background: var(--bg-card); border-radius: 16px; margin-bottom: 30px;
-  box-shadow: var(--shadow-md); border: 1px solid var(--border); overflow: hidden;
-}
-.day-hero { position: relative; height: clamp(200px, 32vw, 340px); }
-.day-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.day-hero .day-chip {
-  position: absolute; top: 16px; left: 16px;
-  background: var(--accent); color: #fff; padding: 6px 16px; border-radius: 20px;
-  font-size: 13px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,.3);
-}
-.day-hero .day-chip.tokyo { background: var(--blue); }
-.day-hero .day-chip.special { background: var(--special); }
-.day-hero .day-chip.base { background: var(--green); }
-.day-hero .img-cap {
-  position: absolute; right: 12px; bottom: 10px;
-  background: rgba(0,0,0,.55); color: #fff; padding: 4px 12px; border-radius: 14px;
-  font-size: 11.5px; backdrop-filter: blur(4px);
-}
-.day-body { padding: 24px 26px 26px; }
-.day-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin-bottom: 6px; }
-.day-head .date { color: var(--text-muted); font-size: 14px; }
-.day-head h2 { font-size: clamp(18px, 2.6vw, 23px); color: var(--text-heading); }
-.day-head .theme-tag { margin-left: auto; font-size: 12px; color: var(--accent); background: var(--tag-rec-bg); padding: 3px 12px; border-radius: 14px; font-weight: 600; }
-.lodging { font-size: 13px; color: var(--text-muted); background: var(--bg-elevated); padding: 8px 14px; border-radius: 8px; display: inline-block; margin: 8px 0 18px; }
-.lodging b { color: var(--text-heading); }
-
-/* ============== Timeline ============== */
-.day-cols { display: grid; grid-template-columns: 1fr 1.35fr; gap: 24px; }
-@media (max-width: 900px) { .day-cols { grid-template-columns: 1fr; } }
-.tl-card { background: var(--bg-elevated); border-radius: 12px; padding: 18px 20px; }
-.tl-card h3, .desc-block h3 { font-size: 15px; margin-bottom: 12px; color: var(--text-heading); display: flex; align-items: center; gap: 6px; }
-.tl-list { list-style: none; }
-.tl-list li { display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 13.5px; }
-.tl-list li:last-child { border-bottom: none; }
-.tl-list .time { color: var(--accent); font-weight: 700; min-width: 52px; flex-shrink: 0; font-size: 13px; }
-.tl-list .txt { color: var(--text-secondary); }
-
-/* ============== Desc Blocks ============== */
-.desc-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 22px; }
-@media (max-width: 900px) { .desc-grid { grid-template-columns: 1fr; } }
-.desc-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
-.desc-block.spots { border-top: 3px solid var(--accent); }
-.desc-block.food { border-top: 3px solid var(--special); }
-.desc-block.shopping { border-top: 3px solid var(--blue); }
-.desc-item { margin-bottom: 16px; }
-.desc-item:last-child { margin-bottom: 0; }
-.desc-item .d-name { font-weight: 700; font-size: 14px; color: var(--text-heading); display: block; margin-bottom: 4px; }
-.desc-item .d-name .d-tag { font-size: 11px; font-weight: 600; margin-left: 6px; padding: 1px 8px; border-radius: 10px; vertical-align: 2px; }
-.desc-item p { font-size: 13px; color: var(--text-secondary); line-height: 1.75; }
-
-/* ============== Day Footer ============== */
-.day-foot { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; gap: 12px; font-size: 12.5px; }
-.day-foot .quota { background: var(--bg-elevated); padding: 8px 14px; border-radius: 8px; color: var(--text-muted); }
-.day-foot .quota b { color: var(--text-heading); }
-.day-foot .tips { background: var(--alert-yellow-bg); color: var(--alert-yellow-fg); padding: 8px 14px; border-radius: 8px; }
-.day-foot .tips b { font-weight: 700; }
-
-/* ============== Footer ============== */
-.footer { text-align: center; padding: 30px 10px 10px; color: var(--footer-color); font-size: 12.5px; }
+/* ===== 新增：每日配图 + 详细描述（原样式未改动，全部追加） ===== */
+.ext-day-image{width:100%;margin:14px 0 0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-md)}
+.ext-day-image img{width:100%;height:280px;object-fit:cover;display:block}
+.ext-detail{margin-top:16px;padding:16px 18px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:12px}
+.ext-title{margin:0 0 12px;font-size:16px;font-weight:600;color:var(--text-heading)}
+.ext-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:768px){.ext-grid{grid-template-columns:1fr}}
+.ext-block{background:var(--bg-card);padding:14px;border-radius:10px;border-top:3px solid var(--accent)}
+.ext-block.ext-food{border-top-color:var(--special)}
+.ext-block.ext-shop{border-top-color:var(--tag-info-fg)}
+.ext-block h5{margin:0 0 10px;font-size:14px;color:var(--text-heading)}
+.ext-item{margin-bottom:12px}
+.ext-item:last-child{margin-bottom:0}
+.ext-item strong{display:block;font-size:13.5px;color:var(--text-primary);margin-bottom:3px}
+.ext-item p{margin:0;font-size:13px;color:var(--text-secondary);line-height:1.7}
+.ext-note{text-align:center;color:var(--text-muted);font-size:12px;margin:22px 0 0}
 </style>
 </head>
 <body>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换暗色模式" title="切换暗色模式"><span class="icon-sun" aria-hidden="true">☀️</span><span class="icon-moon" aria-hidden="true">🌙</span></button>
+<button class="back-top" id="backTop" type="button" aria-label="回到顶部" title="回到顶部">↑</button>
 <div class="container">
 
 <div class="header">
-  <h1>🗾 2026 日本亲子自由行 · 每日详细行程</h1>
-  <div class="subtitle">10 天 9 晚 · 大阪 → 东京 → 镰仓 → 河口湖 → 京都 → 奈良 → 大阪 · 轻松完整版</div>
-  <div class="meta">
-    <span class="meta-item">📅 2026.09.25 – 10.04</span>
-    <span class="meta-item">👨‍👩‍👧 亲子双人 + 娃</span>
-    <span class="meta-item">✈️ 济南 ⇄ 关西</span>
-    <span class="meta-item">💤 每日午休 · 轻松不赶</span>
-  </div>
+<h1>🗾 2026 日本亲子自由行 · 轻松完整版</h1>
+<div class="subtitle">济南 ✈️ 大阪进 · 东京 → 镰仓 → 河口湖 → 京都 → 奈良 → 大阪购物收尾</div>
+<div class="meta">
+<div class="meta-item">📅 2026.09.25 — 10.04</div>
+<div class="meta-item">👨‍👩‍👦 2大1小（5.5岁）</div>
+<div class="meta-item">🎯 每天 4 景点 / 2 购物 / 3 美食</div>
+<div class="meta-item">😴 早起日必留午休</div>
+<div class="meta-item">🚇 避开通勤高峰</div>
+</div>
 </div>
 
+<div class="tabs">
+<div class="tab active" data-tab="overview">📋 总览</div>
+<div class="tab" data-tab="alerts">⚠️ 关键判断</div>
+<div class="tab" data-tab="itinerary">🗓️ 每日行程</div>
+<div class="tab" data-tab="hotels">🏨 住宿</div>
+<div class="tab" data-tab="transport">🚄 交通</div>
+<div class="tab" data-tab="shopping">🛍️ 购物美食</div>
+<div class="tab" data-tab="branches">🎫 预约分支</div>
+<div class="tab" data-tab="kids">👶 亲子贴士</div>
+<div class="tab" data-tab="budget">💰 预算</div>
+<div class="tab" data-tab="checklist">✅ 清单</div>
+</div>
+
+<!-- ============ 总览 ============ -->
+<div class="section active" id="overview">
+<div class="card">
+<h2>🎯 行程定位</h2>
+<p>固定航班 <strong>SC8085 济南 11:20→关西 14:55 / SC8086 关西 16:00→济南 17:55</strong>。大阪作为入境和购物基地，东京负责都市与动漫，河口湖一晚温泉看富士，<strong>京都住 3 晚</strong>承接东山、岚山与任天堂博物馆晚场，最后心斋桥+临空奥莱完整购物收尾。全程轻松优先：每天约 4 个景点、2 个购物点、3 个美食体验，不硬塞。</p>
 <div class="stats">
-  <div class="stat"><span class="num">10</span><span class="label">行程天数</span></div>
-  <div class="stat"><span class="num">6</span><span class="label">城市/区域</span></div>
-  <div class="stat"><span class="num">2</span><span class="label">温泉夜</span></div>
-  <div class="stat"><span class="num">1</span><span class="label">任天堂博物馆</span></div>
-  <div class="stat"><span class="num">10+</span><span class="label">每日配图</span></div>
+<div class="stat"><span class="num">9</span><div class="label">晚住宿</div></div>
+<div class="stat"><span class="num">4</span><div class="label">景点 / 天</div></div>
+<div class="stat"><span class="num">2</span><div class="label">购物点 / 天</div></div>
+<div class="stat"><span class="num">3</span><div class="label">美食体验 / 天</div></div>
+<div class="stat"><span class="num">4</span><div class="label">早起日（含午休）</div></div>
+</div>
 </div>
 
+<div class="card">
+<h2>🗺️ 全程路线</h2>
 <div class="route">
-  <span class="node">大阪 KIX</span><span class="arrow">→</span>
-  <span class="node base">新大阪</span><span class="arrow">→</span>
-  <span class="node tokyo">东京新宿</span><span class="arrow">→</span>
-  <span class="node special">镰仓</span><span class="arrow">→</span>
-  <span class="node special">河口湖</span><span class="arrow">→</span>
-  <span class="node base">京都河原町</span><span class="arrow">→</span>
-  <span class="node base">奈良</span><span class="arrow">→</span>
-  <span class="node base">大阪梅田</span><span class="arrow">→</span>
-  <span class="node base">临空城</span><span class="arrow">→</span>
-  <span class="node">✈️ 济南</span>
+<span class="node">大阪KIX</span><span class="arrow">✈️</span>
+<span class="node">新大阪(1晚)</span><span class="arrow">🚄</span>
+<span class="node tokyo">东京新宿(2晚)</span><span class="arrow">↘️</span>
+<span class="node tokyo">镰仓</span><span class="arrow">🚌</span>
+<span class="node tokyo">河口湖温泉(1晚)</span><span class="arrow">🚄</span>
+<span class="node base">京都河原町(3晚)</span><span class="arrow">↘️</span>
+<span class="node base">宇治·奈良</span><span class="arrow">↘️</span>
+<span class="node">大阪梅田(1晚)</span><span class="arrow">↘️</span>
+<span class="node">临空城(1晚)</span><span class="arrow">✈️</span>
+<span class="node">济南</span>
+</div>
+<p style="margin-top:14px;color:var(--text-muted);font-size:13px">🔵蓝=关东 · 🟢绿=京都基地 · 🔴红=大阪/其他。<strong>为什么京都住 3 晚：</strong>任天堂博物馆只能约到 10/1 或 10/2 晚场，住京都时博物馆结束 30 分钟回酒店；住大阪则孩子要深夜跨城。多换一次酒店，换来京都两个完整夜晚 + 更稳的博物馆日 + 更从容的奈良日。</p>
 </div>
 
+<div class="card">
+<h2>📅 9 晚分段与节奏</h2>
 <div class="table-wrap">
 <table>
-<thead><tr><th>Day</th><th>日期</th><th>主题</th><th>住宿</th><th>早起</th><th>核心亮点</th></tr></thead>
+<thead><tr><th>日期</th><th>住宿</th><th>主题</th><th>节奏</th><th>早起</th></tr></thead>
 <tbody>
-  <tr><td><span class="tag info">Day 1</span></td><td>9/25 周五</td><td>抵达恢复</td><td>新大阪</td><td>否</td><td>通天阁夜景 + 串炸</td></tr>
-  <tr><td><span class="tag info">Day 2</span></td><td>9/26 周六</td><td>新干线→原宿·涩谷</td><td>东京新宿</td><td>是</td><td>明治神宫 + Nintendo TOKYO</td></tr>
-  <tr><td><span class="tag info">Day 3</span></td><td>9/27 周日</td><td>浅草·上野·秋叶原·池袋</td><td>东京新宿</td><td>否</td><td>浅草寺 + 秋叶原 + 寄大箱</td></tr>
-  <tr><td><span class="tag info">Day 4</span></td><td>9/28 周一</td><td>镰仓→河口湖温泉</td><td>河口湖</td><td>是</td><td>灌篮高手道口 + 温泉旅馆</td></tr>
-  <tr><td><span class="tag info">Day 5</span></td><td>9/29 周二</td><td>河口湖→京都</td><td>京都河原町</td><td>否</td><td>大石公园富士山 + 先斗町</td></tr>
-  <tr><td><span class="tag info">Day 6</span></td><td>9/30 周三</td><td>京都东山深度</td><td>京都河原町</td><td>是</td><td>千本鸟居 + 清水寺 + 锦市场</td></tr>
-  <tr><td><span class="tag warn">Day 7</span></td><td>10/1 周四</td><td>岚山 + 任天堂博物馆</td><td>京都河原町</td><td>是</td><td>嵯峨野小火车 + 任天堂博物馆</td></tr>
-  <tr><td><span class="tag info">Day 8</span></td><td>10/2 周五</td><td>奈良→大阪梅田</td><td>大阪梅田</td><td>否</td><td>喂鹿 + 东大寺 + 梅田购物</td></tr>
-  <tr><td><span class="tag info">Day 9</span></td><td>10/3 周六</td><td>心斋桥购物→临空奥莱</td><td>临空城</td><td>否</td><td>黑门市场 + 心斋桥 + 奥莱首轮</td></tr>
-  <tr><td><span class="tag warn">Day 10</span></td><td>10/4 周日</td><td>奥莱补货→返程</td><td>—</td><td>否</td><td>精准补货 + 飞回济南</td></tr>
+<tr><td>9/25 周五</td><td>新大阪</td><td>抵达恢复</td><td>晚起型</td><td>否</td></tr>
+<tr><td>9/26 周六</td><td>东京新宿</td><td>原宿·涩谷</td><td>新干线早班，下午酒店午休</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>9/27 周日</td><td>东京新宿</td><td>浅草·秋叶原·池袋</td><td>周日无高峰，正常节奏</td><td>否</td></tr>
+<tr><td>9/28 周一</td><td>河口湖温泉</td><td>镰仓+温泉</td><td>7:00 出发避高峰，午后巴士补觉</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>9/29 周二</td><td>京都河原町</td><td>河口湖→京都</td><td>白天跨城补觉，晚上慢逛</td><td>否</td></tr>
+<tr><td>9/30 周三</td><td>京都河原町</td><td>东山深度</td><td>7:00 出发，13:30–15:00 酒店午休</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>10/1 周四</td><td>京都河原町</td><td>岚山+任天堂博物馆</td><td>7:00 出发，午后车程补觉</td><td><span class="tag tag-warn">是</span></td></tr>
+<tr><td>10/2 周五</td><td>大阪梅田</td><td>奈良+梅田</td><td>9:30 后出发避高峰</td><td>否</td></tr>
+<tr><td>10/3 周六</td><td>临空城</td><td>心斋桥购物</td><td>周六无高峰，购物主日</td><td>否</td></tr>
+<tr><td>10/4 周日</td><td>—</td><td>奥莱补货+离境</td><td>航班硬约束</td><td>否</td></tr>
 </tbody>
 </table>
 </div>
+</div>
 
-<!-- DAYS_START -->
+<div class="card">
+<h2>🚇 通勤高峰规避规则（已内置到每天）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>场景</th><th>规则</th></tr></thead>
+<tbody>
+<tr><td>平日市内地铁/JR</td><td>不在 <strong>7:30–9:30</strong> 和 <strong>17:30–19:30</strong> 挤通勤线</td></tr>
+<tr><td>早起看景点（伏见稻荷、岚山、镰仓）</td><td><strong>7:00–7:15 上车</strong>，赶高峰前通过；当天下午必留午休</td></tr>
+<tr><td>晚间回酒店</td><td>要么 17:00 前回，要么吃完晚饭 19:30 后回，不夹在高峰里</td></tr>
+<tr><td>周六日（9/27、10/3）</td><td>无通勤高峰，可自然醒后出发</td></tr>
+<tr><td>跨城新干线/高速巴士</td><td>全部排在工作日 10:00–16:00 之间，订座车厢=孩子补觉时间</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 
-<!-- DAY1 -->
-<section class="day-section" id="day1">
-  <div class="day-hero">
-    <img src="images/day1-shinsekai-tsutenkaku.png" alt="大阪新世界通天阁夜景">
-    <span class="day-chip base">Day 1</span>
-    <span class="img-cap">📸 新世界 · 通天阁夜色</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">9/25 周五</span>
-      <h2>抵达｜落地关西 · 新大阪恢复夜</h2>
-      <span class="theme-tag">😴 抵达日不凑数</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Courtyard Shin-Osaka Station（或新大阪站步行酒店）</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">14:55</span><span class="txt">落地 → 入境、取行李、买 ICOCA、取现金</span></li>
-          <li><span class="time">17:00</span><span class="txt">Haruka 至新大阪，入住</span></li>
-          <li><span class="time">18:15</span><span class="txt">新世界街区 + 通天阁外围夜景（不登塔）</span></li>
-          <li><span class="time">19:00</span><span class="txt">串炸晚餐</span></li>
-          <li><span class="time">20:00</span><span class="txt">便利店买次日新干线早餐、儿童零食</span></li>
-          <li><span class="time">21:30</span><span class="txt">前熄灯休息</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">新世界·通天阁外围夜景 <span class="d-tag best">首选</span></span>
-            <p>大阪最具昭和风情的街区，1912 年仿巴黎与纽约建造，是战后大阪庶民文化的原点。通天阁高 108 米，是"大阪的埃菲尔铁塔"，1956 年重建至今仍是大阪地标。抵达日只逛外围不登塔——五光十色的霓虹招牌、复古看板与热闹街市足够让孩子兴奋，30 分钟拍照即走。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">JANJAN 横丁 <span class="d-tag rec">备选</span></span>
-            <p>新世界腹地的窄巷，比主街更有烟火气：烤串、章鱼烧、居酒屋一家挨一家，昭和海报与暖帘氛围感十足，适合饭后散步消食。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">串かつだるま 新世界総本店 <span class="d-tag best">首选</span></span>
-            <p>通天阁脚下的串炸本店，新世界灵魂美食。牛串、虾、莲藕裹脆浆油炸，蘸一次酱汁（店里铁律：禁止二次蘸！）。白饭、乌冬、玉子烧孩子都能吃，排队超 20 分钟就换隔壁大阪烧/定食。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">便利店补给 <span class="d-tag rec">1 处</span></span>
-            <p>Lawson / 7-Eleven / FamilyMart 一次买齐次日新干线早餐、儿童零食、饮料和应急用品，别让疲惫的一天再为小事折返。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 2 / 购物 1 / 美食 1</div>
-      <div class="tips">💡 <b>贴士：</b>抵达日不凑数、休息优先，让孩子适应时差；现金建议在机场 ATM 一次取足。</div>
-    </div>
-  </div>
-</section>
+<!-- ============ 关键判断 ============ -->
+<div class="section" id="alerts">
+<div class="card">
+<h2>⚠️ 出行前必读的 6 个关键判断</h2>
+<div class="alert alert-red"><h4>1. 国庆 + 日本秋季旺季叠加</h4><p>9/25–10/4 覆盖中国国庆黄金周，<strong>10/1 起酒店涨价、关西机场回程值机排队剧增</strong>。长途移动（大阪→东京、河口湖→京都）全部安排在 9/30 前；10/1 后只做京都—奈良—大阪短半径移动。<strong>10/4 目标 13:00 前到关西机场</strong>。</p></div>
+<div class="alert alert-red"><h4>2. 任天堂博物馆是唯一的"硬预约"</h4><p>目标 <strong>10/1（周四）16:00 以后</strong>的票，备选 10/2 16:00 以后。门票实名、需持与票面一致证件入场，<strong>不能买转售票</strong>。现在起每天查官方余票/候补——拿到票的那一刻 Day 7 / Day 8 才最终定型（见"预约分支"页）。无票也不崩：Day 7 下午改宇治慢体验。</p></div>
+<div class="alert alert-blue"><h4>3. 通勤高峰规则</h4><p>平日地铁/JR 避开 7:30–9:30、17:30–19:30。早起日 7:00–7:15 上车抢在高峰前；晚间 17:00 前或 19:30 后回酒店；跨城段全排在白天订座车厢。本行程每天的时间都是按这条规则排的。</p></div>
+<div class="alert alert-green"><h4>4. 行李策略：9/27 晚东京大箱直寄京都</h4><p>宅急便约 1,500–2,000 日元/件，9/27 寄、9/29 入住京都前必达；寄出时让东京前台电话确认京都酒店可代收。9/28–29 只背 1 晚小包去镰仓和河口湖。护照、贵重物、药品、充电宝永远随身。返程留 20kg 购物空间，保健品/酒类/液体必须托运。</p></div>
+<div class="alert alert-yellow"><h4>5. 现金 vs 移动支付</h4><p>支付宝/微信在东京、大阪市内覆盖 80%+。<strong>仍需现金</strong>：镰仓/河口湖/宇治小站、神社、寺庙门票、小店、自动售货机。建议带 8–10 万日元现金（3 人），7-11 ATM 银联可取。</p></div>
+<div class="alert alert-yellow"><h4>6. 必备预约/手续清单</h4><p>Visit Japan Web（前 7 天）；任天堂博物馆（每天查）；9/26 Nozomi 指定席（约 8/26 10:00 JST 开售，SmartEX）；9/28 藤泽→河口湖巴士、9/29 河口湖→三岛巴士+三岛→京都新干线（开售后即订）；岚山小火车；河口湖旅馆（含晚餐+站接送）。Shibuya Sky、Kirby Café OSAKA 全部是可删加分项。</p></div>
+</div>
+</div>
 
-<!-- DAY2 -->
-<section class="day-section" id="day2">
-  <div class="day-hero">
-    <img src="images/day2-meiji-jingu.png" alt="明治神宫大鸟居">
-    <span class="day-chip tokyo">Day 2</span>
-    <span class="img-cap">📸 明治神宫 · 森林参道</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">9/26 周六</span>
-      <h2>跨越｜早班新干线 → 原宿 · 涩谷</h2>
-      <span class="theme-tag">🚄 新干线 2.5h</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hilton Tokyo（西新宿）· 大行李随身寄酒店</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">07:09</span><span class="txt">Nozomi 新大阪→东京（约 2.5h，车上早餐+补觉）</span></li>
-          <li><span class="time">10:00</span><span class="txt">新宿酒店寄存行李（已过早高峰）</span></li>
-          <li><span class="time">11:00</span><span class="txt">明治神宫</span></li>
-          <li><span class="time">12:00</span><span class="txt">表参道午餐</span></li>
-          <li><span class="time">13:00</span><span class="txt">竹下通（只走核心段）+ 可丽饼</span></li>
-          <li><span class="time">13:40</span><span class="txt">表参道慢走</span></li>
-          <li><span class="time">14:30</span><span class="txt">回酒店入住 + 孩子午休（至 16:30）</span></li>
-          <li><span class="time">16:30</span><span class="txt">涩谷十字路口、Hachiko、中心街</span></li>
-          <li><span class="time">17:00</span><span class="txt">涩谷 PARCO：Nintendo TOKYO</span></li>
-          <li><span class="time">18:00</span><span class="txt">涩谷晚餐</span></li>
-          <li><span class="time">19:30</span><span class="txt">PARCO/109 短逛后回新宿（避高峰）</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">明治神宫 <span class="d-tag best">首选</span></span>
-            <p>东京都心最大的一片森林，参道两旁 10 万棵树木遮天蔽日，闹市中一秒切换宁静。高 12 米的木造大鸟居由 1500 年树龄桧木制成，是全日本最大木制鸟居，必拍机位。路面平缓好走，推车无压力，清晨光斑穿过树梢特别出片。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">竹下通 · KIDDY LAND <span class="d-tag rec">备选</span></span>
-            <p>原宿青少年文化中心，全长 400 米，平价潮服、大头贴、可丽饼一路排开。KIDDY LAND 是玩具/文具/限定玩偶大本营，孩子进去很难空手出来，记得先谈好预算。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">涩谷十字路口 + ハチ公 <span class="d-tag rec">备选</span></span>
-            <p>世界最繁忙十字路口，一次绿灯约 3000 人同时穿过，站在 QFRONT 二楼看"人潮海浪"最震撼。车站前的忠犬八公像给孩子讲一个忠诚故事，比任何攻略都生动。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">まい泉 青山本店 <span class="d-tag best">首选</span></span>
-            <p>表参道旁 70 年历史炸猪排名店，提供儿童餐具和软嫩ひれかつ（里脊），孩子友好度满分。炸衣酥脆、肉汁饱满，午市套餐配饭配汤，是长途转场后最好的能量补给。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">Marion Crepes 竹下通 <span class="d-tag rec">备选</span></span>
-            <p>1977 年开业的可丽饼创始老店，甜口草莓奶油、咸口火腿芝士都有，边走边吃是原宿的仪式感。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">活 美登利寿司 涩谷店 <span class="d-tag rec">备选</span></span>
-            <p>回转寿司人气店，新鲜实惠，孩子自己拿盘子互动性强，晚餐首选。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">Nintendo TOKYO <span class="d-tag best">首选</span></span>
-            <p>涩谷 PARCO 6F，任天堂官方直营店，免费入场。马里奥/动森/塞尔达官方限定周边 + 游戏试玩区，孩子天堂。排队超 20 分钟果断放弃，不破坏午休节奏。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">Pokémon Center Shibuya <span class="d-tag rec">备选</span></span>
-            <p>同层宝可梦中心，限定商品与大型宝可梦雕像合影区，皮卡丘、伊布周边是孩子的最爱。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 2 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 14:30–16:30 酒店雷打不动；删减顺序：Shibuya Sky → 表参道 → 任天堂店。</div>
-    </div>
-  </div>
-</section>
+<!-- ============ 每日行程 ============ -->
+<div class="section" id="itinerary">
+<div class="card">
+<h2>🗓️ 10 天 9 晚逐日行程 · 完整展开版</h2>
+<p style="color:var(--text-muted);font-size:13px">每天左侧是时间线，右侧「本日最推荐」给出景点/美食/购物的首选具体店与点位（配图 + 官网 + Google 地图链接），备选并列其后；每天末尾是配额与午休。「可选」项都可整体删除而不影响当天。图片 © Wikimedia Commons，点击图片可查原图。</p>
+</div>
 
-<!-- DAY3 -->
-<section class="day-section" id="day3">
-  <div class="day-hero">
-    <img src="images/day3-sensoji-asakusa.png" alt="浅草寺雷门">
-    <span class="day-chip tokyo">Day 3</span>
-    <span class="img-cap">📸 浅草寺 · 雷门大灯笼</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">9/27 周日</span>
-      <h2>东京｜浅草 · 上野 · 秋叶原 · 池袋</h2>
-      <span class="theme-tag">📦 今晚寄大箱去京都</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hilton Tokyo · 晚 19:30 大箱宅急便寄京都</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">08:30</span><span class="txt">早餐、出发（周日无高峰，不用早起）</span></li>
-          <li><span class="time">09:30</span><span class="txt">浅草寺：雷门—仲见世—本堂</span></li>
-          <li><span class="time">11:30</span><span class="txt">上野/阿美横丁午餐</span></li>
-          <li><span class="time">12:30</span><span class="txt">上野公园跑一跑</span></li>
-          <li><span class="time">13:30</span><span class="txt">秋叶原：扭蛋、模型、游戏机厅（先定预算）</span></li>
-          <li><span class="time">15:30</span><span class="txt">电车回新宿方向，车上补觉</span></li>
-          <li><span class="time">16:00</span><span class="txt">池袋 animate 旗舰店（营业至 21:00）</span></li>
-          <li><span class="time">18:00</span><span class="txt">池袋晚餐</span></li>
-          <li><span class="time">19:30</span><span class="txt">买次日路早；打包寄大箱到 Hilton Kyoto，只留 1 晚小包</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">浅草寺·雷门 <span class="d-tag best">首选</span></span>
-            <p>东京最古老的寺庙（始建于 628 年），雷门大灯笼高 3.9 米、重 700 公斤，是东京最经典江户街景。路线一条线：大红灯笼 → 仲见世通 → 本堂，约 250 米的参道两侧 90 多家老铺。教孩子参拜前洗手、看香炉冒烟、挂绘马，顺便买个人形烧边走边吃。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">上野公园 <span class="d-tag rec">备选</span></span>
-            <p>日本第一座公园（1873 年），开阔草坪适合孩子撒欢奔跑，不忍池畔喂鸽子看水鸟。周日人少清静，是消食放电的好地方。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">秋叶原无线电会馆 <span class="d-tag rec">备选</span></span>
-            <p>一栋楼集中模型、手办、卡牌、扭蛋，御宅文化圣地。先定预算：规则是"想买"先拍照，出店门冷静后决定，防止冲动消费。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">伊豆荣 本店 <span class="d-tag best">首选</span></span>
-            <p>上野不忍池旁创业 260 多年的鳗鱼饭老铺，鳗鱼软嫩、酱汁甜香，午市套餐性价比高。二楼能眺望池景，带孩子慢慢吃一顿传统和食。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">木村家本店 人形烧 <span class="d-tag rec">备选</span></span>
-            <p>浅草伴手小吃，红豆馅传统点心，刚出炉外皮微脆、内馅温热，孩子边走边吃正合适。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">无敌家 池袋 <span class="d-tag rec">备选</span></span>
-            <p>晚餐拉面，浓郁豚骨汤底、厚切叉烧，孩子也爱吃的经典豚骨系。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">animate 池袋本店 <span class="d-tag best">首选</span></span>
-            <p>日本最大动漫周边连锁旗舰店，角色周边、漫画、文具、CD 一整栋楼，营业到 21:00 不怕赶。孩子挑周边，大人逛文具，各取所需。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">ガシャポンのデパート 池袋総本店 <span class="d-tag rec">备选</span></span>
-            <p>扭蛋专门店，数百台扭蛋机从动漫角色到动物模型应有尽有，200–500 日元一次，孩子的最爱，注意设上限。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 2 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 15:30–16:00 车上；19:30 前把大箱寄出（宅急便当日收件），后面只背小包转场；删减：池袋 → 上野公园。</div>
-    </div>
-  </div>
-</section>
+<div class="card">
+<div class="day-head"><span class="day-badge">Day 1</span><h3>9/25 周五 · 抵达｜落地关西·新大阪恢复夜</h3></div>
+<span class="lodging-inline">🏠 Courtyard Shin-Osaka Station（或新大阪站步行酒店）</span>
 
-<!-- DAY4 -->
-<section class="day-section" id="day4">
-  <div class="day-hero">
-    <img src="images/day4-kamakura-crossing.png" alt="镰仓高校前道口">
-    <span class="day-chip special">Day 4</span>
-    <span class="img-cap">📸 镰仓高校前 · 江之电与湘南海岸</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">9/28 周一</span>
-      <h2>转场｜镰仓半日 → 河口湖温泉夜</h2>
-      <span class="theme-tag">♨️ 温泉旅馆一夜</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hotel Asafuji 或同级含晚餐温泉旅馆 · 只背小包</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">07:00</span><span class="txt">JR 湘南新宿线→镰仓（高峰前通过），换江之电</span></li>
-          <li><span class="time">08:30</span><span class="txt">镰仓高校前：官方安全区域拍照</span></li>
-          <li><span class="time">09:00</span><span class="txt">江之电沿海短乘</span></li>
-          <li><span class="time">09:45</span><span class="txt">镰仓大佛</span></li>
-          <li><span class="time">10:45</span><span class="txt">小町通早午餐</span></li>
-          <li><span class="time">12:30</span><span class="txt">藤泽→河口湖直达巴士（已订座，全车补觉）</span></li>
-          <li><span class="time">15:00</span><span class="txt">河口湖站 10 号站牌旅馆接送、入住、房间休息</span></li>
-          <li><span class="time">16:30</span><span class="txt">浴衣、榻榻米、第一次温泉（孩子浅尝即可）</span></li>
-          <li><span class="time">18:00</span><span class="txt">旅馆日式晚餐（须 18:00 前到站）</span></li>
-          <li><span class="time">19:30</span><span class="txt">房内桌游/绘本/日式小点；第二次温泉成人轮流</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">镰仓高校前·灌篮高手道口 <span class="d-tag best">首选</span></span>
-            <p>《灌篮高手》OP 名场面——绿皮江之电驶过道口，背景是蔚蓝湘南海岸与江之岛，动漫照进现实的瞬间。只在海侧官方安全区域拍照，不站轨道、不堵道口，给孩子讲讲樱木花道的故事，比打卡更有意义。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">江之电 <span class="d-tag rec">备选</span></span>
-            <p>1902 年运营的怀旧电车，沿海贴地飞行，穿过民宅小巷与隧道，一节车厢就是一部湘南风光片，孩子坐窗边超兴奋。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">高德院 镰仓大佛 <span class="d-tag rec">备选</span></span>
-            <p>高 13.35 米、重约 121 吨的青铜坐像，镰仓时代铸造技术巅峰，也是全行程唯一保留的寺院。大佛内部中空可入内参观（另付费），孩子会惊叹"大佛肚子里可以走"。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">小町通 しらす丼 <span class="d-tag best">首选</span></span>
-            <p>镰仓名物银鱼盖饭，湘南现捕小银鱼或生食或盐煮，鲜甜无腥味。早午餐坐下吃 40 分钟——这是赶巴士前最重要的体力补给，别边走边吃。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">豊島屋 本店 · 鳩サブレー <span class="d-tag rec">备选</span></span>
-            <p>镰仓百年老铺的鸽子黄油饼干，奶香酥松、包装古典，是全行程最精致的小伴手礼，买几盒送人正合适。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">旅馆日式晚餐 <span class="d-tag best">核心</span></span>
-            <p>温泉旅馆含餐，一泊二食不另找餐厅。刺身、煮物、烤鱼、釜饭层层上桌，孩子坐在榻榻米上吃日式小火锅，仪式感拉满。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">小町通杂货小店 <span class="d-tag rec">备选</span></span>
-            <p>不追网红店，路过合眼缘的杂货铺就逛：湘南冰箱贴、江之电周边、手作饰品，小件带回无压力。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 1 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 12:30–15:00 巴士 + 15:00–16:30 房间；大行李寄存在东京酒店或已寄京都，今天只背小包；删减：湖畔夜走 → 江之电延长段 → 大佛。</div>
-    </div>
-  </div>
-</section>
+<div class="ext-day-image"><img src="images/day1-shinsekai-tsutenkaku.png" alt="新世界·通天阁夜景" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">14:55</span>落地→入境、取行李、买 ICOCA、取现金</li>
+<li><span class="time">17:00</span>Haruka 至新大阪，入住</li>
+<li><span class="time">18:15</span>新世界街区+通天阁外围夜景（不登塔）</li>
+<li><span class="time">19:00</span>串炸晚餐</li>
+<li><span class="time">20:00</span>便利店买次日新干线早餐、儿童零食</li>
+<li><span class="time">21:30</span>前熄灯</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg/960px-Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg" alt="新世界与通天阁夜景" loading="lazy">
+<div>
+<div class="rec-name">新世界 · 通天阁外围夜景</div>
+<div class="rec-why">昭和老街的霓虹氛围是大阪最好的"第一眼"，只拍外围不登塔，30 分钟搞定不耗体力。</div>
+<div class="rec-links"><a href="https://www.tsutenkaku.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=通天閣" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ジャンジャン横丁" target="_blank" rel="noopener">JANJAN 横丁</a>（新世界腹地的小巷，更有烟火气）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">串かつだるま 新世界総本店</div>
+<div class="rec-why">通天阁脚下的串炸本店，白饭、乌冬、玉子烧孩子都能吃；酱汁禁止二次蘸，顺便给孩子讲个有趣的餐桌规则。</div>
+<div class="rec-links"><a href="https://www.kushikatsu-daruma.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=串かつだるま+新世界総本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=新世界+大阪烧" target="_blank" rel="noopener">新世界大阪烧/定食</a>（排队超 20 分钟就换，第一晚不硬排）</div>
+</div>
+</div>
+</div>
 
-<!-- DAY5 -->
-<section class="day-section" id="day5">
-  <div class="day-hero">
-    <img src="images/day5-lake-kawaguchi-fuji.png" alt="河口湖大石公园富士山">
-    <span class="day-chip base">Day 5</span>
-    <span class="img-cap">📸 大石公园 · 湖面倒映富士山</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">9/29 周二</span>
-      <h2>跨越｜河口湖清晨 → 京都河原町夜</h2>
-      <span class="theme-tag">🗻 富士山最佳机位</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hilton Kyoto（河原町）· 东京大箱今日送达</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">06:30</span><span class="txt">清晨湖景/温泉：安静看富士的最佳窗口</span></li>
-          <li><span class="time">07:15</span><span class="txt">旅馆早餐、退房</span></li>
-          <li><span class="time">08:30</span><span class="txt">大石公园/湖畔短走（红线巴士或出租车）</span></li>
-          <li><span class="time">09:45</span><span class="txt">站前伴手礼</span></li>
-          <li><span class="time">10:30</span><span class="txt">ほうとう午餐</span></li>
-          <li><span class="time">11:30</span><span class="txt">河口湖→三岛巴士（订座，补觉）→三岛→京都 Hikari</span></li>
-          <li><span class="time">15:00</span><span class="txt">Hilton Kyoto 入住、洗澡、休息；确认大箱已到</span></li>
-          <li><span class="time">17:00</span><span class="txt">先斗町短走</span></li>
-          <li><span class="time">18:00</span><span class="txt">京都晚餐</span></li>
-          <li><span class="time">19:00</span><span class="txt">鸭川/河原町短走；药妆预逛（只看价不扫货）</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">大石公园·富士山全景 <span class="d-tag best">首选</span></span>
-            <p>河口湖北岸明信片机位：湖面 + 富士山同框，红线巴士直达、步道平缓。9 月底正值波斯菊季，花海 + 雪山 + 湖面，随手一拍就是壁纸。上午人少光好，清晨刚退房顺路即到。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">先斗町 <span class="d-tag rec">备选</span></span>
-            <p>京都最窄最古的花街，石板路两侧料亭茶屋一字排开，傍晚暖帘与灯笼次第亮起。京都第一晚只做城市生活体验，不赶景点，散步最舒服。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">鸭川三角洲 <span class="d-tag rec">备选</span></span>
-            <p>鸭川与高野川汇流处，看夕阳把河面染成金色，京都人坐在堤岸聊天发呆，是这座城市最日常也最动人的风景。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">ほうとう不動 河口湖駅前店 <span class="d-tag best">首选</span></span>
-            <p>山梨第一名物：味噌汤底 + 手打宽面 + 南瓜蔬菜，热乎软烂、一碗管饱。就在车站对面，吃完正好赶 11:30 巴士，时间严丝合缝。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">先斗町 汤豆腐/荞麦 <span class="d-tag rec">备选</span></span>
-            <p>京都名物汤豆腐，软嫩豆香、蘸出汁酱油，配一碗手打荞麦面，孩子也能接受，清淡收尾养胃。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">河口湖站前伴手礼 <span class="d-tag best">首选</span></span>
-            <p>山梨葡萄点心、富士山造型饼干、ほうとう味手信一站买齐，控制在 20 分钟内，留足上车时间。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">河原町药妆预逛 <span class="d-tag rec">备选</span></span>
-            <p>只比价不扫货，把心仪商品和价格记下来，留给 Day 9 购物主日集中出手。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 2 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>全天车程补觉 + 15:00–16:30 房间；天上山缆车与大石公园二选一，带娃选公园更轻松；到店先确认东京寄出的大箱已送达。</div>
-    </div>
-  </div>
-</section>
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 1 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>新世界·通天阁外围夜景</strong><p>大阪最具昭和风情的街区，1912 年建成时模仿巴黎与纽约的游乐区。通天阁高 108 米、1956 年重建，被称为“大阪的埃菲尔铁塔”。不登塔，外围的霓虹灯牌与复古招牌就是最佳拍照背景，30 分钟轻松搞定。</p></div>
+<div class="ext-item"><strong>JANJAN 横丁</strong><p>新世界腹地的小巷，比主街更有烟火气，老铺居酒屋与棋牌室林立，昭和味十足，适合顺路穿行感受。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>串かつだるま 新世界総本店</strong><p>通天阁脚下的串炸本店。各种食材裹上面衣油炸，“酱汁禁止二次蘸”是这里的铁律。白饭、乌冬、玉子烧孩子都能吃，第一晚不硬排。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>便利店补给</strong><p>抵达日晚间便利店一站式买齐次日新干线早餐、儿童零食、饮料，省时省力。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 2 / 购物 1（便利店补给）/ 美食 1<br>😴 抵达日不凑数，休息优先</div>
+</div>
 
-<!-- DAY6 -->
-<section class="day-section" id="day6">
-  <div class="day-hero">
-    <img src="images/day6-fushimi-inari.png" alt="伏见稻荷千本鸟居">
-    <span class="day-chip base">Day 6</span>
-    <span class="img-cap">📸 伏见稻荷 · 千本鸟居</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">9/30 周三</span>
-      <h2>京都｜东山深度</h2>
-      <span class="theme-tag">⛩️ 京都经典一日</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hilton Kyoto · 13:30–15:00 回酒店午休</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">07:00</span><span class="txt">京阪线→伏见稻荷（高峰前上车）</span></li>
-          <li><span class="time">08:00</span><span class="txt">伏见稻荷大社：千本鸟居，奥社奉拜所折返，不登顶</span></li>
-          <li><span class="time">10:15</span><span class="txt">清水寺：舞台、音羽瀑布（排队超 20 分钟跳过）</span></li>
-          <li><span class="time">11:30</span><span class="txt">二年坂午餐，坐下 45 分钟</span></li>
-          <li><span class="time">12:30</span><span class="txt">三年坂→宁宁之道；清水坂小店</span></li>
-          <li><span class="time">13:30</span><span class="txt">回酒店午休（至 15:00，大人轮流咖啡）</span></li>
-          <li><span class="time">15:00</span><span class="txt">祇园·花见小路→八坂神社</span></li>
-          <li><span class="time">16:00</span><span class="txt">抹茶/和果子茶歇</span></li>
-          <li><span class="time">16:30</span><span class="txt">锦市场</span></li>
-          <li><span class="time">18:00</span><span class="txt">先斗町/鸭川边晚餐，步行回酒店</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">伏见稻荷大社·千本鸟居 <span class="d-tag best">首选</span></span>
-            <p>全日本 3 万座稻荷神社的总本宫，朱红鸟居隧道沿山绵延 4 公里，是全日本最具辨识度的画面。8 点前到几乎包场，晨光穿过鸟居缝隙的光影最美。只走前段到奥社奉拜所就折返（不登顶），孩子可以写狐狸绘马、挑一个可爱御守——狐狸是稻荷神的使者，神社里到处是狐狸雕像。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">清水寺 <span class="d-tag rec">备选</span></span>
-            <p>始建于 778 年的世界遗产，清水舞台高 13 米、由 139 根巨型榉木柱支撑、未用一根钉子，是日本建筑史的奇迹。音羽瀑布三股泉水分别代表长寿/学业/爱情，排队超 20 分钟就跳过，站在舞台远眺京都城景已足够震撼。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">祇园·花见小路 <span class="d-tag rec">备选</span></span>
-            <p>京都艺伎文化中心，傍晚偶遇盛装艺伎/舞伎的概率最高。不追拍、不进私道，远远看一眼那惊鸿一瞥就是最好的画面。顺路八坂神社，夜晚灯笼亮起格外梦幻。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">锦市场 <span class="d-tag rec">备选</span></span>
-            <p>"京都的厨房"，390 米拱廊内 130 多家店：渍物、抹茶、豆乳甜甜圈、海鲜串烧一站逛遍。下午室内逛最舒服，拥挤时也是雨天的完美替换方案。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">清水顺正 おかべ家 <span class="d-tag best">首选</span></span>
-            <p>清水寺步行 5 分钟的汤豆腐名店，豆腐清淡软嫩、豆香浓郁，午市定食配米饭小菜价格合理，孩子吃得很安稳。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">茶寮都路里 祇园本店 <span class="d-tag rec">备选</span></span>
-            <p>抹茶芭菲下午茶：抹茶冰淇淋 + 白玉团子 + 红豆层层堆叠，京都抹茶甜品代表，玩累了正好回血。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">锦市场 <span class="d-tag best">首选</span></span>
-            <p>茶叶、渍物、厨房小物、抹茶伴手礼在这里买最全，比景区便宜。豆乳甜甜圈现做现吃是孩子的最爱。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">七味家本铺 <span class="d-tag rec">备选</span></span>
-            <p>清水坂上 370 年七味粉老铺，辣椒/山椒/芝麻/陈皮等七种香料调配，买一瓶回家撒在拉面乌冬上，京都味道带回家。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 2 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 13:30–15:00 酒店雷打不动；雨天方案：压缩街区步行、锦市场提前；二年坂三年坂坡多，推车注意防滑。</div>
-    </div>
-  </div>
-</section>
+<div class="card">
+<div class="day-head"><span class="day-badge tokyo">Day 2</span><h3>9/26 周六 · 跨越｜早班新干线→原宿·涩谷</h3></div>
+<span class="lodging-inline">🏠 Hilton Tokyo（西新宿）· 大行李随身寄酒店</span>
 
-<!-- DAY7 -->
-<section class="day-section" id="day7">
-  <div class="day-hero">
-    <img src="images/day7-arashiyama-bamboo.png" alt="岚山竹林小径">
-    <span class="day-chip special">Day 7</span>
-    <span class="img-cap">📸 岚山 · 竹林小径</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">10/1 周四</span>
-      <h2>关键日｜岚山 + 16:00 任天堂博物馆</h2>
-      <span class="theme-tag">🎮 全行程最独特体验</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hilton Kyoto · 博物馆结束 30 分钟回酒店</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">07:00</span><span class="txt">河原町→岚山（高峰前上车），车上早餐</span></li>
-          <li><span class="time">08:45</span><span class="txt">岚山小火车（订座；无票直接跳过）</span></li>
-          <li><span class="time">10:00</span><span class="txt">竹林小径 + 野宫神社</span></li>
-          <li><span class="time">11:00</span><span class="txt">天龙寺庭园</span></li>
-          <li><span class="time">12:00</span><span class="txt">渡月桥河岸休息</span></li>
-          <li><span class="time">12:30</span><span class="txt">岚山午餐</span></li>
-          <li><span class="time">13:20</span><span class="txt">岚山小店（只选一家）</span></li>
-          <li><span class="time">14:00</span><span class="txt">岚山→宇治小仓（车上补觉）</span></li>
-          <li><span class="time">16:00</span><span class="txt">任天堂博物馆：历史展→互动→花札→限定商店；馆内咖啡</span></li>
-          <li><span class="time">19:30</span><span class="txt">回河原町；京都晚餐（酒店附近坐下吃）</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">嵯峨野小火车 <span class="d-tag best">首选 1</span></span>
-            <p>沿保津峡行驶 25 分钟的开放式观光列车，穿峡谷、跨溪流，9 月底山色渐染，秋天红叶季一票难求。必须提前订指定席，无票直接跳过不纠结——它只是加分项不是必选项。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">任天堂博物馆 <span class="d-tag best">首选 2</span></span>
-            <p>2024 年开业的任天堂官方博物馆，从 1889 年的花札纸牌讲到 Switch，全家一起"考古"童年。路线：历史展 → 孩子最想玩的互动区 → 花札制作工坊 → 限定商店收尾。馆内咖啡有蘑菇王国主题甜品，只对持票者开放。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">竹林小径 + 天龙寺 <span class="d-tag rec">备选</span></span>
-            <p>竹林小径两侧孟宗竹高耸入云，风吹竹叶沙沙作响；天龙寺曹源池庭园是"借景"造园的杰作，把岚山龟山收进一幅画。野宫神社求学业最灵，正好给娃讨个好彩头。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">渡月桥 <span class="d-tag rec">备选</span></span>
-            <p>横跨桂川的木桥，岚山象征。桥畔河岸坐下休息，看水看山看人，是行程里最松弛的 30 分钟。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">嵯峨とうふ 稻 本店 <span class="d-tag best">首选</span></span>
-            <p>竹林旁平价汤豆腐定食名店，11:30 开门就去不排队。岚山泉水做的豆腐滑嫩清甜，定食配饭配渍物，清淡又管饱。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">博物馆馆内咖啡 <span class="d-tag rec">备选</span></span>
-            <p>有票才能进的限定体验，任天堂主题甜品咖啡，逛累了正好歇脚，孩子会疯狂拍照。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">任天堂博物馆限定商店 <span class="d-tag best">首选</span></span>
-            <p>只有持票者能进，限定周边外面买不到！放离馆前最后 30 分钟，先玩再买，花札、复古 T 恤、限定徽章别犹豫。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">ちりめん细工馆 岚山 <span class="d-tag rec">备选</span></span>
-            <p>京友禅碎布手作小物，小摆件、书签、饰品精致独特，岚山限定伴手礼。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4+博物馆 / 购物 2 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 14:00–15:00 车上补觉；票面若在 17:00 后，午后先回酒店午休再去；无票分支：下午改宇治慢体验（平等院）。</div>
-    </div>
-  </div>
-</section>
+<div class="ext-day-image"><img src="images/day2-meiji-jingu.png" alt="明治神宫森林参道" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">07:09</span>Nozomi 新大阪→东京（约 2.5h，车上早餐+补觉）</li>
+<li><span class="time">10:00</span>新宿酒店寄存行李（已过早高峰）</li>
+<li><span class="time">11:00</span>明治神宫</li>
+<li><span class="time">12:00</span>表参道午餐</li>
+<li><span class="time">13:00</span>竹下通（只走核心段）+可丽饼</li>
+<li><span class="time">13:40</span>表参道慢走</li>
+<li><span class="time">14:30</span>回酒店入住+孩子午休（至 16:30）</li>
+<li><span class="time">16:30</span>涩谷十字路口、Hachiko、中心街</li>
+<li><span class="time">17:00</span>涩谷 PARCO：Nintendo TOKYO</li>
+<li><span class="time">18:00</span>涩谷晚餐</li>
+<li><span class="time">19:30</span>PARCO/109 短逛后回新宿（避高峰）</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Meiji_Jingu_2023-3.jpg/960px-Meiji_Jingu_2023-3.jpg" alt="明治神宫" loading="lazy">
+<div>
+<div class="rec-name">明治神宫</div>
+<div class="rec-why">东京都心最大的森林参道，大鸟居必拍；路面平缓好走，是落地第二天最舒服的"开场"。</div>
+<div class="rec-links"><a href="https://www.meijijingu.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=明治神宮" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=竹下通り" target="_blank" rel="noopener">竹下通</a> · <a href="https://www.google.com/maps/search/?api=1&query=KIDDY LAND 原宿店" target="_blank" rel="noopener">KIDDY LAND 原宿店</a>（孩子的玩具天堂） · <a href="https://www.google.com/maps/search/?api=1&query=渋谷スクランブル交差点" target="_blank" rel="noopener">涩谷十字路口＋ハチ公</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">まい泉 青山本店（炸猪排）</div>
+<div class="rec-why">表参道旁的老牌猪排店，有儿童餐具和软嫩的ひれかつ，午休前坐下来吃顿正经午餐的最佳选择。</div>
+<div class="rec-links"><a href="https://mai-sen.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=まい泉+青山本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=マリオンクレープ+竹下通り" target="_blank" rel="noopener">Marion Crepes 竹下通</a>（可丽饼创始老店，甜点不当代正餐） · <a href="https://www.google.com/maps/search/?api=1&query=活美登利寿司+渋谷" target="_blank" rel="noopener">活 美登利寿司 涩谷店</a>（晚餐回转寿司，孩子接受度高）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Nintendo_TOKYO_2024.JPG/960px-Nintendo_TOKYO_2024.JPG" alt="Nintendo TOKYO" loading="lazy">
+<div>
+<div class="rec-name">Nintendo TOKYO（涩谷 PARCO 6F）</div>
+<div class="rec-why">免费入场，马里奥/动森/塞尔达官方限定；只顺路停 30–45 分钟，排队超 20 分钟就放弃，不当主线。</div>
+<div class="rec-links"><a href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=Nintendo TOKYO" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：同层 <a href="https://www.google.com/maps/search/?api=1&query=Pokémon Center Shibuya" target="_blank" rel="noopener">Pokémon Center Shibuya</a> · PARCO 动漫/游戏楼层短逛</div>
+</div>
+</div>
+</div>
 
-<!-- DAY8 -->
-<section class="day-section" id="day8">
-  <div class="day-hero">
-    <img src="images/day8-nara-deer.png" alt="奈良公园喂鹿">
-    <span class="day-chip base">Day 8</span>
-    <span class="img-cap">📸 奈良公园 · 与小鹿亲密接触</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">10/2 周五</span>
-      <h2>跨越｜奈良精华 → 大阪梅田</h2>
-      <span class="theme-tag">🦌 孩子全程高光</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Hilton Osaka（JR 大阪站 2 分钟）</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">09:30</span><span class="txt">近铁京都→近铁奈良（避开早高峰）</span></li>
-          <li><span class="time">10:30</span><span class="txt">奈良公园喂鹿 + 东大寺大佛殿</span></li>
-          <li><span class="time">12:00</span><span class="txt">奈良町午餐</span></li>
-          <li><span class="time">13:00</span><span class="txt">奈良町慢走；奈良小物</span></li>
-          <li><span class="time">14:00</span><span class="txt">猿泽池/浮见堂；吉野葛/和果子茶歇</span></li>
-          <li><span class="time">15:00</span><span class="txt">近铁→大阪（车上补觉，晚高峰前抵达）</span></li>
-          <li><span class="time">16:00</span><span class="txt">Hilton Osaka 入住、休息</span></li>
-          <li><span class="time">17:00</span><span class="txt">梅田购物</span></li>
-          <li><span class="time">18:30</span><span class="txt">梅田晚餐</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">奈良公园喂鹿 + 东大寺大佛殿 <span class="d-tag best">首选</span></span>
-            <p>660 公顷公园里生活着约 1200 头野生鹿，被视为神的使者，是孩子全程的高光时刻。买一包鹿仙贝（约 200 日元），小鹿会鞠躬讨食——喂完摊开双手表示"没有了"，鹿就懂了。东大寺大佛殿是世界最大木造建筑，殿内 15 米大佛给孩子直观的震撼。注意保管地图和纸张，鹿会抢着吃。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">奈良町 <span class="d-tag rec">备选</span></span>
-            <p>江户时代格子窗老屋街区，现在改造成咖啡馆、杂货店、画廊，石板路和木头房子充满怀旧感，午后慢走最舒服。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">猿泽池/浮见堂 <span class="d-tag rec">备选</span></span>
-            <p>水边平缓收尾，浮见堂倒影如画，坐在池边长凳上吃块吉野葛点心，把今天的兴奋慢慢收进记忆。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">平宗 奈良店·柿叶寿司 <span class="d-tag best">首选</span></span>
-            <p>创业 150 多年的老铺，柿叶包裹的鲭鱼寿司清淡好拿，自带天然防腐，是奈良独特保存食文化。买一盒外带，正好当车上点心。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">天极堂 奈良本店 <span class="d-tag rec">备选</span></span>
-            <p>吉野葛点心/葛切下午茶，葛根做的透明凉粉蘸黑蜜，清爽解腻，孩子当甜品吃。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">中川政七商店 奈良本店 <span class="d-tag best">首选</span></span>
-            <p>300 年奈良老铺的现代杂货：鹿麻织小物、手帕、文具，传统工艺 + 现代设计，全行程最值得买的奈良手信，颜值与品质双高。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">阪急梅田本店 <span class="d-tag rec">备选</span></span>
-            <p>梅田百货巨头，食品层、童装、户外品牌齐全。百货 20:00 关门前先去，地下食品层顺路买伴手礼。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 2 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 15:00–16:00 车上 + 16:00–17:00 房间；删减：猿泽池 → 奈良町；喂鹿前把包和纸张收好。</div>
-    </div>
-  </div>
-</section>
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 2 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>明治神宫</strong><p>东京最大的神社，占地 70 公顷，参道森林种植了约 10 万棵树木。大鸟居高 12 米、由 1500 年树龄的桧木制成，是日本最大的木制鸟居。路面平缓适合推车，清晨光线穿过树梢格外宁静。</p></div>
+<div class="ext-item"><strong>竹下通</strong><p>原宿青少年文化的中心，全长约 400 米，两侧是平价时尚店与可丽饼店。只走核心段即可，避免深入小巷迷路。</p></div>
+<div class="ext-item"><strong>涩谷十字路口</strong><p>世界最繁忙的十字路口，每次绿灯约有 3000 人同时穿越。车站前的忠犬八公雕像是忠诚的象征，可以给孩子讲个温情小故事。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>まい泉 青山本店</strong><p>表参道旁创业 70 多年的老牌炸猪排店，备有儿童餐具，里脊炸猪排肉质软嫩，孩子接受度高。</p></div>
+<div class="ext-item"><strong>Marion Crepes 竹下通</strong><p>可丽饼创始老店（1977 年开业），甜口草莓奶油、咸口火腿芝士都有，边走边吃是原宿的经典体验。</p></div>
+<div class="ext-item"><strong>活 美登利寿司 涩谷店</strong><p>回转寿司，新鲜实惠，孩子可以自己拿喜欢的盘子，互动性强、上菜快。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>Nintendo TOKYO</strong><p>涩谷 PARCO 6F 任天堂官方直营店，免费入场，有马里奥/动森/塞尔达限定周边与游戏试玩区。排队超 20 分钟建议放弃。</p></div>
+<div class="ext-item"><strong>Pokémon Center Shibuya</strong><p>同层宝可梦中心，限定商品与拍照区，皮卡丘和伊布是孩子的最爱。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 14:30–16:30 酒店<br>✂️ 删减顺序：Shibuya Sky → 表参道 → 任天堂店</div>
+</div>
 
-<!-- DAY9 -->
-<section class="day-section" id="day9">
-  <div class="day-hero">
-    <img src="images/day9-dotonbori-glico.png" alt="道顿堀固力果招牌">
-    <span class="day-chip base">Day 9</span>
-    <span class="img-cap">📸 道顿堀 · 固力果跑跑人</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">10/3 周六</span>
-      <h2>购物主日｜心斋桥主购物 → 临空奥莱</h2>
-      <span class="theme-tag">🛒 买买买 + 奥莱首轮</span>
-    </div>
-    <div class="lodging">🏨 <b>住宿：</b>Star Gate Hotel / 临空城站周边 · 17:00 取大箱转移</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">09:00</span><span class="txt">黑门市场早午餐</span></li>
-          <li><span class="time">10:00</span><span class="txt">道顿堀/戎桥：白天版固力果招牌</span></li>
-          <li><span class="time">10:40</span><span class="txt">法善寺横丁</span></li>
-          <li><span class="time">11:30</span><span class="txt">大丸心斋桥 + PARCO：先办退税流程的店</span></li>
-          <li><span class="time">13:00</span><span class="txt">心斋桥午餐（Kirby Café 仅预约成功时）</span></li>
-          <li><span class="time">14:00</span><span class="txt">心斋桥筋：按清单入店，每家最多 20 分钟</span></li>
-          <li><span class="time">15:30</span><span class="txt">美国村；孩子咖啡厅休整 30 分钟（大人轮逛）</span></li>
-          <li><span class="time">16:15</span><span class="txt">橘通/堀江补货；咖啡甜品茶歇</span></li>
-          <li><span class="time">17:30</span><span class="txt">南海电铁→临空城，入住</span></li>
-          <li><span class="time">18:30</span><span class="txt">临空奥莱第一轮：只买试尺码大件</span></li>
-          <li><span class="time">20:00</span><span class="txt">RINKU FOOD PARK 晚餐（19:45 最后点餐）</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 景点</h3>
-          <div class="desc-item">
-            <span class="d-name">道顿堀·戎桥固力果招牌 <span class="d-tag best">首选</span></span>
-            <p>大阪第一标志，1935 年立起的固力果跑跑人霓虹招牌，白天版和夜晚版两种味道。上午 10 点前人少好拍，戎桥上以跑跑人为背景拍全家福是标准动作。旁边法善寺横丁石板巷闹中取静，水挂不动明王像被泼水千年长满青苔，是隐藏彩蛋。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">美国村 Triangle Park <span class="d-tag rec">备选</span></span>
-            <p>大阪年轻人潮流聚集地，街头艺术、古着店、唱片店，三角公园坐着看人来人往，孩子歇脚大人逛。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">黑门市场·黑门三平 <span class="d-tag best">首选</span></span>
-            <p>"大阪的厨房"，烤扇贝、烤蟹腿、玉子烧、水果切片边走边吃，早午餐一站解决，孩子会爱上现烤海鲜的香气。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">千房 道顿堀店 <span class="d-tag rec">备选</span></span>
-            <p>大阪烧名店，铁板上滋滋作响，面糊+卷心菜+肉+美乃滋酱汁，大阪灵魂美食，孩子看着"翻面"就欢呼。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">RINKU FOOD PARK <span class="d-tag rec">备选</span></span>
-            <p>临空城 513 个座位的大型美食广场，按口味分区点餐，和食洋食中华都有，19:45 最后点餐别迟到。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">大丸心斋桥 + 心斋桥筋 <span class="d-tag best">首选 1</span></span>
-            <p>购物主战场：先在大丸/PARCO 集中办退税类商品，再沿心斋桥筋按清单入店，每家最多 20 分钟，防止逛散。Kirby Café 在大丸 9F，预约成功才替换午餐。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">临空 Premium Outlets <span class="d-tag best">首选 2</span></span>
-            <p>TNF / Patagonia / Arc'teryx / Columbia 常态 3–7 折，关西最大奥莱。今晚第一轮只买必须试尺码的大件（鞋、外套），记下缺尺码/缺型号留给明天精准补货。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">大国药妆 心斋桥 <span class="d-tag rec">备选</span></span>
-            <p>保健品一次买齐，常比松本清便宜 5–15%，维生素、眼药水、药妆一站搞定。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>景点 4 / 购物 2+奥莱 / 美食 3</div>
-      <div class="tips">💡 <b>贴士：</b>午休 15:30–16:15 咖啡厅/商场休息区；护照随身带好办退税；有马温泉仅前 8 天全顺且孩子状态好时上午插入，默认不加。</div>
-    </div>
-  </div>
-</section>
+<div class="card">
+<div class="day-head"><span class="day-badge tokyo">Day 3</span><h3>9/27 周日 · 东京｜浅草·上野·秋叶原·池袋</h3></div>
+<span class="lodging-inline">🏠 Hilton Tokyo · <strong>晚 19:30 大箱宅急便寄京都</strong></span>
 
-<!-- DAY10 -->
-<section class="day-section" id="day10">
-  <div class="day-hero">
-    <img src="images/day10-rinku-outlets.png" alt="临空奥特莱斯">
-    <span class="day-chip base">Day 10</span>
-    <span class="img-cap">📸 临空奥特莱斯 · 返程前最后一站</span>
-  </div>
-  <div class="day-body">
-    <div class="day-head">
-      <span class="date">10/4 周日</span>
-      <h2>返程｜奥莱精准补货 → 关西机场 → 济南</h2>
-      <span class="theme-tag">✈️ 13:00 前必须到机场</span>
-    </div>
-    <div class="lodging">🏨 <b>航班：</b>SC8086 关西 16:00 → 济南 17:55 · 硬约束</div>
-    <div class="day-cols">
-      <div class="tl-card">
-        <h3>⏱️ 当日时间线</h3>
-        <ul class="tl-list">
-          <li><span class="time">08:00</span><span class="txt">早餐、退房、寄存行李；托运/随身分装</span></li>
-          <li><span class="time">10:00</span><span class="txt">临空奥莱第二轮：只补 Day 9 缺尺码/缺型号</span></li>
-          <li><span class="time">11:30</span><span class="txt">Food Park 快速早午餐或外带</span></li>
-          <li><span class="time">12:00</span><span class="txt">取行李、前往 KIX（1 站/酒店接驳）</span></li>
-          <li><span class="time">13:00</span><span class="txt">值机、托运、安检、退税（免税店不是主购物场）</span></li>
-          <li><span class="time">16:00</span><span class="txt">SC8086 起飞回济南</span></li>
-        </ul>
-      </div>
-      <div class="desc-grid">
-        <div class="desc-block spots">
-          <h3>🎯 收尾</h3>
-          <div class="desc-item">
-            <span class="d-name">最后半天·克制美学 <span class="d-tag best">原则</span></span>
-            <p>购物有边界、航班优先。最后半天的关键词是"精准"：奥莱 10:00 开门直入目标店，只买昨晚记录的缺尺码/缺型号，不新开主题，11:30 必须停手。把遗憾留到下次，把从容留给孩子。</p>
-          </div>
-        </div>
-        <div class="desc-block food">
-          <h3>🍜 美食</h3>
-          <div class="desc-item">
-            <span class="d-name">RINKU FOOD PARK 快速早午餐 <span class="d-tag best">首选</span></span>
-            <p>饭、面、蛋包饭等稳定主食，快速吃饱不让孩子空腹进机场。安检后的机场餐厅作为备选，稳妥第一。</p>
-          </div>
-        </div>
-        <div class="desc-block shopping">
-          <h3>🛍️ 购物</h3>
-          <div class="desc-item">
-            <span class="d-name">临空奥莱·精准补货 <span class="d-tag best">首选</span></span>
-            <p>只买 Day 9 记录的缺尺码/缺型号，直进直出。奥莱买够 5000 日元可退税，记得带护照在服务中心办手续。</p>
-          </div>
-          <div class="desc-item">
-            <span class="d-name">机场免税店 <span class="d-tag rec">备选</span></span>
-            <p>白色恋人、Royce 生巧、薯条三兄弟等伴手礼安检后补漏，不是主购物场，随手带几盒即可。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="day-foot">
-      <div class="quota">📊 <b>配额：</b>购物有边界，航班优先</div>
-      <div class="tips">💡 <b>贴士：</b>国庆回程峰值，13:00 前到机场是硬约束；托运前检查锂电池、喷雾、液体；免税品单据留好备查。</div>
-    </div>
-  </div>
-</section>
+<div class="ext-day-image"><img src="images/day3-sensoji-asakusa.png" alt="浅草寺雷门与仲见世通" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">08:30</span>早餐、出发（周日无高峰，不用早起）</li>
+<li><span class="time">09:30</span>浅草寺：雷门—仲见世—本堂</li>
+<li><span class="time">11:30</span>上野/阿美横丁午餐</li>
+<li><span class="time">12:30</span>上野公园跑一跑</li>
+<li><span class="time">13:30</span>秋叶原：扭蛋、模型、游戏机厅（先定预算）</li>
+<li><span class="time">15:30</span>电车回新宿方向，车上补觉</li>
+<li><span class="time">16:00</span>池袋 animate 旗舰店（营业至 21:00）</li>
+<li><span class="time">18:00</span>池袋晚餐</li>
+<li><span class="time">19:30</span>买次日路早；打包寄大箱到 Hilton Kyoto，只留 1 晚小包</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sensoji_2023.jpg/960px-Sensoji_2023.jpg" alt="浅草寺" loading="lazy">
+<div>
+<div class="rec-name">浅草寺 · 雷门</div>
+<div class="rec-why">东京最经典的江户街景：大红灯笼—仲见世—本堂一条线走完；教孩子参拜前洗手、安静看香炉和绘马。</div>
+<div class="rec-links"><a href="https://www.senso-ji.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=浅草寺" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=仲見世通り" target="_blank" rel="noopener">仲见世通</a> · <a href="https://www.google.com/maps/search/?api=1&query=上野公園" target="_blank" rel="noopener">上野公园</a> · <a href="https://www.google.com/maps/search/?api=1&query=アメヤ横丁" target="_blank" rel="noopener">阿美横丁</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ueno_20241210_133139.jpg/960px-Ueno_20241210_133139.jpg" alt="阿美横丁" loading="lazy">
+<div>
+<div class="rec-name">伊豆荣 本店（上野 · 鳗鱼饭）</div>
+<div class="rec-why">创业 260 多年的鳗鱼饭老铺，就在上野公园不忍池旁；鳗鱼软、酱汁甜，孩子也能吃，午市套餐性价比高。</div>
+<div class="rec-links"><a href="https://www.izuei.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=伊豆栄+上野本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=木村家本店+浅草+人形焼" target="_blank" rel="noopener">木村家本店 人形烧</a>（浅草伴手小吃） · <a href="https://www.google.com/maps/search/?api=1&query=無敵家+池袋" target="_blank" rel="noopener">无敌家 池袋</a>（晚餐拉面，排队短于一兰）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png/960px-Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png" alt="秋叶原电器街" loading="lazy">
+<div>
+<div class="rec-name">秋叶原无线电会馆（ラジオ会館）</div>
+<div class="rec-why">一栋楼集中模型、手办、卡牌、扭蛋，亲子逛这一栋就够；先定每人预算，"想买"拍照后再决定。</div>
+<div class="rec-links"><a href="https://akihabara-radiokaikan.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=秋葉原ラジオ会館" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.animate.co.jp/shop/ikebukuro/" target="_blank" rel="noopener">animate 池袋本店</a>（<a href="https://www.google.com/maps/search/?api=1&query=アニメイト池袋本店" target="_blank" rel="noopener">地图</a>，角色周边/漫画/文具） · <a href="https://www.google.com/maps/search/?api=1&query=ガシャポンのデパート+池袋総本店" target="_blank" rel="noopener">ガシャポンのデパート 池袋総本店</a>（扭蛋专门店）</div>
+</div>
+</div>
+</div>
 
-<!-- DAYS_END -->
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 3 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>浅草寺·雷门</strong><p>东京最古老的寺庙，始建于 628 年。雷门大灯笼高 3.9 米、重 700 公斤，是浅草的象征。穿过雷门就是约 250 米的仲见世通，90 多家老铺卖人形烧、扇子、和风小物。教孩子先在水手舍洗手再参拜，体验日本礼仪。</p></div>
+<div class="ext-item"><strong>上野公园</strong><p>日本第一座公园（1873 年），占地约 53 公顷，园内有博物馆、动物园、不忍池。周日无早高峰，适合让孩子奔跑放电。</p></div>
+<div class="ext-item"><strong>秋叶原无线电会馆</strong><p>一栋楼集中模型、手办、卡牌、扭蛋，是御宅文化的圣地。先定预算再逛，避免冲动消费。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>伊豆荣 本店</strong><p>不忍池旁创业 260 多年的鳗鱼饭老铺，鳗鱼软嫩、酱汁微甜，午市套餐性价比高，2 楼可眺望池景。</p></div>
+<div class="ext-item"><strong>木村家本店 人形烧</strong><p>浅草经典伴手小吃，红豆馅的传统点心，刚出炉时外皮微脆、内馅温热。</p></div>
+<div class="ext-item"><strong>无敌家 池袋</strong><p>浓郁豚骨汤底拉面，叉烧厚实，口味大众，孩子也能接受。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>animate 池袋本店</strong><p>日本最大的动漫周边店，共 9 层楼，角色周边、漫画、文具、CD 一应俱全，是动漫迷的朝圣地。</p></div>
+<div class="ext-item"><strong>ガシャポンのデパート 池袋総本店</strong><p>扭蛋专门店，数百台扭蛋机，从动漫角色到动物模型应有尽有，200–500 日元一次，孩子最爱。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 15:30–16:00 车上（也可 15:00 回酒店躺 1 小时）<br>✂️ 删减：池袋 → 上野公园</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge tokyo">Day 4</span><h3>9/28 周一 · 转场｜镰仓半日→河口湖温泉夜</h3></div>
+<span class="lodging-inline">🏠 <a href="https://en.asafuji.jp/" target="_blank" rel="noopener" style="color:inherit">Hotel Asafuji</a> 或同级含晚餐温泉旅馆 · 只背小包</span>
+
+<div class="ext-day-image"><img src="images/day4-kamakura-crossing.png" alt="镰仓高校前·江之电道口" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">07:00</span>JR 湘南新宿线→镰仓（高峰前通过），换江之电</li>
+<li><span class="time">08:30</span>镰仓高校前：官方安全区域拍照</li>
+<li><span class="time">09:00</span>江之电沿海短乘</li>
+<li><span class="time">09:45</span>镰仓大佛</li>
+<li><span class="time">10:45</span>小町通早午餐</li>
+<li><span class="time">12:30</span>藤泽→河口湖直达巴士（已订座，全车补觉）</li>
+<li><span class="time">15:00</span>河口湖站 10 号站牌旅馆接送、入住、房间休息</li>
+<li><span class="time">16:30</span>浴衣、榻榻米、第一次温泉（孩子浅尝即可）</li>
+<li><span class="time">18:00</span>旅馆日式晚餐（须 18:00 前到站）</li>
+<li><span class="time">19:30</span>房内桌游/绘本/日式小点；第二次温泉成人轮流</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Enoden_300_series_Kamakura_Koko_mae_Station.jpg/960px-Enoden_300_series_Kamakura_Koko_mae_Station.jpg" alt="江之电与镰仓高校前" loading="lazy">
+<div>
+<div class="rec-name">镰仓高校前 · 灌篮高手道口</div>
+<div class="rec-why">《灌篮高手》OP 名场面。只在海侧官方安全区域拍，不站轨道、不堵道口；8:30 到人少好拍。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=鎌倉高校前駅" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.enoden.co.jp/" target="_blank" rel="noopener">江之电</a>（沿海慢车体验，<a href="https://www.google.com/maps/search/?api=1&query=江ノ電" target="_blank" rel="noopener">地图</a>） · <a href="https://www.kotoku-in.jp/" target="_blank" rel="noopener">高德院 镰仓大佛</a>（<a href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏+高徳院" target="_blank" rel="noopener">地图</a>，只保留这一处寺院）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Komachi_Street%2C_Kanagawa_02.jpg/960px-Komachi_Street%2C_Kanagawa_02.jpg" alt="小町通" loading="lazy">
+<div>
+<div class="rec-name">小町通 しらす丼（银鱼盖饭）</div>
+<div class="rec-why">镰仓名物，小町通沿线的和食店都有；早午餐坐下吃 40 分钟，是赶巴士前最重要的体力补给。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=小町通り+しらす丼" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">今日核心：<strong>旅馆日式晚餐</strong>（含餐旅馆不另找餐厅，18:00 前必须到河口湖站）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">豊島屋 本店 · 鳩サブレー</div>
+<div class="rec-why">镰仓百年老铺的鸽子黄油饼干，小町通入口即达；孩子喜欢造型，大人认老字号，最佳小伴手礼。</div>
+<div class="rec-links"><a href="https://www.hato-sable.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=豊島屋+本店+鎌倉" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：小町通杂货小店（不为特定网红店排队）</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 4 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>镰仓高校前·灌篮高手道口</strong><p>《灌篮高手》OP 名场面，江之电绿皮小火车穿越道口，背景是蔚蓝的湘南海岸。只在海侧官方安全区域拍照，不站轨道、不堵道口，带孩子感受“动漫照进现实”。</p></div>
+<div class="ext-item"><strong>江之电</strong><p>1902 年开通的怀旧电车，全长约 10 公里，沿途经过海边、隧道、古刹，是体验湘南风情的最佳方式，沿海段风景最美。</p></div>
+<div class="ext-item"><strong>高德院 镰仓大佛</strong><p>日本第二大青铜佛像，高 13.35 米、重约 121 吨。佛像内部可付费进入参观，感受中世纪铸造技术的震撼。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>小町通 しらす丼</strong><p>镰仓名物银鱼盖饭，使用湘南海岸当日捕获的新鲜小银鱼。坐下吃 40 分钟，是赶巴士前最重要的体力补给。</p></div>
+<div class="ext-item"><strong>豊島屋 本店·鳩サブレー</strong><p>镰仓百年老铺的鸽子黄油饼干，包装精美、口感酥脆奶香，是最佳小伴手礼。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>小町通杂货小店</strong><p>不为特定网红店排队，随意逛逛更有惊喜：传统工艺品、湘南特产、手作饰品。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 1 / 美食 3<br>😴 午休 12:30–15:00 巴士 + 15:00–16:30 房间<br>✂️ 删减：湖畔夜走 → 江之电延长段 → 大佛</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge special">Day 5</span><h3>9/29 周二 · 跨越｜河口湖清晨→京都河原町夜</h3></div>
+<span class="lodging-inline">🏠 Hilton Kyoto（河原町）· 东京大箱今日送达</span>
+
+<div class="ext-day-image"><img src="images/day5-lake-kawaguchi-fuji.png" alt="河口湖大石公园·富士山" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">06:30</span>清晨湖景/温泉：安静看富士的最佳窗口</li>
+<li><span class="time">07:15</span>旅馆早餐、退房</li>
+<li><span class="time">08:30</span>大石公园/湖畔短走（红线巴士或出租车）</li>
+<li><span class="time">09:45</span>站前伴手礼</li>
+<li><span class="time">10:30</span>ほうとう午餐</li>
+<li><span class="time">11:30</span>河口湖→三岛巴士（订座，补觉）→三岛→京都 Hikari</li>
+<li><span class="time">15:00</span>Hilton Kyoto 入住、洗澡、休息；确认大箱已到</li>
+<li><span class="time">17:00</span>先斗町短走</li>
+<li><span class="time">18:00</span>京都晚餐</li>
+<li><span class="time">19:00</span>鸭川/河原町短走；药妆预逛（只看价不扫货）</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/KawaguchiKo.jpg/960px-KawaguchiKo.jpg" alt="河口湖与富士山" loading="lazy">
+<div>
+<div class="rec-name">大石公园 · 富士山全景</div>
+<div class="rec-why">湖面+富士山的明信片机位，红线巴士直达、步道平缓，带孩子最省力的富士观景方式；上午人少。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=大石公園+河口湖" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=河口湖+天上山公園" target="_blank" rel="noopener">天上山缆车</a>（与骑行/大石公园三选一，不全做） · <a href="https://www.google.com/maps/search/?api=1&query=先斗町" target="_blank" rel="noopener">先斗町</a> · <a href="https://www.google.com/maps/search/?api=1&query=鴨川デルタ" target="_blank" rel="noopener">鸭川三角洲</a>（京都傍晚短走）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Houtou.jpg/960px-Houtou.jpg" alt="ほうとう" loading="lazy">
+<div>
+<div class="rec-name">ほうとう不動 河口湖駅前店</div>
+<div class="rec-why">山梨第一名物：味噌汤底的手打宽面+南瓜蔬菜，热乎软烂孩子爱吃；店就在车站对面，赶巴士前吃最顺。</div>
+<div class="rec-links"><a href="http://www.houtou-fudou.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=先斗町+湯豆腐" target="_blank" rel="noopener">先斗町 汤豆腐/荞麦</a>（京都第一晚只做城市生活体验，不安排寺院）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">河口湖站前伴手礼</div>
+<div class="rec-why">山梨葡萄点心、富士山饼干、ほうとう味手信一站买齐；控制在 20 分钟内，不耽误巴士。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=河口湖駅+お土産" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=河原町+药妆店" target="_blank" rel="noopener">河原町药妆预逛</a>（只比价不扫货，留给 Day 9）</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 5 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>大石公园·富士山全景</strong><p>位于河口湖北岸，是拍摄“湖面+富士山”明信片机位的最佳地点。四季花卉不同：春季郁金香、夏季薰衣草、秋季波斯菊。红线巴士直达，步道平缓适合推车，上午人少光线柔和。</p></div>
+<div class="ext-item"><strong>先斗町</strong><p>京都最有风情的花街，狭窄的石板路两侧是料亭与茶屋，傍晚点灯后最美，带孩子感受古都的“慢生活”。</p></div>
+<div class="ext-item"><strong>鸭川三角洲</strong><p>鸭川与支流交汇处，傍晚短走，看夕阳染红河面，是京都人日常的风景，河岸处处是悠闲的氛围。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>ほうとう不動 河口湖駅前店</strong><p>山梨第一名物，味噌汤底的手打宽面，加入南瓜、芋头、蘑菇等蔬菜，热乎软烂。车站对面，方便赶车。</p></div>
+<div class="ext-item"><strong>先斗町 汤豆腐/荞麦</strong><p>京都第一晚只做城市生活体验、不赶寺院，轻松吃顿好的。汤豆腐是京都名物，水质好、豆腐格外细腻。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>河口湖站前伴手礼</strong><p>山梨葡萄点心、富士山饼干、ほうとう味手信一站买齐，控制在 20 分钟内。</p></div>
+<div class="ext-item"><strong>河原町药妆预逛</strong><p>只比价不扫货，把正式采购留给 Day 9，先熟悉位置与价格。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 全天车程补觉 + 15:00–16:30 房间</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge base">Day 6</span><h3>9/30 周三 · 京都｜东山深度</h3></div>
+<span class="lodging-inline">🏠 Hilton Kyoto · 13:30–15:00 回酒店午休</span>
+
+<div class="ext-day-image"><img src="images/day6-fushimi-inari.png" alt="伏见稻荷大社·千本鸟居" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">07:00</span>京阪线→伏见稻荷（高峰前上车）</li>
+<li><span class="time">08:00</span>伏见稻荷大社：千本鸟居，奥社奉拜所折返，不登顶</li>
+<li><span class="time">10:15</span>清水寺：舞台、音羽瀑布（排队超 20 分钟跳过）</li>
+<li><span class="time">11:30</span>二年坂午餐，坐下 45 分钟</li>
+<li><span class="time">12:30</span>三年坂→宁宁之道；清水坂小店</li>
+<li><span class="time">13:30</span>回酒店午休（至 15:00，大人轮流咖啡）</li>
+<li><span class="time">15:00</span>祇园·花见小路→八坂神社</li>
+<li><span class="time">16:00</span>抹茶/和果子茶歇</li>
+<li><span class="time">16:30</span>锦市场</li>
+<li><span class="time">18:00</span>先斗町/鸭川边晚餐，步行回酒店</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/960px-Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg" alt="伏见稻荷千本鸟居" loading="lazy">
+<div>
+<div class="rec-name">伏见稻荷大社 · 千本鸟居</div>
+<div class="rec-why">8 点前到几乎包场，鸟居隧道光影最好；只走前段不登顶，孩子还能写一块绘马、选一枚御守。</div>
+<div class="rec-links"><a href="https://inari.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=伏見稲荷大社" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.kiyomizudera.or.jp/" target="_blank" rel="noopener">清水寺</a>（<a href="https://www.google.com/maps/search/?api=1&query=清水寺" target="_blank" rel="noopener">地图</a>） · <a href="https://www.google.com/maps/search/?api=1&query=祇園+花見小路" target="_blank" rel="noopener">祇园·花见小路</a>（不追拍艺伎、不进私道） · <a href="https://www.google.com/maps/search/?api=1&query=八坂神社" target="_blank" rel="noopener">八坂神社</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Sannenzaka_street%2C_Kyoto_%283811257874%29.jpg/960px-Sannenzaka_street%2C_Kyoto_%283811257874%29.jpg" alt="三年坂" loading="lazy">
+<div>
+<div class="rec-name">清水顺正 おかべ家（汤豆腐）</div>
+<div class="rec-why">清水寺步行 5 分钟的汤豆腐老铺，豆腐清淡软嫩、有米饭套餐，孩子接受度高；午市定食价格合理。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=清水順正+おかべ家" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=茶寮都路里+祇園本店" target="_blank" rel="noopener">茶寮都路里 祇园本店</a>（抹茶芭菲下午茶） · <a href="https://www.google.com/maps/search/?api=1&query=先斗町+京料理" target="_blank" rel="noopener">先斗町京料理</a>（晚餐）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Nishiki_Ichiba_by_matsuyuki.jpg/960px-Nishiki_Ichiba_by_matsuyuki.jpg" alt="锦市场" loading="lazy">
+<div>
+<div class="rec-name">锦市场</div>
+<div class="rec-why">"京都的厨房"：茶叶、漬物、厨房小物、豆乳甜甜圈；下午的室内段，拥挤时就是雨天替换方案。</div>
+<div class="rec-links"><a href="https://www.kyoto-nishiki.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=錦市場" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=七味家本舗+清水" target="_blank" rel="noopener">七味家本铺</a>（清水坂 370 年七味粉老铺） · 清水坂小店（扇子、香袋、手帕）</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 6 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>伏见稻荷大社·千本鸟居</strong><p>全日本约 3 万座稻荷神社的总本宫，以“千本鸟居”闻名。鸟居由企业与个人捐赠，从山脚绵延到山顶约 4 公里。8 点前抵达几乎包场，鸟居隧道的光影最好。只走前段不登顶，孩子可写绘马、选御守。狐狸是稻荷神的使者，神社内随处可见狐狸雕像。</p></div>
+<div class="ext-item"><strong>清水寺</strong><p>始建于 778 年，世界文化遗产。清水舞台高 13 米，由 139 根巨型榉木柱支撑、未用一根钉子，是日本建筑史的奇迹。音羽瀑布三道泉水分别寓意长寿、学业、爱情，可排队饮用。</p></div>
+<div class="ext-item"><strong>二年坂·三年坂</strong><p>京都最经典的坡道，两侧是町屋（传统木造建筑），石板路、木格子窗、垂帘，仿佛穿越回江户时代，和果子店与手工艺品店适合慢慢逛。</p></div>
+<div class="ext-item"><strong>祇园·花见小路</strong><p>京都艺伎文化的中心，傍晚有机会偶遇艺伎或舞伎穿着华丽和服走过。不追拍、不进私道，尊重当地文化。</p></div>
+<div class="ext-item"><strong>八坂神社</strong><p>祇园的镇守神社，以“美御前社”闻名，据说可保佑美貌，夜间灯笼点亮后格外梦幻。</p></div>
+<div class="ext-item"><strong>锦市场</strong><p>“京都的厨房”，长约 390 米，130 多家店铺售卖渍物、海鲜、和牛、抹茶甜品、豆乳甜甜圈等，室内逛着不受天气影响。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>清水顺正 おかべ家</strong><p>清水寺步行 5 分钟的汤豆腐名店，豆腐清淡软嫩，有米饭套餐，午市定食价格合理。</p></div>
+<div class="ext-item"><strong>茶寮都路里 祇园本店</strong><p>抹茶芭菲下午茶，层层叠叠的抹茶冰淇淋、白玉团子、红豆，是京都抹茶甜品的代表。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>七味家本铺</strong><p>清水坂 370 年七味粉老铺，可买京都特色调味料，由辣椒、山椒、芝麻、陈皮等七种香料调配。</p></div>
+<div class="ext-item"><strong>清水坂小店</strong><p>扇子、香袋、手帕等传统小物，精致且价格亲民，适合作为手信。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 13:30–15:00 酒店<br>🌧️ 雨天：压缩街区步行，锦市场提前</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge base">Day 7</span><h3>10/1 周四 · 关键日｜岚山 + 16:00 任天堂博物馆</h3></div>
+<span class="lodging-inline">🏠 Hilton Kyoto · 博物馆结束 30 分钟回酒店</span>
+
+<div class="ext-day-image"><img src="images/day7-arashiyama-bamboo.png" alt="岚山竹林小径" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">07:00</span>河原町→岚山（高峰前上车），车上早餐</li>
+<li><span class="time">08:45</span>岚山小火车（订座；无票直接跳过）</li>
+<li><span class="time">10:00</span>竹林小径+野宫神社</li>
+<li><span class="time">11:00</span>天龙寺庭园</li>
+<li><span class="time">12:00</span>渡月桥河岸休息</li>
+<li><span class="time">12:30</span>岚山午餐</li>
+<li><span class="time">13:20</span>岚山小店（只选一家）</li>
+<li><span class="time">14:00</span>岚山→宇治小仓（车上补觉）</li>
+<li><span class="time">16:00</span>任天堂博物馆：历史展→互动→花札→限定商店；馆内咖啡</li>
+<li><span class="time">19:30</span>回河原町；京都晚餐（酒店附近坐下吃）</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sagano_scenic_railway_hotsukyo.jpg/960px-Sagano_scenic_railway_hotsukyo.jpg" alt="岚山小火车" loading="lazy">
+<div>
+<div class="rec-name">嵯峨野小火车（トロッコ列車）</div>
+<div class="rec-why">沿保津峡 25 分钟的开放式观光车厢，孩子全程不无聊；必须提前订指定席，无票就直接跳过不等待。</div>
+<div class="rec-links"><a href="https://www.sagano-kanko.co.jp/" target="_blank" rel="noopener">官网订票</a><a href="https://www.google.com/maps/search/?api=1&query=トロッコ嵯峨駅" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Nintendo_Museum_logo.svg/960px-Nintendo_Museum_logo.svg.png" alt="任天堂博物馆" loading="lazy">
+<div>
+<div class="rec-name">任天堂博物馆（16:00 票）</div>
+<div class="rec-why">全行程最独特的体验：花札到 Switch 的产品史+互动项目+花札制作。顺序：历史展→孩子最想玩的互动→花札→商店，数字币有限不求全打卡。</div>
+<div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=ニンテンドーミュージアム" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">上午备选：<a href="https://www.google.com/maps/search/?api=1&query=嵐山+竹林の小径" target="_blank" rel="noopener">竹林小径</a> · <a href="https://www.tenryuji.com/" target="_blank" rel="noopener">天龙寺</a>（<a href="https://www.google.com/maps/search/?api=1&query=天龍寺" target="_blank" rel="noopener">地图</a>，庭园借景） · <a href="https://www.google.com/maps/search/?api=1&query=渡月橋" target="_blank" rel="noopener">渡月桥</a><br>无票分支：<a href="https://www.byodoin.or.jp/" target="_blank" rel="noopener">平等院</a>（<a href="https://www.google.com/maps/search/?api=1&query=平等院" target="_blank" rel="noopener">地图</a>，宇治慢体验）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">嵯峨とうふ 稲 本店（岚山汤豆腐定食）</div>
+<div class="rec-why">竹林旁的平价汤豆腐名店，定食有饭有汤孩子能吃好；11:30 开门就去，避开正午排队。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=嵯峨とうふ稲+本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：博物馆馆内咖啡（有票才能用，轻食/饮品） · 河原町酒店附近晚餐</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">任天堂博物馆限定商店</div>
+<div class="rec-why">只有持票者能进，博物馆限定商品在外面买不到；放离馆前最后 30 分钟，先玩再买。</div>
+<div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ちりめん細工館+嵐山" target="_blank" rel="noopener">ちりめん细工馆 岚山</a>（布艺手作小物，岚山只选这一家）</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 7 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>嵯峨野小火车</strong><p>沿保津峡运行的观光列车，25 分钟开放式车厢可欣赏峡谷、溪流与红叶（秋季）。必须提前订指定席，无票直接跳过。火车沿溪而行，下方是碧绿的保津川。</p></div>
+<div class="ext-item"><strong>竹林小径</strong><p>长约 500 米，两侧是高耸入云的孟宗竹，风过竹林声如天籁。清晨或傍晚人较少，光影透过竹叶洒落，是岚山最具代表性的风景。</p></div>
+<div class="ext-item"><strong>天龙寺庭园</strong><p>世界文化遗产，曹源池庭园是“借景”造园的杰作，将岚山与龟山融入庭园画面，一步一景。</p></div>
+<div class="ext-item"><strong>渡月桥</strong><p>横跨桂川的木桥，长约 155 米，是岚山的象征。桥畔休息，看河水缓缓流过，感受古都的宁静。</p></div>
+<div class="ext-item"><strong>任天堂博物馆</strong><p>位于宇治小仓，2024 年开业的任天堂官方博物馆，展示从 1889 年花札纸牌到 Switch 的完整产品史。互动区可体验经典游戏，花札制作工坊可亲手做一副花札，限定商店只有持票者能进。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>嵯峨とうふ 稻 本店</strong><p>竹林旁的平价汤豆腐名店，11:30 开门就去。岚山豆腐以当地泉水制作，口感滑嫩，定食包含汤豆腐、米饭、渍物。</p></div>
+<div class="ext-item"><strong>博物馆馆内咖啡</strong><p>有票才能使用，提供任天堂主题甜品与饮品，如蘑菇王国蛋糕、星星饼干等。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>任天堂博物馆限定商店</strong><p>只有持票者能进，限定商品外面买不到。放在离馆前最后 30 分钟，先玩再买，推荐花札、复古 T 恤、限定徽章。</p></div>
+<div class="ext-item"><strong>ちりめん细工馆 岚山</strong><p>布艺手作小物店，传统京友禅织物制成的饰品与杂货，精致独特。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4+博物馆 / 购物 2 / 美食 3<br>😴 午休 14:00–15:00 车上补觉<br>🔀 票面 17:00 后：午后先回酒店午休再去；无票：下午改宇治慢体验</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge">Day 8</span><h3>10/2 周五 · 跨越｜奈良精华→大阪梅田</h3></div>
+<span class="lodging-inline">🏠 Hilton Osaka（JR 大阪站 2 分钟）</span>
+
+<div class="ext-day-image"><img src="images/day8-nara-deer.png" alt="奈良公园喂鹿" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">09:30</span>近铁京都→近铁奈良（避开早高峰）</li>
+<li><span class="time">10:30</span>奈良公园喂鹿 + 东大寺大佛殿</li>
+<li><span class="time">12:00</span>奈良町午餐</li>
+<li><span class="time">13:00</span>奈良町慢走；奈良小物</li>
+<li><span class="time">14:00</span>猿泽池/浮见堂；吉野葛/和果子茶歇</li>
+<li><span class="time">15:00</span>近铁→大阪（车上补觉，晚高峰前抵达）</li>
+<li><span class="time">16:00</span>Hilton Osaka 入住、休息</li>
+<li><span class="time">17:00</span>梅田购物</li>
+<li><span class="time">18:30</span>梅田晚餐</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nara_Park_-_panoramio_%282%29.jpg/960px-Nara_Park_-_panoramio_%282%29.jpg" alt="奈良公园的鹿" loading="lazy">
+<div>
+<div class="rec-name">奈良公园喂鹿 + 东大寺大佛殿</div>
+<div class="rec-why">孩子全程的高光时刻：上千头野生鹿+世界最大木造建筑。只喂鹿仙贝，孩子的零食/纸张提前收好，喂完摊开双手表示"没有了"。</div>
+<div class="rec-links"><a href="https://www.todaiji.or.jp/" target="_blank" rel="noopener">东大寺官网</a><a href="https://www.google.com/maps/search/?api=1&query=奈良公園" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ならまち" target="_blank" rel="noopener">奈良町</a>（格子老屋街区） · <a href="https://www.google.com/maps/search/?api=1&query=猿沢池" target="_blank" rel="noopener">猿泽池/浮见堂</a>（水边平缓收尾）</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">平宗 奈良店 · 柿叶寿司</div>
+<div class="rec-why">奈良第一名物，创业 150 多年的老铺；柿子叶包裹的寿司清淡好拿，孩子也能吃，还可以外带当车上点心。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=平宗+奈良店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=天極堂+奈良本店" target="_blank" rel="noopener">天极堂 奈良本店</a>（吉野葛点心/葛切下午茶） · 东大寺门前茶粥定食</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<div>
+<div class="rec-name">中川政七商店 奈良本店</div>
+<div class="rec-why">300 年奈良老铺的现代杂货：鹿麻织小物、手帕、文具，好看不贵，是最值得买的奈良手信。</div>
+<div class="rec-links"><a href="https://www.nakagawa-masashichi.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=中川政七商店+奈良本店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=阪急うめだ本店" target="_blank" rel="noopener">阪急梅田本店</a>（食品层/童装/户外品牌，百货 20:00 关门前先去）</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 8 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>奈良公园喂鹿</strong><p>占地约 660 公顷，生活着约 1200 头野生鹿，被视为神的使者。鹿仙贝约 200 日元/包，喂完摊开双手表示“没有了”。小鹿会鞠躬讨食，是孩子的全程高光时刻。注意护好地图和纸张，鹿会抢食。</p></div>
+<div class="ext-item"><strong>东大寺大佛殿</strong><p>世界文化遗产，大佛殿是世界最大木造建筑（高 49 米、宽 57 米），殿内大佛高 15 米，是奈良的象征。</p></div>
+<div class="ext-item"><strong>奈良町</strong><p>保留江户时代格子窗町屋的老街区，现已改建为咖啡馆、杂货店、画廊，石板路与木建筑充满怀旧氛围。</p></div>
+<div class="ext-item"><strong>猿泽池/浮见堂</strong><p>水边平缓收尾，浮见堂是池中的传统建筑，倒影如画，适合下午歇脚喝茶。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>平宗 奈良店·柿叶寿司</strong><p>创业 150 多年的老铺，柿子叶包裹的寿司清淡好拿，可外带当车上点心。柿叶有天然防腐作用，是奈良独特的保存食文化。</p></div>
+<div class="ext-item"><strong>天极堂 奈良本店</strong><p>吉野葛点心/葛切下午茶，葛根制成的透明凉粉口感清爽，是奈良传统甜品。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>中川政七商店 奈良本店</strong><p>300 年奈良老铺的现代杂货店，鹿麻织小物、手帕、文具，将传统工艺与现代设计结合，是最值得买的奈良手信。</p></div>
+<div class="ext-item"><strong>阪急梅田本店</strong><p>食品层/童装/户外品牌齐全，百货 20:00 关门前先去，地下食品层适合补伴手礼。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 2 / 美食 3<br>😴 午休 15:00–16:00 车上 + 16:00–17:00 房间<br>✂️ 删减：猿泽池 → 奈良町</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge special">Day 9</span><h3>10/3 周六 · 购物主日｜心斋桥主购物→临空奥莱</h3></div>
+<span class="lodging-inline">🏠 Star Gate Hotel / 临空城站周边 · 17:00 取大箱转移</span>
+
+<div class="ext-day-image"><img src="images/day9-dotonbori-glico.png" alt="道顿堀·固力果招牌" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">09:00</span>黑门市场早午餐</li>
+<li><span class="time">10:00</span>道顿堀/戎桥：白天版固力果招牌</li>
+<li><span class="time">10:40</span>法善寺横丁</li>
+<li><span class="time">11:30</span>大丸心斋桥+PARCO：先办退税流程的店</li>
+<li><span class="time">13:00</span>心斋桥午餐（Kirby Café 仅预约成功时）</li>
+<li><span class="time">14:00</span>心斋桥筋：按清单入店，每家最多 20 分钟</li>
+<li><span class="time">15:30</span>美国村；孩子咖啡厅休整 30 分钟（大人轮逛）</li>
+<li><span class="time">16:15</span>橘通/堀江补货；咖啡甜品茶歇</li>
+<li><span class="time">17:30</span>南海电铁→临空城，入住</li>
+<li><span class="time">18:30</span>临空奥莱第一轮：只买试尺码大件</li>
+<li><span class="time">20:00</span>RINKU FOOD PARK 晚餐（19:45 最后点餐）</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🎯 景点</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Osaka_Dotonbori_Ebisu_Bridge.jpg/960px-Osaka_Dotonbori_Ebisu_Bridge.jpg" alt="道顿堀戎桥" loading="lazy">
+<div>
+<div class="rec-name">道顿堀 · 戎桥固力果招牌</div>
+<div class="rec-why">大阪的第一标志，上午 10 点前人少好拍；白天版和夜景是两种感觉，拍完全家福就走。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=道頓堀+戎橋" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=法善寺横丁" target="_blank" rel="noopener">法善寺横丁</a>（水挂不动明王，霓虹背后的安静石板巷） · <a href="https://www.google.com/maps/search/?api=1&query=アメリカ村+三角公園" target="_blank" rel="noopener">美国村 Triangle Park</a></div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg/960px-%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg" alt="黑门市场" loading="lazy">
+<div>
+<div class="rec-name">黑门市场 · 黑门三平</div>
+<div class="rec-why">"大阪的厨房"：烤扇贝、烤蟹腿、玉子烧、水果切片，早午餐一站解决；黑门三平是人气最旺的海鲜档。</div>
+<div class="rec-links"><a href="https://www.kuromon.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=黒門三平" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=千房+道頓堀" target="_blank" rel="noopener">千房 道顿堀店</a>（大阪烧） · <a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">RINKU FOOD PARK</a>（临空晚餐，513 个座位分口味点餐）</div>
+</div>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shinsaibashi_Osaka_Japan01-r.jpg/960px-Shinsaibashi_Osaka_Japan01-r.jpg" alt="心斋桥筋" loading="lazy">
+<div>
+<div class="rec-name">大丸心斋桥 + 心斋桥筋</div>
+<div class="rec-why">购物主战场：先在大丸/PARCO 完成退税类（护肤、药妆、品牌、角色商品），再沿心斋桥筋按清单入店，每家最多 20 分钟。</div>
+<div class="rec-links"><a href="https://www.daimaru.co.jp/shinsaibashi/" target="_blank" rel="noopener">大丸官网</a><a href="https://www.google.com/maps/search/?api=1&query=心斎橋筋商店街" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/960px-Rinku_premium_outlets02s3200.jpg" alt="临空奥莱" loading="lazy">
+<div>
+<div class="rec-name">临空 Premium Outlets</div>
+<div class="rec-why">TNF/Patagonia/Arc'teryx/Columbia 常态 3–7 折。第一轮（今晚）只买必须试尺码的大件：运动鞋、户外服、童装、行李箱；比价留到明早。</div>
+<div class="rec-links"><a href="https://www.premiumoutlets.co.jp/rinku/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアム・アウトレット" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-alt">可选：<a href="https://kirbycafe.jp/cafe/osaka/" target="_blank" rel="noopener">Kirby Café OSAKA</a>（大丸 9F，<a href="https://www.google.com/maps/search/?api=1&query=カービィカフェ+OSAKA" target="_blank" rel="noopener">地图</a>；仅预约成功时替换午餐） · <a href="https://www.google.com/maps/search/?api=1&query=大国药妆+心斎橋" target="_blank" rel="noopener">大国药妆 心斋桥</a>（保健品一次买齐，常比松本清便宜 5–15%）</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 9 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><div class="ext-item"><strong>道顿堀·戎桥固力果招牌</strong><p>大阪第一标志，固力果跑跑人霓虹招牌自 1935 年设立以来就是道顿堀的象征。上午 10 点前人少好拍，戎桥横跨道顿堀川，是最佳拍摄点。</p></div>
+<div class="ext-item"><strong>法善寺横丁</strong><p>闹中取静的古老小巷，石板路两侧是居酒屋与料亭。水挂不动明王像被信徒泼洒清水多年、表面长满青苔，是独特景观。</p></div>
+<div class="ext-item"><strong>美国村 Triangle Park</strong><p>大阪年轻人文化的聚集地，街头艺术与潮流店铺，感受大阪的活力。</p></div></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>黑门市场·黑门三平</strong><p>“大阪的厨房”，烤扇贝、烤蟹腿、玉子烧、水果切片，早午餐一站解决。市场内可直接站着吃，气氛热闹。</p></div>
+<div class="ext-item"><strong>千房 道顿堀店</strong><p>大阪烧名店，面糊中加入卷心菜、猪肉、海鲜，铁板煎制后淋上美乃滋与酱汁，是大阪的灵魂美食。</p></div>
+<div class="ext-item"><strong>RINKU FOOD PARK</strong><p>临空城的晚餐选择，513 个座位分口味点餐，和食到洋食都有，选择丰富。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>大丸心斋桥+心斋桥筋</strong><p>购物主战场。先在大丸/PARCO 完成退税类，再沿心斋桥筋按清单入店，每家最多 20 分钟。心斋桥筋是长约 600 米的拱廊商业街，平价药妆到高端百货应有尽有。</p></div>
+<div class="ext-item"><strong>临空 Premium Outlets</strong><p>TNF/Patagonia/Arc'teryx/Columbia 常态 3–7 折。第一轮（今晚）只买必须试尺码的大件。</p></div>
+<div class="ext-item"><strong>大国药妆 心斋桥</strong><p>保健品一次买齐，常比松本清便宜 5–15%。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 景点 4 / 购物 2+奥莱 / 美食 3<br>😴 午休 15:30–16:15 咖啡厅/商场休息区<br>♨️ 有马温泉：仅前 8 天全顺且孩子状态好时上午插入，默认不加</div>
+</div>
+
+<div class="card">
+<div class="day-head"><span class="day-badge">Day 10</span><h3>10/4 周日 · 返程｜奥莱精准补货→关西机场→济南</h3></div>
+<span class="lodging-inline">✈️ 16:00 SC8086 硬约束 · 13:00 前到机场</span>
+
+<div class="ext-day-image"><img src="images/day10-rinku-outlets.png" alt="临空 Premium Outlets" loading="lazy"></div>
+<div class="day-cols">
+<div>
+<p class="tl-head">⏱️ 当日时间线</p>
+<ul class="tl">
+<li><span class="time">08:00</span>早餐、退房、寄存行李；托运/随身分装</li>
+<li><span class="time">10:00</span>临空奥莱第二轮：只补 Day 9 缺尺码/缺型号</li>
+<li><span class="time">11:30</span>Food Park 快速早午餐或外带</li>
+<li><span class="time">12:00</span>取行李、前往 KIX（1 站/酒店接驳）</li>
+<li><span class="time">13:00</span>值机、托运、安检、退税（免税店不是主购物场）</li>
+<li><span class="time">16:00</span>SC8086 起飞回济南</li>
+</ul>
+</div>
+<div>
+<p class="tl-head">⭐ 本日最推荐</p>
+<div class="rec-group">
+<h5>🛍️ 购物</h5>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Rinku_premium_outlets02s3200.jpg/960px-Rinku_premium_outlets02s3200.jpg" alt="临空奥莱" loading="lazy">
+<div>
+<div class="rec-name">临空奥莱 · 精准补货</div>
+<div class="rec-why">10:00 开门直入目标店，只买 Day 9 记录的缺尺码/缺型号，不新开主题；11:30 必须停手。</div>
+<div class="rec-links"><a href="https://www.premiumoutlets.co.jp/rinku/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアム・アウトレット" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+</div>
+<div class="rec-group">
+<h5>🍜 美食</h5>
+<div class="rec-alt">收尾餐：<a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">RINKU FOOD PARK</a> 快速早午餐（饭/面/蛋包饭等稳定主食，不让孩子空腹进机场） · 安检后机场餐厅为备选</div>
+</div>
+</div>
+</div>
+
+<div class="ext-detail">
+<p class="ext-title">📝 详细描述（Day 10 补充）</p>
+<div class="ext-grid">
+<div class="ext-block"><h5>🎯 景点详解</h5><p style="font-size:13px;color:var(--text-muted)">今日为返程日，无新增景点安排。</p></div>
+<div class="ext-block ext-food"><h5>🍜 美食详解</h5><div class="ext-item"><strong>RINKU FOOD PARK 快速早午餐</strong><p>饭/面/蛋包饭等稳定主食，快速解决、不让孩子空腹进机场。</p></div>
+<div class="ext-item"><strong>机场餐厅</strong><p>安检后的备选，稳定可靠。</p></div></div>
+<div class="ext-block ext-shop"><h5>🛍️ 购物详解</h5><div class="ext-item"><strong>临空奥莱·精准补货</strong><p>10:00 开门直入目标店，只买 Day 9 记录的缺尺码/缺型号，不新开主题，11:30 必须停手。</p></div></div>
+</div>
+</div>
+<div class="quota">🎯 购物有边界，航班优先<br>⚠️ 国庆回程峰值，13:00 前到机场</div>
+</div>
 
 </div>
+
+<!-- ============ 住宿 ============ -->
+<div class="section" id="hotels">
+<div class="card">
+<h2>🏨 住宿规划（9 晚）</h2>
+<p style="color:var(--text-muted);font-size:13px;margin-bottom:10px">积分房需在 Hilton Honors / Marriott Bonvoy 账户内以「2 成人 + 1 名 5 岁儿童」查询复核。<strong>先订可取消现金房，积分房出现后再替换。</strong></p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>晚</th><th>日期</th><th>区域</th><th>推荐酒店</th><th>选择原因</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>9/25</td><td>新大阪</td><td><strong>Courtyard by Marriott Shin-Osaka Station</strong></td><td>次日早班新干线，住站上最稳</td></tr>
+<tr><td>2–3</td><td>9/26–27</td><td>东京新宿</td><td><strong>Hilton Tokyo（西新宿）</strong></td><td>两天分别走东京西/东北，回程方便</td></tr>
+<tr><td>4</td><td>9/28</td><td>河口湖</td><td><strong>Hotel Asafuji</strong> 或同级含晚餐温泉旅馆</td><td>价值在日式晚餐+湖景+温泉+榻榻米；约 10 号站牌接送，晚餐 18:00/18:30/19:00 可选，温泉开放至 23:30</td></tr>
+<tr><td>5–7</td><td>9/29–10/1</td><td>京都河原町</td><td><strong>Hilton Kyoto</strong>；备选 DoubleTree 京都站</td><td>步行可达祇园、锦市场、先斗町；博物馆结束 30 分钟回房</td></tr>
+<tr><td>8</td><td>10/2</td><td>大阪梅田</td><td><strong>Hilton Osaka</strong></td><td>JR 大阪站 2 分钟，地下通道连商场，适合梅田购物和次日取行李</td></tr>
+<tr><td>9</td><td>10/3</td><td>临空城</td><td><strong>Star Gate Hotel Kansai Airport</strong> 或临空城站周边</td><td>当晚奥莱第一轮 + 次日补货，去机场 1 站，Day 10 完全不赶</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-blue" style="margin-top:18px"><h4>少换酒店替代</h4><p>10/3 可续住 Hilton Osaka，Day 10 早班南海电铁 40 分钟到机场；但 10/4 需 11:00 前出发，奥莱补货时间减半。默认仍推荐末晚住临空城。</p></div>
+<div class="alert alert-green"><h4>行李流转</h4><p><strong>9/27 晚</strong>东京大箱宅急便寄 Hilton Kyoto（9/29 入住前必达，前台电话确认代收）。9/28–29 只背 1 晚小包（换洗、雨具、儿童睡衣、常用药、安抚物）。护照、贵重物、药品、充电宝永远随身。</p></div>
+</div>
+</div>
+
+<!-- ============ 交通 ============ -->
+<div class="section" id="transport">
+<div class="card">
+<h2>🚄 跨城交通（全部订座制，白天=补觉时间）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>段</th><th>日期</th><th>方式</th><th>耗时</th><th>关键动作</th></tr></thead>
+<tbody>
+<tr><td>关西机场→新大阪</td><td>9/25</td><td>JR Haruka 直达</td><td>约 50 分钟</td><td>落地后只办必要事项</td></tr>
+<tr><td>新大阪→东京</td><td>9/26</td><td><strong>Nozomi 07:09 左右</strong>，指定席 3 人相邻</td><td>约 2.5 小时</td><td>SmartEX 开售后即订；不选名古屋换乘组合</td></tr>
+<tr><td>新宿→镰仓</td><td>9/28</td><td>JR 湘南新宿线，<strong>7:00 前后上车</strong></td><td>约 55 分钟</td><td>赶通勤高峰前通过</td></tr>
+<tr><td>藤泽→河口湖</td><td>9/28</td><td>神奈中高速巴士（预约制）</td><td>约 2.5 小时</td><td>无座则改 JR 新宿→大月→富士急行</td></tr>
+<tr><td>河口湖→三岛</td><td>9/29</td><td>高速巴士（预约制）</td><td>约 1 小时 20 分</td><td>班次少必订；为新干线留 45–60 分钟缓冲</td></tr>
+<tr><td>三岛→京都</td><td>9/29</td><td><strong>Hikari 优先</strong>，无则 Kodama 直达</td><td>约 1 小时 50 分</td><td>不在新大阪换乘</td></tr>
+<tr><td>京都→奈良→大阪</td><td>10/2</td><td>近铁（奈良站离公园最近）</td><td>各约 40–50 分钟</td><td>9:30 后出发、15:00 前后离开奈良</td></tr>
+<tr><td>大阪→临空城</td><td>10/3</td><td>南海电铁 / JR</td><td>约 40 分钟</td><td>先回酒店取大箱再去</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h2>🚇 市内交通 & 高峰对照</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🗼</span><h4>东京</h4><p>JR 山手线+地铁；新宿→原宿/涩谷选 JR 或副都心线；避开 7:30–9:30 / 17:30–19:30</p></div>
+<div class="hl-box"><span class="icon">⛩️</span><h4>京都</h4><p>京阪电铁+地铁+短程出租车，不依赖堵车的市巴士；河原町住宿区大量步行</p></div>
+<div class="hl-box"><span class="icon">🎋</span><h4>岚山</h4><p>去程 JR 嵯峨野线或阪急（河原町出发更顺）；岚电用于体验和转场</p></div>
+<div class="hl-box"><span class="icon">💳</span><h4>ICOCA</h4><p>落地关空即买，儿童版半价；东京通用，iPhone 可绑 Apple Pay</p></div>
+</div>
+<h3>每天的高峰避法</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>日期</th><th>高峰风险</th><th>处理</th></tr></thead>
+<tbody>
+<tr><td>9/26 周六</td><td>无</td><td>—</td></tr>
+<tr><td>9/28 周一</td><td>早高峰</td><td>7:00 前后上新宿→镰仓 JR，高峰前通过</td></tr>
+<tr><td>9/29 周二</td><td>双高峰</td><td>全天在高速巴士/新干线订座车厢里</td></tr>
+<tr><td>9/30 周三</td><td>早高峰</td><td>7:00 京阪河原町上车，8 点前到伏见稻荷</td></tr>
+<tr><td>10/1 周四</td><td>早高峰</td><td>7:00 前后出发去岚山；16:00 进博物馆正好错过晚高峰</td></tr>
+<tr><td>10/2 周五</td><td>双高峰</td><td>9:30 后离开京都；15:00 前后离开奈良，晚高峰前到大阪</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- ============ 购物美食 ============ -->
+<div class="section" id="shopping">
+<div class="card">
+<h2>🛍️ 购物清单（按区域落位）</h2>
+<h3>🗼 东京（Day 2–3，只买"东京限定"小件）</h3>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🎮</span><h4>涩谷 PARCO</h4><p>Nintendo TOKYO、动漫/游戏楼层</p></div>
+<div class="hl-box"><span class="icon">🕹️</span><h4>秋叶原</h4><p>扭蛋、模型、游戏机厅（先设预算）</p></div>
+<div class="hl-box"><span class="icon">📚</span><h4>池袋 animate 旗舰店</h4><p>角色周边、漫画、文具（营业至 21:00）</p></div>
+</div>
+<div class="alert alert-yellow" style="margin-top:14px"><p>⚠️ 东京只买小件和限定品，<strong>大宗购物全部留在大阪</strong>，免得拎去河口湖。</p></div>
+<h3>⛩️ 京都（Day 5–7 轻量）</h3>
+<p>清水坂/二三年坂：扇子、香袋、手帕 · 锦市场：茶、干货、漬物 · 岚山：和果子、竹工艺 · 任天堂博物馆商店：限定商品（有票才有）</p>
+<h3>🐙 大阪（Day 8–9 主战场）</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>区域</th><th>时间</th><th>目标</th></tr></thead>
+<tbody>
+<tr><td>梅田（Day 8）</td><td>17:00–18:30</td><td>阪急/大丸食品层、童装、户外品牌（Mont-bell、Snow Peak、TNF 紫标）</td></tr>
+<tr><td>大丸/PARCO（Day 9）</td><td>11:30–13:00</td><td>护肤药妆、日系品牌、角色商品（先办退税）</td></tr>
+<tr><td>心斋桥筋（Day 9）</td><td>14:00–15:30</td><td>运动鞋、服饰、药妆、零食伴手礼</td></tr>
+<tr><td>美国村（Day 9）</td><td>15:30–16:15</td><td>潮牌、古着（BAPE、Supreme、Stüssy）</td></tr>
+<tr><td>临空奥莱（Day 9 晚）</td><td>18:30–20:00</td><td>试尺码大件：运动鞋、户外服、童装、行李箱</td></tr>
+<tr><td>临空奥莱（Day 10）</td><td>10:00–11:30</td><td>只补缺尺码/缺型号</td></tr>
+</tbody>
+</table>
+</div>
+<h3>💊 药妆/保健品（Day 9 下午一次买齐）</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>品类</th><th>推荐</th><th>备注</th></tr></thead>
+<tbody>
+<tr><td>综合维生素</td><td>DHC、Fancl</td><td>DHC 最便宜</td></tr>
+<tr><td>眼药水</td><td>参天 FX、乐敦</td><td><span class="tag tag-warn">注意限购</span></td></tr>
+<tr><td>益生菌</td><td>强力 Wakamoto、新ビオフェルミンS</td><td>经典便宜</td></tr>
+<tr><td>儿童用品</td><td>小林冰宝贴、儿童钙/DHA</td><td>亲子必带</td></tr>
+<tr><td>胶原蛋白</td><td>Fancl、明治</td><td></td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-blue" style="margin-top:14px"><p>退税：单店满 5,000 日元（不含税），<strong>护照原件</strong>；消耗品密封离境前不拆。海关：保健品单品种 ≤6 瓶/人，礼品总价 ≤5,000 元免税。大国药妆常比松本清便宜 5–15%。</p></div>
+</div>
+
+<div class="card">
+<h2>🍜 必吃清单（按区域）</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">🐙</span><h4>大阪</h4><p>新世界串炸、黑门市场烤扇贝/玉子烧、章鱼烧、千房大阪烧、一蘭拉面、梅田新梅田食道街、RINKU FOOD PARK</p></div>
+<div class="hl-box"><span class="icon">🗼</span><h4>东京</h4><p>原宿可丽饼、涩谷回转寿司/亲子盖饭、上野鳗鱼饭、浅草人形烧/炸馒头</p></div>
+<div class="hl-box"><span class="icon">🌊</span><h4>镰仓·河口湖</h4><p>小町通鳗鱼饭/海鲜丼、河口湖ほうとう、旅馆日式晚餐（核心体验）</p></div>
+<div class="hl-box"><span class="icon">🍵</span><h4>京都·宇治·奈良</h4><p>汤豆腐/湯叶、荞麦、抹茶和果子、先斗町京料理、宇治抹茶（无票分支）、奈良柿叶寿司/茶粥/吉野葛</p></div>
+</div>
+</div>
+</div>
+
+<!-- ============ 预约分支 ============ -->
+<div class="section" id="branches">
+<div class="card">
+<h2>🎫 关键预约与分支总表</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>优先级</th><th>项目</th><th>成功</th><th>失败/无票</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-rec">1</span></td><td><strong>任天堂博物馆</strong></td><td>10/1 16:00 后 → Day 7 主线；17:00–18:00 场 → 午后先回酒店午休再去；10/2 场 → Day 7 改岚山完整日、Day 8 下午博物馆（奈良移到 Day 9 上午）</td><td>Day 7 下午改宇治慢体验；Nintendo KYOTO 仅顺路；<strong>不买转售票</strong></td></tr>
+<tr><td><span class="tag tag-warn">2</span></td><td>9/26 Nozomi 指定席</td><td>07:09 优先</td><td>改 06:15 或更晚班次；不用名古屋换乘组合</td></tr>
+<tr><td><span class="tag tag-warn">3</span></td><td>藤泽→河口湖巴士</td><td>Day 4 午后直达</td><td>改 JR 新宿→大月→富士急行（约多 1 小时，删小町通短走）</td></tr>
+<tr><td><span class="tag tag-warn">4</span></td><td>河口湖→三岛巴士</td><td>Day 5 主线</td><td>无座走铁路绕行，三岛新干线改晚一班</td></tr>
+<tr><td><span class="tag tag-info">5</span></td><td>岚山小火车</td><td>Day 7 首项</td><td>直接竹林+野宫+天龙寺+渡月桥，只问一次当日余票</td></tr>
+<tr><td><span class="tag tag-info">6</span></td><td>Kirby Café OSAKA</td><td>Day 9 13:00 午餐</td><td>普通午餐 + 更完整购物时间</td></tr>
+<tr><td><span class="tag tag-info">7</span></td><td>Shibuya Sky</td><td>Day 2 晚间</td><td>涩谷夜景替代</td></tr>
+<tr><td><span class="tag tag-info">8</span></td><td>东京→京都行李寄送</td><td>Day 3 晚寄出</td><td>改随身 + 新干线带大件行李区座位</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-red" style="margin-top:18px"><h4>博物馆票务决策</h4><p><strong>10/1 16:00–17:00</strong>：主线执行，上午岚山下午小仓，不加金阁寺。<strong>10/1 18:00 后</strong>：岚山午餐后回酒店午休，15:30 再去小仓。<strong>10/2 场</strong>：Day 7 岚山完整日，Day 8 下午博物馆，奈良移到 Day 9 上午。<strong>无票</strong>：Day 7 下午宇治慢体验。拿到票后保存二维码、护照和同行人信息离线截图。</p></div>
+</div>
+</div>
+
+<!-- ============ 亲子贴士 ============ -->
+<div class="section" id="kids">
+<div class="card">
+<h2>👶 亲子专属贴士</h2>
+<div class="hl-grid">
+<div class="hl-box"><span class="icon">💳</span><h4>儿童 ICOCA 半价</h4><p>落地即办，东京关西通用</p></div>
+<div class="hl-box"><span class="icon">😴</span><h4>午休纪律</h4><p>4 个早起日（9/26、9/28、9/30、10/1）都内置午休或车程补觉，不要因为"状态还行"就砍掉——疲劳是累积的</p></div>
+<div class="hl-box"><span class="icon">🚄</span><h4>补觉场景已设计</h4><p>Nozomi 2.5h、藤泽—河口湖巴士 2.5h、河口湖—三岛—京都 3h、奈良往返 2h，全是订座车厢，孩子放心睡</p></div>
+<div class="hl-box"><span class="icon">🍼</span><h4>母婴设施</h4><p>找"赤ちゃん休憩室"，百货和车站标配；餐厅找"お子様ランチ"</p></div>
+<div class="hl-box"><span class="icon">♨️</span><h4>温泉礼仪</h4><p>5.5 岁儿童视旅馆规定入汤，每次不超 10 分钟，先淋浴后入池，不强迫</p></div>
+<div class="hl-box"><span class="icon">🦌</span><h4>喂鹿安全</h4><p>只喂鹿仙贝；孩子零食、纸张、塑料袋提前收进包；喂完摊开双手表示"没有了"</p></div>
+<div class="hl-box"><span class="icon">⏱️</span><h4>喝水节奏</h4><p>每 45–60 分钟安排一次坐下喝水，尤其秋叶原、心斋桥这种逛起来没完的地方</p></div>
+<div class="hl-box"><span class="icon">💊</span><h4>儿童药品</h4><p>退烧贴、感冒药在药妆店（小林制药儿童线）随手补</p></div>
+<div class="hl-box"><span class="icon">✂️</span><h4>删减不内疚</h4><p>每天都写了删减顺序，删到孩子开心为止，就是这份行程设计的目的</p></div>
+</div>
+</div>
+<div class="card">
+<h2>🆘 应急信息</h2>
+<div class="stats"><div class="stat"><span class="num">110</span><div class="label">报警</div></div><div class="stat"><span class="num">119</span><div class="label">救护/消防</div></div></div>
+<div class="table-wrap"><table><thead><tr><th>联系</th><th>电话</th></tr></thead><tbody><tr><td>中国驻大阪总领馆</td><td>+81-6-6445-9481</td></tr><tr><td>中国驻东京大使馆</td><td>+81-3-3403-3380</td></tr><tr><td>关西机场咨询</td><td>+81-72-455-2500</td></tr></tbody></table></div>
+<h3>📱 必备 App</h3>
+<div class="table-wrap"><table><thead><tr><th>App</th><th>用途</th></tr></thead><tbody><tr><td>Google Maps</td><td>导航+换乘</td></tr><tr><td>Yahoo!乗換案内</td><td>电车时刻</td></tr><tr><td>SmartEX</td><td>新干线订座/改签</td></tr><tr><td>DiDi 日本</td><td>中文叫车+支付宝</td></tr><tr><td>Visit Japan Web</td><td>入境申报</td></tr></tbody></table></div>
+</div>
+</div>
+
+<!-- ============ 预算 ============ -->
+<div class="section" id="budget">
+<div class="card">
+<h2>💰 预算参考（3 人家庭合计，中档）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>项目</th><th>人民币</th></tr></thead>
+<tbody>
+<tr><td>往返机票（3 人，已出票）</td><td>约 9,000–12,000</td></tr>
+<tr><td>酒店 9 晚（含温泉旅馆 1 晚含早晚餐）</td><td>约 15,000–20,000</td></tr>
+<tr><td>跨城交通（新干线×2 段 + 高速巴士×2 段，儿童半价/免费）</td><td>约 3,500–4,500</td></tr>
+<tr><td>市内交通</td><td>约 1,000</td></tr>
+<tr><td>餐饮</td><td>约 8,000–10,000</td></tr>
+<tr><td>门票（博物馆、小火车、寺院等）</td><td>约 1,500</td></tr>
+<tr><td>购物（户外+药妆+动漫周边）</td><td>按清单自控，典型 10,000–25,000</td></tr>
+<tr><td>杂项（保险、通信、行李寄送）</td><td>约 2,000</td></tr>
+<tr style="font-weight:700"><td>合计（不含购物）</td><td>约 4.0–5.0 万</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-green" style="margin-top:18px"><h4>预算说明</h4><p>京都 3 晚用积分房可显著降低成本；温泉旅馆选含早晚餐的可省两餐外出费用。汇率以预订时为准。</p></div>
+</div>
+</div>
+
+<!-- ============ 清单 ============ -->
+<div class="section" id="checklist">
+<div class="card">
+<h2>✅ 出行前 Checklist</h2>
+<h3>📅 出发前 30 天</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ <span class="tag tag-rec">任天堂博物馆</span> 官方余票/候补（每天查）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9/26 新大阪→东京 Nozomi 指定席（SmartEX，约 8/26 10:00 JST 开售）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9/28 藤泽→河口湖高速巴士</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9/29 河口湖→三岛巴士 + 三岛→京都 Hikari</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 岚山小火车指定席</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 9 晚酒店（先可取消现金房，再查积分替换）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 河口湖旅馆：确认含晚餐 + 河口湖站接送 + 到店时间</li>
+<li style="padding:6px 0">☐ 旅行保险（含医疗+航延）</li>
+</ul>
+<h3>📅 出发前 14 天</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 确认东京、京都酒店均接受宅急便代收</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Kirby Café OSAKA / Shibuya Sky（有则加分）</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 复核各景点休馆/临时调整</li>
+<li style="padding:6px 0">☐ 拖车（仅在书面确认 120cm 儿童座舱后保留）</li>
+</ul>
+<h3>📅 出发前 72 小时</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ Visit Japan Web 填好</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 下载所有车票/门票二维码离线截图</li>
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 查东京/富士/京都天气，确定 Day 5 上午方案</li>
+<li style="padding:6px 0">☐ 存好博物馆票面和身份证件对应关系</li>
+</ul>
+<h3>📅 每天晚上</h3>
+<ul style="list-style:none;padding:0">
+<li style="padding:6px 0;border-bottom:1px dashed var(--border-soft)">☐ 确认次日首班交通、预约时间、午休位置、删减顺序</li>
+<li style="padding:6px 0">☐ 不临时增加跨区项目</li>
+</ul>
+</div>
+</div>
+
+<div class="footer">
+<p>🗾 2026 日本亲子自由行 · 轻松完整版 · 东京·河口湖·京都·奈良·大阪购物收尾</p>
+<p style="margin-top:6px">v4.1 · 2026-08-17 · 济南 ✈️ 大阪 KIX · 9 晚 10 天 · 2大1小</p>
+<p style="margin-top:6px;font-size:12px;opacity:.7">v4.1 变更：每日行程完整展开——每天新增「本日最推荐」，景点/美食/购物给出首选具体店与点位，配图（Wikimedia Commons）+ 官网 + Google 地图链接，备选并列</p>
+</div>
+
+</div>
+
+<script>
+const THEME_KEY='osaka-guide-theme';
+function applyTheme(theme){if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark')}else{document.documentElement.removeAttribute('data-theme')}}
+(function initTheme(){let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(e){}if(saved==='light'||saved==='dark'){applyTheme(saved);return}const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;applyTheme(prefersDark?'dark':'light')})();
+const themeBtn=document.getElementById('themeToggle');
+if(themeBtn){themeBtn.addEventListener('click',()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';const next=isDark?'light':'dark';applyTheme(next);try{localStorage.setItem(THEME_KEY,next)}catch(e){}})}
+if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{let saved=null;try{saved=localStorage.getItem(THEME_KEY)}catch(_){ }if(saved)return;applyTheme(e.matches?'dark':'light')})}
+document.querySelectorAll('.tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.tab).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})})});
+const backTop=document.getElementById('backTop');
+if(backTop){window.addEventListener('scroll',()=>{if(window.scrollY>400){backTop.classList.add('show')}else{backTop.classList.remove('show')}},{passive:true});backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})}
+</script>
+
+<p class="ext-note">本页在原版行程基础上追加：每日配图 + 景点/美食/购物详细描述 · 原内容未改动</p>
 </body>
 </html>
