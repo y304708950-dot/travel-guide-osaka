@@ -146,9 +146,16 @@ tr:hover td{background:var(--bg-hover)}
 .rec-links{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
 .rec-links a{font-size:11px;padding:3px 9px;border-radius:10px;background:var(--accent-soft);color:var(--accent-2);text-decoration:none;font-weight:500}
 .rec-links a:hover{text-decoration:underline}
+.rec-top.rec-sm{padding:8px;margin-bottom:6px}
+.rec-top.rec-sm img{width:64px;height:50px}
+.rec-top.rec-sm .rec-name{font-size:12px}
+.rec-top.rec-sm .rec-why{font-size:11px}
+.rec-sub{font-size:11px;color:var(--text-faint);margin:10px 0 6px;font-weight:600;letter-spacing:.5px}
 .rec-alt{font-size:12px;color:var(--text-muted);line-height:1.8}
 .rec-alt a{color:var(--accent-2);text-decoration:none}
 .rec-alt a:hover{text-decoration:underline}
+.alt-grid{display:grid;grid-template-columns:1fr;gap:6px}
+.alt-note{font-size:11px;color:var(--text-faint);line-height:1.6;margin-top:4px}
 .quota{margin-top:14px;padding:8px 10px;border-radius:8px;background:var(--bg-elevated);font-size:12px;color:var(--text-muted);line-height:1.5}
 .footer{text-align:center;padding:30px 20px;color:var(--footer-color);font-size:13px;transition:color .3s}
 .theme-toggle{position:fixed;top:16px;right:16px;z-index:100;width:44px;height:44px;border-radius:50%;background:var(--toggle-bg);border:1.5px solid var(--toggle-border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s,background .3s,border-color .3s;color:var(--toggle-icon);box-shadow:var(--shadow-sm)}
@@ -338,18 +345,35 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.tsutenkaku.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=通天閣" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ジャンジャン横丁" target="_blank" rel="noopener">JANJAN 横丁</a>（新世界腹地的小巷，更有烟火气）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Shinsekai%28Osaka%29_Janjan.jpg" alt="JANJAN 横丁" loading="lazy">
+<div>
+<div class="rec-name">JANJAN 横丁</div>
+<div class="rec-why">新世界腹地的小巷，比主街更有烟火气，串炸老店和立饮屋密集，10 分钟穿一圈。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=ジャンジャン横丁" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/KushikatsuDaruma01.jpg/960px-KushikatsuDaruma01.jpg" alt="串炸 Daruma" loading="lazy">
 <div>
 <div class="rec-name">串かつだるま 新世界総本店</div>
 <div class="rec-why">通天阁脚下的串炸本店，白饭、乌冬、玉子烧孩子都能吃；酱汁禁止二次蘸，顺便给孩子讲个有趣的餐桌规则。</div>
 <div class="rec-links"><a href="https://www.kushikatsu-daruma.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=串かつだるま+新世界総本店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=新世界+大阪烧" target="_blank" rel="noopener">新世界大阪烧/定食</a>（排队超 20 分钟就换，第一晚不硬排）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/960px-Okonomiyaki_001.jpg" alt="大阪烧" loading="lazy">
+<div>
+<div class="rec-name">新世界大阪烧 / 定食屋</div>
+<div class="rec-why">第一晚的底线选项：有座位、能上白饭乌冬；だるま排队超 20 分钟就换，不硬排。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=新世界+お好み焼き" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -400,18 +424,59 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.meijijingu.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=明治神宮" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=竹下通り" target="_blank" rel="noopener">竹下通</a> · <a href="https://www.google.com/maps/search/?api=1&query=KIDDY LAND 原宿店" target="_blank" rel="noopener">KIDDY LAND 原宿店</a>（孩子的玩具天堂） · <a href="https://www.google.com/maps/search/?api=1&query=渋谷スクランブル交差点" target="_blank" rel="noopener">涩谷十字路口＋ハチ公</a></div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Takeshita_Street_in_December_2018.jpg/960px-Takeshita_Street_in_December_2018.jpg" alt="竹下通" loading="lazy">
+<div>
+<div class="rec-name">竹下通</div>
+<div class="rec-why">原宿年轻街头文化的核心段，只走主街约 300 米；人挤就立刻切去表参道，不在人流里硬扛。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=竹下通り" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Kiddy_Land1.JPG" alt="KIDDY LAND 原宿店" loading="lazy">
+<div>
+<div class="rec-name">KIDDY LAND 原宿店</div>
+<div class="rec-why">五层玩具店：吉卜力、星之卡比、乐高、三丽鸥专区，是孩子眼中的"表参道主景点"，预算先讲好。</div>
+<div class="rec-links"><a href="https://www.kiddyland.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=KIDDY LAND 原宿店" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Shibuya_Crossing%2C_Aerial.jpg/960px-Shibuya_Crossing%2C_Aerial.jpg" alt="涩谷十字路口" loading="lazy">
+<div>
+<div class="rec-name">涩谷十字路口 ＋ ハチ公像</div>
+<div class="rec-why">世界最忙路口，傍晚亮灯后氛围最好；ハチ公像在站前广场，拍完直接进 PARCO。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=渋谷スクランブル交差点" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/%22Amai-Yuwaku%22_Special_Loin_Pork_Cutlet1.jpg/960px-%22Amai-Yuwaku%22_Special_Loin_Pork_Cutlet1.jpg" alt="炸猪排" loading="lazy">
 <div>
 <div class="rec-name">まい泉 青山本店（炸猪排）</div>
 <div class="rec-why">表参道旁的老牌猪排店，有儿童餐具和软嫩的ひれかつ，午休前坐下来吃顿正经午餐的最佳选择。</div>
 <div class="rec-links"><a href="https://mai-sen.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=まい泉+青山本店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=マリオンクレープ+竹下通り" target="_blank" rel="noopener">Marion Crepes 竹下通</a>（可丽饼创始老店，甜点不当代正餐） · <a href="https://www.google.com/maps/search/?api=1&query=活美登利寿司+渋谷" target="_blank" rel="noopener">活 美登利寿司 涩谷店</a>（晚餐回转寿司，孩子接受度高）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Crepes_dsc07085.jpg/960px-Crepes_dsc07085.jpg" alt="可丽饼" loading="lazy">
+<div>
+<div class="rec-name">Marion Crepes 竹下通</div>
+<div class="rec-why">1976 年创始的可丽饼老店，竹下通的仪式感担当；当下午茶，不当代正餐。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=マリオンクレープ+竹下通り" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Midori_Sushi1.JPG/960px-Midori_Sushi1.JPG" alt="美登利寿司" loading="lazy">
+<div>
+<div class="rec-name">活 美登利寿司 涩谷店</div>
+<div class="rec-why">高性价比回转寿司，晚餐 18 点前到店不排队；孩子自己挑盘子，吃得比大人还认真。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=活美登利寿司+渋谷" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
@@ -423,7 +488,15 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.nintendo.com/jp/officialstore/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=Nintendo TOKYO" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：同层 <a href="https://www.google.com/maps/search/?api=1&query=Pokémon Center Shibuya" target="_blank" rel="noopener">Pokémon Center Shibuya</a> · PARCO 动漫/游戏楼层短逛</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Pokemon_Center_Tohoku_in_SENDAI_PARCO.jpg/960px-Pokemon_Center_Tohoku_in_SENDAI_PARCO.jpg" alt="Pokémon Center" loading="lazy">
+<div>
+<div class="rec-name">Pokémon Center Shibuya</div>
+<div class="rec-why">同在 PARCO 6F，赛博风皮卡丘必拍；与任天堂店二选一久留，按孩子更喜欢的 IP 决定。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=Pokémon Center Shibuya" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -476,7 +549,21 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.senso-ji.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=浅草寺" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=仲見世通り" target="_blank" rel="noopener">仲见世通</a> · <a href="https://www.google.com/maps/search/?api=1&query=上野公園" target="_blank" rel="noopener">上野公园</a> · <a href="https://www.google.com/maps/search/?api=1&query=アメヤ横丁" target="_blank" rel="noopener">阿美横丁</a></div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Asakusa_Nakamise_2021-12_ac.jpg/960px-Asakusa_Nakamise_2021-12_ac.jpg" alt="仲见世通" loading="lazy">
+<div><div class="rec-name">仲见世通</div><div class="rec-why">浅草寺表参道，雷门到本堂一路小吃和伴手礼；推荐人形烧、雷おこし，小件即可。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=仲見世通り" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ueno_park.jpg/960px-Ueno_park.jpg" alt="上野公园" loading="lazy">
+<div><div class="rec-name">上野公园</div><div class="rec-why">午饭后让孩子跑一跑的缓冲地，不进博物馆也值得；不忍池边最适合短坐。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=上野公園" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ueno_20241210_133139.jpg/960px-Ueno_20241210_133139.jpg" alt="阿美横丁" loading="lazy">
+<div><div class="rec-name">阿美横丁</div><div class="rec-why">上野站旁的热闹商店街，零食、药妆、运动鞋都有；只当午餐后短逛，不大采购。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=アメヤ横丁" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
@@ -488,7 +575,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.izuei.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=伊豆栄+上野本店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=木村家本店+浅草+人形焼" target="_blank" rel="noopener">木村家本店 人形烧</a>（浅草伴手小吃） · <a href="https://www.google.com/maps/search/?api=1&query=無敵家+池袋" target="_blank" rel="noopener">无敌家 池袋</a>（晚餐拉面，排队短于一兰）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ningyoyaki%2C_Doll-shaped_cake.jpg/960px-Ningyoyaki%2C_Doll-shaped_cake.jpg" alt="人形烧" loading="lazy">
+<div><div class="rec-name">木村家本店 · 人形烧</div><div class="rec-why">浅草经典小点心，外皮像鸡蛋糕、内馅红豆；适合作为孩子上午加餐和伴手礼。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=木村家本店+浅草+人形焼" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg/960px-Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg" alt="拉面" loading="lazy">
+<div><div class="rec-name">无敌家 池袋</div><div class="rec-why">池袋人气拉面，汤浓但可选普通口味；比一兰更适合顺路晚餐，排队长就换商场餐厅。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=無敵家+池袋" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
@@ -500,7 +597,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://akihabara-radiokaikan.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=秋葉原ラジオ会館" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.animate.co.jp/shop/ikebukuro/" target="_blank" rel="noopener">animate 池袋本店</a>（<a href="https://www.google.com/maps/search/?api=1&query=アニメイト池袋本店" target="_blank" rel="noopener">地图</a>，角色周边/漫画/文具） · <a href="https://www.google.com/maps/search/?api=1&query=ガシャポンのデパート+池袋総本店" target="_blank" rel="noopener">ガシャポンのデパート 池袋総本店</a>（扭蛋专门店）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Animate_head_office.jpg/960px-Animate_head_office.jpg" alt="animate" loading="lazy">
+<div><div class="rec-name">animate 池袋本店</div><div class="rec-why">东京动漫周边密度最高的一栋楼，漫画、角色文具、盲盒齐全；比秋叶原更适合女性向和儿童文具。</div><div class="rec-links"><a href="https://www.animate.co.jp/shop/ikebukuro/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=アニメイト池袋本店" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Gachapon.jpg/960px-Gachapon.jpg" alt="扭蛋机" loading="lazy">
+<div><div class="rec-name">ガシャポンのデパート 池袋総本店</div><div class="rec-why">扭蛋机规模巨大，孩子参与感强；每人限定 3–5 次，避免小额消费失控。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=ガシャポンのデパート+池袋総本店" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -554,7 +661,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=鎌倉高校前駅" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.enoden.co.jp/" target="_blank" rel="noopener">江之电</a>（沿海慢车体验，<a href="https://www.google.com/maps/search/?api=1&query=江ノ電" target="_blank" rel="noopener">地图</a>） · <a href="https://www.kotoku-in.jp/" target="_blank" rel="noopener">高德院 镰仓大佛</a>（<a href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏+高徳院" target="_blank" rel="noopener">地图</a>，只保留这一处寺院）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Enoden_300_series_Kamakura_Koko_mae_Station.jpg/960px-Enoden_300_series_Kamakura_Koko_mae_Station.jpg" alt="江之电" loading="lazy">
+<div><div class="rec-name">江之电沿海慢车</div><div class="rec-why">镰仓最有记忆点的交通体验，车窗外是民居、海岸和路面电车；孩子中途也能小睡。</div><div class="rec-links"><a href="https://www.enoden.co.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=江ノ電" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/230128_Kamakura_Daibutsu_Japan04s3.jpg/960px-230128_Kamakura_Daibutsu_Japan04s3.jpg" alt="镰仓大佛" loading="lazy">
+<div><div class="rec-name">高德院 · 镰仓大佛</div><div class="rec-why">镰仓只保留这一处代表性寺院，户外大佛震撼但游览很短；适合 30–40 分钟快进快出。</div><div class="rec-links"><a href="https://www.kotoku-in.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=鎌倉大仏+高徳院" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
@@ -566,18 +683,33 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=小町通り+しらす丼" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">今日核心：<strong>旅馆日式晚餐</strong>（含餐旅馆不另找餐厅，18:00 前必须到河口湖站）</div>
+<div class="rec-sub">备选 / 今日核心</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Gianchetti_and_poutine.jpg/960px-Gianchetti_and_poutine.jpg" alt="银鱼" loading="lazy">
+<div><div class="rec-name">小町通和食定食</div><div class="rec-why">如果孩子不接受银鱼盖饭，直接换烤鱼定食、亲子丼或乌冬；原则是坐下吃饱，不边走边塞。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=小町通り+和食" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Kaiseki_dinner_at_Arima_Grand_Hotel.jpg/960px-Kaiseki_dinner_at_Arima_Grand_Hotel.jpg" alt="日式旅馆晚餐" loading="lazy">
+<div><div class="rec-name">河口湖旅馆日式晚餐</div><div class="rec-why">这天真正的晚餐主角。含餐旅馆不用外出找店，18:00 前到河口湖站是硬约束。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=河口湖+温泉旅館+夕食" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Komachi_Street%2C_Kanagawa_02.jpg/960px-Komachi_Street%2C_Kanagawa_02.jpg" alt="小町通" loading="lazy">
 <div>
 <div class="rec-name">豊島屋 本店 · 鳩サブレー</div>
 <div class="rec-why">镰仓百年老铺的鸽子黄油饼干，小町通入口即达；孩子喜欢造型，大人认老字号，最佳小伴手礼。</div>
 <div class="rec-links"><a href="https://www.hato-sable.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=豊島屋+本店+鎌倉" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：小町通杂货小店（不为特定网红店排队）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Komachi_Street%2C_Kanagawa_02.jpg/960px-Komachi_Street%2C_Kanagawa_02.jpg" alt="小町通商店街" loading="lazy">
+<div><div class="rec-name">小町通杂货小店</div><div class="rec-why">手帕、木制小玩具、镰仓限定文具都适合买；不为网红甜点排队，看到喜欢就买小件。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=小町通り+雑貨" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -629,7 +761,21 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=大石公園+河口湖" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=河口湖+天上山公園" target="_blank" rel="noopener">天上山缆车</a>（与骑行/大石公园三选一，不全做） · <a href="https://www.google.com/maps/search/?api=1&query=先斗町" target="_blank" rel="noopener">先斗町</a> · <a href="https://www.google.com/maps/search/?api=1&query=鴨川デルタ" target="_blank" rel="noopener">鸭川三角洲</a>（京都傍晚短走）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/KawaguchiKo.jpg/960px-KawaguchiKo.jpg" alt="河口湖" loading="lazy">
+<div><div class="rec-name">天上山缆车</div><div class="rec-why">天气晴朗、孩子状态好时替代大石公园；上去看富士和河口湖全景，排队超 20 分钟放弃。</div><div class="rec-links"><a href="https://www.mtfujiropeway.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=河口湖+天上山公園" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg/960px-Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg" alt="先斗町" loading="lazy">
+<div><div class="rec-name">先斗町</div><div class="rec-why">京都第一晚的窄巷夜色，离河原町酒店近；只走主巷，不钻安静私巷。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=先斗町" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Kamogawa_sakura.jpg/960px-Kamogawa_sakura.jpg" alt="鸭川" loading="lazy">
+<div><div class="rec-name">鸭川三角洲 / 河岸短走</div><div class="rec-why">傍晚平缓散步区，孩子可以看水鸟和跳石；坐 10 分钟比再加景点更值。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=鴨川デルタ" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
@@ -641,18 +787,27 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="http://www.houtou-fudou.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=先斗町+湯豆腐" target="_blank" rel="noopener">先斗町 汤豆腐/荞麦</a>（京都第一晚只做城市生活体验，不安排寺院）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG/960px-Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG" alt="汤豆腐" loading="lazy">
+<div><div class="rec-name">先斗町 汤豆腐 / 荞麦</div><div class="rec-why">京都第一晚只做城市生活体验，选清淡、能坐下的豆腐或荞麦面，不安排寺院。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=先斗町+湯豆腐" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/KawaguchiKo.jpg/960px-KawaguchiKo.jpg" alt="河口湖站伴手礼" loading="lazy">
 <div>
 <div class="rec-name">河口湖站前伴手礼</div>
 <div class="rec-why">山梨葡萄点心、富士山饼干、ほうとう味手信一站买齐；控制在 20 分钟内，不耽误巴士。</div>
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=河口湖駅+お土産" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=河原町+药妆店" target="_blank" rel="noopener">河原町药妆预逛</a>（只比价不扫货，留给 Day 9）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Matsumotokiyoshi-holdings-head_office.jpg/960px-Matsumotokiyoshi-holdings-head_office.jpg" alt="药妆店" loading="lazy">
+<div><div class="rec-name">河原町药妆预逛</div><div class="rec-why">只看价签和库存，不扫货；把保健品、面膜、眼药水清单留给 Day 9 心斋桥一次买齐。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=河原町+药妆店" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -705,7 +860,21 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://inari.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=伏見稲荷大社" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.kiyomizudera.or.jp/" target="_blank" rel="noopener">清水寺</a>（<a href="https://www.google.com/maps/search/?api=1&query=清水寺" target="_blank" rel="noopener">地图</a>） · <a href="https://www.google.com/maps/search/?api=1&query=祇園+花見小路" target="_blank" rel="noopener">祇园·花见小路</a>（不追拍艺伎、不进私道） · <a href="https://www.google.com/maps/search/?api=1&query=八坂神社" target="_blank" rel="noopener">八坂神社</a></div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Kiyomizu.jpg/960px-Kiyomizu.jpg" alt="清水寺" loading="lazy">
+<div><div class="rec-name">清水寺</div><div class="rec-why">京都东山代表景点，舞台视野开阔；排队项目（音羽瀑布）超过 20 分钟就跳过。</div><div class="rec-links"><a href="https://www.kiyomizudera.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=清水寺" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/150124_Gion_Kyoto_Japan01s3.jpg/960px-150124_Gion_Kyoto_Japan01s3.jpg" alt="祇园花见小路" loading="lazy">
+<div><div class="rec-name">祇园 · 花见小路</div><div class="rec-why">传统町家街景，下午比夜间更适合亲子；不追拍艺伎、不进私道，保持礼貌距离。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=祇園+花見小路" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Yasaka_jinja.jpg/960px-Yasaka_jinja.jpg" alt="八坂神社" loading="lazy">
+<div><div class="rec-name">八坂神社</div><div class="rec-why">祇园尽头的开放式神社，傍晚灯笼亮起很好看；10–20 分钟即可，不额外消耗。</div><div class="rec-links"><a href="https://www.yasaka-jinja.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=八坂神社" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
@@ -717,7 +886,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=清水順正+おかべ家" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=茶寮都路里+祇園本店" target="_blank" rel="noopener">茶寮都路里 祇园本店</a>（抹茶芭菲下午茶） · <a href="https://www.google.com/maps/search/?api=1&query=先斗町+京料理" target="_blank" rel="noopener">先斗町京料理</a>（晚餐）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Matcha_Scoop.jpg/960px-Matcha_Scoop.jpg" alt="抹茶芭菲" loading="lazy">
+<div><div class="rec-name">茶寮都路里 祇园本店</div><div class="rec-why">抹茶芭菲、抹茶冰淇淋和茶点，适合作为午休后的奖励；排队长就买外带冰淇淋。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=茶寮都路里+祇園本店" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg/960px-Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg" alt="先斗町京料理" loading="lazy">
+<div><div class="rec-name">先斗町京料理</div><div class="rec-why">晚餐选有座位、能点饭/面/烤物的店；不要为了川床或名店排队牺牲孩子睡眠。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=先斗町+京料理" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
@@ -729,7 +908,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.kyoto-nishiki.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=錦市場" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=七味家本舗+清水" target="_blank" rel="noopener">七味家本铺</a>（清水坂 370 年七味粉老铺） · 清水坂小店（扇子、香袋、手帕）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Shichimi_002.jpg" alt="七味粉" loading="lazy">
+<div><div class="rec-name">七味家本铺</div><div class="rec-why">清水坂 370 年老铺，七味粉、山椒粉适合做成人伴手礼；小罐轻、不占箱。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=七味家本舗+清水" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Sannenzaka_street%2C_Kyoto_%283811257874%29.jpg/960px-Sannenzaka_street%2C_Kyoto_%283811257874%29.jpg" alt="清水坂小店" loading="lazy">
+<div><div class="rec-name">清水坂小店</div><div class="rec-why">扇子、香袋、手帕、清水烧小件都好看；只买轻小易带的，不买易碎大件。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=清水坂+土産" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -793,29 +982,63 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=ニンテンドーミュージアム" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">上午备选：<a href="https://www.google.com/maps/search/?api=1&query=嵐山+竹林の小径" target="_blank" rel="noopener">竹林小径</a> · <a href="https://www.tenryuji.com/" target="_blank" rel="noopener">天龙寺</a>（<a href="https://www.google.com/maps/search/?api=1&query=天龍寺" target="_blank" rel="noopener">地图</a>，庭园借景） · <a href="https://www.google.com/maps/search/?api=1&query=渡月橋" target="_blank" rel="noopener">渡月桥</a><br>无票分支：<a href="https://www.byodoin.or.jp/" target="_blank" rel="noopener">平等院</a>（<a href="https://www.google.com/maps/search/?api=1&query=平等院" target="_blank" rel="noopener">地图</a>，宇治慢体验）</div>
+<div class="rec-sub">上午备选 / 无票分支</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Bamboo_Grove%2C_Arashiyama%2C_Kyoto%2C_Japan.jpg/960px-Bamboo_Grove%2C_Arashiyama%2C_Kyoto%2C_Japan.jpg" alt="岚山竹林小径" loading="lazy">
+<div><div class="rec-name">竹林小径</div><div class="rec-why">岚山最经典短步道，早到才有安静感；推车不好走时只拍入口段。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=嵐山+竹林の小径" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tenryuji_Kyoto_Japan02s3.jpg/960px-Tenryuji_Kyoto_Japan02s3.jpg" alt="天龙寺" loading="lazy">
+<div><div class="rec-name">天龙寺庭园</div><div class="rec-why">曹源池借景庭园，坐着看山水比走更多寺院更适合孩子；庭园票即可。</div><div class="rec-links"><a href="https://www.tenryuji.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=天龍寺" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Togetsukyo_in_Kyoto_Arashiyama.jpg/960px-Togetsukyo_in_Kyoto_Arashiyama.jpg" alt="渡月桥" loading="lazy">
+<div><div class="rec-name">渡月桥</div><div class="rec-why">岚山河岸代表机位，拍照+坐河边休息即可；不安排长距离步行到猴子公园。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=渡月橋" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Phoenix_Hall_in_Byodo-in_Temple%2C_Ujirenge_Uji_city_2026.jpg/960px-Phoenix_Hall_in_Byodo-in_Temple%2C_Ujirenge_Uji_city_2026.jpg" alt="平等院凤凰堂" loading="lazy">
+<div><div class="rec-name">无票分支：平等院</div><div class="rec-why">任天堂博物馆无票时的宇治主景点，凤凰堂对称水景很美；和抹茶街区组合成慢体验。</div><div class="rec-links"><a href="https://www.byodoin.or.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=平等院" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG/960px-Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG" alt="汤豆腐" loading="lazy">
 <div>
 <div class="rec-name">嵯峨とうふ 稲 本店（岚山汤豆腐定食）</div>
 <div class="rec-why">竹林旁的平价汤豆腐名店，定食有饭有汤孩子能吃好；11:30 开门就去，避开正午排队。</div>
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=嵯峨とうふ稲+本店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：博物馆馆内咖啡（有票才能用，轻食/饮品） · 河原町酒店附近晚餐</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tomonoura05s2000.jpg/960px-Tomonoura05s2000.jpg" alt="咖啡馆轻食" loading="lazy">
+<div><div class="rec-name">任天堂博物馆馆内咖啡</div><div class="rec-why">有票才能用，轻食和饮品适合作为 16:00 场中途补给；不要指望正餐量。</div><div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg/960px-Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg" alt="河原町晚餐" loading="lazy">
+<div><div class="rec-name">河原町酒店附近晚餐</div><div class="rec-why">博物馆结束后只在酒店周边坐下吃，不跨区；乌冬、定食、烤鸟都比找名店稳。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=河原町+定食" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Nintendo_Museum_logo.svg/960px-Nintendo_Museum_logo.svg.png" alt="任天堂博物馆限定商店" loading="lazy">
 <div>
 <div class="rec-name">任天堂博物馆限定商店</div>
 <div class="rec-why">只有持票者能进，博物馆限定商品在外面买不到；放离馆前最后 30 分钟，先玩再买。</div>
 <div class="rec-links"><a href="https://museum.nintendo.com/en/" target="_blank" rel="noopener">官网</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ちりめん細工館+嵐山" target="_blank" rel="noopener">ちりめん细工馆 岚山</a>（布艺手作小物，岚山只选这一家）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Chirimen_%28Japanese_crepe%29_of_rayon.jpg" alt="ちりめん细工" loading="lazy">
+<div><div class="rec-name">ちりめん细工馆 岚山</div><div class="rec-why">布艺手作小物、发饰、挂件，京都味很足；岚山购物只选这一家，避免拖慢下午转场。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=ちりめん細工館+嵐山" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -869,29 +1092,55 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.todaiji.or.jp/" target="_blank" rel="noopener">东大寺官网</a><a href="https://www.google.com/maps/search/?api=1&query=奈良公園" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=ならまち" target="_blank" rel="noopener">奈良町</a>（格子老屋街区） · <a href="https://www.google.com/maps/search/?api=1&query=猿沢池" target="_blank" rel="noopener">猿泽池/浮见堂</a>（水边平缓收尾）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/170930_Sarusawaike_Nara_Japan01s3.jpg/960px-170930_Sarusawaike_Nara_Japan01s3.jpg" alt="奈良町" loading="lazy">
+<div><div class="rec-name">奈良町</div><div class="rec-why">格子老屋街区，节奏比奈良公园安静；适合午餐后散步和买鹿主题小物。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=ならまち" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/170930_Sarusawaike_Nara_Japan01s3.jpg/960px-170930_Sarusawaike_Nara_Japan01s3.jpg" alt="猿泽池" loading="lazy">
+<div><div class="rec-name">猿泽池 / 浮见堂</div><div class="rec-why">水边平缓收尾点，适合下午茶前后坐一会儿；比再加一个寺院更轻松。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=猿沢池" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Kakinohazusi.jpg/960px-Kakinohazusi.jpg" alt="柿叶寿司" loading="lazy">
 <div>
 <div class="rec-name">平宗 奈良店 · 柿叶寿司</div>
 <div class="rec-why">奈良第一名物，创业 150 多年的老铺；柿子叶包裹的寿司清淡好拿，孩子也能吃，还可以外带当车上点心。</div>
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=平宗+奈良店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=天極堂+奈良本店" target="_blank" rel="noopener">天极堂 奈良本店</a>（吉野葛点心/葛切下午茶） · 东大寺门前茶粥定食</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/140614_Yagyu_Iris_Garden_Nara_Japan07s.jpg/960px-140614_Yagyu_Iris_Garden_Nara_Japan07s.jpg" alt="葛切" loading="lazy">
+<div><div class="rec-name">天极堂 奈良本店</div><div class="rec-why">吉野葛点心老店，葛切、葛饼清爽不腻；适合作为奈良下午茶和孩子休息点。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=天極堂+奈良本店" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Cha_Gayu_20141001.jpg/960px-Cha_Gayu_20141001.jpg" alt="茶粥" loading="lazy">
+<div><div class="rec-name">东大寺门前茶粥定食</div><div class="rec-why">奈良传统茶粥，温和、软、适合孩子和老人胃口；公园周边看到空位即可。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=東大寺+茶粥" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
 <div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/%E4%B8%AD%E5%B7%9D%E6%94%BF%E4%B8%83%E5%95%86%E5%BA%97_in_Ginza_Six_2018.jpg/960px-%E4%B8%AD%E5%B7%9D%E6%94%BF%E4%B8%83%E5%95%86%E5%BA%97_in_Ginza_Six_2018.jpg" alt="中川政七商店" loading="lazy">
 <div>
 <div class="rec-name">中川政七商店 奈良本店</div>
 <div class="rec-why">300 年奈良老铺的现代杂货：鹿麻织小物、手帕、文具，好看不贵，是最值得买的奈良手信。</div>
 <div class="rec-links"><a href="https://www.nakagawa-masashichi.jp/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=中川政七商店+奈良本店" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">晚间：<a href="https://www.google.com/maps/search/?api=1&query=阪急うめだ本店" target="_blank" rel="noopener">阪急梅田本店</a>（食品层/童装/户外品牌，百货 20:00 关门前先去）</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Umeda_Hankyu_Department_Store.JPG/960px-Umeda_Hankyu_Department_Store.JPG" alt="阪急梅田本店" loading="lazy">
+<div><div class="rec-name">阪急梅田本店</div><div class="rec-why">食品层、童装、户外品牌、伴手礼集中；百货 20:00 左右关门，入住后先去。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=阪急うめだ本店" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -946,7 +1195,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=道頓堀+戎橋" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=法善寺横丁" target="_blank" rel="noopener">法善寺横丁</a>（水挂不动明王，霓虹背后的安静石板巷） · <a href="https://www.google.com/maps/search/?api=1&query=アメリカ村+三角公園" target="_blank" rel="noopener">美国村 Triangle Park</a></div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/99/HouzennjiDVC00213.JPG" alt="法善寺横丁" loading="lazy">
+<div><div class="rec-name">法善寺横丁</div><div class="rec-why">水挂不动明王和石板巷，离道顿堀很近但安静许多；适合作为霓虹街区里的短暂停顿。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=法善寺横丁" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Amerikamura.jpg/960px-Amerikamura.jpg" alt="美国村" loading="lazy">
+<div><div class="rec-name">美国村 Triangle Park</div><div class="rec-why">大阪潮流街区，适合看滑板、潮牌、古着氛围；不深逛二手店，只作为心斋桥购物间隙。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=アメリカ村+三角公園" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
@@ -958,7 +1217,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.kuromon.com/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=黒門三平" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">备选：<a href="https://www.google.com/maps/search/?api=1&query=千房+道頓堀" target="_blank" rel="noopener">千房 道顿堀店</a>（大阪烧） · <a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">RINKU FOOD PARK</a>（临空晚餐，513 个座位分口味点餐）</div>
+<div class="rec-sub">备选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Okonomiyaki_001.jpg/960px-Okonomiyaki_001.jpg" alt="大阪烧" loading="lazy">
+<div><div class="rec-name">千房 道顿堀店</div><div class="rec-why">大阪烧老牌，铁板桌有现场感；孩子不吃酱汁时点炒面、米饭或鸡蛋类。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=千房+道頓堀" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Rinku-Gate-Tower-Bldg-05.jpg/960px-Rinku-Gate-Tower-Bldg-05.jpg" alt="临空城" loading="lazy">
+<div><div class="rec-name">RINKU FOOD PARK</div><div class="rec-why">奥莱里的大型美食区，各自点饭/面/蛋包饭，不用全家统一口味；临空晚餐最稳。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 <div class="rec-group">
 <h5>🛍️ 购物</h5>
@@ -978,7 +1247,17 @@ tr:hover td{background:var(--bg-hover)}
 <div class="rec-links"><a href="https://www.premiumoutlets.co.jp/rinku/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=りんくうプレミアム・アウトレット" target="_blank" rel="noopener">📍 地图</a></div>
 </div>
 </div>
-<div class="rec-alt">可选：<a href="https://kirbycafe.jp/cafe/osaka/" target="_blank" rel="noopener">Kirby Café OSAKA</a>（大丸 9F，<a href="https://www.google.com/maps/search/?api=1&query=カービィカフェ+OSAKA" target="_blank" rel="noopener">地图</a>；仅预约成功时替换午餐） · <a href="https://www.google.com/maps/search/?api=1&query=大国药妆+心斎橋" target="_blank" rel="noopener">大国药妆 心斋桥</a>（保健品一次买齐，常比松本清便宜 5–15%）</div>
+<div class="rec-sub">可选</div>
+<div class="alt-grid">
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Kirby_Cafe.png/960px-Kirby_Cafe.png" alt="Kirby Cafe" loading="lazy">
+<div><div class="rec-name">Kirby Café OSAKA</div><div class="rec-why">大丸心斋桥 9F，预约成功才替换午餐；菜品可爱但耗时，不成功不要临场等位。</div><div class="rec-links"><a href="https://kirbycafe.jp/cafe/osaka/" target="_blank" rel="noopener">官网</a><a href="https://www.google.com/maps/search/?api=1&query=カービィカフェ+OSAKA" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Senbanishi_Daikokudrug.jpg/960px-Senbanishi_Daikokudrug.jpg" alt="大国药妆" loading="lazy">
+<div><div class="rec-name">大国药妆 心斋桥</div><div class="rec-why">保健品、眼药水、面膜一次买齐，常比松本清便宜；先按清单拿货，别被货架牵着走。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=大国药妆+心斎橋" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1032,7 +1311,19 @@ tr:hover td{background:var(--bg-hover)}
 </div>
 <div class="rec-group">
 <h5>🍜 美食</h5>
-<div class="rec-alt">收尾餐：<a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">RINKU FOOD PARK</a> 快速早午餐（饭/面/蛋包饭等稳定主食，不让孩子空腹进机场） · 安检后机场餐厅为备选</div>
+<div class="rec-top">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Rinku-Gate-Tower-Bldg-05.jpg/960px-Rinku-Gate-Tower-Bldg-05.jpg" alt="临空城" loading="lazy">
+<div>
+<div class="rec-name">RINKU FOOD PARK 快速早午餐</div>
+<div class="rec-why">饭、面、蛋包饭等稳定主食都有，11:30 必须停手吃饭，保证孩子不空腹进机场。</div>
+<div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=RINKU FOOD PARK" target="_blank" rel="noopener">📍 地图</a></div>
+</div>
+</div>
+<div class="rec-sub">备选</div>
+<div class="rec-top rec-sm">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/%E9%96%A2%E8%A5%BF%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF%E5%85%A8%E4%BD%93%E5%86%99%E7%9C%9F20220811.jpg/960px-%E9%96%A2%E8%A5%BF%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF%E5%85%A8%E4%BD%93%E5%86%99%E7%9C%9F20220811.jpg" alt="关西机场 T1" loading="lazy">
+<div><div class="rec-name">关西机场安检后餐厅</div><div class="rec-why">只作为时间紧张时的兜底；选择乌冬、饭团、咖啡面包这类快餐，不把机场当最后购物点。</div><div class="rec-links"><a href="https://www.google.com/maps/search/?api=1&query=関西国際空港+T1+レストラン" target="_blank" rel="noopener">📍 地图</a></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -1337,8 +1628,8 @@ tr:hover td{background:var(--bg-hover)}
 
 <div class="footer">
 <p>🗾 2026 日本亲子自由行 · 轻松完整版 · 东京·河口湖·京都·奈良·大阪购物收尾</p>
-<p style="margin-top:6px">v4.1 · 2026-08-17 · 济南 ✈️ 大阪 KIX · 9 晚 10 天 · 2大1小</p>
-<p style="margin-top:6px;font-size:12px;opacity:.7">v4.1 变更：每日行程完整展开——每天新增「本日最推荐」，景点/美食/购物给出首选具体店与点位，配图（Wikimedia Commons）+ 官网 + Google 地图链接，备选并列</p>
+<p style="margin-top:6px">v5.3 · 2026-08-18 · 济南 ✈️ 大阪 KIX · 9 晚 10 天 · 2大1小</p>
+<p style="margin-top:6px;font-size:12px;opacity:.7">v5.3 变更：保留 v5.2 的每日大图、详细描述与交通费用测算；每日行程的备选地点、备选美食、备选购物全部升级为图文卡片，并替换风险图片外链</p>
 </div>
 
 </div>
